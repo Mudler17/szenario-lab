@@ -16,4 +16,5 @@
 - [ ] Modulgrenzen nach erstem Fachmodul überprüfen
 
 ## Phase 3 – Erste Fachmodule
-- [ ] Erste Fachmodule gemäß Modellentscheidung umsetzen
+- [x] Erstes statisches Beispielszenario anlegen
+- [ ] Erstes Szenario-Modul fachlich ausarbeiten
