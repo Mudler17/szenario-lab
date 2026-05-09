@@ -45,6 +45,7 @@
 - [x] Phase 4.2 dokumentiert: Szenario-Name im lokalen Draft bearbeitbar (Preview + Reset)
 - [x] Phase 4.3 dokumentiert: Szenario-Name und Szenario-Beschreibung im lokalen Draft bearbeitbar (Preview + Reset)
 - [x] Phase 4.4 dokumentiert: Szenario-Name, Szenario-Beschreibung und Szenario-Ziel im lokalen Draft bearbeitbar (Preview + Reset)
+- [x] Phase 4.5 dokumentiert: Formularstruktur für Szenario-Grunddaten verbessert (fieldset/legend, Hilfetexte, aria-describedby)
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation

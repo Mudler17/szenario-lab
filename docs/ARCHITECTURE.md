@@ -101,3 +101,23 @@ Konkreter Umfang in Phase 4.4:
 - keine neuen Module
 
 Damit bleibt Phase 4.4 auf eine minimale, lokal begrenzte Editierfähigkeit fokussiert, ohne Persistenz-, Simulations- oder Integrationsschritte vorzuziehen.
+
+
+## Phase 4.5 – Formularstruktur für Szenario-Grunddaten
+In Phase 4.5 wurde die bestehende Formularstruktur für die drei bereits bearbeitbaren Szenario-Grunddaten verbessert.
+Dabei wurde der Bereich als „Szenario-Grunddaten“ mit `fieldset` und `legend` semantisch gegliedert.
+Die vorhandenen Felder Name, Beschreibung und Ziel wurden um Hilfetexte ergänzt; die zugehörigen Eingabefelder referenzieren diese Hinweise über `aria-describedby`.
+
+Konkreter Umfang in Phase 4.5:
+- keine neuen Felder; weiterhin nur Name, Beschreibung und Ziel
+- verbesserte Zugänglichkeit und Strukturierung durch `fieldset`/`legend`
+- Hilfetexte an allen drei bestehenden Feldern
+- Verknüpfung der Hilfetexte über `aria-describedby`
+- keine Speicherung auf Dateisystem oder Backend
+- kein LocalStorage
+- keine Simulation
+- keine OpenAI-Anbindung
+- keine weiteren aktiven Formularbereiche
+- keine neuen Module
+
+Damit bleibt Phase 4.5 innerhalb der bestehenden Grenzen des lokalen Draft-Editings und erweitert nur die semantische sowie zugänglichkeitsbezogene Formularqualität.
