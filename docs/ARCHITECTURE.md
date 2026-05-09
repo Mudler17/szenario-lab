@@ -85,14 +85,19 @@ Das dokumentarische Review der Reset-Utility ist in `docs/RESET_DRAFT_REVIEW.md`
 Bearbeitung wird zunächst als getrennte Schicht bzw. Komponentenfamilie vorbereitet und nicht in bestehende read-only-Komponenten eingebaut.
 
 
-## Phase 4.1 – Aktueller sichtbarer Draft-Stand
-In Phase 4.1 ist ein lokaler Szenario-Draft als in-memory-Arbeitszustand in der Anwendung sichtbar gemacht.
-Dabei ist der Umfang bewusst begrenzt:
+## Phase 4.2 – Lokale Bearbeitung eines Grundfelds
+In Phase 4.2 ist ein einzelnes Szenario-Grundfeld im lokalen Draft bearbeitbar gemacht: der Szenario-Name.
+Die Änderung bleibt bewusst innerhalb der bestehenden Draft-Grenzen und ergänzt keine neuen Architekturbausteine.
+
+Konkreter Umfang in Phase 4.2:
+- bearbeitbar ist aktuell nur der Szenario-Name
+- die Szenario-Vorschau reagiert direkt auf die Namensänderung
+- Reset stellt den Originalwert aus dem Ausgangsszenario wieder her
 - keine Speicherung auf Dateisystem oder Backend
 - kein LocalStorage
 - keine Simulation
 - keine OpenAI-Anbindung
-- keine Formularbearbeitung
+- keine weiteren aktiven Formularbereiche
 - keine Erweiterung der Modulstruktur
 
-Damit bleibt die Änderung auf die Sichtbarkeit des lokalen Draft-Zustands fokussiert, ohne Persistenz- oder Integrationsschritte vorzuziehen.
+Damit bleibt Phase 4.2 auf eine minimale, lokal begrenzte Editierfähigkeit fokussiert, ohne Persistenz-, Simulations- oder Integrationsschritte vorzuziehen.

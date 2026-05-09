@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 4.1 · Lokaler Szenario-Draft im Arbeitsspeicher sichtbar
+Phase 4.2 · Szenario-Name im lokalen Draft bearbeitbar (mit Preview + Reset)
 
 ## Lokale Befehle
 ```bash
@@ -14,8 +14,9 @@ npm run build
 ```
 
 ## Hinweis
-Die App zeigt derzeit einen lokalen Szenario-Draft als Arbeitsspeicher-Zustand (in-memory) sichtbar an.
-Wichtig: Noch keine Speicherung, kein LocalStorage, keine Simulation, keine OpenAI-Anbindung und keine Formularbearbeitung.
+Die App erlaubt derzeit die Bearbeitung eines einzelnen Szenario-Grundfelds im lokalen Draft: den Szenario-Namen.
+Die Vorschau reagiert direkt auf diese Änderung. Über Reset wird der Originalwert wiederhergestellt.
+Wichtig: Keine Speicherung, kein LocalStorage, keine Simulation, keine OpenAI-Anbindung und keine weiteren aktiven Formularbereiche.
 
 
 ## Dokumentation
