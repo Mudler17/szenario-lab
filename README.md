@@ -24,3 +24,4 @@ Wichtig: Keine Speicherung, kein LocalStorage, keine Simulation, keine OpenAI-An
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
+- Review-Dokument: `docs/DRAFT_EDITING_REVIEW.md`
