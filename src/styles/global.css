@@ -63,6 +63,42 @@ body {
   color: #64748b;
 }
 
+.workspace-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.workspace-panel {
+  background: #ffffff;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.workspace-panel h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.workspace-hint {
+  margin: 0.6rem 0 1rem;
+  color: #64748b;
+}
+
+.editor-panel {
+  border-left: 4px solid #2563eb;
+}
+
+.preview-panel {
+  border-left: 4px solid #0f766e;
+}
+
+.preview-panel .scenario-preview {
+  margin-top: 0.75rem;
+}
+
 .scenario-preview {
   margin-top: 1.5rem;
   background: #ffffff;
