@@ -52,6 +52,7 @@
 - [x] Phase 4.7.1 dokumentiert: Validierungs-Helper in eigene Draft-State-Datei ausgelagert (ohne Logikänderung)
 - [x] Phase 4.8 dokumentiert: Bearbeitung und Vorschau visuell klarer getrennt (ohne neue Fachlogik)
 - [x] Phase 4.8.1 dokumentiert: Minimal-CSS für Workspace-Grid und Panels ergänzt (ohne Logikänderung)
+- [x] Phase 4 Review dokumentiert: Szenario-Bearbeitung bis Draft/Validierung/Layout abgeschlossen
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation

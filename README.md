@@ -29,3 +29,5 @@ Auch in Phase 4.8.1 gilt unverändert: keine React-Logikänderung, keine neuen F
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
 - Review-Dokument: `docs/DRAFT_EDITING_REVIEW.md`
+- Phase-4-Review: `docs/PHASE_4_REVIEW.md`
+
