@@ -1,4 +1,4 @@
-import { createDraftFromScenario } from './createDraftFromScenario';
+import { createDraftFromScenario } from './createDraftFromScenario.js';
 
 export function resetDraft(originalScenario) {
   if (!originalScenario) {
