@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.2 · Build- und Testbefehle als Qualitätsgrenze dokumentiert
+Phase 5.3 · Speicherentscheidung konzeptionell vorbereitet
 
 ## Lokale Befehle
 ```bash
@@ -38,4 +38,5 @@ Nicht Teil von Phase 5.1 sind React-Komponententests oder UI-Änderungen. Ebenfa
 - Phase-5.1-Testreview: `docs/PHASE_5_1_TEST_REVIEW.md`
 - Quality Gate: `docs/QUALITY_GATE.md`
 - Phase-5.2-Quality-Gate-Review: `docs/PHASE_5_2_QUALITY_GATE_REVIEW.md`
+- Speicherentscheidung (Konzeptvorbereitung): `docs/STORAGE_DECISION.md`
 
