@@ -17,6 +17,8 @@ Dieses Modul bündelt die fachliche Struktur rund um Szenarien in der UI, beginn
 
 ## Aktueller Stand
 Derzeit enthält das Modul ausschließlich eine lesende Szenario-Vorschau, ohne Bearbeitung, ohne Speicherung und ohne Simulation.
-Die Vorschau wurde in kleine, rein lesende Anzeige-Komponenten (Summary, Persona-, Phasen-, Annahmen-, Beziehungs-, Interventions- und Strategieliste) zerlegt.
+Die Vorschau wurde in kleine, rein lesende Anzeige-Komponenten (Summary, Persona-, Ressourcen-, Phasen-, Annahmen-, Beziehungs-, Interventions- und Strategieliste) zerlegt.
 Beziehungen und Interventionen sind jetzt als eigene lesende Teilbereiche in der Vorschau sichtbar.
 Beziehungen werden in der lesenden Vorschau mit Persona-Namen dargestellt, sofern die Persona-IDs auflösbar sind.
+
+Ressourcen sind nun als eigener rein lesender Teilbereich in der Vorschau sichtbar.
