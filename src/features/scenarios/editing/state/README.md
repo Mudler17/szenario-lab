@@ -6,7 +6,8 @@ Die konzeptionelle Grundlage dafür ist in `docs/DRAFT_STATE_CONCEPT.md` dokumen
 
 ## Aktueller Stand
 - `createDraftFromScenario` existiert als erste reine Utility-Funktion.
-- Sie erzeugt nur eine lokale Arbeitskopie.
+- `resetDraft` existiert als zweite reine Utility-Funktion.
+- `resetDraft` erzeugt aus `originalScenario` erneut eine lokale Arbeitskopie.
 - Es gibt weiterhin keinen produktiven Draft-State-Code.
 - Es gibt keine Speicherung.
 - Es gibt keine Persistenz.

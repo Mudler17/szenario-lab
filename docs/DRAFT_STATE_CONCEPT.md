@@ -73,7 +73,8 @@ Konzeptioneller Selektionszustand, welcher Bearbeitungsabschnitt gerade im Fokus
 - Wie sichtbar soll Dirty State später werden?
 - Wann werden Validierungsfehler angezeigt?
 
-## Umsetzungsstand (erste Utility)
+## Umsetzungsstand (Utilities)
 - `createDraftFromScenario` wurde als erste reine Utility-Funktion umgesetzt.
-- Sie erzeugt nur eine lokale Arbeitskopie aus einem Scenario.
+- `resetDraft` wurde als zweite reine Utility-Funktion umgesetzt.
+- `resetDraft` erzeugt aus `originalScenario` erneut eine lokale Arbeitskopie.
 - Es gibt weiterhin keinen React-State, keine UI-Einbindung und keine Speicherung.

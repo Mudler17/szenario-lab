@@ -39,5 +39,6 @@
 - [x] Lokalen Draft-State konzeptionell vorbereiten
 - [x] Erste Draft-State-Utility vorbereiten
 - [x] Erste Draft-State-Utility prüfen
+- [x] Reset-Draft-Utility vorbereiten
 - [ ] Noch keine Speicherung
 - [ ] Noch keine Simulation
