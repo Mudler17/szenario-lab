@@ -40,5 +40,6 @@
 - [x] Erste Draft-State-Utility vorbereiten
 - [x] Erste Draft-State-Utility prüfen
 - [x] Reset-Draft-Utility vorbereiten
+- [x] Reset-Draft-Utility prüfen
 - [ ] Noch keine Speicherung
 - [ ] Noch keine Simulation
