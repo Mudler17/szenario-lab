@@ -41,5 +41,10 @@
 - [x] Erste Draft-State-Utility prüfen
 - [x] Reset-Draft-Utility vorbereiten
 - [x] Reset-Draft-Utility prüfen
+- [x] Phase 4.1 dokumentiert: Lokaler Szenario-Draft im Arbeitsspeicher sichtbar
 - [ ] Noch keine Speicherung
+- [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
+- [ ] Noch keine OpenAI-Anbindung
+- [ ] Noch keine Formularbearbeitung
+- [ ] Keine neuen Module in Phase 4.1

@@ -83,3 +83,16 @@ Dabei gilt ausdrücklich: keine UI-Einbindung, keine State-Verwaltung und kein P
 Das dokumentarische Review dieser Utility ist in `docs/DRAFT_UTILITY_REVIEW.md` festgehalten.
 Das dokumentarische Review der Reset-Utility ist in `docs/RESET_DRAFT_REVIEW.md` festgehalten.
 Bearbeitung wird zunächst als getrennte Schicht bzw. Komponentenfamilie vorbereitet und nicht in bestehende read-only-Komponenten eingebaut.
+
+
+## Phase 4.1 – Aktueller sichtbarer Draft-Stand
+In Phase 4.1 ist ein lokaler Szenario-Draft als in-memory-Arbeitszustand in der Anwendung sichtbar gemacht.
+Dabei ist der Umfang bewusst begrenzt:
+- keine Speicherung auf Dateisystem oder Backend
+- kein LocalStorage
+- keine Simulation
+- keine OpenAI-Anbindung
+- keine Formularbearbeitung
+- keine Erweiterung der Modulstruktur
+
+Damit bleibt die Änderung auf die Sichtbarkeit des lokalen Draft-Zustands fokussiert, ohne Persistenz- oder Integrationsschritte vorzuziehen.
