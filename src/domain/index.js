@@ -10,3 +10,5 @@ export { Strategy } from './entities/strategy';
 export { Comparison } from './entities/comparison';
 export { Evidence } from './entities/evidence';
 export { ScenarioVersion } from './entities/scenarioVersion';
+
+export { exampleScenario } from './seeds/exampleScenario';
