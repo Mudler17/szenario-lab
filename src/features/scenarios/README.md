@@ -17,3 +17,4 @@ Dieses Modul bündelt die fachliche Struktur rund um Szenarien in der UI, beginn
 
 ## Aktueller Stand
 Derzeit enthält das Modul ausschließlich eine lesende Szenario-Vorschau, ohne Bearbeitung, ohne Speicherung und ohne Simulation.
+Die Vorschau wurde in kleine, rein lesende Anzeige-Komponenten (Summary, Persona-, Phasen-, Annahmen- und Strategieliste) zerlegt.
