@@ -138,3 +138,20 @@ Konkreter Umfang in Phase 4.6:
 - keine OpenAI-Anbindung
 - keine weiteren aktiven Formularbereiche
 - keine neuen Module
+
+
+## Phase 4.7 – Einfache lokale Validierung der Szenario-Grundfelder
+In Phase 4.7 wurde die bestehende lokale Draft-Bearbeitung für Name, Beschreibung und Ziel um eine minimale, rein lokale Validierung ergänzt.
+Die Validierung prüft ausschließlich, ob die drei bestehenden Felder leer sind, und erzeugt dafür sichtbare Hinweise im Formular.
+
+Konkreter Umfang in Phase 4.7:
+- weiterhin nur die drei bestehenden Felder: Name, Beschreibung und Ziel
+- lokale Validierung im Draft-Kontext (ohne Persistenz)
+- sichtbare Hinweise bei leeren Feldern
+- Vorschau und Reset bleiben unverändert funktionsfähig
+- keine Speicherung auf Dateisystem oder Backend
+- kein LocalStorage
+- keine Simulation
+- keine OpenAI-Anbindung
+- keine weiteren aktiven Formularbereiche
+- keine neuen Module

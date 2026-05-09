@@ -1,7 +1,17 @@
-function ScenarioDraftForm({ scenario, onNameChange, onDescriptionChange, onGoalChange }) {
+function ScenarioDraftForm({
+  scenario,
+  validation,
+  onNameChange,
+  onDescriptionChange,
+  onGoalChange,
+}) {
   if (!scenario) {
     return null;
   }
+
+  const nameError = validation?.name;
+  const descriptionError = validation?.description;
+  const goalError = validation?.goal;
 
   return (
     <section aria-label="Szenario-Draft bearbeiten">
@@ -18,9 +28,11 @@ function ScenarioDraftForm({ scenario, onNameChange, onDescriptionChange, onGoal
             name="scenarioName"
             type="text"
             aria-describedby="scenario-draft-name-help"
+            aria-invalid={Boolean(nameError)}
             value={scenario.name ?? ''}
             onChange={(event) => onNameChange(event.target.value)}
           />
+          {nameError ? <p role="alert">{nameError}</p> : null}
         </div>
 
         <div>
@@ -31,9 +43,11 @@ function ScenarioDraftForm({ scenario, onNameChange, onDescriptionChange, onGoal
             name="scenarioDescription"
             type="text"
             aria-describedby="scenario-draft-description-help"
+            aria-invalid={Boolean(descriptionError)}
             value={scenario.description ?? ''}
             onChange={(event) => onDescriptionChange(event.target.value)}
           />
+          {descriptionError ? <p role="alert">{descriptionError}</p> : null}
         </div>
 
         <div>
@@ -44,9 +58,11 @@ function ScenarioDraftForm({ scenario, onNameChange, onDescriptionChange, onGoal
             name="scenarioGoal"
             type="text"
             aria-describedby="scenario-draft-goal-help"
+            aria-invalid={Boolean(goalError)}
             value={scenario.goal ?? ''}
             onChange={(event) => onGoalChange(event.target.value)}
           />
+          {goalError ? <p role="alert">{goalError}</p> : null}
         </div>
       </fieldset>
     </section>
