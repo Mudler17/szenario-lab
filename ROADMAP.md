@@ -23,4 +23,5 @@
 - [x] Beziehungen und Interventionen in lesender Vorschau sichtbar machen
 - [x] Beziehungspersonen in lesender Vorschau namentlich auflösen
 - [x] Ressourcen in lesender Vorschau sichtbar machen
+- [x] Szenario-Modul fachlich dokumentieren
 - [ ] Szenario-Modul fachlich ausarbeiten
