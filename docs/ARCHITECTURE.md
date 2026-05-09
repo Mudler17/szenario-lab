@@ -142,20 +142,6 @@ Konkreter Umfang in Phase 4.6:
 
 
 
-## Phase 4.7.1 – Validierungs-Helper als eigene Draft-State-Datei
-In Phase 4.7.1 wurde die Funktion `validateScenarioDraftBasics` aus `updateScenarioDraftField.js` in eine eigene State-Datei ausgelagert.
-Die bestehende Validierungslogik blieb dabei unverändert; es wurde nur die Verantwortlichkeit klarer getrennt.
-
-Konkreter Umfang in Phase 4.7.1:
-- `validateScenarioDraftBasics` ist organisatorisch aus der Update-Utility herausgelöst
-- keine Änderung der Validierungsregeln
-- keine UI-Änderung
-- keine neuen Felder
-- keine Speicherung auf Dateisystem oder Backend
-- kein LocalStorage
-- keine Simulation
-- keine OpenAI-Anbindung
-
 ## Phase 4.7 – Einfache lokale Validierung der Szenario-Grundfelder
 In Phase 4.7 wurde die bestehende lokale Draft-Bearbeitung für Name, Beschreibung und Ziel um eine minimale, rein lokale Validierung ergänzt.
 Die Validierung prüft ausschließlich, ob die drei bestehenden Felder leer sind, und erzeugt dafür sichtbare Hinweise im Formular.
@@ -171,3 +157,17 @@ Konkreter Umfang in Phase 4.7:
 - keine OpenAI-Anbindung
 - keine weiteren aktiven Formularbereiche
 - keine neuen Module
+
+## Phase 4.7.1 – Validierungs-Helper als eigene Draft-State-Datei
+In Phase 4.7.1 wurde die Funktion `validateScenarioDraftBasics` aus `updateScenarioDraftField.js` in eine eigene State-Datei ausgelagert.
+Die bestehende Validierungslogik blieb dabei unverändert; es wurde nur die Verantwortlichkeit klarer getrennt.
+
+Konkreter Umfang in Phase 4.7.1:
+- `validateScenarioDraftBasics` ist organisatorisch aus der Update-Utility herausgelöst
+- keine Änderung der Validierungsregeln
+- keine UI-Änderung
+- keine neuen Felder
+- keine Speicherung auf Dateisystem oder Backend
+- kein LocalStorage
+- keine Simulation
+- keine OpenAI-Anbindung
