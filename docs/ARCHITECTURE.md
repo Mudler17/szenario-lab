@@ -85,19 +85,19 @@ Das dokumentarische Review der Reset-Utility ist in `docs/RESET_DRAFT_REVIEW.md`
 Bearbeitung wird zunächst als getrennte Schicht bzw. Komponentenfamilie vorbereitet und nicht in bestehende read-only-Komponenten eingebaut.
 
 
-## Phase 4.2 – Lokale Bearbeitung eines Grundfelds
-In Phase 4.2 ist ein einzelnes Szenario-Grundfeld im lokalen Draft bearbeitbar gemacht: der Szenario-Name.
+## Phase 4.3 – Lokale Bearbeitung von Name und Beschreibung
+In Phase 4.3 sind zwei Szenario-Grundfelder im lokalen Draft bearbeitbar: der Szenario-Name und die Szenario-Beschreibung.
 Die Änderung bleibt bewusst innerhalb der bestehenden Draft-Grenzen und ergänzt keine neuen Architekturbausteine.
 
-Konkreter Umfang in Phase 4.2:
-- bearbeitbar ist aktuell nur der Szenario-Name
-- die Szenario-Vorschau reagiert direkt auf die Namensänderung
-- Reset stellt den Originalwert aus dem Ausgangsszenario wieder her
+Konkreter Umfang in Phase 4.3:
+- bearbeitbar sind aktuell Szenario-Name und Szenario-Beschreibung
+- die Szenario-Vorschau reagiert direkt auf beide Änderungen
+- Reset stellt Name und Beschreibung auf die Originalwerte aus dem Ausgangsszenario zurück
 - keine Speicherung auf Dateisystem oder Backend
 - kein LocalStorage
 - keine Simulation
 - keine OpenAI-Anbindung
 - keine weiteren aktiven Formularbereiche
-- keine Erweiterung der Modulstruktur
+- keine neuen Module
 
-Damit bleibt Phase 4.2 auf eine minimale, lokal begrenzte Editierfähigkeit fokussiert, ohne Persistenz-, Simulations- oder Integrationsschritte vorzuziehen.
+Damit bleibt Phase 4.3 auf eine minimale, lokal begrenzte Editierfähigkeit fokussiert, ohne Persistenz-, Simulations- oder Integrationsschritte vorzuziehen.
