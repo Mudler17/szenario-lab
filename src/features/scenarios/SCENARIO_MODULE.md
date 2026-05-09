@@ -6,7 +6,7 @@ Das Szenario-Modul bildet die fachliche Sicht auf ein einzelnes Szenario in eine
 Das Modul ist aktuell bewusst als fachliche Ausarbeitungs- und Strukturierungsstufe angelegt: Es macht Inhalte sichtbar, ohne bereits operative Logik oder Eingriffsfunktionen bereitzustellen.
 
 ## Aktuell lesend sichtbare fachliche Teilbereiche
-Der aktuelle Umfang umfasst ausschließlich lesende Teilansichten zu:
+Der aktuelle Umfang umfasst ausschließlich lesende Teilansichten, die in fachliche Abschnitte gegliedert sind, zu:
 - Summary
 - Personas
 - Ressourcen
@@ -17,7 +17,7 @@ Der aktuelle Umfang umfasst ausschließlich lesende Teilansichten zu:
 - Interventionen
 - Strategien
 
-Diese Teilbereiche dienen der fachlichen Orientierung und der transparenten Darstellung von Zusammenhängen innerhalb eines Szenarios. Evidenz wird aktuell ausschließlich lesend angezeigt, mit zugehörigen Annahmen soweit auflösbar namentlich verknüpft, und nicht bewertet.
+Diese Teilbereiche dienen der fachlichen Orientierung und der transparenten Darstellung von Zusammenhängen innerhalb eines Szenarios. Die Vorschau bleibt rein darstellend, enthält keine Bewertung und keine fachliche Entscheidungslogik. Evidenz wird aktuell ausschließlich lesend angezeigt, mit zugehörigen Annahmen soweit auflösbar namentlich verknüpft, und nicht bewertet.
 
 ## Fachliche Fragen, die das Modul künftig beantworten soll
 Das Szenario-Modul soll perspektivisch dabei helfen, unter anderem folgende Fragen klarer zu beantworten:

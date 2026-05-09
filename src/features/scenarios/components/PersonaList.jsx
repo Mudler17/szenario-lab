@@ -1,11 +1,12 @@
+import ScenarioSection from './ScenarioSection';
+
 function PersonaList({ personas }) {
   if (!Array.isArray(personas) || personas.length === 0) {
     return null;
   }
 
   return (
-    <>
-      <h3>Personas</h3>
+    <ScenarioSection title="Personas">
       <ul>
         {personas.map((persona) => (
           <li key={persona.id}>
@@ -13,7 +14,7 @@ function PersonaList({ personas }) {
           </li>
         ))}
       </ul>
-    </>
+    </ScenarioSection>
   );
 }
 

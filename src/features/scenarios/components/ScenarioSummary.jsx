@@ -1,3 +1,5 @@
+import ScenarioSection from './ScenarioSection';
+
 function ScenarioSummary({ scenario }) {
   if (!scenario) {
     return null;
@@ -26,8 +28,7 @@ function ScenarioSummary({ scenario }) {
   }
 
   return (
-    <>
-      <h3>Zusammenfassung</h3>
+    <ScenarioSection title="Zusammenfassung">
       <ul>
         <li>Personas: {personas.length}</li>
         <li>Ressourcen: {resources.length}</li>
@@ -38,7 +39,7 @@ function ScenarioSummary({ scenario }) {
         <li>Interventionen: {interventions.length}</li>
         <li>Strategien: {strategies.length}</li>
       </ul>
-    </>
+    </ScenarioSection>
   );
 }
 

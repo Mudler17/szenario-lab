@@ -1,11 +1,12 @@
+import ScenarioSection from './ScenarioSection';
+
 function StrategyList({ strategies }) {
   if (!Array.isArray(strategies) || strategies.length === 0) {
     return null;
   }
 
   return (
-    <>
-      <h3>Strategien</h3>
+    <ScenarioSection title="Strategien">
       <ul>
         {strategies.map((strategy) => (
           <li key={strategy.id}>
@@ -13,7 +14,7 @@ function StrategyList({ strategies }) {
           </li>
         ))}
       </ul>
-    </>
+    </ScenarioSection>
   );
 }
 

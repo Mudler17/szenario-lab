@@ -1,11 +1,12 @@
+import ScenarioSection from './ScenarioSection';
+
 function InterventionList({ interventions }) {
   if (!Array.isArray(interventions) || interventions.length === 0) {
     return null;
   }
 
   return (
-    <>
-      <h3>Interventionen</h3>
+    <ScenarioSection title="Interventionen">
       <ul>
         {interventions.map((intervention) => (
           <li key={intervention.id}>
@@ -13,7 +14,7 @@ function InterventionList({ interventions }) {
           </li>
         ))}
       </ul>
-    </>
+    </ScenarioSection>
   );
 }
 

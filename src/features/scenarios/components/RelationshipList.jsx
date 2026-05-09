@@ -1,3 +1,5 @@
+import ScenarioSection from './ScenarioSection';
+
 function RelationshipList({ relationships, personas }) {
   if (!Array.isArray(relationships) || relationships.length === 0) {
     return null;
@@ -10,8 +12,7 @@ function RelationshipList({ relationships, personas }) {
   const displayPersona = (personaId) => personaNameById.get(personaId) ?? personaId;
 
   return (
-    <>
-      <h3>Beziehungen</h3>
+    <ScenarioSection title="Beziehungen">
       <ul>
         {relationships.map((relationship) => (
           <li key={relationship.id}>
@@ -22,7 +23,7 @@ function RelationshipList({ relationships, personas }) {
           </li>
         ))}
       </ul>
-    </>
+    </ScenarioSection>
   );
 }
 

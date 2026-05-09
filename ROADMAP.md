@@ -26,4 +26,5 @@
 - [x] Szenario-Modul fachlich dokumentieren
 - [x] Evidenz als lesenden Teilbereich vorbereiten
 - [x] Evidenz-Annahmen in lesender Vorschau namentlich auflösen
+- [x] Lesende Szenario-Vorschau in fachliche Abschnitte gliedern
 - [ ] Szenario-Modul fachlich ausarbeiten

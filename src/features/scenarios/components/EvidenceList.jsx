@@ -1,3 +1,5 @@
+import ScenarioSection from './ScenarioSection';
+
 function EvidenceList({ evidence, assumptions }) {
   if (!Array.isArray(evidence) || evidence.length === 0) {
     return null;
@@ -8,8 +10,7 @@ function EvidenceList({ evidence, assumptions }) {
   );
 
   return (
-    <>
-      <h3>Evidenz</h3>
+    <ScenarioSection title="Evidenz">
       <ul>
         {evidence.map((item) => {
           const relatedAssumptionName =
@@ -24,7 +25,7 @@ function EvidenceList({ evidence, assumptions }) {
           );
         })}
       </ul>
-    </>
+    </ScenarioSection>
   );
 }
 

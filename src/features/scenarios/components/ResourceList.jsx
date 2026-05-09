@@ -1,11 +1,12 @@
+import ScenarioSection from './ScenarioSection';
+
 function ResourceList({ resources }) {
   if (!Array.isArray(resources) || resources.length === 0) {
     return null;
   }
 
   return (
-    <>
-      <h3>Ressourcen</h3>
+    <ScenarioSection title="Ressourcen">
       <ul>
         {resources.map((resource) => (
           <li key={resource.id}>
@@ -13,7 +14,7 @@ function ResourceList({ resources }) {
           </li>
         ))}
       </ul>
-    </>
+    </ScenarioSection>
   );
 }
 
