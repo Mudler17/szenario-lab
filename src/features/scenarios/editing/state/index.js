@@ -1,0 +1,1 @@
+export { createDraftFromScenario } from './createDraftFromScenario';

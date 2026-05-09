@@ -37,5 +37,6 @@
 - [x] Editing-Code-Skeleton vorbereiten
 - [x] Editing-Code-Skeleton prüfen
 - [x] Lokalen Draft-State konzeptionell vorbereiten
+- [x] Erste Draft-State-Utility vorbereiten
 - [ ] Noch keine Speicherung
 - [ ] Noch keine Simulation

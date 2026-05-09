@@ -72,3 +72,8 @@ Konzeptioneller Selektionszustand, welcher Bearbeitungsabschnitt gerade im Fokus
 - Sollen mehrere Entitäten gleichzeitig bearbeitbar sein?
 - Wie sichtbar soll Dirty State später werden?
 - Wann werden Validierungsfehler angezeigt?
+
+## Umsetzungsstand (erste Utility)
+- `createDraftFromScenario` wurde als erste reine Utility-Funktion umgesetzt.
+- Sie erzeugt nur eine lokale Arbeitskopie aus einem Scenario.
+- Es gibt weiterhin keinen React-State, keine UI-Einbindung und keine Speicherung.
