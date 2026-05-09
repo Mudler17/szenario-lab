@@ -24,4 +24,5 @@
 - [x] Beziehungspersonen in lesender Vorschau namentlich auflösen
 - [x] Ressourcen in lesender Vorschau sichtbar machen
 - [x] Szenario-Modul fachlich dokumentieren
+- [x] Evidenz als lesenden Teilbereich vorbereiten
 - [ ] Szenario-Modul fachlich ausarbeiten

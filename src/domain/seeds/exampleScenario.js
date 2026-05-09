@@ -90,6 +90,32 @@ export const exampleScenario = {
       uncertainty: 'mittel'
     }
   ],
+  evidence: [
+    {
+      id: 'evidence-1',
+      source: 'Pilot-Retrospektive KW 12',
+      evidenceType: 'Team-Feedback',
+      confidence: 'mittel',
+      relatedAssumptionId: 'assumption-1',
+      note: 'Mehrere Teammitglieder berichten über schnellere Einarbeitung in neue Arbeitsschritte.'
+    },
+    {
+      id: 'evidence-2',
+      source: 'Datenschutz-Checkliste v1.2',
+      evidenceType: 'Compliance-Dokument',
+      confidence: 'hoch',
+      relatedAssumptionId: 'assumption-2',
+      note: 'Für den ausgewählten Use Case sind zusätzliche Freigabeschritte und Protokollpflichten benannt.'
+    },
+    {
+      id: 'evidence-3',
+      source: 'Qualitätsprotokoll Pilotwoche 4',
+      evidenceType: 'Messprotokoll',
+      confidence: 'mittel',
+      relatedAssumptionId: 'assumption-3',
+      note: 'Erste Stichproben zeigen weniger Nachkorrekturen bei standardisierten Serviceantworten.'
+    }
+  ],
   relationships: [
     {
       id: 'relationship-1',
