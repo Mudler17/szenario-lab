@@ -63,7 +63,6 @@ body {
   color: #64748b;
 }
 
-
 .scenario-preview {
   margin-top: 1.5rem;
   background: #ffffff;
@@ -77,12 +76,23 @@ body {
   font-size: 1.2rem;
 }
 
+.scenario-preview h3 {
+  margin: 1rem 0 0.35rem;
+  font-size: 1rem;
+}
+
 .scenario-preview p {
   margin: 0.5rem 0 0;
   color: #475569;
+  line-height: 1.45;
 }
 
 .scenario-preview ul {
-  margin: 0.75rem 0 0;
+  margin: 0.4rem 0 0;
   padding-left: 1.2rem;
+}
+
+.scenario-preview li {
+  margin-top: 0.35rem;
+  line-height: 1.4;
 }
