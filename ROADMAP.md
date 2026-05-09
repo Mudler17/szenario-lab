@@ -25,4 +25,5 @@
 - [x] Ressourcen in lesender Vorschau sichtbar machen
 - [x] Szenario-Modul fachlich dokumentieren
 - [x] Evidenz als lesenden Teilbereich vorbereiten
+- [x] Evidenz-Annahmen in lesender Vorschau namentlich auflösen
 - [ ] Szenario-Modul fachlich ausarbeiten
