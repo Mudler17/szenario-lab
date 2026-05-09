@@ -75,5 +75,7 @@ Wichtig: Diese Formularstruktur ist aktuell **nur geplant** und noch nicht imple
 Zusätzlich wurde ein minimales Editing-Code-Skeleton unter `src/features/scenarios/editing/` angelegt.
 Das dokumentarische Review dieses Skeletons ist in `docs/EDITING_SKELETON_REVIEW.md` festgehalten.
 Dieses Skeleton enthält derzeit ausdrücklich keine Formularlogik und keinen lokalen State.
+Die konzeptionelle Schärfung eines späteren lokalen Draft-State ist in `docs/DRAFT_STATE_CONCEPT.md` dokumentiert.
+Der Draft-State ist damit aktuell nur konzeptionell vorbereitet und ausdrücklich noch nicht implementiert.
 Dabei gilt ausdrücklich: Dieses editierbare Modell ist zunächst eine lokale Arbeitskopie und kein Persistenzmodell.
 Bearbeitung wird zunächst als getrennte Schicht bzw. Komponentenfamilie vorbereitet und nicht in bestehende read-only-Komponenten eingebaut.
