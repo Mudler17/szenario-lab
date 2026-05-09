@@ -25,12 +25,25 @@ function HomePage() {
     });
   };
 
+  const handleScenarioDescriptionChange = (nextDescription) => {
+    setScenarioDraft((currentDraft) => {
+      if (!currentDraft) {
+        return currentDraft;
+      }
+
+      return {
+        ...currentDraft,
+        description: nextDescription,
+      };
+    });
+  };
+
   return (
     <main className="page">
       <section className="hero">
         <h1>szenario-lab</h1>
         <p className="subtitle">Organisationsszenarien strukturiert modellieren</p>
-        <p className="phase-note">Phase 4.2 · Lokaler Szenario-Entwurf (nur im Arbeitsspeicher)</p>
+        <p className="phase-note">Phase 4.3 · Lokaler Szenario-Entwurf (nur im Arbeitsspeicher)</p>
       </section>
 
       <section className="placeholder-grid" aria-label="Module in Vorbereitung">
@@ -52,7 +65,11 @@ function HomePage() {
         <p>
           Aktiver Modus: <strong>Lokaler Draft</strong> (nicht gespeichert)
         </p>
-        <ScenarioDraftForm scenario={scenarioDraft} onNameChange={handleScenarioNameChange} />
+        <ScenarioDraftForm
+          scenario={scenarioDraft}
+          onNameChange={handleScenarioNameChange}
+          onDescriptionChange={handleScenarioDescriptionChange}
+        />
         <button type="button" onClick={handleResetDraft}>
           Draft auf Original zurücksetzen
         </button>
