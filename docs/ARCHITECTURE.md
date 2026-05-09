@@ -206,3 +206,19 @@ Konkreter Umfang in Phase 4.8.1:
 - keine OpenAI-Anbindung
 - keine neuen Module
 
+## Phase 5.1 – Minimales Testfundament für Draft-State-Utilities
+In Phase 5.1 wurde ein bewusst schlankes Testfundament für den bestehenden lokalen Draft-State dokumentiert.
+Als Testlaufzeit wird der native Node-Test-Runner genutzt; `npm test` führt `node --test` aus.
+
+Konkreter Umfang in Phase 5.1:
+- getestet werden ausschließlich die Draft-State-Utilities `createDraftFromScenario`, `resetDraft`, `updateScenarioDraftField` und `validateScenarioDraftBasics`
+- keine React-Komponententests
+- keine UI-Änderung
+- keine neuen Features
+- keine neuen Felder
+- keine Speicherung auf Dateisystem oder Backend
+- kein LocalStorage
+- keine Simulation
+- keine OpenAI-Anbindung
+- keine neuen Fachmodule
+
