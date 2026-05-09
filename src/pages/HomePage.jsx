@@ -1,7 +1,11 @@
 import { useMemo, useState } from 'react';
 import { exampleScenario } from '../domain';
 import { ScenarioDraftForm } from '../features/scenarios/editing';
-import { createDraftFromScenario, resetDraft } from '../features/scenarios/editing/state';
+import {
+  createDraftFromScenario,
+  resetDraft,
+  updateScenarioDraftField,
+} from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 
 function HomePage() {
@@ -12,43 +16,20 @@ function HomePage() {
     setScenarioDraft(resetDraft(originalScenario));
   };
 
-  const handleScenarioNameChange = (nextName) => {
-    setScenarioDraft((currentDraft) => {
-      if (!currentDraft) {
-        return currentDraft;
-      }
+  const updateDraftField = (fieldName, value) => {
+    setScenarioDraft((currentDraft) => updateScenarioDraftField(currentDraft, fieldName, value));
+  };
 
-      return {
-        ...currentDraft,
-        name: nextName,
-      };
-    });
+  const handleScenarioNameChange = (nextName) => {
+    updateDraftField('name', nextName);
   };
 
   const handleScenarioDescriptionChange = (nextDescription) => {
-    setScenarioDraft((currentDraft) => {
-      if (!currentDraft) {
-        return currentDraft;
-      }
-
-      return {
-        ...currentDraft,
-        description: nextDescription,
-      };
-    });
+    updateDraftField('description', nextDescription);
   };
 
   const handleScenarioGoalChange = (nextGoal) => {
-    setScenarioDraft((currentDraft) => {
-      if (!currentDraft) {
-        return currentDraft;
-      }
-
-      return {
-        ...currentDraft,
-        goal: nextGoal,
-      };
-    });
+    updateDraftField('goal', nextGoal);
   };
 
   return (
