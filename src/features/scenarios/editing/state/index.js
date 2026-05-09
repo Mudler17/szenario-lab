@@ -1,4 +1,5 @@
 export { createDraftFromScenario } from './createDraftFromScenario';
 export { resetDraft } from './resetDraft';
 
-export { updateScenarioDraftField, validateScenarioDraftBasics } from './updateScenarioDraftField';
+export { updateScenarioDraftField } from './updateScenarioDraftField';
+export { validateScenarioDraftBasics } from './validateScenarioDraftBasics';
