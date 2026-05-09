@@ -22,4 +22,5 @@
 - [x] Szenario-Detailvorschau in lesende Teilkomponenten zerlegen
 - [x] Beziehungen und Interventionen in lesender Vorschau sichtbar machen
 - [x] Beziehungspersonen in lesender Vorschau namentlich auflösen
+- [x] Ressourcen in lesender Vorschau sichtbar machen
 - [ ] Szenario-Modul fachlich ausarbeiten
