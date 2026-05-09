@@ -37,7 +37,7 @@ function HomePage() {
       <section className="hero">
         <h1>szenario-lab</h1>
         <p className="subtitle">Organisationsszenarien strukturiert modellieren</p>
-        <p className="phase-note">Phase 4.4 · Lokaler Szenario-Entwurf (nur im Arbeitsspeicher)</p>
+        <p className="phase-note">Phase 4.6 · Draft-Update-Logik entlastet (nur im Arbeitsspeicher)</p>
       </section>
 
       <section className="placeholder-grid" aria-label="Module in Vorbereitung">
