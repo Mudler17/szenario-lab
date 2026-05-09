@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { exampleScenario } from '../domain';
+import { ScenarioDraftForm } from '../features/scenarios/editing';
 import { createDraftFromScenario, resetDraft } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 
@@ -11,12 +12,25 @@ function HomePage() {
     setScenarioDraft(resetDraft(originalScenario));
   };
 
+  const handleScenarioNameChange = (nextName) => {
+    setScenarioDraft((currentDraft) => {
+      if (!currentDraft) {
+        return currentDraft;
+      }
+
+      return {
+        ...currentDraft,
+        name: nextName,
+      };
+    });
+  };
+
   return (
     <main className="page">
       <section className="hero">
         <h1>szenario-lab</h1>
         <p className="subtitle">Organisationsszenarien strukturiert modellieren</p>
-        <p className="phase-note">Phase 4.1 · Lokaler Szenario-Entwurf (nur im Arbeitsspeicher)</p>
+        <p className="phase-note">Phase 4.2 · Lokaler Szenario-Entwurf (nur im Arbeitsspeicher)</p>
       </section>
 
       <section className="placeholder-grid" aria-label="Module in Vorbereitung">
@@ -38,6 +52,7 @@ function HomePage() {
         <p>
           Aktiver Modus: <strong>Lokaler Draft</strong> (nicht gespeichert)
         </p>
+        <ScenarioDraftForm scenario={scenarioDraft} onNameChange={handleScenarioNameChange} />
         <button type="button" onClick={handleResetDraft}>
           Draft auf Original zurücksetzen
         </button>
