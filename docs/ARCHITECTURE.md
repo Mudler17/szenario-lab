@@ -79,4 +79,5 @@ Die konzeptionelle Schärfung eines späteren lokalen Draft-State ist in `docs/D
 Der Draft-State ist damit aktuell nur konzeptionell vorbereitet und ausdrücklich noch nicht als State-Verwaltung implementiert.
 Als erste reine Utility-Funktion ist `createDraftFromScenario` vorhanden, um eine lokale Arbeitskopie zu erzeugen.
 Dabei gilt ausdrücklich: keine UI-Einbindung, keine State-Verwaltung und kein Persistenzmodell.
+Das dokumentarische Review dieser Utility ist in `docs/DRAFT_UTILITY_REVIEW.md` festgehalten.
 Bearbeitung wird zunächst als getrennte Schicht bzw. Komponentenfamilie vorbereitet und nicht in bestehende read-only-Komponenten eingebaut.
