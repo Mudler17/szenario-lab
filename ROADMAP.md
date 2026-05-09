@@ -34,5 +34,6 @@
 - [x] Bearbeitungsgrenzen fachlich dokumentieren
 - [x] Editierbares Datenmodell konzeptionell vorbereiten
 - [x] Erste Formularstruktur planen
+- [x] Editing-Code-Skeleton vorbereiten
 - [ ] Noch keine Speicherung
 - [ ] Noch keine Simulation
