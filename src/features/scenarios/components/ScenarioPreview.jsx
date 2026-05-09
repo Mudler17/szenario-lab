@@ -1,25 +1,27 @@
-import { exampleScenario } from '../domain';
+function ScenarioPreview({ scenario }) {
+  if (!scenario) {
+    return null;
+  }
 
-function ScenarioPreview() {
   return (
     <section className="scenario-preview" aria-label="Beispielszenario Vorschau">
-      <h2>{exampleScenario.name}</h2>
-      <p>{exampleScenario.description}</p>
+      <h2>{scenario.name}</h2>
+      <p>{scenario.description}</p>
 
       <h3>Zusammenfassung</h3>
       <ul>
-        <li>Personas: {exampleScenario.personas.length}</li>
-        <li>Ressourcen: {exampleScenario.resources.length}</li>
-        <li>Phasen: {exampleScenario.phases.length}</li>
-        <li>Annahmen: {exampleScenario.assumptions.length}</li>
-        <li>Beziehungen: {exampleScenario.relationships.length}</li>
-        <li>Interventionen: {exampleScenario.interventions.length}</li>
-        <li>Strategien: {exampleScenario.strategies.length}</li>
+        <li>Personas: {scenario.personas.length}</li>
+        <li>Ressourcen: {scenario.resources.length}</li>
+        <li>Phasen: {scenario.phases.length}</li>
+        <li>Annahmen: {scenario.assumptions.length}</li>
+        <li>Beziehungen: {scenario.relationships.length}</li>
+        <li>Interventionen: {scenario.interventions.length}</li>
+        <li>Strategien: {scenario.strategies.length}</li>
       </ul>
 
       <h3>Personas</h3>
       <ul>
-        {exampleScenario.personas.map((persona) => (
+        {scenario.personas.map((persona) => (
           <li key={persona.id}>
             <strong>{persona.name}</strong> ({persona.role}) – {persona.perspective}
           </li>
@@ -28,7 +30,7 @@ function ScenarioPreview() {
 
       <h3>Phasen</h3>
       <ul>
-        {exampleScenario.phases.map((phase) => (
+        {scenario.phases.map((phase) => (
           <li key={phase.id}>
             {phase.order}. <strong>{phase.name}</strong>: {phase.goal}
           </li>
@@ -37,7 +39,7 @@ function ScenarioPreview() {
 
       <h3>Annahmen</h3>
       <ul>
-        {exampleScenario.assumptions.map((assumption) => (
+        {scenario.assumptions.map((assumption) => (
           <li key={assumption.id}>
             {assumption.name} (Unsicherheit: {assumption.uncertainty})
           </li>
@@ -46,7 +48,7 @@ function ScenarioPreview() {
 
       <h3>Strategien</h3>
       <ul>
-        {exampleScenario.strategies.map((strategy) => (
+        {scenario.strategies.map((strategy) => (
           <li key={strategy.id}>
             <strong>{strategy.name}</strong>: {strategy.guidingLogic}
           </li>
