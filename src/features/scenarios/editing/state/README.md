@@ -2,9 +2,11 @@
 
 ## Zweck
 Dieser Ordner ist für einen späteren lokalen Editing-State als Arbeitskopie vorgesehen.
+Die konzeptionelle Grundlage dafür ist in `docs/DRAFT_STATE_CONCEPT.md` dokumentiert.
 
 ## Aktueller Stand
 - Aktuell gibt es keine State-Implementierung.
+- Es gibt keinen produktiven Draft-State-Code.
 - Es gibt keine Speicherung.
 - Es gibt keine Persistenz.
 - Es gibt keine Simulation.

@@ -36,5 +36,6 @@
 - [x] Erste Formularstruktur planen
 - [x] Editing-Code-Skeleton vorbereiten
 - [x] Editing-Code-Skeleton prüfen
+- [x] Lokalen Draft-State konzeptionell vorbereiten
 - [ ] Noch keine Speicherung
 - [ ] Noch keine Simulation
