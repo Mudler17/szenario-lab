@@ -48,7 +48,7 @@ function HomePage() {
       <section className="hero">
         <h1>szenario-lab</h1>
         <p className="subtitle">Organisationsszenarien strukturiert modellieren</p>
-        <p className="phase-note">Phase 4.7 · Einfache Feldvalidierung im lokalen Szenario-Draft</p>
+        <p className="phase-note">Phase 4.8 · Bearbeitungsbereich und Vorschau visuell klarer getrennt</p>
       </section>
 
       <section className="placeholder-grid" aria-label="Module in Vorbereitung">
@@ -66,23 +66,30 @@ function HomePage() {
         </article>
       </section>
 
-      <section aria-label="Lokaler Szenario-Entwurf">
-        <p>
+      <section className="workspace-grid" aria-label="Lokaler Szenario-Entwurf und Vorschau">
+        <section className="workspace-panel editor-panel" aria-label="Bearbeitung">
+          <h2>Bearbeitung</h2>
+          <p className="workspace-hint">
           Aktiver Modus: <strong>Lokaler Draft</strong> (nicht gespeichert)
-        </p>
-        <ScenarioDraftForm
-          scenario={scenarioDraft}
-          validation={scenarioValidation}
-          onNameChange={handleScenarioNameChange}
-          onDescriptionChange={handleScenarioDescriptionChange}
-          onGoalChange={handleScenarioGoalChange}
-        />
-        <button type="button" onClick={handleResetDraft}>
-          Draft auf Original zurücksetzen
-        </button>
-      </section>
+          </p>
+          <ScenarioDraftForm
+            scenario={scenarioDraft}
+            validation={scenarioValidation}
+            onNameChange={handleScenarioNameChange}
+            onDescriptionChange={handleScenarioDescriptionChange}
+            onGoalChange={handleScenarioGoalChange}
+          />
+          <button type="button" onClick={handleResetDraft}>
+            Draft auf Original zurücksetzen
+          </button>
+        </section>
 
-      <ScenarioPreview scenario={scenarioDraft} />
+        <section className="workspace-panel preview-panel" aria-label="Vorschau">
+          <h2>Vorschau</h2>
+          <p className="workspace-hint">Die Vorschau aktualisiert sich direkt aus dem lokalen Draft.</p>
+          <ScenarioPreview scenario={scenarioDraft} />
+        </section>
+      </section>
     </main>
   );
 }

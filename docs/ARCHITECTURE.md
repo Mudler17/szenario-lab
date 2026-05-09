@@ -171,3 +171,20 @@ Konkreter Umfang in Phase 4.7.1:
 - kein LocalStorage
 - keine Simulation
 - keine OpenAI-Anbindung
+
+
+## Phase 4.8 – Bearbeitungsbereich und Vorschau visuell getrennt
+In Phase 4.8 wurde die Home-Ansicht strukturell klarer in zwei semantische Bereiche gegliedert: **Bearbeitung** und **Vorschau**.
+Die Änderung betrifft nur die visuelle und semantische Trennung in der UI-Komposition; die bestehende Draft-Logik für Name, Beschreibung und Ziel bleibt unverändert.
+
+Konkreter Umfang in Phase 4.8:
+- semantische Trennung in Bearbeitungs- und Vorschau-Section
+- klare Überschriften und kurze Hinweise je Bereich
+- visuelle Unterscheidung über bestehende/einfache CSS-Klassen
+- keine neuen Felder
+- keine Speicherung auf Dateisystem oder Backend
+- kein LocalStorage
+- keine Simulation
+- keine OpenAI-Anbindung
+- keine weiteren aktiven Formularbereiche
+- keine neuen Module
