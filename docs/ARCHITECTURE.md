@@ -68,3 +68,5 @@ Das Projekt enthält nun ein initiales Code-Skeleton für die vorgesehenen Modul
 Das erste Feature-Modul wurde als rein lesende Szenario-Ansicht abgeschlossen. Damit ist die fachliche Darstellung eines statischen Beispielszenarios in gegliederten Teilbereichen umgesetzt, ohne Bearbeitung oder operative Fachlogik.
 
 Für Phase 4 wird zuerst die fachliche Bearbeitungsgrenze dokumentiert. Auf dieser Grundlage werden danach Formularstrukturen geplant, bevor konkrete Bearbeitungsoberflächen umgesetzt werden.
+Die dokumentierten Bearbeitungsgrenzen sind in `docs/EDITING_BOUNDARIES.md` festgehalten.
+Bearbeitung wird zunächst als getrennte Schicht bzw. Komponentenfamilie vorbereitet und nicht in bestehende read-only-Komponenten eingebaut.
