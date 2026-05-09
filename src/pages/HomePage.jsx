@@ -1,4 +1,5 @@
-import ScenarioPreview from '../components/ScenarioPreview';
+import { exampleScenario } from '../domain';
+import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 
 function HomePage() {
   return (
@@ -24,7 +25,7 @@ function HomePage() {
         </article>
       </section>
 
-      <ScenarioPreview />
+      <ScenarioPreview scenario={exampleScenario} />
     </main>
   );
 }

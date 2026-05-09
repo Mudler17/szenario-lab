@@ -18,4 +18,5 @@
 ## Phase 3 – Erste Fachmodule
 - [x] Erstes statisches Beispielszenario anlegen
 - [x] Erste lesende Szenario-Detailvorschau erstellen
-- [ ] Erstes Szenario-Modul fachlich ausarbeiten
+- [x] Szenario-Vorschau in Feature-Modul überführen
+- [ ] Szenario-Modul fachlich ausarbeiten
