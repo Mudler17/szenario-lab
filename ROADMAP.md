@@ -19,4 +19,5 @@
 - [x] Erstes statisches Beispielszenario anlegen
 - [x] Erste lesende Szenario-Detailvorschau erstellen
 - [x] Szenario-Vorschau in Feature-Modul überführen
+- [x] Szenario-Detailvorschau in lesende Teilkomponenten zerlegen
 - [ ] Szenario-Modul fachlich ausarbeiten
