@@ -11,7 +11,8 @@
 ## Phase 2 – Architektur und Domänenmodell
 - [x] Architekturentscheidungen dokumentieren
 - [x] Domänenmodell ausarbeiten
-- [~] Modulgrenzen definieren (vorläufig definiert)
+- [x] Modulgrenzen vorläufig definieren
+- [ ] Modulgrenzen nach erstem Fachmodul überprüfen
 
 ## Phase 3 – Erste Fachmodule
 - [ ] Erste Fachmodule gemäß Modellentscheidung umsetzen

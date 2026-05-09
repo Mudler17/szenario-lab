@@ -124,3 +124,90 @@ Es enthält bewusst **keine** TypeScript-Typen und **keinen** Implementierungsco
 - Ein Report bezieht sich auf genau ein Scenario (oder eine konkrete Scenario-Version).
 - Ein Report referenziert relevante Assumptions und Interventions.
 - Ein Scenario kann mehrere Reports über verschiedene Zeitpunkte/Stände besitzen.
+
+
+## 8) Relationship
+
+**Zweck**
+- Modelliert Beziehungen zwischen Personas, um soziale Dynamiken und Abhängigkeiten explizit im Scenario abzubilden.
+
+**Wichtigste Felder (Konzept)**
+- beteiligte Personas
+- Beziehungstyp
+- Stärke
+- Vertrauen
+- Spannung
+- Einfluss
+- Notiz
+
+**Beziehungen**
+- Eine Relationship gehört zu einem Scenario.
+- Eine Relationship verbindet zwei Personas.
+- Eine Relationship kann Simulationsergebnisse und Report-Bewertungen beeinflussen.
+
+## 9) Strategy
+
+**Zweck**
+- Erlaubt den Vergleich mehrerer Vorgehensweisen oder Handlungsoptionen innerhalb eines Scenarios.
+
+**Wichtigste Felder (Konzept)**
+- Name
+- Ziel
+- Leitlogik
+- erwarteter Nutzen
+- Risiken
+- betroffene Interventionen
+
+**Beziehungen**
+- Eine Strategy gehört zu einem Scenario.
+- Eine Strategy kann mehrere Interventions bündeln.
+- Eine Strategy kann in Reports bewertet und gegenübergestellt werden.
+
+## 10) Comparison
+
+**Zweck**
+- Stellt Varianten eines Scenarios oder unterschiedliche Strategien strukturiert gegenüber.
+
+**Wichtigste Felder (Konzept)**
+- Vergleichsgegenstand
+- Kriterien
+- Bewertung
+- Zielkonflikte
+- offene Annahmen
+
+**Beziehungen**
+- Eine Comparison bezieht sich auf Scenarios und/oder Strategies.
+- Eine Comparison referenziert relevante Assumptions.
+- Ergebnisse einer Comparison können in Reports einfließen.
+
+## 11) Evidence
+
+**Zweck**
+- Macht Quellenlage und Begründungsqualität von Annahmen transparent.
+
+**Wichtigste Felder (Konzept)**
+- Quelle
+- Evidenztyp
+- Vertrauensgrad
+- Bezug zur Annahme
+- Notiz
+
+**Beziehungen**
+- Evidence stützt oder schwächt Assumptions.
+- Evidence kann zur Nachvollziehbarkeit in Reports referenziert werden.
+
+## 12) ScenarioVersion
+
+**Zweck**
+- Macht unterschiedliche Bearbeitungsstände eines Scenarios nachvollziehbar und vergleichbar.
+
+**Wichtigste Felder (Konzept)**
+- Versionsname
+- Zeitpunkt
+- Änderungsnotiz
+- Bezug zum Scenario
+
+**Beziehungen**
+- Ein Scenario kann mehrere ScenarioVersions besitzen.
+- Reports beziehen sich auf konkrete ScenarioVersions.
+- ScenarioVersions können Grundlage für Comparisons sein.

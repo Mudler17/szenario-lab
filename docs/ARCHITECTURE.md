@@ -17,6 +17,7 @@ Die UI ist für Interaktion, Visualisierung und State-Orchestrierung verantwortl
 
 ### Domänenmodell
 Das Domänenmodell bildet die fachlichen Objekte und Beziehungen ab. Es dient als gemeinsame Sprache zwischen UI, späterer Simulation und späterem Reporting.
+In der aktuellen Phase wird dieses Modell zunächst dokumentiert und fachlich geschärft; ein Code-Skeleton im Projekt folgt erst im nächsten Schritt.
 
 ### Simulation (zukünftig)
 Simulation wird als eigenständiges Modul geplant, damit Berechnungsregeln austauschbar und testbar bleiben, ohne UI-Komponenten ändern zu müssen.
