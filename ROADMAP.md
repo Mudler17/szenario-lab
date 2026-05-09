@@ -20,4 +20,5 @@
 - [x] Erste lesende Szenario-Detailvorschau erstellen
 - [x] Szenario-Vorschau in Feature-Modul überführen
 - [x] Szenario-Detailvorschau in lesende Teilkomponenten zerlegen
+- [x] Beziehungen und Interventionen in lesender Vorschau sichtbar machen
 - [ ] Szenario-Modul fachlich ausarbeiten
