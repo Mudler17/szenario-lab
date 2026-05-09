@@ -13,7 +13,7 @@
 - [x] Domänenmodell ausarbeiten
 - [x] Modulgrenzen vorläufig definieren
 - [x] Code-Skeleton für Domänenmodell anlegen
-- [ ] Modulgrenzen nach erstem Fachmodul überprüfen
+- [x] Modulgrenzen nach erstem Fachmodul überprüfen
 
 ## Phase 3 – Erste Fachmodule
 - [x] Erstes statisches Beispielszenario anlegen

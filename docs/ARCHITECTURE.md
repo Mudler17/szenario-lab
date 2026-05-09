@@ -57,6 +57,8 @@ Die folgende Struktur ist eine Vorbereitung für spätere Phasen, ohne bereits F
 
 Diese Struktur bleibt bewusst vorläufig und wird in Phase 3 anhand der ersten Fachmodule konkretisiert.
 
+Ein ergänzendes Boundary-Review nach Abschluss des ersten lesenden Fachmoduls ist in `docs/MODULE_BOUNDARY_REVIEW.md` dokumentiert.
+
 
 ## Aktueller Umsetzungsstand
 Das Projekt enthält nun ein initiales Code-Skeleton für die vorgesehenen Module (`domain`, `simulation`, `report`, `infrastructure`). Es dient ausschließlich der Strukturvorbereitung; fachliche Umsetzung ist darin noch nicht enthalten.
