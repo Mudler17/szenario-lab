@@ -81,6 +81,17 @@ body {
   font-size: 1rem;
 }
 
+.scenario-section {
+  margin-top: 0.9rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 0.75rem;
+}
+
+.scenario-section h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
 .scenario-preview p {
   margin: 0.5rem 0 0;
   color: #475569;

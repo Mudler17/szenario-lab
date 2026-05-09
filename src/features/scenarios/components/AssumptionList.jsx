@@ -1,11 +1,12 @@
+import ScenarioSection from './ScenarioSection';
+
 function AssumptionList({ assumptions }) {
   if (!Array.isArray(assumptions) || assumptions.length === 0) {
     return null;
   }
 
   return (
-    <>
-      <h3>Annahmen</h3>
+    <ScenarioSection title="Annahmen">
       <ul>
         {assumptions.map((assumption) => (
           <li key={assumption.id}>
@@ -13,7 +14,7 @@ function AssumptionList({ assumptions }) {
           </li>
         ))}
       </ul>
-    </>
+    </ScenarioSection>
   );
 }
 

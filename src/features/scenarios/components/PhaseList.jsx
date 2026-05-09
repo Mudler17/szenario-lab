@@ -1,11 +1,12 @@
+import ScenarioSection from './ScenarioSection';
+
 function PhaseList({ phases }) {
   if (!Array.isArray(phases) || phases.length === 0) {
     return null;
   }
 
   return (
-    <>
-      <h3>Phasen</h3>
+    <ScenarioSection title="Phasen">
       <ul>
         {phases.map((phase) => (
           <li key={phase.id}>
@@ -13,7 +14,7 @@ function PhaseList({ phases }) {
           </li>
         ))}
       </ul>
-    </>
+    </ScenarioSection>
   );
 }
 
