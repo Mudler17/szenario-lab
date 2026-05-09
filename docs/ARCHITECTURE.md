@@ -60,3 +60,9 @@ Diese Struktur bleibt bewusst vorläufig und wird in Phase 3 anhand der ersten F
 
 ## Aktueller Umsetzungsstand
 Das Projekt enthält nun ein initiales Code-Skeleton für die vorgesehenen Module (`domain`, `simulation`, `report`, `infrastructure`). Es dient ausschließlich der Strukturvorbereitung; fachliche Umsetzung ist darin noch nicht enthalten.
+
+
+## Fortschritt Phase 3 und Ausblick Phase 4
+Das erste Feature-Modul wurde als rein lesende Szenario-Ansicht abgeschlossen. Damit ist die fachliche Darstellung eines statischen Beispielszenarios in gegliederten Teilbereichen umgesetzt, ohne Bearbeitung oder operative Fachlogik.
+
+Für Phase 4 wird zuerst die fachliche Bearbeitungsgrenze dokumentiert. Auf dieser Grundlage werden danach Formularstrukturen geplant, bevor konkrete Bearbeitungsoberflächen umgesetzt werden.
