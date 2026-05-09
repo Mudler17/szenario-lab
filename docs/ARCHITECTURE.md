@@ -70,5 +70,7 @@ Das erste Feature-Modul wurde als rein lesende Szenario-Ansicht abgeschlossen. D
 Für Phase 4 wird zuerst die fachliche Bearbeitungsgrenze dokumentiert. Auf dieser Grundlage werden danach Formularstrukturen geplant, bevor konkrete Bearbeitungsoberflächen umgesetzt werden.
 Die dokumentierten Bearbeitungsgrenzen sind in `docs/EDITING_BOUNDARIES.md` festgehalten.
 Die konzeptionelle Vorbereitung des editierbaren Arbeitskopie-Modells ist in `docs/EDITABLE_DATA_MODEL.md` dokumentiert.
+Die konzeptionelle Planung der späteren Formularstruktur ist in `docs/FORM_STRUCTURE_PLAN.md` dokumentiert.
+Wichtig: Diese Formularstruktur ist aktuell **nur geplant** und noch nicht implementiert.
 Dabei gilt ausdrücklich: Dieses editierbare Modell ist zunächst eine lokale Arbeitskopie und kein Persistenzmodell.
 Bearbeitung wird zunächst als getrennte Schicht bzw. Komponentenfamilie vorbereitet und nicht in bestehende read-only-Komponenten eingebaut.

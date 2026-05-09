@@ -33,6 +33,6 @@
 ## Phase 4 – Szenario-Bearbeitung vorbereiten
 - [x] Bearbeitungsgrenzen fachlich dokumentieren
 - [x] Editierbares Datenmodell konzeptionell vorbereiten
-- [ ] Erste Formularstruktur planen
+- [x] Erste Formularstruktur planen
 - [ ] Noch keine Speicherung
 - [ ] Noch keine Simulation
