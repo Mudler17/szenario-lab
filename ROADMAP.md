@@ -35,5 +35,6 @@
 - [x] Editierbares Datenmodell konzeptionell vorbereiten
 - [x] Erste Formularstruktur planen
 - [x] Editing-Code-Skeleton vorbereiten
+- [x] Editing-Code-Skeleton prüfen
 - [ ] Noch keine Speicherung
 - [ ] Noch keine Simulation
