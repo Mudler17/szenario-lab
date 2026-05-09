@@ -49,6 +49,7 @@
 - [x] Phase 4.6 dokumentiert: Draft-Update-Logik aus HomePage für Name/Beschreibung/Ziel in Utility ausgelagert
 - [x] Phase 4.6 Review dokumentiert: Draft-Editing-Grenzen geprüft
 - [x] Phase 4.7 dokumentiert: Einfache lokale Validierung für Name/Beschreibung/Ziel ergänzt
+- [x] Phase 4.7.1 dokumentiert: Validierungs-Helper in eigene Draft-State-Datei ausgelagert (ohne Logikänderung)
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
