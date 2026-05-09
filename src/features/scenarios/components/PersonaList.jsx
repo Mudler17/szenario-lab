@@ -1,5 +1,5 @@
 function PersonaList({ personas }) {
-  if (!personas) {
+  if (!Array.isArray(personas) || personas.length === 0) {
     return null;
   }
 

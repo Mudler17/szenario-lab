@@ -1,5 +1,5 @@
 function AssumptionList({ assumptions }) {
-  if (!assumptions) {
+  if (!Array.isArray(assumptions) || assumptions.length === 0) {
     return null;
   }
 

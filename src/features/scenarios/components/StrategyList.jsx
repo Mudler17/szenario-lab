@@ -1,5 +1,5 @@
 function StrategyList({ strategies }) {
-  if (!strategies) {
+  if (!Array.isArray(strategies) || strategies.length === 0) {
     return null;
   }
 

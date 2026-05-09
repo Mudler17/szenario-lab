@@ -1,5 +1,5 @@
 function PhaseList({ phases }) {
-  if (!phases) {
+  if (!Array.isArray(phases) || phases.length === 0) {
     return null;
   }
 
