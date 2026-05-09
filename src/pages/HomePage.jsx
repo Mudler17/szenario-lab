@@ -5,19 +5,30 @@ import {
   createDraftFromScenario,
   resetDraft,
   updateScenarioDraftField,
+  validateScenarioDraftBasics,
 } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 
 function HomePage() {
   const originalScenario = useMemo(() => exampleScenario, []);
-  const [scenarioDraft, setScenarioDraft] = useState(() => createDraftFromScenario(originalScenario));
+  const initialDraft = useMemo(() => createDraftFromScenario(originalScenario), [originalScenario]);
+  const [scenarioDraft, setScenarioDraft] = useState(() => initialDraft);
+  const [scenarioValidation, setScenarioValidation] = useState(() =>
+    validateScenarioDraftBasics(initialDraft),
+  );
 
   const handleResetDraft = () => {
-    setScenarioDraft(resetDraft(originalScenario));
+    const resetScenario = resetDraft(originalScenario);
+    setScenarioDraft(resetScenario);
+    setScenarioValidation(validateScenarioDraftBasics(resetScenario));
   };
 
   const updateDraftField = (fieldName, value) => {
-    setScenarioDraft((currentDraft) => updateScenarioDraftField(currentDraft, fieldName, value));
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = updateScenarioDraftField(currentDraft, fieldName, value);
+      setScenarioValidation(validateScenarioDraftBasics(nextDraft));
+      return nextDraft;
+    });
   };
 
   const handleScenarioNameChange = (nextName) => {
@@ -37,7 +48,7 @@ function HomePage() {
       <section className="hero">
         <h1>szenario-lab</h1>
         <p className="subtitle">Organisationsszenarien strukturiert modellieren</p>
-        <p className="phase-note">Phase 4.6 · Draft-Update-Logik entlastet (nur im Arbeitsspeicher)</p>
+        <p className="phase-note">Phase 4.7 · Einfache Feldvalidierung im lokalen Szenario-Draft</p>
       </section>
 
       <section className="placeholder-grid" aria-label="Module in Vorbereitung">
@@ -61,6 +72,7 @@ function HomePage() {
         </p>
         <ScenarioDraftForm
           scenario={scenarioDraft}
+          validation={scenarioValidation}
           onNameChange={handleScenarioNameChange}
           onDescriptionChange={handleScenarioDescriptionChange}
           onGoalChange={handleScenarioGoalChange}
