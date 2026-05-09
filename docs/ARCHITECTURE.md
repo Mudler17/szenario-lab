@@ -121,3 +121,20 @@ Konkreter Umfang in Phase 4.5:
 - keine neuen Module
 
 Damit bleibt Phase 4.5 innerhalb der bestehenden Grenzen des lokalen Draft-Editings und erweitert nur die semantische sowie zugänglichkeitsbezogene Formularqualität.
+
+
+## Phase 4.6 – Draft-Update-Logik in Utility entlastet
+In Phase 4.6 wurde die wiederholte Update-Logik für die drei bestehenden Szenario-Grundfelder (Name, Beschreibung und Ziel) aus `HomePage` in eine kleine Utility-Funktion ausgelagert.
+Die fachliche Grenze bleibt unverändert: keine neuen Felder, keine neuen Module und keine zusätzliche Persistenz- oder Integrationslogik.
+
+Konkreter Umfang in Phase 4.6:
+- Utility `updateScenarioDraftField(draft, fieldName, value)` für bestehende Draft-Felder
+- Nutzung dieser Utility in `HomePage` für Name, Beschreibung und Ziel
+- Vorschau reagiert weiterhin direkt auf Änderungen
+- Reset setzt weiterhin auf den Originalzustand zurück
+- keine Speicherung auf Dateisystem oder Backend
+- kein LocalStorage
+- keine Simulation
+- keine OpenAI-Anbindung
+- keine weiteren aktiven Formularbereiche
+- keine neuen Module
