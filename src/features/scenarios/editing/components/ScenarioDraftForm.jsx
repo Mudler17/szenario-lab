@@ -1,4 +1,4 @@
-function ScenarioDraftForm({ scenario, onNameChange, onDescriptionChange }) {
+function ScenarioDraftForm({ scenario, onNameChange, onDescriptionChange, onGoalChange }) {
   if (!scenario) {
     return null;
   }
@@ -20,6 +20,14 @@ function ScenarioDraftForm({ scenario, onNameChange, onDescriptionChange }) {
         type="text"
         value={scenario.description ?? ''}
         onChange={(event) => onDescriptionChange(event.target.value)}
+      />
+      <label htmlFor="scenario-draft-goal">Szenario-Ziel</label>
+      <input
+        id="scenario-draft-goal"
+        name="scenarioGoal"
+        type="text"
+        value={scenario.goal ?? ''}
+        onChange={(event) => onGoalChange(event.target.value)}
       />
     </section>
   );
