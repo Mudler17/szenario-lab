@@ -1,4 +1,5 @@
 import AssumptionList from './AssumptionList';
+import EvidenceList from './EvidenceList';
 import InterventionList from './InterventionList';
 import PersonaList from './PersonaList';
 import ResourceList from './ResourceList';
@@ -22,6 +23,7 @@ function ScenarioPreview({ scenario }) {
       <ResourceList resources={scenario.resources} />
       <PhaseList phases={scenario.phases} />
       <AssumptionList assumptions={scenario.assumptions} />
+      <EvidenceList evidence={scenario.evidence} />
       <RelationshipList relationships={scenario.relationships} personas={scenario.personas} />
       <InterventionList interventions={scenario.interventions} />
       <StrategyList strategies={scenario.strategies} />

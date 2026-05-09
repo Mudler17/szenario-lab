@@ -8,6 +8,7 @@ function ScenarioSummary({ scenario }) {
   const phases = Array.isArray(scenario.phases) ? scenario.phases : [];
   const assumptions = Array.isArray(scenario.assumptions) ? scenario.assumptions : [];
   const relationships = Array.isArray(scenario.relationships) ? scenario.relationships : [];
+  const evidence = Array.isArray(scenario.evidence) ? scenario.evidence : [];
   const interventions = Array.isArray(scenario.interventions) ? scenario.interventions : [];
   const strategies = Array.isArray(scenario.strategies) ? scenario.strategies : [];
 
@@ -17,6 +18,7 @@ function ScenarioSummary({ scenario }) {
     phases.length === 0 &&
     assumptions.length === 0 &&
     relationships.length === 0 &&
+    evidence.length === 0 &&
     interventions.length === 0 &&
     strategies.length === 0
   ) {
@@ -32,6 +34,7 @@ function ScenarioSummary({ scenario }) {
         <li>Phasen: {phases.length}</li>
         <li>Annahmen: {assumptions.length}</li>
         <li>Beziehungen: {relationships.length}</li>
+        <li>Evidenz: {evidence.length}</li>
         <li>Interventionen: {interventions.length}</li>
         <li>Strategien: {strategies.length}</li>
       </ul>

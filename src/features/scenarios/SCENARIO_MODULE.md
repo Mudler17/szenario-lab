@@ -12,11 +12,12 @@ Der aktuelle Umfang umfasst ausschließlich lesende Teilansichten zu:
 - Ressourcen
 - Phasen
 - Annahmen
+- Evidenz
 - Beziehungen
 - Interventionen
 - Strategien
 
-Diese Teilbereiche dienen der fachlichen Orientierung und der transparenten Darstellung von Zusammenhängen innerhalb eines Szenarios.
+Diese Teilbereiche dienen der fachlichen Orientierung und der transparenten Darstellung von Zusammenhängen innerhalb eines Szenarios. Evidenz wird aktuell ausschließlich lesend angezeigt und nicht bewertet.
 
 ## Fachliche Fragen, die das Modul künftig beantworten soll
 Das Szenario-Modul soll perspektivisch dabei helfen, unter anderem folgende Fragen klarer zu beantworten:
