@@ -188,3 +188,21 @@ Konkreter Umfang in Phase 4.8:
 - keine OpenAI-Anbindung
 - keine weiteren aktiven Formularbereiche
 - keine neuen Module
+
+## Phase 4.8.1 – Workspace-Panel-Styling mit Minimal-CSS
+In Phase 4.8.1 wurde die in Phase 4.8 eingeführte Trennung von Bearbeitung und Vorschau ausschließlich auf Styling-Ebene präzisiert.
+Dafür wurde ein minimales CSS-Set ergänzt, das die Bereiche strukturierter und visuell eindeutiger macht, ohne die bestehende React- oder Draft-Logik anzupassen.
+
+Konkreter Umfang in Phase 4.8.1:
+- `workspace-grid` strukturiert die Bereiche für Bearbeitung und Vorschau
+- `workspace-panel` gestaltet die Panels konsistent
+- `editor-panel` und `preview-panel` unterscheiden Bearbeitung und Vorschau visuell
+- `workspace-hint` gestaltet die erklärenden Hinweise
+- keine Änderung an React-Logik
+- keine neuen Felder
+- keine Speicherung auf Dateisystem oder Backend
+- kein LocalStorage
+- keine Simulation
+- keine OpenAI-Anbindung
+- keine neuen Module
+
