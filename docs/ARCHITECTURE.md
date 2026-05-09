@@ -17,7 +17,7 @@ Die UI ist für Interaktion, Visualisierung und State-Orchestrierung verantwortl
 
 ### Domänenmodell
 Das Domänenmodell bildet die fachlichen Objekte und Beziehungen ab. Es dient als gemeinsame Sprache zwischen UI, späterer Simulation und späterem Reporting.
-In der aktuellen Phase wird dieses Modell zunächst dokumentiert und fachlich geschärft; ein Code-Skeleton im Projekt folgt erst im nächsten Schritt.
+In der aktuellen Phase wurde zusätzlich ein minimales Code-Skeleton im Projekt angelegt, das die dokumentierten Domänenbegriffe strukturell vorbereitet. Dieses Skeleton enthält bewusst noch keine fachliche Implementierung, keine Regeln und keine operative Logik.
 
 ### Simulation (zukünftig)
 Simulation wird als eigenständiges Modul geplant, damit Berechnungsregeln austauschbar und testbar bleiben, ohne UI-Komponenten ändern zu müssen.
@@ -44,15 +44,19 @@ Die folgende Struktur ist eine Vorbereitung für spätere Phasen, ohne bereits F
   - Seitenkomposition und Routing-nahe UI-Struktur
 - `src/components/` *(später)*
   - wiederverwendbare UI-Bausteine
-- `src/domain/` *(später)*
+- `src/domain/`
   - Domänenentitäten, Value-Objekte, fachliche Schnittstellen
-- `src/simulation/` *(später)*
+- `src/simulation/`
   - Simulationsabläufe und Rechenlogik
-- `src/report/` *(später)*
+- `src/report/`
   - Report-Modelle und Ergebnisaufbereitung
-- `src/infrastructure/` *(später)*
+- `src/infrastructure/`
   - Persistenzadapter, externe Schnittstellen
 - `docs/`
   - Architektur- und Modellentscheidungen als Referenz
 
 Diese Struktur bleibt bewusst vorläufig und wird in Phase 3 anhand der ersten Fachmodule konkretisiert.
+
+
+## Aktueller Umsetzungsstand
+Das Projekt enthält nun ein initiales Code-Skeleton für die vorgesehenen Module (`domain`, `simulation`, `report`, `infrastructure`). Es dient ausschließlich der Strukturvorbereitung; fachliche Umsetzung ist darin noch nicht enthalten.

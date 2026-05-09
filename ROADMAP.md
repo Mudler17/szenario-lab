@@ -12,6 +12,7 @@
 - [x] Architekturentscheidungen dokumentieren
 - [x] Domänenmodell ausarbeiten
 - [x] Modulgrenzen vorläufig definieren
+- [x] Code-Skeleton für Domänenmodell anlegen
 - [ ] Modulgrenzen nach erstem Fachmodul überprüfen
 
 ## Phase 3 – Erste Fachmodule
