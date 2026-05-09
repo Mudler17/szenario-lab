@@ -5,8 +5,13 @@ Dieser Ordner ist für einen späteren lokalen Editing-State als Arbeitskopie vo
 Die konzeptionelle Grundlage dafür ist in `docs/DRAFT_STATE_CONCEPT.md` dokumentiert.
 
 ## Aktueller Stand
-- Aktuell gibt es keine State-Implementierung.
-- Es gibt keinen produktiven Draft-State-Code.
+- `createDraftFromScenario` existiert als erste reine Utility-Funktion.
+- Sie erzeugt nur eine lokale Arbeitskopie.
+- Es gibt weiterhin keinen produktiven Draft-State-Code.
 - Es gibt keine Speicherung.
 - Es gibt keine Persistenz.
 - Es gibt keine Simulation.
+
+- Sie speichert nichts.
+- Sie validiert nichts.
+- Sie simuliert nichts.
