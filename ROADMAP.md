@@ -59,3 +59,13 @@
 - [ ] Noch keine OpenAI-Anbindung
 - [ ] Keine weiteren Formularbereiche aktiv
 - [ ] Keine neuen Module in Phase 4
+
+## Phase 5 – Stabilisierung durch Tests
+
+- [x] Phase 5.0 dokumentiert: Nächste Entwicklungsrichtung festgelegt
+- [ ] Phase 5.1: Testfundament für Draft-State-Utilities einführen
+- [ ] Noch keine Speicherung
+- [ ] Noch kein LocalStorage
+- [ ] Noch keine Simulation
+- [ ] Noch keine OpenAI-Anbindung
+- [ ] Keine neuen Fachmodule
