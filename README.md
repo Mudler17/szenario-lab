@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 1 · Technisches Grundgerüst
+Phase 2 · Architektur und Domänenmodell in Vorbereitung
 
 ## Lokale Befehle
 ```bash
