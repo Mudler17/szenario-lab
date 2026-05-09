@@ -20,7 +20,7 @@ function ScenarioPreview({ scenario }) {
       <PersonaList personas={scenario.personas} />
       <PhaseList phases={scenario.phases} />
       <AssumptionList assumptions={scenario.assumptions} />
-      <RelationshipList relationships={scenario.relationships} />
+      <RelationshipList relationships={scenario.relationships} personas={scenario.personas} />
       <InterventionList interventions={scenario.interventions} />
       <StrategyList strategies={scenario.strategies} />
     </section>

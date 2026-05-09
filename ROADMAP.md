@@ -21,4 +21,5 @@
 - [x] Szenario-Vorschau in Feature-Modul überführen
 - [x] Szenario-Detailvorschau in lesende Teilkomponenten zerlegen
 - [x] Beziehungen und Interventionen in lesender Vorschau sichtbar machen
+- [x] Beziehungspersonen in lesender Vorschau namentlich auflösen
 - [ ] Szenario-Modul fachlich ausarbeiten
