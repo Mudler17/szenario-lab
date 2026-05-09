@@ -27,4 +27,12 @@
 - [x] Evidenz als lesenden Teilbereich vorbereiten
 - [x] Evidenz-Annahmen in lesender Vorschau namentlich auflösen
 - [x] Lesende Szenario-Vorschau in fachliche Abschnitte gliedern
-- [ ] Szenario-Modul fachlich ausarbeiten
+- [x] Szenario-Modul fachlich ausarbeiten
+
+
+## Phase 4 – Szenario-Bearbeitung vorbereiten
+- [ ] Bearbeitungsgrenzen fachlich dokumentieren
+- [ ] Editierbares Datenmodell konzeptionell vorbereiten
+- [ ] Erste Formularstruktur planen
+- [ ] Noch keine Speicherung
+- [ ] Noch keine Simulation

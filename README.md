@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 3 · Erstes Fachmodul in Vorbereitung
+Phase 3 · Lesendes Szenario-Modul abgeschlossen
 
 ## Lokale Befehle
 ```bash
@@ -14,7 +14,8 @@ npm run build
 ```
 
 ## Hinweis
-Noch keine Fachlogik, keine Simulation, keine OpenAI-Anbindung.
+Die App enthält derzeit ein statisches Beispielszenario und eine rein lesende Szenario-Vorschau.
+Noch keine Bearbeitung, Speicherung, Simulation oder OpenAI-Anbindung.
 
 
 ## Dokumentation
