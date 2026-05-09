@@ -15,3 +15,8 @@ npm run build
 
 ## Hinweis
 Noch keine Fachlogik, keine Simulation, keine OpenAI-Anbindung.
+
+
+## Dokumentation
+- Architektur: `docs/ARCHITECTURE.md`
+- Domänenmodell: `docs/DOMAIN_MODEL.md`
