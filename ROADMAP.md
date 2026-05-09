@@ -64,6 +64,7 @@
 
 - [x] Phase 5.0 dokumentiert: Nächste Entwicklungsrichtung festgelegt
 - [x] Phase 5.1: Testfundament für Draft-State-Utilities einführen
+- [x] Phase 5.1 Review dokumentiert: Testfundament geprüft
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
