@@ -37,4 +37,5 @@ Nicht Teil von Phase 5.1 sind React-Komponententests oder UI-Änderungen. Ebenfa
 - Phase-5-Entscheidung: `docs/PHASE_5_DIRECTION.md`
 - Phase-5.1-Testreview: `docs/PHASE_5_1_TEST_REVIEW.md`
 - Quality Gate: `docs/QUALITY_GATE.md`
+- Phase-5.2-Quality-Gate-Review: `docs/PHASE_5_2_QUALITY_GATE_REVIEW.md`
 
