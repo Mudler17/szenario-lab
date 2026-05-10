@@ -71,7 +71,7 @@
 - [x] Phase 5.4: JSON-Export konzeptionell vorbereitet
 - [x] Phase 5.5: JSON-Export-Payload-Utility vorbereitet
 - [x] Phase 5.5 Review dokumentiert: JSON-Export-Payload-Utility geprüft
-- [ ] Phase 5.6: JSON-Export-Schema konzeptionell festlegen
+- [x] Phase 5.6: JSON-Export-Schema konzeptionell festlegen
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
