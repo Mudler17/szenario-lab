@@ -105,4 +105,5 @@
 ## Phase 6 – Nächste Entwicklungsrichtung
 
 - [x] Phase 6.0 dokumentiert: Nächste Entwicklungsrichtung nach Stabilisierung festgelegt
-- [ ] Phase 6.1: JSON-Import konzeptionell vorbereiten
+- [x] Phase 6.1: JSON-Import konzeptionell vorbereitet
+- [ ] Phase 6.1 Review: JSON-Import-Konzept prüfen
