@@ -358,3 +358,7 @@ Die veraltete technische Hero-Phase-Note wurde durch einen neutralen Nutzungshin
 
 Inhalt:
 Die bestehende Download-Statusmeldung wurde als Statusregion markiert. Die Änderung ergänzt `role="status"` zur bereits vorhandenen `aria-live="polite"`-Statusmeldung. Die Änderung bleibt auf Zugänglichkeit begrenzt und ergänzt keine Fachlogik, keine Exportlogik, keine Speicherung und keine neuen Module.
+
+## Phase 5.18 – Konsolidierte Download-Statusmeldungen
+
+Die nutzerfreundlichen Meldungstexte der bestehenden Statusmeldungs-Utility wurden fachlich konsolidiert. Die Änderung bleibt auf Text-Mapping begrenzt. Es wurden keine React-UI, keine Exportlogik, keine Downloadlogik, keine Speicherung und keine neuen Module ergänzt.
