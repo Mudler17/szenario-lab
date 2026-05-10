@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.5 Review · JSON-Export-Payload-Utility geprüft
+Phase 5.6 · JSON-Export-Schema konzeptionell festgelegt
 
 ## Lokale Befehle
 ```bash
@@ -31,6 +31,9 @@ Nicht Teil von Phase 5.1 sind React-Komponententests oder UI-Änderungen. Ebenfa
 In Phase 5.5 wurde eine reine Export-Payload-Utility vorbereitet. Sie erzeugt aus dem aktuellen Szenario-Draft ein serialisierbares JavaScript-Objekt mit `exportType`, `formatVersion`, `exportedAt`, `source` und `scenario`.
 Es gibt weiterhin keinen Download-Button, keine UI, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
+In Phase 5.6 wurde das konzeptionelle JSON-Export-Schema verbindlich dokumentiert (Top-Level-Struktur, Pflichtfelder, optionale Metadaten und Erweiterungsregeln).
+Es gibt weiterhin keinen Download-Button, keine Export-UI, keinen JSON-Import, kein LocalStorage und keine Speicherung.
+
 
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
@@ -44,3 +47,4 @@ Es gibt weiterhin keinen Download-Button, keine UI, keinen JSON-Import, kein Loc
 - Speicherentscheidung (Konzeptvorbereitung): `docs/STORAGE_DECISION.md`
 - JSON-Export-Konzeptvorbereitung: `docs/JSON_EXPORT_CONCEPT.md`
 - Phase-5.5-Review (Export-Payload-Utility): `docs/PHASE_5_5_EXPORT_PAYLOAD_REVIEW.md`
+- JSON-Export-Schema (Konzept): `docs/JSON_EXPORT_SCHEMA.md`
