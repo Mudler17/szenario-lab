@@ -296,3 +296,26 @@ Konkreter Umfang:
 - kein Import
 - keine Speicherung
 
+
+
+## Phase 5.9 – JSON-Export-Orchestrierungs-Utility
+In Phase 5.9 wurde eine reine Utility-Funktion vorbereitet, die Export-Payload, Export-Dateiname und gemeinsamen Exportzeitpunkt zusammenführt.
+
+Konkreter Umfang:
+- `createScenarioExportDraft`
+- gemeinsamer `exportedAt`-Zeitpunkt
+- Nutzung von `createScenarioExportPayload`
+- Nutzung von `createScenarioExportFilename`
+- Rückgabe von `payload`, `filename` und `exportedAt`
+- Tests für die Utility
+
+Nicht enthalten:
+- kein Download
+- kein Button
+- keine UI
+- kein Browser-Blob
+- kein `URL.createObjectURL`
+- kein `JSON.stringify`
+- kein JSON-Import
+- kein LocalStorage
+- keine Speicherung
