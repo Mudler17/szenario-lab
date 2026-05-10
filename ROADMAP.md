@@ -77,6 +77,7 @@
 - [x] Phase 5.8: JSON-Export-Orchestrierung konzeptionell vorbereiten
 - [x] Phase 5.9: JSON-Export-Orchestrierungs-Utility vorbereitet
 - [x] Phase 5.9 Review dokumentiert: JSON-Export-Orchestrierungs-Utility geprüft
+- [x] Phase 5.10: JSON-Download-Utility vorbereitet
 - [x] Phase 5.11 Review dokumentiert: JSON-Download-Utility geprüft
 - [x] Phase 5.12: JSON-Download-Cleanup gehärtet
 - [x] Phase 5.12 Review dokumentiert: JSON-Download-Cleanup geprüft
@@ -93,6 +94,7 @@
 - [x] Phase 5.18: UI-Statusmeldungen fachlich konsolidiert
 - [x] Phase 5.18 Review: UI-Statusmeldungen prüfen
 - [x] Phase 5.19: JSON-Export/Download fachlich abschließend geprüft
+- [x] Phase 5 Review dokumentiert: Stabilisierung durch Tests abgeschlossen
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
