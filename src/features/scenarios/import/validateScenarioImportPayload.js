@@ -1,7 +1,7 @@
 const SUPPORTED_EXPORT_TYPE = 'szenario-lab.scenario';
 const SUPPORTED_FORMAT_VERSION = 1;
 const REQUIRED_SCENARIO_FIELDS = ['name', 'description', 'goal'];
-const KNOWN_TOP_LEVEL_FIELDS = ['exportType', 'formatVersion', 'scenario'];
+const KNOWN_TOP_LEVEL_FIELDS = ['exportType', 'formatVersion', 'exportedAt', 'source', 'scenario'];
 const KNOWN_SCENARIO_FIELDS = [
   'id',
   'name',
@@ -30,7 +30,7 @@ function createError(reason, message, details = {}, warnings = []) {
 }
 
 function cloneScenario(scenario) {
-  return { ...scenario };
+  return structuredClone(scenario);
 }
 
 export function validateScenarioImportPayload(payload, options = {}) {
