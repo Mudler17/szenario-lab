@@ -83,8 +83,8 @@
 - [x] Phase 5.13: JSON-Download-UI konzeptionell vorbereitet
 - [x] Phase 5.13 Review dokumentiert: JSON-Download-UI-Konzept geprüft
 - [x] Phase 5.14: JSON-Download-Statusmeldungen vorbereitet
-- [ ] Phase 5.15: JSON-Download-UI minimal vorbereiten
 - [x] Phase 5.14 Review dokumentiert: JSON-Download-Statusmeldungen geprüft
+- [ ] Phase 5.15: JSON-Download-UI minimal vorbereiten
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
