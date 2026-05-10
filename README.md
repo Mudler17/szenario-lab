@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.9 · JSON-Export-Orchestrierungs-Utility vorbereitet
+Phase 5.9 Review · JSON-Export-Orchestrierungs-Utility geprüft
 
 ## Lokale Befehle
 ```bash
@@ -57,5 +57,4 @@ Es gibt weiterhin keinen Download-Button, keine UI, keinen Browser-Blob, kein JS
 - JSON-Export-Schema (Konzept): `docs/JSON_EXPORT_SCHEMA.md`
 - Phase-5.7-Review (Export-Dateinamen): `docs/PHASE_5_7_EXPORT_FILENAME_REVIEW.md`
 - JSON-Export-Orchestrierung (Konzept): `docs/JSON_EXPORT_ORCHESTRATION_CONCEPT.md`
-
 - Phase-5.9-Review (Export-Orchestrierungs-Utility): `docs/PHASE_5_9_EXPORT_DRAFT_REVIEW.md`
