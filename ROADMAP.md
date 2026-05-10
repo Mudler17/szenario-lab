@@ -107,4 +107,5 @@
 - [x] Phase 6.0 dokumentiert: Nächste Entwicklungsrichtung nach Stabilisierung festgelegt
 - [x] Phase 6.1: JSON-Import konzeptionell vorbereitet
 - [x] Phase 6.1 Review dokumentiert: JSON-Import-Konzept geprüft
-- [ ] Phase 6.2: JSON-Import-Validierung konzeptionell vorbereiten
+- [x] Phase 6.2: JSON-Import-Validierung konzeptionell vorbereitet
+- [ ] Phase 6.2 Review: JSON-Import-Validierungskonzept prüfen
