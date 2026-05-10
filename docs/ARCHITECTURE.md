@@ -345,3 +345,8 @@ Die spätere UI-Einbindung des JSON-Downloads wurde konzeptionell vorbereitet. D
 ## Phase 5.14 – JSON-Download-Statusmeldungen
 Inhalt:
 Die Statusmeldungen für den späteren JSON-Download wurden als reine Mapping-Utility vorbereitet. Technische Ergebnisobjekte und reason-Werte werden von der späteren UI entkoppelt. Die Änderung ergänzt keine UI, keine React-Einbindung und keine Speicherung.
+
+
+## Phase 5.15 – Minimale JSON-Download-UI
+Inhalt:
+Die bestehende HomePage nutzt die vorbereiteten Export-/Download-Utilities erstmals minimal in der UI. Die UI bleibt Auslöser, nicht Träger der Exportfachlogik. Download bleibt von Speicherung getrennt. Es wurden kein JSON-Import, kein LocalStorage, keine Backend-Speicherung und keine neue Fachlogik ergänzt.

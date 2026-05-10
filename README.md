@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.14 Review · JSON-Download-Statusmeldungen geprüft
+Phase 5.15 · JSON-Download-UI minimal vorbereitet
 
 ## Lokale Befehle
 ```bash
@@ -60,6 +60,8 @@ In Phase 5.13 Review wurde das JSON-Download-UI-Konzept geprüft. Die Review bes
 In Phase 5.14 wurde eine reine Mapping-Utility für JSON-Download-Statusmeldungen vorbereitet. Sie übersetzt technische Ergebnisobjekte des Download-Adapters in nutzerfreundliche Erfolg-, Fehler- und Info-Meldungen. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
 In Phase 5.14 Review wurde die Mapping-Utility für JSON-Download-Statusmeldungen geprüft. Die Review bestätigt, dass technische Ergebnisobjekte und reason-Werte nutzerfreundlich gekapselt werden und die spätere UI keine technischen Fehlercodes direkt anzeigen muss. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
+
+In Phase 5.15 wurde eine minimale JSON-Download-UI im bestehenden Bearbeitungsbereich vorbereitet. Der Button „JSON herunterladen“ nutzt den aktuellen lokalen Draft, erzeugt einen Export-Draft, löst den Browser-Download aus und zeigt nutzerfreundliche Statusmeldungen. Download bleibt ausdrücklich von App-interner Speicherung getrennt. Es gibt weiterhin keinen JSON-Import, kein LocalStorage, keine Backend-Speicherung, keine Simulation und keine OpenAI-Anbindung.
 
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`

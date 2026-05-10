@@ -148,3 +148,33 @@ body {
   margin-top: 0.35rem;
   line-height: 1.4;
 }
+
+
+.export-panel {
+  margin-top: 1rem;
+  border-top: 1px solid #dbe3ee;
+  padding-top: 1rem;
+}
+
+.export-panel h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.download-status {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.download-status-success {
+  color: #166534;
+}
+
+.download-status-error {
+  color: #b91c1c;
+}
+
+.download-status-info {
+  color: #475569;
+}
