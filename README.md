@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.11 · JSON-Download-Utility vorbereitet
+Phase 5.11 Review · JSON-Download-Utility geprüft
 
 ## Lokale Befehle
 ```bash
@@ -46,6 +46,9 @@ In Phase 5.10 wurde der spätere JSON-Download konzeptionell vorbereitet. Der Do
 In Phase 5.11 wurde eine kleine technische JSON-Download-Utility vorbereitet. Sie kann einen bereits erzeugten Export-Draft mit payload und filename als JSON-Datei im Browser ausleiten. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
 
+In Phase 5.11 Review wurde die JSON-Download-Utility geprüft. Sie bleibt als technischer Browser-Adapter nach `createScenarioExportDraft` abgegrenzt. Die Review bestätigt die grundsätzliche Funktion und Testabdeckung, empfiehlt aber vor einer UI-Einbindung eine kleine Härtung des Cleanup-Verhaltens, insbesondere rund um `URL.revokeObjectURL`. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
+
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -63,3 +66,4 @@ In Phase 5.11 wurde eine kleine technische JSON-Download-Utility vorbereitet. Si
 - JSON-Export-Orchestrierung (Konzept): `docs/JSON_EXPORT_ORCHESTRATION_CONCEPT.md`
 - Phase-5.9-Review (Export-Orchestrierungs-Utility): `docs/PHASE_5_9_EXPORT_DRAFT_REVIEW.md`
 - JSON-Download-Konzept: `docs/JSON_DOWNLOAD_CONCEPT.md`
+- Phase-5.11-Review (JSON-Download-Utility): `docs/PHASE_5_11_DOWNLOAD_UTILITY_REVIEW.md`
