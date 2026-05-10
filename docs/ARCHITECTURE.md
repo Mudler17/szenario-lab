@@ -222,3 +222,24 @@ Konkreter Umfang in Phase 5.1:
 - keine OpenAI-Anbindung
 - keine neuen Fachmodule
 
+
+
+## Phase 5.5 – JSON-Export-Payload-Utility
+In Phase 5.5 wurde eine reine Utility-Funktion vorbereitet, die aus einem Szenario-Draft ein serialisierbares Export-Payload-Objekt erzeugt.
+
+Konkreter Umfang:
+- `createScenarioExportPayload`
+- `exportType`: `szenario-lab.scenario`
+- `formatVersion`: `1`
+- `exportedAt`
+- `source`
+- scenario-Kopie
+- Tests für die Utility
+
+Nicht enthalten:
+- kein Download
+- kein Button
+- keine UI
+- kein JSON-Import
+- kein LocalStorage
+- keine Speicherung
