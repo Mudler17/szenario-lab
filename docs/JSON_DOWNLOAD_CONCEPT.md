@@ -70,3 +70,5 @@ Nicht Teil von Phase 5.10 sind:
 ## Umsetzungsstand (Phase 5.11)
 Phase 5.11 hat die zuvor konzeptionell beschriebene Adaptergrenze als kleine Utility vorbereitet.
 Weiterhin keine UI und keine Speicherung.
+
+Phase 5.12 härtet den technischen Download-Adapter vor einer späteren UI-Einbindung. Ziel ist zuverlässigeres Aufräumen temporärer Browser-Ressourcen.

@@ -168,3 +168,237 @@ test('führt Download-Schritte aus und gibt ok-Ergebnis zurück', () => {
   assert.equal(exportDraft.payload, originalPayload);
   assert.equal(exportDraft.filename, originalFilename);
 });
+
+test('gibt download-click-failed zurück, wenn link.click fehlschlägt und räumt trotzdem auf', () => {
+  const calls = [];
+
+  class FakeBlob {
+    constructor(parts, options) {
+      this.parts = parts;
+      this.options = options;
+    }
+  }
+
+  const link = {
+    click() {
+      calls.push('click');
+      throw new Error('click failed');
+    },
+  };
+
+  const documentRef = {
+    body: {
+      appendChild(node) {
+        calls.push(['append', node]);
+      },
+      removeChild(node) {
+        calls.push(['remove', node]);
+      },
+    },
+    createElement() {
+      return link;
+    },
+  };
+
+  const URLRef = {
+    createObjectURL() {
+      calls.push('createObjectURL');
+      return 'blob:example';
+    },
+    revokeObjectURL(url) {
+      calls.push(['revokeObjectURL', url]);
+    },
+  };
+
+  const result = downloadScenarioExport(
+    { payload: { ok: true }, filename: 'export.json' },
+    { documentRef, BlobRef: FakeBlob, URLRef },
+  );
+
+  assert.ok(calls.includes('createObjectURL'));
+  assert.ok(calls.some((entry) => Array.isArray(entry) && entry[0] === 'remove'));
+  assert.ok(calls.some((entry) => Array.isArray(entry) && entry[0] === 'revokeObjectURL'));
+  assert.deepEqual(result, { ok: false, reason: 'download-click-failed' });
+});
+
+test('gibt download-cleanup-failed zurück, wenn removeChild fehlschlägt', () => {
+  const calls = [];
+
+  class FakeBlob {
+    constructor(parts, options) {
+      this.parts = parts;
+      this.options = options;
+    }
+  }
+
+  const link = {
+    click() {
+      calls.push('click');
+    },
+  };
+
+  const documentRef = {
+    body: {
+      appendChild() {},
+      removeChild() {
+        calls.push('remove');
+        throw new Error('remove failed');
+      },
+    },
+    createElement() {
+      return link;
+    },
+  };
+
+  const URLRef = {
+    createObjectURL() {
+      return 'blob:example';
+    },
+    revokeObjectURL() {
+      calls.push('revoke');
+    },
+  };
+
+  const result = downloadScenarioExport(
+    { payload: { ok: true }, filename: 'export.json' },
+    { documentRef, BlobRef: FakeBlob, URLRef },
+  );
+
+  assert.ok(calls.includes('click'));
+  assert.ok(calls.includes('revoke'));
+  assert.deepEqual(result, { ok: false, reason: 'download-cleanup-failed' });
+});
+
+test('gibt download-cleanup-failed zurück, wenn revokeObjectURL fehlschlägt', () => {
+  const calls = [];
+
+  class FakeBlob {
+    constructor(parts, options) {
+      this.parts = parts;
+      this.options = options;
+    }
+  }
+
+  const link = {
+    click() {
+      calls.push('click');
+    },
+  };
+
+  const documentRef = {
+    body: {
+      appendChild() {},
+      removeChild() {
+        calls.push('remove');
+      },
+    },
+    createElement() {
+      return link;
+    },
+  };
+
+  const URLRef = {
+    createObjectURL() {
+      return 'blob:example';
+    },
+    revokeObjectURL() {
+      throw new Error('revoke failed');
+    },
+  };
+
+  const result = downloadScenarioExport(
+    { payload: { ok: true }, filename: 'export.json' },
+    { documentRef, BlobRef: FakeBlob, URLRef },
+  );
+
+  assert.ok(calls.includes('click'));
+  assert.ok(calls.includes('remove'));
+  assert.deepEqual(result, { ok: false, reason: 'download-cleanup-failed' });
+});
+
+test('gibt bei click- und removeChild-Fehlern weiterhin download-click-failed zurück', () => {
+  class FakeBlob {
+    constructor(parts, options) {
+      this.parts = parts;
+      this.options = options;
+    }
+  }
+
+  let revokeCalled = false;
+
+  const link = {
+    click() {
+      throw new Error('click failed');
+    },
+  };
+
+  const documentRef = {
+    body: {
+      appendChild() {},
+      removeChild() {
+        throw new Error('remove failed');
+      },
+    },
+    createElement() {
+      return link;
+    },
+  };
+
+  const URLRef = {
+    createObjectURL() {
+      return 'blob:example';
+    },
+    revokeObjectURL() {
+      revokeCalled = true;
+    },
+  };
+
+  const result = downloadScenarioExport(
+    { payload: { ok: true }, filename: 'export.json' },
+    { documentRef, BlobRef: FakeBlob, URLRef },
+  );
+
+  assert.equal(revokeCalled, true);
+  assert.deepEqual(result, { ok: false, reason: 'download-click-failed' });
+});
+
+test('gibt bei click- und revokeObjectURL-Fehlern weiterhin download-click-failed zurück', () => {
+  class FakeBlob {
+    constructor(parts, options) {
+      this.parts = parts;
+      this.options = options;
+    }
+  }
+
+  const link = {
+    click() {
+      throw new Error('click failed');
+    },
+  };
+
+  const documentRef = {
+    body: {
+      appendChild() {},
+      removeChild() {},
+    },
+    createElement() {
+      return link;
+    },
+  };
+
+  const URLRef = {
+    createObjectURL() {
+      return 'blob:example';
+    },
+    revokeObjectURL() {
+      throw new Error('revoke failed');
+    },
+  };
+
+  const result = downloadScenarioExport(
+    { payload: { ok: true }, filename: 'export.json' },
+    { documentRef, BlobRef: FakeBlob, URLRef },
+  );
+
+  assert.deepEqual(result, { ok: false, reason: 'download-click-failed' });
+});

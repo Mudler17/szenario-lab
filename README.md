@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.11 Review · JSON-Download-Utility geprüft
+Phase 5.12 · JSON-Download-Cleanup gehärtet
 
 ## Lokale Befehle
 ```bash
@@ -48,6 +48,8 @@ In Phase 5.11 wurde eine kleine technische JSON-Download-Utility vorbereitet. Si
 
 In Phase 5.11 Review wurde die JSON-Download-Utility geprüft. Sie bleibt als technischer Browser-Adapter nach `createScenarioExportDraft` abgegrenzt. Die Review bestätigt die grundsätzliche Funktion und Testabdeckung, empfiehlt aber vor einer UI-Einbindung eine kleine Härtung des Cleanup-Verhaltens, insbesondere rund um `URL.revokeObjectURL`. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
+
+In Phase 5.12 wurde das Cleanup-Verhalten der JSON-Download-Utility gehärtet. Die Utility versucht temporäre Download-Elemente und Objekt-URLs auch bei Fehlern im Klick- oder Cleanup-Ablauf kontrolliert aufzuräumen. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`

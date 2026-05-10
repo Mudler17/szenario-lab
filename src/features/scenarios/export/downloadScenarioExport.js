@@ -43,10 +43,36 @@ export function downloadScenarioExport(exportDraft, options = {}) {
   link.href = objectUrl;
   link.download = exportDraft.filename;
 
+  let clickFailed = false;
+  let cleanupFailed = false;
+
   documentRef.body.appendChild(link);
-  link.click();
-  documentRef.body.removeChild(link);
-  URLRef.revokeObjectURL(objectUrl);
+
+  try {
+    link.click();
+  } catch {
+    clickFailed = true;
+  } finally {
+    try {
+      documentRef.body.removeChild(link);
+    } catch {
+      cleanupFailed = true;
+    } finally {
+      try {
+        URLRef.revokeObjectURL(objectUrl);
+      } catch {
+        cleanupFailed = true;
+      }
+    }
+  }
+
+  if (clickFailed) {
+    return { ok: false, reason: 'download-click-failed' };
+  }
+
+  if (cleanupFailed) {
+    return { ok: false, reason: 'download-cleanup-failed' };
+  }
 
   return {
     ok: true,
