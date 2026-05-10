@@ -39,6 +39,4 @@ Nicht Teil von Phase 5.1 sind React-Komponententests oder UI-Änderungen. Ebenfa
 - Quality Gate: `docs/QUALITY_GATE.md`
 - Phase-5.2-Quality-Gate-Review: `docs/PHASE_5_2_QUALITY_GATE_REVIEW.md`
 - Speicherentscheidung (Konzeptvorbereitung): `docs/STORAGE_DECISION.md`
-
-
 - JSON-Export-Konzeptvorbereitung: `docs/JSON_EXPORT_CONCEPT.md`
