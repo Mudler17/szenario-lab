@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.12 Review · JSON-Download-Cleanup geprüft
+Phase 5.13 · JSON-Download-UI konzeptionell vorbereitet
 
 ## Lokale Befehle
 ```bash
@@ -53,6 +53,8 @@ In Phase 5.12 wurde das Cleanup-Verhalten der JSON-Download-Utility gehärtet. D
 
 In Phase 5.12 Review wurde die Cleanup-Härtung der JSON-Download-Utility geprüft. Die Review bestätigt, dass temporäre Download-Elemente und Objekt-URLs auch bei Klick- und Cleanup-Fehlern kontrolliert behandelt werden. Die Utility bleibt weiterhin ein technischer Browser-Adapter ohne Download-Button, ohne Export-UI, ohne React-Einbindung, ohne JSON-Import, ohne LocalStorage und ohne Speicherung.
 
+In Phase 5.13 wurde die spätere UI-Einbindung des JSON-Downloads konzeptionell vorbereitet. Festgelegt wurde insbesondere, dass Download nicht mit App-interner Speicherung gleichgesetzt werden darf, dass ein späterer Button klar als „JSON herunterladen“ bezeichnet werden soll und dass Datenschutz- sowie Statushinweise vorzusehen sind. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -72,3 +74,4 @@ In Phase 5.12 Review wurde die Cleanup-Härtung der JSON-Download-Utility geprü
 - JSON-Download-Konzept: `docs/JSON_DOWNLOAD_CONCEPT.md`
 - Phase-5.11-Review (JSON-Download-Utility): `docs/PHASE_5_11_DOWNLOAD_UTILITY_REVIEW.md`
 - Phase-5.12-Review (JSON-Download-Cleanup): `docs/PHASE_5_12_DOWNLOAD_CLEANUP_REVIEW.md`
+- JSON-Download-UI-Konzept: `docs/JSON_DOWNLOAD_UI_CONCEPT.md`

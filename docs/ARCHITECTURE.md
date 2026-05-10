@@ -337,3 +337,7 @@ Keine UI-/React-Einbindung.
 
 ## Phase 5.12 – JSON-Download-Cleanup
 Die bestehende Download-Utility wurde technisch gehärtet. Cleanup von temporärem Link und Objekt-URL ist nun robuster abgesichert. Die Änderung bleibt auf den technischen Browser-Adapter begrenzt und ergänzt keine UI, keine React-Einbindung und keine Persistenz.
+
+
+## Phase 5.13 – JSON-Download-UI-Konzept
+Die spätere UI-Einbindung des JSON-Downloads wurde konzeptionell vorbereitet. Die UI soll nur als Auslöser für die bereits getrennte Export- und Download-Logik dienen. Download bleibt von Speicherung getrennt. In Phase 5.13 wurden keine React-Komponenten, keine UI-Elemente und keine Runtime-Integration umgesetzt.
