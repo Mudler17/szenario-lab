@@ -115,3 +115,7 @@ Phase 5.13 liefert die fachlich-technische Grundlage für eine spätere minimale
 
 ## 12. Umsetzungsstand Phase 5.14
 Phase 5.14 bereitet die nutzerfreundliche Übersetzung von Download-Ergebnissen vor. Eine spätere UI soll diese Meldungen nutzen können, ohne technische reason-Werte selbst interpretieren zu müssen.
+
+
+## 13. Umsetzungsstand Phase 5.15
+Phase 5.15 setzt das Konzept minimal um: Exportbereich im Bearbeitungsbereich, Button „JSON herunterladen“, Hinweis Download ≠ Speicherung, Datenschutzhinweis und aria-live-Statusmeldung.

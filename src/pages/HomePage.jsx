@@ -8,6 +8,11 @@ import {
   validateScenarioDraftBasics,
 } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
+import {
+  createScenarioExportDraft,
+  downloadScenarioExport,
+  createJsonDownloadStatusMessage,
+} from '../features/scenarios/export';
 
 function HomePage() {
   const originalScenario = useMemo(() => exampleScenario, []);
@@ -16,19 +21,31 @@ function HomePage() {
   const [scenarioValidation, setScenarioValidation] = useState(() =>
     validateScenarioDraftBasics(initialDraft),
   );
+  const [downloadStatus, setDownloadStatus] = useState(() =>
+    createJsonDownloadStatusMessage(),
+  );
 
   const handleResetDraft = () => {
     const resetScenario = resetDraft(originalScenario);
     setScenarioDraft(resetScenario);
     setScenarioValidation(validateScenarioDraftBasics(resetScenario));
+    setDownloadStatus(createJsonDownloadStatusMessage());
   };
 
   const updateDraftField = (fieldName, value) => {
     setScenarioDraft((currentDraft) => {
       const nextDraft = updateScenarioDraftField(currentDraft, fieldName, value);
       setScenarioValidation(validateScenarioDraftBasics(nextDraft));
+      setDownloadStatus(createJsonDownloadStatusMessage());
       return nextDraft;
     });
+  };
+
+
+  const handleDownloadJson = () => {
+    const exportDraft = createScenarioExportDraft(scenarioDraft);
+    const result = downloadScenarioExport(exportDraft);
+    setDownloadStatus(createJsonDownloadStatusMessage(result));
   };
 
   const handleScenarioNameChange = (nextName) => {
@@ -82,6 +99,25 @@ function HomePage() {
           <button type="button" onClick={handleResetDraft}>
             Draft auf Original zurücksetzen
           </button>
+
+          <section className="export-panel" aria-label="JSON-Download">
+            <h3>JSON-Download</h3>
+            <p className="workspace-hint">
+              Lädt den aktuellen lokalen Draft als JSON-Datei auf dein Gerät herunter. Dies ist keine Speicherung in der App.
+            </p>
+            <p className="workspace-hint">
+              Prüfe vor dem Download, ob der Entwurf personenbezogene oder vertrauliche Informationen enthält.
+            </p>
+            <button type="button" onClick={handleDownloadJson}>
+              JSON herunterladen
+            </button>
+            <p
+              className={`download-status download-status-${downloadStatus.type}`}
+              aria-live="polite"
+            >
+              {downloadStatus.message}
+            </p>
+          </section>
         </section>
 
         <section className="workspace-panel preview-panel" aria-label="Vorschau">
