@@ -260,3 +260,24 @@ Konkreter Umfang:
 - kein Import
 - keine Speicherung
 
+
+## Phase 5.7 – JSON-Export-Dateinamen-Utility
+
+In Phase 5.7 wurde eine reine Utility-Funktion vorbereitet, die aus einem Szenario-Draft einen sicheren Dateinamen für spätere JSON-Exporte erzeugt.
+
+Konkreter Umfang:
+- `createScenarioExportFilename`
+- Prefix `szenario-lab`
+- Slug aus `scenario.name`
+- Datum `YYYY-MM-DD`
+- Endung `.json`
+- Fallback `export`
+- Tests für die Utility
+
+Nicht enthalten:
+- kein Download
+- kein Button
+- keine UI
+- kein JSON-Import
+- kein LocalStorage
+- keine Speicherung
