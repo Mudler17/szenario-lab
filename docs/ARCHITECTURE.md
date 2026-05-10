@@ -341,3 +341,7 @@ Die bestehende Download-Utility wurde technisch gehärtet. Cleanup von temporär
 
 ## Phase 5.13 – JSON-Download-UI-Konzept
 Die spätere UI-Einbindung des JSON-Downloads wurde konzeptionell vorbereitet. Die UI soll nur als Auslöser für die bereits getrennte Export- und Download-Logik dienen. Download bleibt von Speicherung getrennt. In Phase 5.13 wurden keine React-Komponenten, keine UI-Elemente und keine Runtime-Integration umgesetzt.
+
+## Phase 5.14 – JSON-Download-Statusmeldungen
+Inhalt:
+Die Statusmeldungen für den späteren JSON-Download wurden als reine Mapping-Utility vorbereitet. Technische Ergebnisobjekte und reason-Werte werden von der späteren UI entkoppelt. Die Änderung ergänzt keine UI, keine React-Einbindung und keine Speicherung.

@@ -111,3 +111,7 @@ Konzeptionell festhalten:
 
 ## 11. Ergebnis von Phase 5.13
 Phase 5.13 liefert die fachlich-technische Grundlage für eine spätere minimale UI-Einbindung, ohne sie bereits umzusetzen.
+
+
+## 12. Umsetzungsstand Phase 5.14
+Phase 5.14 bereitet die nutzerfreundliche Übersetzung von Download-Ergebnissen vor. Eine spätere UI soll diese Meldungen nutzen können, ohne technische reason-Werte selbst interpretieren zu müssen.
