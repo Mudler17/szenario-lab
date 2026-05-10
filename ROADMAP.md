@@ -101,3 +101,8 @@
 - [ ] Noch keine Simulation
 - [ ] Noch keine OpenAI-Anbindung
 - [ ] Keine neuen Fachmodule
+
+## Phase 6 – Nächste Entwicklungsrichtung
+
+- [x] Phase 6.0 dokumentiert: Nächste Entwicklungsrichtung nach Stabilisierung festgelegt
+- [ ] Phase 6.1: JSON-Import konzeptionell vorbereiten
