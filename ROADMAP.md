@@ -92,7 +92,7 @@
 - [x] Phase 5.17 Review dokumentiert: UI-Zugänglichkeit der Download-Statusmeldung geprüft
 - [x] Phase 5.18: UI-Statusmeldungen fachlich konsolidiert
 - [x] Phase 5.18 Review: UI-Statusmeldungen prüfen
-- [ ] Phase 5.19: JSON-Export/Download fachlich abschließend prüfen
+- [x] Phase 5.19: JSON-Export/Download fachlich abschließend geprüft
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
