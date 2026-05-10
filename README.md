@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.2 Review · JSON-Import-Validierungskonzept geprüft
+Phase 6.3 · JSON-Import-Validierungs-Utility vorbereitet
 
 ## Lokale Befehle
 ```bash
@@ -89,6 +89,8 @@ In Phase 6.2 wurde die spätere JSON-Import-Validierung konzeptionell vorbereite
 
 
 In Phase 6.2 Review wurde das JSON-Import-Validierungskonzept geprüft. Die Review bewertet Eingabeform, Ergebnisobjekt, Reason-Codes, Warnungen, Validierungsreihenfolge, Nutzertexte, Testperspektive sowie Sicherheits- und Datenschutzgrenzen. Es wurden keine Validierungsfunktion, kein Datei-Upload, keine UI, keine Speicherung und kein LocalStorage ergänzt.
+
+In Phase 6.3 wurde eine reine Utility zur Validierung bereits geparster JSON-Import-Payloads vorbereitet. Die Utility prüft Exporttyp, Formatversion, Szenarioobjekt sowie die Pflichtfelder Name, Beschreibung und Ziel und gibt strukturierte Result-Objekte zurück. Es wurden kein Datei-Upload, kein FileReader, kein JSON.parse im Anwendungscode, keine UI, keine Speicherung, kein LocalStorage und keine Importübernahme ergänzt.
 
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
