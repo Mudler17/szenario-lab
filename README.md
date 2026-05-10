@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.16 · UI-Hinweise neutralisiert und Hero-Phase-Note bereinigt
+Phase 5.16 Review · UI-Hinweise geprüft
 
 ## Lokale Befehle
 ```bash
@@ -67,6 +67,8 @@ In Phase 5.15 Review wurde die minimale JSON-Download-UI geprüft. Die Review be
 
 In Phase 5.16 wurde die veraltete Hero-Phase-Note neutralisiert. Der sichtbare Hinweis beschreibt nun den aktuellen Nutzungsmodus als lokalen Draft mit Bearbeitung, Vorschau und JSON-Download ohne App-Speicherung. Es wurden keine neue Fachlogik, keine Speicherung, kein LocalStorage, kein JSON-Import, keine Simulation und keine OpenAI-Anbindung ergänzt.
 
+In Phase 5.16 Review wurden die neutralisierten UI-Hinweise geprüft. Die Review bestätigt, dass der Hero-Hinweis den aktuellen Nutzungsmodus als lokalen Draft mit Bearbeitung, Vorschau und JSON-Download ohne App-Speicherung verständlich beschreibt. Es wurden keine Fachlogik, keine Exportlogik, keine Speicherung, kein LocalStorage, kein JSON-Import, keine Simulation und keine OpenAI-Anbindung ergänzt.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -90,5 +92,6 @@ In Phase 5.16 wurde die veraltete Hero-Phase-Note neutralisiert. Der sichtbare H
 - Phase-5.13-Review (JSON-Download-UI-Konzept): `docs/PHASE_5_13_DOWNLOAD_UI_CONCEPT_REVIEW.md`
 - Phase-5.14-Review (JSON-Download-Statusmeldungen): `docs/PHASE_5_14_DOWNLOAD_STATUS_MESSAGES_REVIEW.md`
 - Phase-5.15-Review (JSON-Download-UI): `docs/PHASE_5_15_DOWNLOAD_UI_REVIEW.md`
+- Phase-5.16-Review (UI-Hinweise): `docs/PHASE_5_16_UI_HINTS_REVIEW.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
