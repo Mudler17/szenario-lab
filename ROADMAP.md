@@ -69,7 +69,8 @@
 - [x] Phase 5.2 Review dokumentiert: Quality Gate geprüft
 - [x] Phase 5.3 dokumentiert: Speicherentscheidung konzeptionell vorbereitet
 - [x] Phase 5.4: JSON-Export konzeptionell vorbereitet
-- [ ] Phase 5.5: JSON-Export-Payload-Utility vorbereiten
+- [x] Phase 5.5: JSON-Export-Payload-Utility vorbereitet
+- [ ] Phase 5.5 Review: JSON-Export-Payload-Utility prüfen
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
