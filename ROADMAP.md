@@ -68,7 +68,7 @@
 - [x] Phase 5.2 dokumentiert: Build- und Testbefehle als Qualitätsgrenze festgelegt
 - [x] Phase 5.2 Review dokumentiert: Quality Gate geprüft
 - [x] Phase 5.3 dokumentiert: Speicherentscheidung konzeptionell vorbereitet
-- [ ] Phase 5.4: JSON-Export konzeptionell vorbereiten
+- [x] Phase 5.4: JSON-Export konzeptionell vorbereitet
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
