@@ -119,3 +119,5 @@ Phase 5.14 bereitet die nutzerfreundliche Übersetzung von Download-Ergebnissen 
 
 ## 13. Umsetzungsstand Phase 5.15
 Phase 5.15 setzt das Konzept minimal um: Exportbereich im Bearbeitungsbereich, Button „JSON herunterladen“, Hinweis Download ≠ Speicherung, Datenschutzhinweis und aria-live-Statusmeldung.
+
+Phase 5.17 verbessert die Zugänglichkeit der Statusmeldung minimal, indem die Live-Region zusätzlich als Statusregion ausgezeichnet wird.

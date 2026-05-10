@@ -112,6 +112,7 @@ function HomePage() {
             </button>
             <p
               className={`download-status download-status-${downloadStatus.type}`}
+              role="status"
               aria-live="polite"
             >
               {downloadStatus.message}
