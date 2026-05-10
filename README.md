@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.2 · JSON-Import-Validierung konzeptionell vorbereitet
+Phase 6.2 Review · JSON-Import-Validierungskonzept geprüft
 
 ## Lokale Befehle
 ```bash
@@ -88,6 +88,8 @@ In Phase 6.1 Review wurde das JSON-Import-Konzept geprüft. Die Review bestätig
 In Phase 6.2 wurde die spätere JSON-Import-Validierung konzeptionell vorbereitet. Festgelegt wurden Eingabeform, Ergebnisobjekt, Fehlercodes, Warnungen, Validierungsreihenfolge, Nutzertexte und spätere Testfälle. Es wurden keine Validierungsfunktion, kein Datei-Upload, keine UI, keine Speicherung und kein LocalStorage ergänzt.
 
 
+In Phase 6.2 Review wurde das JSON-Import-Validierungskonzept geprüft. Die Review bewertet Eingabeform, Ergebnisobjekt, Reason-Codes, Warnungen, Validierungsreihenfolge, Nutzertexte, Testperspektive sowie Sicherheits- und Datenschutzgrenzen. Es wurden keine Validierungsfunktion, kein Datei-Upload, keine UI, keine Speicherung und kein LocalStorage ergänzt.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -117,5 +119,6 @@ In Phase 6.2 wurde die spätere JSON-Import-Validierung konzeptionell vorbereite
 - JSON-Import-Konzept: `docs/JSON_IMPORT_CONCEPT.md`
 - Phase-6.1-Review (JSON-Import-Konzept): `docs/PHASE_6_1_JSON_IMPORT_CONCEPT_REVIEW.md`
 - JSON-Import-Validierungskonzept: `docs/JSON_IMPORT_VALIDATION_CONCEPT.md`
+- Phase-6.2-Review (JSON-Import-Validierungskonzept): `docs/PHASE_6_2_JSON_IMPORT_VALIDATION_CONCEPT_REVIEW.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
