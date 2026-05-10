@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.5 · JSON-Export-Payload-Utility vorbereitet
+Phase 5.5 Review · JSON-Export-Payload-Utility geprüft
 
 ## Lokale Befehle
 ```bash
@@ -43,3 +43,4 @@ Es gibt weiterhin keinen Download-Button, keine UI, keinen JSON-Import, kein Loc
 - Phase-5.2-Quality-Gate-Review: `docs/PHASE_5_2_QUALITY_GATE_REVIEW.md`
 - Speicherentscheidung (Konzeptvorbereitung): `docs/STORAGE_DECISION.md`
 - JSON-Export-Konzeptvorbereitung: `docs/JSON_EXPORT_CONCEPT.md`
+- Phase-5.5-Review (Export-Payload-Utility): `docs/PHASE_5_5_EXPORT_PAYLOAD_REVIEW.md`

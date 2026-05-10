@@ -70,7 +70,7 @@
 - [x] Phase 5.3 dokumentiert: Speicherentscheidung konzeptionell vorbereitet
 - [x] Phase 5.4: JSON-Export konzeptionell vorbereitet
 - [x] Phase 5.5: JSON-Export-Payload-Utility vorbereitet
-- [ ] Phase 5.5 Review: JSON-Export-Payload-Utility prüfen
+- [x] Phase 5.5 Review dokumentiert: JSON-Export-Payload-Utility geprüft
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
