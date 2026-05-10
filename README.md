@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.8 · JSON-Export-Orchestrierung konzeptionell vorbereitet
+Phase 5.9 · JSON-Export-Orchestrierungs-Utility vorbereitet
 
 ## Lokale Befehle
 ```bash
@@ -38,8 +38,8 @@ In Phase 5.7 wurde eine reine Export-Dateinamen-Utility vorbereitet. Sie erzeugt
 Es gibt weiterhin keinen Download-Button, keine UI, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
 
-In Phase 5.8 wurde die konzeptionelle Orchestrierung für den späteren JSON-Export vorbereitet. Ziel ist ein gemeinsamer Exportzeitpunkt, damit Export-Payload und Export-Dateiname konsistent zusammengeführt werden können.
-Es gibt weiterhin keinen Download-Button, keine Export-UI, keinen JSON-Import, kein LocalStorage und keine Speicherung.
+In Phase 5.9 wurde eine reine Export-Orchestrierungs-Utility vorbereitet. Sie führt Export-Payload, Export-Dateiname und einen gemeinsamen Exportzeitpunkt in einem JavaScript-Objekt zusammen.
+Es gibt weiterhin keinen Download-Button, keine UI, keinen Browser-Blob, kein JSON.stringify, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
 
 ## Dokumentation
