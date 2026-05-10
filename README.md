@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.13 Review · JSON-Download-UI-Konzept geprüft
+Phase 5.14 · JSON-Download-Statusmeldungen vorbereitet
 
 ## Lokale Befehle
 ```bash
@@ -57,6 +57,8 @@ In Phase 5.13 wurde die spätere UI-Einbindung des JSON-Downloads konzeptionell 
 
 In Phase 5.13 Review wurde das JSON-Download-UI-Konzept geprüft. Die Review bestätigt, dass die spätere UI nur als Auslöser für die getrennte Export- und Download-Logik dienen soll, dass Download nicht als App-interne Speicherung missverstanden werden darf und dass nutzerfreundliche Status-, Fehler- und Datenschutzhinweise vorzusehen sind. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
+In Phase 5.14 wurde eine reine Mapping-Utility für JSON-Download-Statusmeldungen vorbereitet. Sie übersetzt technische Ergebnisobjekte des Download-Adapters in nutzerfreundliche Erfolg-, Fehler- und Info-Meldungen. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -78,3 +80,5 @@ In Phase 5.13 Review wurde das JSON-Download-UI-Konzept geprüft. Die Review bes
 - Phase-5.12-Review (JSON-Download-Cleanup): `docs/PHASE_5_12_DOWNLOAD_CLEANUP_REVIEW.md`
 - JSON-Download-UI-Konzept: `docs/JSON_DOWNLOAD_UI_CONCEPT.md`
 - Phase-5.13-Review (JSON-Download-UI-Konzept): `docs/PHASE_5_13_DOWNLOAD_UI_CONCEPT_REVIEW.md`
+
+- Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
