@@ -325,3 +325,11 @@ Nicht enthalten:
 In Phase 5.10 wurde der spätere JSON-Download ausschließlich konzeptionell als technische Adaptergrenze nach der Export-Orchestrierung vorbereitet.
 Die fachliche Orchestrierung bleibt bei `createScenarioExportDraft`; der Download ist als nachgelagerte Browser-Adapterschicht verstanden.
 Es wurde ausdrücklich keine Implementierung ergänzt (kein Download-Button, keine UI-Erweiterung, kein Blob, kein `URL.createObjectURL`, kein `JSON.stringify` im Anwendungscode, kein Import, kein LocalStorage, keine Speicherung).
+
+
+## Phase 5.11 – JSON-Download-Utility
+Inhalt:
+Die Download-Utility ist als technischer Browser-Adapter nach `createScenarioExportDraft` umgesetzt.
+Sie übernimmt nur Serialisierung, Blob-Erzeugung, temporäre Objekt-URL, Link-Klick und Cleanup.
+Sie bestimmt keine Exportdaten, keine Dateinamen und keine Speicherlogik.
+Keine UI-/React-Einbindung.

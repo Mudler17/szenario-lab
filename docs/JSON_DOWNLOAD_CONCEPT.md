@@ -65,3 +65,8 @@ Nicht Teil von Phase 5.10 sind:
 - JSON-Import
 - LocalStorage
 - Speicherung
+
+
+## Umsetzungsstand (Phase 5.11)
+Phase 5.11 hat die zuvor konzeptionell beschriebene Adaptergrenze als kleine Utility vorbereitet.
+Weiterhin keine UI und keine Speicherung.
