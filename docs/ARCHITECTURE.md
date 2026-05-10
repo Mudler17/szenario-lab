@@ -243,3 +243,20 @@ Nicht enthalten:
 - kein JSON-Import
 - kein LocalStorage
 - keine Speicherung
+
+## Phase 5.6 – JSON-Export-Schema
+
+In Phase 5.6 wurde das Export-Schema für spätere Szenario-Exporte konzeptionell festgelegt.
+
+Konkreter Umfang:
+- Top-Level-Felder `exportType`, `formatVersion`, `exportedAt`, `source`, `scenario`
+- Mindeststruktur für `scenario`
+- optionale Metadaten
+- Kompatibilitäts- und Erweiterungsregeln
+- Hinweise zu JSON-Kompatibilität
+- keine neue Exportlogik
+- kein Download
+- keine UI
+- kein Import
+- keine Speicherung
+
