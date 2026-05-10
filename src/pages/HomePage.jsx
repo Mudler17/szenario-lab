@@ -41,7 +41,6 @@ function HomePage() {
     });
   };
 
-
   const handleDownloadJson = () => {
     const exportDraft = createScenarioExportDraft(scenarioDraft);
     const result = downloadScenarioExport(exportDraft);
@@ -65,7 +64,7 @@ function HomePage() {
       <section className="hero">
         <h1>szenario-lab</h1>
         <p className="subtitle">Organisationsszenarien strukturiert modellieren</p>
-        <p className="phase-note">Phase 4.8 · Bearbeitungsbereich und Vorschau visuell klarer getrennt</p>
+        <p className="phase-note">Lokaler Draft · Bearbeitung, Vorschau und JSON-Download ohne App-Speicherung</p>
       </section>
 
       <section className="placeholder-grid" aria-label="Module in Vorbereitung">
@@ -87,7 +86,7 @@ function HomePage() {
         <section className="workspace-panel editor-panel" aria-label="Bearbeitung">
           <h2>Bearbeitung</h2>
           <p className="workspace-hint">
-          Aktiver Modus: <strong>Lokaler Draft</strong> (nicht gespeichert)
+            Aktiver Modus: <strong>Lokaler Draft</strong> (nicht gespeichert)
           </p>
           <ScenarioDraftForm
             scenario={scenarioDraft}

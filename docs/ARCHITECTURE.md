@@ -350,3 +350,6 @@ Die Statusmeldungen für den späteren JSON-Download wurden als reine Mapping-Ut
 ## Phase 5.15 – Minimale JSON-Download-UI
 Inhalt:
 Die bestehende HomePage nutzt die vorbereiteten Export-/Download-Utilities erstmals minimal in der UI. Die UI bleibt Auslöser, nicht Träger der Exportfachlogik. Download bleibt von Speicherung getrennt. Es wurden kein JSON-Import, kein LocalStorage, keine Backend-Speicherung und keine neue Fachlogik ergänzt.
+
+## Phase 5.16 – UI-Hinweise neutralisiert
+Die veraltete technische Hero-Phase-Note wurde durch einen neutralen Nutzungshinweis ersetzt. Die Änderung verbessert die Konsistenz der Oberfläche, ohne Fachlogik, Exportlogik, Speicherung oder neue Module zu ergänzen.

@@ -86,7 +86,8 @@
 - [x] Phase 5.14 Review dokumentiert: JSON-Download-Statusmeldungen geprüft
 - [x] Phase 5.15: JSON-Download-UI minimal vorbereitet
 - [x] Phase 5.15 Review dokumentiert: JSON-Download-UI geprüft
-- [ ] Phase 5.16: UI-Hinweise neutralisieren und Hero-Phase-Note bereinigen
+- [x] Phase 5.16: UI-Hinweise neutralisiert und Hero-Phase-Note bereinigt
+- [ ] Phase 5.16 Review: UI-Hinweise prüfen
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
