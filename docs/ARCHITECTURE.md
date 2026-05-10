@@ -333,3 +333,7 @@ Die Download-Utility ist als technischer Browser-Adapter nach `createScenarioExp
 Sie übernimmt nur Serialisierung, Blob-Erzeugung, temporäre Objekt-URL, Link-Klick und Cleanup.
 Sie bestimmt keine Exportdaten, keine Dateinamen und keine Speicherlogik.
 Keine UI-/React-Einbindung.
+
+
+## Phase 5.12 – JSON-Download-Cleanup
+Die bestehende Download-Utility wurde technisch gehärtet. Cleanup von temporärem Link und Objekt-URL ist nun robuster abgesichert. Die Änderung bleibt auf den technischen Browser-Adapter begrenzt und ergänzt keine UI, keine React-Einbindung und keine Persistenz.
