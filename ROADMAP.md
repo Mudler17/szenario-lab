@@ -108,4 +108,5 @@
 - [x] Phase 6.1: JSON-Import konzeptionell vorbereitet
 - [x] Phase 6.1 Review dokumentiert: JSON-Import-Konzept geprüft
 - [x] Phase 6.2: JSON-Import-Validierung konzeptionell vorbereitet
-- [ ] Phase 6.2 Review: JSON-Import-Validierungskonzept prüfen
+- [x] Phase 6.2 Review dokumentiert: JSON-Import-Validierungskonzept geprüft
+- [ ] Phase 6.3: JSON-Import-Validierungs-Utility vorbereiten
