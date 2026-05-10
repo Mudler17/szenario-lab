@@ -89,7 +89,8 @@
 - [x] Phase 5.16: UI-Hinweise neutralisiert und Hero-Phase-Note bereinigt
 - [x] Phase 5.16 Review dokumentiert: UI-Hinweise geprüft
 - [x] Phase 5.17: UI-Zugänglichkeit der Download-Statusmeldung verbessert
-- [ ] Phase 5.17 Review: UI-Zugänglichkeit der Download-Statusmeldung prüfen
+- [x] Phase 5.17 Review dokumentiert: UI-Zugänglichkeit der Download-Statusmeldung geprüft
+- [ ] Phase 5.18: UI-Statusmeldungen fachlich konsolidieren
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
