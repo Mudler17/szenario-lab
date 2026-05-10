@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.15 · JSON-Download-UI minimal vorbereitet
+Phase 5.15 Review · JSON-Download-UI geprüft
 
 ## Lokale Befehle
 ```bash
@@ -63,6 +63,8 @@ In Phase 5.14 Review wurde die Mapping-Utility für JSON-Download-Statusmeldunge
 
 In Phase 5.15 wurde eine minimale JSON-Download-UI im bestehenden Bearbeitungsbereich vorbereitet. Der Button „JSON herunterladen“ nutzt den aktuellen lokalen Draft, erzeugt einen Export-Draft, löst den Browser-Download aus und zeigt nutzerfreundliche Statusmeldungen. Download bleibt ausdrücklich von App-interner Speicherung getrennt. Es gibt weiterhin keinen JSON-Import, kein LocalStorage, keine Backend-Speicherung, keine Simulation und keine OpenAI-Anbindung.
 
+In Phase 5.15 Review wurde die minimale JSON-Download-UI geprüft. Die Review bestätigt, dass der Button „JSON herunterladen“ den aktuellen lokalen Draft verwendet, die vorbereitete Export-/Download-Logik auslöst und nutzerfreundliche Statusmeldungen anzeigt. Download bleibt von App-interner Speicherung getrennt. Als nächster UI-Aufräumpunkt wurde die veraltete Hero-Phase-Note identifiziert. Es gibt weiterhin keinen JSON-Import, kein LocalStorage, keine Backend-Speicherung, keine Simulation und keine OpenAI-Anbindung.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -85,5 +87,6 @@ In Phase 5.15 wurde eine minimale JSON-Download-UI im bestehenden Bearbeitungsbe
 - JSON-Download-UI-Konzept: `docs/JSON_DOWNLOAD_UI_CONCEPT.md`
 - Phase-5.13-Review (JSON-Download-UI-Konzept): `docs/PHASE_5_13_DOWNLOAD_UI_CONCEPT_REVIEW.md`
 - Phase-5.14-Review (JSON-Download-Statusmeldungen): `docs/PHASE_5_14_DOWNLOAD_STATUS_MESSAGES_REVIEW.md`
+- Phase-5.15-Review (JSON-Download-UI): `docs/PHASE_5_15_DOWNLOAD_UI_REVIEW.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
