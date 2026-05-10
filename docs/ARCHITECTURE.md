@@ -281,3 +281,18 @@ Nicht enthalten:
 - kein JSON-Import
 - kein LocalStorage
 - keine Speicherung
+
+## Phase 5.8 – JSON-Export-Orchestrierungskonzept
+
+In Phase 5.8 wurde konzeptionell festgelegt, wie Export-Payload und Export-Dateiname später konsistent zusammengeführt werden.
+
+Konkreter Umfang:
+- gemeinsamer `exportedAt`-Zeitpunkt
+- spätere Verbindung von Payload- und Dateinamen-Utility
+- mögliche Orchestrierungsfunktion `createScenarioExportDraft`
+- keine neue Utility
+- kein Download
+- keine UI
+- kein Import
+- keine Speicherung
+
