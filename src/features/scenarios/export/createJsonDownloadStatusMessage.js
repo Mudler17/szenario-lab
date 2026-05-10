@@ -1,6 +1,6 @@
 const UNKNOWN_STATUS_MESSAGE = {
   type: 'info',
-  message: 'Es liegt noch kein Download-Status vor.'
+  message: 'Noch kein JSON-Download gestartet.'
 };
 
 const FALLBACK_ERROR_MESSAGE = {
@@ -9,13 +9,13 @@ const FALLBACK_ERROR_MESSAGE = {
 };
 
 const REASON_TO_MESSAGE = {
-  'missing-export-draft': 'Es ist kein Export-Entwurf vorhanden.',
-  'missing-payload': 'Die Exportdaten konnten nicht vorbereitet werden.',
-  'missing-filename': 'Der Dateiname konnte nicht erstellt werden.',
-  'download-api-unavailable': 'Der Download wird in dieser Browser-Umgebung nicht unterstützt.',
-  'payload-not-json-serializable': 'Die Exportdaten konnten nicht als JSON serialisiert werden.',
-  'download-click-failed': 'Der Browser konnte den Download nicht starten.',
-  'download-cleanup-failed': 'Der Download wurde versucht, aber das technische Aufräumen war nicht vollständig erfolgreich.'
+  'missing-export-draft': 'Der aktuelle lokale Draft konnte nicht für den Download vorbereitet werden.',
+  'missing-payload': 'Die Exportdaten konnten nicht für den Download vorbereitet werden.',
+  'missing-filename': 'Der Dateiname für den JSON-Download konnte nicht erstellt werden.',
+  'download-api-unavailable': 'Der JSON-Download wird in dieser Browser-Umgebung nicht unterstützt.',
+  'payload-not-json-serializable': 'Die Exportdaten konnten nicht als JSON-Datei vorbereitet werden.',
+  'download-click-failed': 'Der Browser konnte den JSON-Download nicht starten.',
+  'download-cleanup-failed': 'Der Download wurde versucht, aber temporäre Browserdaten konnten nicht vollständig aufgeräumt werden.'
 };
 
 export function createJsonDownloadStatusMessage(result) {
@@ -27,13 +27,13 @@ export function createJsonDownloadStatusMessage(result) {
     if (result.filename) {
       return {
         type: 'success',
-        message: `JSON-Datei wurde zum Download vorbereitet: ${result.filename}`
+        message: `JSON-Download vorbereitet: ${result.filename}`
       };
     }
 
     return {
       type: 'success',
-      message: 'JSON-Datei wurde zum Download vorbereitet.'
+      message: 'JSON-Download vorbereitet.'
     };
   }
 
