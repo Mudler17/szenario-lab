@@ -81,7 +81,8 @@
 - [x] Phase 5.12: JSON-Download-Cleanup gehärtet
 - [x] Phase 5.12 Review dokumentiert: JSON-Download-Cleanup geprüft
 - [x] Phase 5.13: JSON-Download-UI konzeptionell vorbereitet
-- [ ] Phase 5.13 Review: JSON-Download-UI-Konzept prüfen
+- [x] Phase 5.13 Review dokumentiert: JSON-Download-UI-Konzept geprüft
+- [ ] Phase 5.14: JSON-Download-Statusmeldungen vorbereiten
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation

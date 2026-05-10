@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.13 · JSON-Download-UI konzeptionell vorbereitet
+Phase 5.13 Review · JSON-Download-UI-Konzept geprüft
 
 ## Lokale Befehle
 ```bash
@@ -55,6 +55,8 @@ In Phase 5.12 Review wurde die Cleanup-Härtung der JSON-Download-Utility geprü
 
 In Phase 5.13 wurde die spätere UI-Einbindung des JSON-Downloads konzeptionell vorbereitet. Festgelegt wurde insbesondere, dass Download nicht mit App-interner Speicherung gleichgesetzt werden darf, dass ein späterer Button klar als „JSON herunterladen“ bezeichnet werden soll und dass Datenschutz- sowie Statushinweise vorzusehen sind. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
+In Phase 5.13 Review wurde das JSON-Download-UI-Konzept geprüft. Die Review bestätigt, dass die spätere UI nur als Auslöser für die getrennte Export- und Download-Logik dienen soll, dass Download nicht als App-interne Speicherung missverstanden werden darf und dass nutzerfreundliche Status-, Fehler- und Datenschutzhinweise vorzusehen sind. Es gibt weiterhin keinen Download-Button, keine Export-UI, keine React-Einbindung, keinen JSON-Import, kein LocalStorage und keine Speicherung.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -75,3 +77,4 @@ In Phase 5.13 wurde die spätere UI-Einbindung des JSON-Downloads konzeptionell 
 - Phase-5.11-Review (JSON-Download-Utility): `docs/PHASE_5_11_DOWNLOAD_UTILITY_REVIEW.md`
 - Phase-5.12-Review (JSON-Download-Cleanup): `docs/PHASE_5_12_DOWNLOAD_CLEANUP_REVIEW.md`
 - JSON-Download-UI-Konzept: `docs/JSON_DOWNLOAD_UI_CONCEPT.md`
+- Phase-5.13-Review (JSON-Download-UI-Konzept): `docs/PHASE_5_13_DOWNLOAD_UI_CONCEPT_REVIEW.md`
