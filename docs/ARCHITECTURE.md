@@ -319,3 +319,9 @@ Nicht enthalten:
 - kein JSON-Import
 - kein LocalStorage
 - keine Speicherung
+
+
+## Phase 5.10 – JSON-Download-Konzept
+In Phase 5.10 wurde der spätere JSON-Download ausschließlich konzeptionell als technische Adaptergrenze nach der Export-Orchestrierung vorbereitet.
+Die fachliche Orchestrierung bleibt bei `createScenarioExportDraft`; der Download ist als nachgelagerte Browser-Adapterschicht verstanden.
+Es wurde ausdrücklich keine Implementierung ergänzt (kein Download-Button, keine UI-Erweiterung, kein Blob, kein `URL.createObjectURL`, kein `JSON.stringify` im Anwendungscode, kein Import, kein LocalStorage, keine Speicherung).
