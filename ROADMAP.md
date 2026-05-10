@@ -74,7 +74,7 @@
 - [x] Phase 5.6: JSON-Export-Schema konzeptionell festlegen
 - [x] Phase 5.7: JSON-Export-Dateinamen vorbereitet
 - [x] Phase 5.7 Review dokumentiert: JSON-Export-Dateinamen geprüft
-- [ ] Phase 5.8: JSON-Export-Orchestrierung konzeptionell vorbereiten
+- [x] Phase 5.8: JSON-Export-Orchestrierung konzeptionell vorbereiten
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
