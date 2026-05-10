@@ -77,6 +77,8 @@
 - [x] Phase 5.8: JSON-Export-Orchestrierung konzeptionell vorbereiten
 - [x] Phase 5.9: JSON-Export-Orchestrierungs-Utility vorbereitet
 - [x] Phase 5.9 Review dokumentiert: JSON-Export-Orchestrierungs-Utility geprüft
+- [x] Phase 5.11 Review dokumentiert: JSON-Download-Utility geprüft
+- [ ] Phase 5.12: JSON-Download-Cleanup härten
 - [ ] Noch keine Speicherung
 - [ ] Noch kein LocalStorage
 - [ ] Noch keine Simulation
