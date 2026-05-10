@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.6 · JSON-Export-Schema konzeptionell festgelegt
+Phase 5.7 · JSON-Export-Dateinamen vorbereitet
 
 ## Lokale Befehle
 ```bash
@@ -33,6 +33,9 @@ Es gibt weiterhin keinen Download-Button, keine UI, keinen JSON-Import, kein Loc
 
 In Phase 5.6 wurde das konzeptionelle JSON-Export-Schema verbindlich dokumentiert (Top-Level-Struktur, Pflichtfelder, optionale Metadaten und Erweiterungsregeln).
 Es gibt weiterhin keinen Download-Button, keine Export-UI, keinen JSON-Import, kein LocalStorage und keine Speicherung.
+
+In Phase 5.7 wurde eine reine Export-Dateinamen-Utility vorbereitet. Sie erzeugt aus dem Szenario-Namen und einem Exportzeitpunkt einen sicheren Dateinamen für spätere JSON-Exporte.
+Es gibt weiterhin keinen Download-Button, keine UI, keinen JSON-Import, kein LocalStorage und keine Speicherung.
 
 
 ## Dokumentation
