@@ -353,3 +353,8 @@ Die bestehende HomePage nutzt die vorbereiteten Export-/Download-Utilities erstm
 
 ## Phase 5.16 – UI-Hinweise neutralisiert
 Die veraltete technische Hero-Phase-Note wurde durch einen neutralen Nutzungshinweis ersetzt. Die Änderung verbessert die Konsistenz der Oberfläche, ohne Fachlogik, Exportlogik, Speicherung oder neue Module zu ergänzen.
+
+## Phase 5.17 – Zugänglichkeit der Download-Statusmeldung
+
+Inhalt:
+Die bestehende Download-Statusmeldung wurde als Statusregion markiert. Die Änderung ergänzt `role="status"` zur bereits vorhandenen `aria-live="polite"`-Statusmeldung. Die Änderung bleibt auf Zugänglichkeit begrenzt und ergänzt keine Fachlogik, keine Exportlogik, keine Speicherung und keine neuen Module.

@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 5.16 Review · UI-Hinweise geprüft
+Phase 5.17 · UI-Zugänglichkeit der Download-Statusmeldung verbessert
 
 ## Lokale Befehle
 ```bash
@@ -68,6 +68,8 @@ In Phase 5.15 Review wurde die minimale JSON-Download-UI geprüft. Die Review be
 In Phase 5.16 wurde die veraltete Hero-Phase-Note neutralisiert. Der sichtbare Hinweis beschreibt nun den aktuellen Nutzungsmodus als lokalen Draft mit Bearbeitung, Vorschau und JSON-Download ohne App-Speicherung. Es wurden keine neue Fachlogik, keine Speicherung, kein LocalStorage, kein JSON-Import, keine Simulation und keine OpenAI-Anbindung ergänzt.
 
 In Phase 5.16 Review wurden die neutralisierten UI-Hinweise geprüft. Die Review bestätigt, dass der Hero-Hinweis den aktuellen Nutzungsmodus als lokalen Draft mit Bearbeitung, Vorschau und JSON-Download ohne App-Speicherung verständlich beschreibt. Es wurden keine Fachlogik, keine Exportlogik, keine Speicherung, kein LocalStorage, kein JSON-Import, keine Simulation und keine OpenAI-Anbindung ergänzt.
+
+In Phase 5.17 wurde die Zugänglichkeit der JSON-Download-Statusmeldung minimal verbessert. Die Statusmeldung nutzt nun zusätzlich zu `aria-live="polite"` auch `role="status"`, damit Erfolg-, Fehler- und Info-Meldungen besser als Statusaktualisierungen erkennbar sind. Es wurden keine Fachlogik, keine Exportlogik, keine Speicherung, kein LocalStorage, kein JSON-Import, keine Simulation und keine OpenAI-Anbindung ergänzt.
 
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
