@@ -109,6 +109,27 @@ function HomePage() {
     fileReader.readAsText(selectedImportFile);
   };
 
+
+  const handleAdoptValidatedImport = () => {
+    if (importResult?.ok !== true || !importResult.scenario) {
+      setImportStatus({
+        type: 'error',
+        message: 'Dieses Szenario kann nicht übernommen werden, weil die Prüfung fehlgeschlagen ist.',
+      });
+      return;
+    }
+
+    const nextDraft = createDraftFromScenario(importResult.scenario);
+    setScenarioDraft(nextDraft);
+    setScenarioValidation(validateScenarioDraftBasics(nextDraft));
+    setImportStatus({
+      type: 'success',
+      message:
+        'Das geprüfte Szenario wurde in den lokalen Draft übernommen. Es wurde nicht gespeichert.',
+    });
+    setDownloadStatus(createJsonDownloadStatusMessage());
+  };
+
   const handleScenarioNameChange = (nextName) => {
     updateDraftField('name', nextName);
   };
@@ -207,6 +228,21 @@ function HomePage() {
             >
               {importStatus.message}
             </p>
+            {importResult?.ok === true ? (
+              <div className="import-adoption-notice" aria-label="Import-Übernahmehinweis">
+                <p>Diese Aktion ersetzt den aktuellen lokalen Draft. Es wird nichts in der App gespeichert.</p>
+                {Array.isArray(importResult.warnings) && importResult.warnings.length > 0 ? (
+                  <p>Die Datei ist gültig, enthält aber zusätzliche Felder. Diese Felder werden derzeit nicht ausgewertet.</p>
+                ) : null}
+                <button type="button" onClick={handleAdoptValidatedImport}>
+                  Geprüftes Szenario in lokalen Draft übernehmen
+                </button>
+              </div>
+            ) : (
+              <p className="workspace-hint">
+                Dieses Szenario kann erst übernommen werden, wenn die Prüfung erfolgreich war.
+              </p>
+            )}
             {importResult?.ok === true && Array.isArray(importResult.warnings) && importResult.warnings.length > 0 ? (
               <div className="import-warnings" aria-label="Import-Warnungen">
                 <p>Hinweis: Die Datei enthält zusätzliche Felder, die derzeit nicht ausgewertet werden.</p>

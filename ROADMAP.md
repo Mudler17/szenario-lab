@@ -126,3 +126,6 @@
 - [x] Phase 6.9 Review dokumentiert: JSON-Import-UI geprüft
 - [x] Phase 6.10: JSON-Import-Übernahme konzeptionell vorbereitet
 - [x] Phase 6.10 Review dokumentiert: JSON-Import-Übernahme-Konzept geprüft
+
+- [x] Phase 6.11: JSON-Import-Übernahme minimal vorbereitet
+- [ ] Phase 6.11 Review dokumentiert: JSON-Import-Übernahme geprüft
