@@ -128,4 +128,4 @@
 - [x] Phase 6.10 Review dokumentiert: JSON-Import-Übernahme-Konzept geprüft
 
 - [x] Phase 6.11: JSON-Import-Übernahme minimal vorbereitet
-- [ ] Phase 6.11 Review dokumentiert: JSON-Import-Übernahme geprüft
+- [x] Phase 6.11 Review dokumentiert: JSON-Import-Übernahme geprüft

@@ -242,13 +242,7 @@ function HomePage() {
               <p className="workspace-hint">
                 Dieses Szenario kann erst übernommen werden, wenn die Prüfung erfolgreich war.
               </p>
-            )}
-            {importResult?.ok === true && Array.isArray(importResult.warnings) && importResult.warnings.length > 0 ? (
-              <div className="import-warnings" aria-label="Import-Warnungen">
-                <p>Hinweis: Die Datei enthält zusätzliche Felder, die derzeit nicht ausgewertet werden.</p>
-              </div>
-            ) : null}
-          </section>
+            )}          </section>
         </section>
 
         <section className="workspace-panel preview-panel" aria-label="Vorschau">
