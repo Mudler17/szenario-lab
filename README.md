@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.4 Review · JSON-Import-Parsing-Konzept geprüft
+Phase 6.5 · JSON-Import-Parsing-Utility vorbereitet
 
 ## Lokale Befehle
 ```bash
@@ -97,6 +97,10 @@ In Phase 6.3 enthält die Utility zusätzlich nicht-blockierende Warnungen für 
 In Phase 6.4 wurde das JSON-Import-Parsing konzeptionell vorbereitet (Text → `JSON.parse` → `validateScenarioImportPayload` → Result), weiterhin ohne UI, Datei-Upload, Speicherung oder Draft-Übernahme.
 
 In Phase 6.4 Review wurde das JSON-Import-Parsing-Konzept fachlich geprüft und ohne Blocker bestätigt.
+
+In Phase 6.5 wurde eine reine Parsing-Utility für JSON-Import-Text vorbereitet. Sie parst Text via `JSON.parse` und reicht erfolgreiche Parse-Ergebnisse unverändert an `validateScenarioImportPayload` weiter; bei Syntaxfehlern liefert sie ein eigenes `invalid-json-syntax`-Ergebnis. Es wurden keine UI, kein Datei-Upload, kein FileReader, keine Speicherung, kein LocalStorage und keine Draft-Übernahme ergänzt.
+
+In Phase 6.5 Review ist die fachliche Prüfung noch offen.
 
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`

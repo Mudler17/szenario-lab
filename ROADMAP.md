@@ -113,3 +113,5 @@
 - [x] Phase 6.3 Review dokumentiert: JSON-Import-Validierungs-Utility geprüft
 - [x] Phase 6.4: JSON-Import-Parsing konzeptionell vorbereitet
 - [x] Phase 6.4 Review dokumentiert: JSON-Import-Parsing-Konzept geprüft
+- [x] Phase 6.5: JSON-Import-Parsing-Utility vorbereitet
+- [ ] Phase 6.5 Review dokumentiert: JSON-Import-Parsing-Utility geprüft
