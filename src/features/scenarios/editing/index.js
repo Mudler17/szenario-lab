@@ -8,4 +8,7 @@ export { default as RelationshipDraftForm } from './components/RelationshipDraft
 export { default as InterventionDraftForm } from './components/InterventionDraftForm';
 export { default as StrategyDraftForm } from './components/StrategyDraftForm';
 
-export { validateScenarioImportPayload } from './import/index.js';
+export {
+  validateScenarioImportPayload,
+  parseScenarioImportJsonText,
+} from './import/index.js';
