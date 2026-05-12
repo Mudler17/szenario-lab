@@ -92,6 +92,8 @@ In Phase 6.2 Review wurde das JSON-Import-Validierungskonzept geprüft. Die Revi
 
 In Phase 6.3 wurde eine reine Utility zur Validierung bereits geparster JSON-Import-Payloads vorbereitet. Die Utility prüft Exporttyp, Formatversion, Szenarioobjekt sowie die Pflichtfelder Name, Beschreibung und Ziel und gibt strukturierte Result-Objekte zurück. Es wurden kein Datei-Upload, kein FileReader, kein JSON.parse im Anwendungscode, keine UI, keine Speicherung, kein LocalStorage und keine Importübernahme ergänzt.
 
+In Phase 6.3 enthält die Utility zusätzlich nicht-blockierende Warnungen für unbekannte Top-Level-Felder und unbekannte Scenario-Felder.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
