@@ -82,7 +82,7 @@ Minimale lokale Validierung (analog zu bisherigen Draft-Regeln):
 - `id`: nicht leer; innerhalb der Liste eindeutig.
 - `title`: nicht leer; getrimmt.
 - `content`: nicht leer; getrimmt.
-- `scope`: nicht leer; freier Text in 7.2.1.
+- `scope`: in Phase 7.2.2 entweder Pflichtfeld mit Default `"Gesamtszenario"` **oder** optional leer mit nutzerseitiger Interpretation als `"Gesamtszenario"` (Entscheidung in 7.2.2 festzulegen).
 - `confidence`: Pflichtfeld; erlaubte Werte zunächst `low | medium | high`.
 - `rationale`: optional, aber wenn gesetzt dann getrimmt und nicht nur Whitespace.
 
@@ -162,3 +162,6 @@ Quality Gate für den Abschluss von 7.2.1:
 - Abgrenzung und Negativ-Liste klar dokumentiert.
 - Verweis auf Folgephase 7.2.2 vorhanden.
 - Keine Implementierungsartefakte in Code, Schema oder UI.
+- `npm test` am 2026-05-12 ausgeführt: **erfolgreich** (113/113 Tests bestanden, 0 Fehler).
+- `npm run build` am 2026-05-12 ausgeführt: **erfolgreich** (Vite Production Build ohne Fehler erstellt).
+- **npm test und npm run build erfolgreich ausgeführt. Keine Blocker.**
