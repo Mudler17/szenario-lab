@@ -135,5 +135,6 @@
 ## Phase 7 – Szenario-Modell fachlich weiter editierbar machen
 
 - [x] Phase 7.0: Nächste Entwicklungsrichtung nach lokaler Import-/Export-Kette festgelegt
-- [ ] Phase 7.1: Nächstes editierbares Szenariofeld konzeptionell auswählen
+- [x] Phase 7.1: Nächstes editierbares Szenariofeld konzeptionell ausgewählt
 - [ ] Phase 7.1 Review dokumentiert: Auswahl des nächsten editierbaren Szenariofelds geprüft
+- [ ] Phase 7.2: Annahmen als ersten zusätzlichen editierbaren Bereich konzeptionell vorbereiten
