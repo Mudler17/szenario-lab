@@ -7,3 +7,5 @@ export { default as EvidenceDraftForm } from './components/EvidenceDraftForm';
 export { default as RelationshipDraftForm } from './components/RelationshipDraftForm';
 export { default as InterventionDraftForm } from './components/InterventionDraftForm';
 export { default as StrategyDraftForm } from './components/StrategyDraftForm';
+
+export { validateScenarioImportPayload } from './import/index.js';
