@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.10 Review · JSON-Import-Übernahme-Konzept fachlich geprüft (bestanden)
+Phase 6.11 · JSON-Import-Übernahme minimal vorbereitet (Review offen)
 
 ## Lokale Befehle
 ```bash
@@ -119,6 +119,8 @@ Im Phase-6.9-Review wurde diese UI fachlich geprüft und ohne Blocker bestätigt
 In Phase 6.10 wurde konzeptionell festgelegt, unter welchen Bedingungen ein geprüftes Szenario später den lokalen Draft ersetzen darf. Die Übernahme bleibt ein bewusster Schritt und ist weiterhin von Speicherung, LocalStorage und Server-Anbindung getrennt.
 
 In Phase 6.10 Review wurde das JSON-Import-Übernahme-Konzept fachlich geprüft und ohne Blocker bestätigt. Die Übernahme bleibt ein bewusster, bestätigter Schritt bei gültigem Prüfergebnis und weiterhin strikt getrennt von Speicherung, LocalStorage und Server-/OpenAI-Anbindung.
+
+In Phase 6.11 wurde eine bewusst bestätigte Übernahme geprüfter JSON-Importe in den lokalen Draft ergänzt. Die Übernahme ersetzt nur den lokalen Arbeitsspeicher-Draft und bleibt von Speicherung, LocalStorage, Server-Upload und OpenAI-Anbindung getrennt.
 
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`

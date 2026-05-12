@@ -193,3 +193,23 @@ body {
 .import-warnings p {
   margin: 0;
 }
+
+
+.import-adoption-notice {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  background: #fffbeb;
+}
+
+.import-adoption-notice p {
+  margin: 0 0 0.5rem;
+  color: #92400e;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.import-adoption-notice button {
+  margin-top: 0.25rem;
+}
