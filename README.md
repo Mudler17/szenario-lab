@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.5 · JSON-Import-Parsing-Utility vorbereitet
+Phase 6.5 Review · JSON-Import-Parsing-Utility fachlich geprüft
 
 ## Lokale Befehle
 ```bash
@@ -100,7 +100,7 @@ In Phase 6.4 Review wurde das JSON-Import-Parsing-Konzept fachlich geprüft und 
 
 In Phase 6.5 wurde eine reine Parsing-Utility für JSON-Import-Text vorbereitet. Sie parst Text via `JSON.parse` und reicht erfolgreiche Parse-Ergebnisse unverändert an `validateScenarioImportPayload` weiter; bei Syntaxfehlern liefert sie ein eigenes `invalid-json-syntax`-Ergebnis. Es wurden keine UI, kein Datei-Upload, kein FileReader, keine Speicherung, kein LocalStorage und keine Draft-Übernahme ergänzt.
 
-In Phase 6.5 Review ist die fachliche Prüfung noch offen.
+In Phase 6.5 Review wurde die JSON-Import-Parsing-Utility fachlich geprüft. Die Review bestätigt JSON.parse-only-Parsing, strukturiertes invalid-json-syntax-Handling sowie unveränderte Durchgabe von Validierungsfehlern und Warnungen. Es wurden keine UI, kein Datei-Upload, kein FileReader, keine Speicherung, kein LocalStorage und keine Draft-Übernahme ergänzt.
 
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
@@ -135,5 +135,6 @@ In Phase 6.5 Review ist die fachliche Prüfung noch offen.
 - Phase-6.3-Review (JSON-Import-Validierungs-Utility): `docs/PHASE_6_3_JSON_IMPORT_VALIDATION_UTILITY_REVIEW.md`
 - Phase-6.4-Review (JSON-Import-Parsing-Konzept): `docs/PHASE_6_4_JSON_IMPORT_PARSING_CONCEPT_REVIEW.md`
 - JSON-Import-Parsing-Konzept (Phase 6.4): `docs/JSON_IMPORT_PARSING_CONCEPT.md`
+- Phase-6.5-Review (JSON-Import-Parsing-Utility): `docs/PHASE_6_5_JSON_IMPORT_PARSING_UTILITY_REVIEW.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
