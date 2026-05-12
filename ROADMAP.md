@@ -136,5 +136,5 @@
 
 - [x] Phase 7.0: Nächste Entwicklungsrichtung nach lokaler Import-/Export-Kette festgelegt
 - [x] Phase 7.1: Nächstes editierbares Szenariofeld konzeptionell ausgewählt
-- [ ] Phase 7.1 Review dokumentiert: Auswahl des nächsten editierbaren Szenariofelds geprüft
+- [x] Phase 7.1 Review dokumentiert: Auswahl des nächsten editierbaren Szenariofelds geprüft
 - [ ] Phase 7.2: Annahmen als ersten zusätzlichen editierbaren Bereich konzeptionell vorbereiten
