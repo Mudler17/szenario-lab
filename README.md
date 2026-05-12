@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.11 Review · JSON-Import-Übernahme geprüft (fachlich bestanden)
+Phase 6.12 · JSON-Import/Export fachlich abschließend geprüft
 
 ## Lokale Befehle
 ```bash
@@ -124,6 +124,8 @@ In Phase 6.11 wurde eine bewusst bestätigte Übernahme geprüfter JSON-Importe 
 
 In Phase 6.11 Review wurde die minimale JSON-Import-Übernahme fachlich geprüft und ohne Blocker bestätigt. Die Übernahme bleibt ein bewusster lokaler Schritt ohne Speicherung; redundante Warnanzeige bei gültigem Import wurde minimal konsolidiert.
 
+In Phase 6.12 wurde die gesamte lokale JSON-Import-/Export-Kette fachlich geprüft: Export, Download, lokale Importprüfung, Statusmeldungen und bewusste Draft-Übernahme. Die Kette bleibt weiterhin ohne App-Speicherung, ohne LocalStorage, ohne Server-Upload und ohne OpenAI-Anbindung.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -167,5 +169,6 @@ In Phase 6.11 Review wurde die minimale JSON-Import-Übernahme fachlich geprüft
 - JSON-Import-Übernahme-Konzept (Phase 6.10): `docs/JSON_IMPORT_DRAFT_ADOPTION_CONCEPT.md`
 - Phase-6.10-Review (JSON-Import-Übernahme-Konzept): `docs/PHASE_6_10_JSON_IMPORT_DRAFT_ADOPTION_CONCEPT_REVIEW.md`
 - Phase-6.11-Review (JSON-Import-Übernahme): `docs/PHASE_6_11_JSON_IMPORT_DRAFT_ADOPTION_REVIEW.md`
+- Phase-6.12-Abschlussreview (JSON-Import/Export): `docs/PHASE_6_12_JSON_IMPORT_EXPORT_FINAL_REVIEW.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
