@@ -130,3 +130,10 @@
 - [x] Phase 6.11: JSON-Import-Übernahme minimal vorbereitet
 - [x] Phase 6.11 Review dokumentiert: JSON-Import-Übernahme geprüft
 - [x] Phase 6.12: JSON-Import/Export fachlich abschließend geprüft
+
+
+## Phase 7 – Szenario-Modell fachlich weiter editierbar machen
+
+- [x] Phase 7.0: Nächste Entwicklungsrichtung nach lokaler Import-/Export-Kette festgelegt
+- [ ] Phase 7.1: Nächstes editierbares Szenariofeld konzeptionell auswählen
+- [ ] Phase 7.1 Review dokumentiert: Auswahl des nächsten editierbaren Szenariofelds geprüft
