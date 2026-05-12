@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.8 Review · JSON-Import-UI-Konzept geprüft
+Phase 6.9 · JSON-Import-UI minimal vorbereitet (Review offen)
 
 ## Lokale Befehle
 ```bash
@@ -110,6 +110,10 @@ In Phase 6.7 Review wurde die JSON-Import-Statusmeldungs-Utility fachlich geprü
 
 In Phase 6.8 Review wurde das JSON-Import-UI-Konzept fachlich geprüft und ohne Blocker bestätigt. Die geplante UI-Kette (Dateiauswahl → Text lesen → Parsing/Validierung → Status → bewusste Übernahme) ist konsistent beschrieben und klar von Implementierung, Speicherung und Server-Anbindung abgegrenzt.
 
+In Phase 6.8 wurde die spätere JSON-Import-UI konzeptionell vorbereitet. Definiert wurden die minimale UI-Kette (Dateiauswahl → Text lesen → Parsing/Validierung → Status), klare Übernahmegrenzen (kein Auto-Replace), Accessibility-Anforderungen sowie Datenschutz-/Sicherheitsgrenzen. Es wurden keine UI implementiert, kein Datei-Upload, kein FileReader, keine Draft-Übernahme, keine Speicherung und kein LocalStorage ergänzt.
+
+In Phase 6.9 wurde eine minimale lokale JSON-Import-Prüfung ergänzt. Dateien werden lokal gelesen und geprüft; es gibt weiterhin keine Draft-Übernahme, keine Speicherung, kein LocalStorage und keine Server-/OpenAI-Anbindung.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -151,6 +155,3 @@ In Phase 6.8 Review wurde das JSON-Import-UI-Konzept fachlich geprüft und ohne 
 - Phase-6.8-Review (JSON-Import-UI-Konzept): `docs/PHASE_6_8_JSON_IMPORT_UI_CONCEPT_REVIEW.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
-
-
-In Phase 6.8 wurde die spätere JSON-Import-UI konzeptionell vorbereitet. Definiert wurden die minimale UI-Kette (Dateiauswahl → Text lesen → Parsing/Validierung → Status), klare Übernahmegrenzen (kein Auto-Replace), Accessibility-Anforderungen sowie Datenschutz-/Sicherheitsgrenzen. Es wurden keine UI implementiert, kein Datei-Upload, kein FileReader, keine Draft-Übernahme, keine Speicherung und kein LocalStorage ergänzt.

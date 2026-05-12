@@ -178,3 +178,18 @@ body {
 .download-status-info {
   color: #475569;
 }
+
+.download-status-warning {
+  color: #9a3412;
+}
+
+.import-warnings {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #9a3412;
+}
+
+.import-warnings p {
+  margin: 0;
+}
