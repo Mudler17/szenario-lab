@@ -126,7 +126,7 @@ function HomePage() {
       <section className="hero">
         <h1>szenario-lab</h1>
         <p className="subtitle">Organisationsszenarien strukturiert modellieren</p>
-        <p className="phase-note">Lokaler Draft · Bearbeitung, Vorschau und JSON-Download ohne App-Speicherung</p>
+        <p className="phase-note">Lokaler Draft · Bearbeitung, Vorschau, JSON-Download und JSON-Importprüfung ohne App-Speicherung</p>
       </section>
 
       <section className="placeholder-grid" aria-label="Module in Vorbereitung">
