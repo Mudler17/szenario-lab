@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.10 · JSON-Import-Übernahme konzeptionell vorbereitet (Review offen)
+Phase 6.10 Review · JSON-Import-Übernahme-Konzept fachlich geprüft (bestanden)
 
 ## Lokale Befehle
 ```bash
@@ -118,6 +118,8 @@ Im Phase-6.9-Review wurde diese UI fachlich geprüft und ohne Blocker bestätigt
 
 In Phase 6.10 wurde konzeptionell festgelegt, unter welchen Bedingungen ein geprüftes Szenario später den lokalen Draft ersetzen darf. Die Übernahme bleibt ein bewusster Schritt und ist weiterhin von Speicherung, LocalStorage und Server-Anbindung getrennt.
 
+In Phase 6.10 Review wurde das JSON-Import-Übernahme-Konzept fachlich geprüft und ohne Blocker bestätigt. Die Übernahme bleibt ein bewusster, bestätigter Schritt bei gültigem Prüfergebnis und weiterhin strikt getrennt von Speicherung, LocalStorage und Server-/OpenAI-Anbindung.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -158,5 +160,7 @@ In Phase 6.10 wurde konzeptionell festgelegt, unter welchen Bedingungen ein gepr
 - JSON-Import-UI-Konzept (Phase 6.8): `docs/JSON_IMPORT_UI_CONCEPT.md`
 - Phase-6.8-Review (JSON-Import-UI-Konzept): `docs/PHASE_6_8_JSON_IMPORT_UI_CONCEPT_REVIEW.md`
 - Phase-6.9-Review (JSON-Import-UI): `docs/PHASE_6_9_JSON_IMPORT_UI_REVIEW.md`
+- JSON-Import-Übernahme-Konzept (Phase 6.10): `docs/JSON_IMPORT_DRAFT_ADOPTION_CONCEPT.md`
+- Phase-6.10-Review (JSON-Import-Übernahme-Konzept): `docs/PHASE_6_10_JSON_IMPORT_DRAFT_ADOPTION_CONCEPT_REVIEW.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
