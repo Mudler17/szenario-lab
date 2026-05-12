@@ -129,3 +129,4 @@
 
 - [x] Phase 6.11: JSON-Import-Übernahme minimal vorbereitet
 - [x] Phase 6.11 Review dokumentiert: JSON-Import-Übernahme geprüft
+- [x] Phase 6.12: JSON-Import/Export fachlich abschließend geprüft
