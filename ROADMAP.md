@@ -119,4 +119,4 @@
 - [x] Phase 6.6: JSON-Import-Statusmeldungen konzeptionell vorbereitet
 - [x] Phase 6.6 Review dokumentiert: JSON-Import-Statusmeldungs-Konzept geprüft
 - [x] Phase 6.7: JSON-Import-Statusmeldungs-Utility vorbereitet
-- [ ] Phase 6.7 Review dokumentiert: JSON-Import-Statusmeldungs-Utility geprüft
+- [x] Phase 6.7 Review dokumentiert: JSON-Import-Statusmeldungs-Utility geprüft
