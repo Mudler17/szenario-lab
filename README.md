@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.6 Review · JSON-Import-Statusmeldungs-Konzept geprüft
+Phase 6.7 · JSON-Import-Statusmeldungs-Utility vorbereitet (Review offen)
 
 ## Lokale Befehle
 ```bash
