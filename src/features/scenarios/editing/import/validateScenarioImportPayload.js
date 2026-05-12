@@ -1,6 +1,21 @@
 const SUPPORTED_EXPORT_TYPE = 'szenario-lab.scenario';
 const SUPPORTED_FORMAT_VERSION = 1;
 const REQUIRED_SCENARIO_FIELDS = ['name', 'description', 'goal'];
+const KNOWN_TOP_LEVEL_FIELDS = ['exportType', 'formatVersion', 'exportedAt', 'source', 'scenario'];
+const KNOWN_SCENARIO_FIELDS = [
+  'id',
+  'name',
+  'description',
+  'goal',
+  'assumptions',
+  'evidence',
+  'personas',
+  'resources',
+  'relationships',
+  'interventions',
+  'strategies',
+  'phases',
+];
 
 function createError(reason, message, details) {
   if (details === undefined) {
@@ -12,6 +27,10 @@ function createError(reason, message, details) {
 
 function cloneScenario(scenario) {
   return structuredClone(scenario);
+}
+
+function findUnknownFields(value, knownFields) {
+  return Object.keys(value).filter((field) => !knownFields.includes(field));
 }
 
 export function validateScenarioImportPayload(payload, options = {}) {
@@ -65,9 +84,26 @@ export function validateScenarioImportPayload(payload, options = {}) {
     }
   }
 
+  const warnings = [];
+  const unknownTopLevelFields = findUnknownFields(payload, KNOWN_TOP_LEVEL_FIELDS);
+  if (unknownTopLevelFields.length > 0) {
+    warnings.push({
+      code: 'unknown-top-level-fields',
+      fields: unknownTopLevelFields,
+    });
+  }
+
+  const unknownScenarioFields = findUnknownFields(scenario, KNOWN_SCENARIO_FIELDS);
+  if (unknownScenarioFields.length > 0) {
+    warnings.push({
+      code: 'unknown-scenario-fields',
+      fields: unknownScenarioFields,
+    });
+  }
+
   return {
     ok: true,
     scenario: cloneScenario(scenario),
-    warnings: [],
+    warnings,
   };
 }
