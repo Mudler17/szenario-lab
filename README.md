@@ -94,6 +94,10 @@ In Phase 6.3 wurde eine reine Utility zur Validierung bereits geparster JSON-Imp
 
 In Phase 6.3 enthält die Utility zusätzlich nicht-blockierende Warnungen für unbekannte Top-Level-Felder und unbekannte Scenario-Felder.
 
+In Phase 6.4 wurde das JSON-Import-Parsing konzeptionell vorbereitet (Text → `JSON.parse` → `validateScenarioImportPayload` → Result), weiterhin ohne UI, Datei-Upload, Speicherung oder Draft-Übernahme.
+
+In Phase 6.4 Review wurde das JSON-Import-Parsing-Konzept fachlich geprüft und ohne Blocker bestätigt.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -125,6 +129,7 @@ In Phase 6.3 enthält die Utility zusätzlich nicht-blockierende Warnungen für 
 - JSON-Import-Validierungskonzept: `docs/JSON_IMPORT_VALIDATION_CONCEPT.md`
 - Phase-6.2-Review (JSON-Import-Validierungskonzept): `docs/PHASE_6_2_JSON_IMPORT_VALIDATION_CONCEPT_REVIEW.md`
 - Phase-6.3-Review (JSON-Import-Validierungs-Utility): `docs/PHASE_6_3_JSON_IMPORT_VALIDATION_UTILITY_REVIEW.md`
+- Phase-6.4-Review (JSON-Import-Parsing-Konzept): `docs/PHASE_6_4_JSON_IMPORT_PARSING_CONCEPT_REVIEW.md`
 - JSON-Import-Parsing-Konzept (Phase 6.4): `docs/JSON_IMPORT_PARSING_CONCEPT.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
