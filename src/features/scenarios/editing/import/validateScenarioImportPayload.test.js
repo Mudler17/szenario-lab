@@ -7,10 +7,21 @@ function createValidPayload() {
   return {
     exportType: 'szenario-lab.scenario',
     formatVersion: 1,
+    exportedAt: '2026-05-12T12:00:00.000Z',
+    source: 'test-suite',
     scenario: {
+      id: 'scenario-1',
       name: 'Name',
       description: 'Beschreibung',
       goal: 'Ziel',
+      assumptions: [],
+      evidence: [],
+      personas: [],
+      resources: [],
+      relationships: [],
+      interventions: [],
+      strategies: [],
+      phases: [],
     },
   };
 }
@@ -116,4 +127,72 @@ test('returns clone instead of reference', () => {
 
   result.scenario.personas[0].name = 'Geändert';
   assert.equal(payload.scenario.personas[0].name, 'Persona A');
+});
+
+test('accepts known optional top-level fields without warnings', () => {
+  const result = validateScenarioImportPayload(createValidPayload());
+
+  assert.equal(result.ok, true);
+  assert.deepEqual(result.warnings, []);
+});
+
+test('adds warning for unknown top-level fields', () => {
+  const payload = {
+    ...createValidPayload(),
+    customMeta: { foo: 'bar' },
+  };
+
+  const result = validateScenarioImportPayload(payload);
+  assert.equal(result.ok, true);
+  assert.deepEqual(result.warnings, [
+    {
+      code: 'unknown-top-level-fields',
+      fields: ['customMeta'],
+    },
+  ]);
+});
+
+test('adds warning for unknown scenario fields', () => {
+  const payload = createValidPayload();
+  payload.scenario.customNode = { active: true };
+
+  const result = validateScenarioImportPayload(payload);
+  assert.equal(result.ok, true);
+  assert.deepEqual(result.warnings, [
+    {
+      code: 'unknown-scenario-fields',
+      fields: ['customNode'],
+    },
+  ]);
+});
+
+test('unknown fields do not block import', () => {
+  const payload = {
+    ...createValidPayload(),
+    customTopLevel: true,
+    scenario: {
+      ...createValidPayload().scenario,
+      customScenarioPart: 'x',
+    },
+  };
+
+  const result = validateScenarioImportPayload(payload);
+  assert.equal(result.ok, true);
+  assert.deepEqual(result.warnings, [
+    { code: 'unknown-top-level-fields', fields: ['customTopLevel'] },
+    { code: 'unknown-scenario-fields', fields: ['customScenarioPart'] },
+  ]);
+  assert.deepEqual(result.scenario, payload.scenario);
+});
+
+test('does not mutate payload object', () => {
+  const payload = createValidPayload();
+  payload.extra = { value: 1 };
+  payload.scenario.unknown = 'keep';
+  const before = structuredClone(payload);
+
+  const result = validateScenarioImportPayload(payload);
+
+  assert.equal(result.ok, true);
+  assert.deepEqual(payload, before);
 });
