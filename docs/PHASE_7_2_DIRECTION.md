@@ -2,12 +2,7 @@
 
 ## 1. Ausgangslage
 
-Phase 6.12 hat die lokale JSON-Import-/Export-Kette abgeschlossen. Die App kann derzeit:
-
-- einen lokalen Draft bearbeiten,
-- den lokalen Draft als JSON herunterladen,
-- eine JSON-Datei lokal prüfen,
-- ein gültig geprüftes Szenario bewusst in den lokalen Draft übernehmen.
+Phase 6.12 hat die lokale JSON-Import-/Export-Kette abgeschlossen.
 
 Phase 7.0 hat als nächste Hauptentwicklungsrichtung festgelegt, das Szenario-Modell fachlich weiter editierbar zu machen.
 
@@ -19,86 +14,42 @@ Aktuell sind im lokalen Draft nur diese Grundfelder aktiv editierbar:
 - `description`
 - `goal`
 
-Die Entität `Assumption` ist im Domain-Modell bereits angelegt. Das Domain-Modell beschreibt sie als explizite Annahmen, die Grundlage für Bewertung und spätere Simulation sein können.
+Die Entität `Assumption` ist im Domain-Modell bereits angelegt und dient als fachliche Grundlage für spätere Bewertung und Simulation.
 
 ## 2. Ziel von Phase 7.2
 
 Phase 7.2 führt Annahmen als ersten zusätzlichen editierbaren Szenario-Bereich ein.
 
-Der neue gestraffte Phasenschnitt für diese Entität lautet:
+Der Phasenschnitt lautet:
 
 - **Phase 7.2.1** · Annahmen-Konzept
 - **Phase 7.2.2** · Annahmen-Implementierung
 - **Phase 7.2.3** · Annahmen-Review
 
-Phase 7.2.1 klärt ausschließlich das Konzept:
-
-- fachlicher Zweck der Annahmen,
-- Felder der Entität,
-- minimale Validierungsregeln,
-- Pattern-Verweise auf bestehende Phasen,
-- geplante Tests,
-- JSON-Rundlauf,
-- Accessibility-Anforderungen,
-- Negativ-Liste,
-- geschätzter Umfang.
+Phase 7.2.1 klärt ausschließlich konzeptionelle Punkte und enthält keine Implementierung.
 
 ## 3. Fachlicher Zweck von Annahmen
 
 Annahmen machen sichtbar, worauf ein Szenario gedanklich beruht.
 
-Sie beantworten Fragen wie:
+Sie dienen dazu:
 
-- Wovon gehen wir aus?
-- Welche Bedingungen nehmen wir an?
-- Welche Unsicherheit steckt in dieser Annahme?
-- Gilt die Annahme für das gesamte Szenario oder nur für einen Teilbereich?
-- Wie wird die Annahme begründet?
+- zentrale Voraussetzungen explizit zu machen,
+- Unsicherheit transparent zu beschreiben,
+- Diskussions- und Prüfgrundlagen für spätere Schritte zu schaffen,
+- den Übergang von narrativer Beschreibung zu strukturierter Modellierung vorzubereiten.
 
-Annahmen sind damit die Brücke zwischen beschreibendem Szenariotext und späterer Modellierung.
+## 4. Abgrenzung zu Evidenz, Personas, Ressourcen, Interventionen, Phasen
 
-Ohne Annahmen bleibt ein Szenario vor allem erzählend.
-Mit Annahmen wird es prüfbar, diskutierbar und später simulierbar.
+- **Evidenz:** Annahmen beschreiben „wovon ausgegangen wird“; Evidenz begründet oder widerlegt diese Annahmen.
+- **Personas:** Personas beschreiben Rollen/Akteure; Annahmen beschreiben Bedingungen oder Erwartungen.
+- **Ressourcen:** Ressourcen sind Mittel/Kapazitäten; Annahmen können Ressourcenaspekte enthalten, ersetzen aber kein Ressourcenmodell.
+- **Interventionen:** Interventionen sind Maßnahmen; Annahmen sind Voraussetzungen oder Rahmenbedingungen dafür.
+- **Phasen:** Phasen strukturieren Zeit/Abschnitte; Annahmen können phasenbezogen sein, werden in 7.2 aber noch ohne Phasenverknüpfung geführt.
 
-## 4. Abgrenzung zu anderen Entitäten
+## 5. Geplantes Datenmodell
 
-### Annahmen vs. Evidenz
-
-Annahmen formulieren, wovon ausgegangen wird.
-
-Evidenz beschreibt später, wodurch diese Annahmen gestützt, geschwächt oder relativiert werden.
-
-In Phase 7.2 wird noch keine eigene Evidenz-Entität editierbar gemacht. Das Feld `rationale` darf eine kurze Begründung enthalten, ersetzt aber keine spätere Evidenzmodellierung.
-
-### Annahmen vs. Personas
-
-Personas beschreiben beteiligte Rollen oder Akteursgruppen.
-
-Annahmen können sich später auf Personas beziehen, aber Phase 7.2 führt noch keine Persona-Verknüpfung ein.
-
-### Annahmen vs. Ressourcen
-
-Ressourcen beschreiben verfügbare oder begrenzte Mittel.
-
-Annahmen können später Aussagen über Ressourcen enthalten, aber Phase 7.2 modelliert Ressourcen noch nicht editierbar.
-
-### Annahmen vs. Interventionen
-
-Interventionen beschreiben gezielte Maßnahmen.
-
-Annahmen können spätere Interventionen begründen oder begrenzen, aber Phase 7.2 führt noch keine editierbaren Interventionen ein.
-
-### Annahmen vs. Phasen
-
-Phasen strukturieren ein Szenario zeitlich oder logisch.
-
-Annahmen können später phasenbezogen sein. Phase 7.2 führt jedoch noch keine Phasenverknüpfung ein.
-
-## 5. Geplantes Datenmodell für Annahmen
-
-Annahmen werden als Liste am Szenario geführt.
-
-Vorgeschlagene Struktur im Szenario-Draft:
+Annahmen werden als Liste am Szenario geführt:
 
 ```js
 assumptions: [
@@ -111,3 +62,103 @@ assumptions: [
     rationale: "Bisherige Rückmeldungen aus Workshops zeigen Offenheit, aber auch Unsicherheit."
   }
 ]
+```
+
+## 6. Felder
+
+Verwendete Felder in Phase 7.2:
+
+- `id`
+- `title`
+- `content`
+- `scope`
+- `confidence`
+- `rationale`
+
+## 7. Validierungsregeln
+
+Minimale lokale Validierung (analog zu bisherigen Draft-Regeln):
+
+- `id`: nicht leer; innerhalb der Liste eindeutig.
+- `title`: nicht leer; getrimmt.
+- `content`: nicht leer; getrimmt.
+- `scope`: nicht leer; freier Text in 7.2.1.
+- `confidence`: Pflichtfeld; erlaubte Werte zunächst `low | medium | high`.
+- `rationale`: optional, aber wenn gesetzt dann getrimmt und nicht nur Whitespace.
+
+## 8. Pattern-Verweise
+
+Konzept orientiert sich an bereits etablierten Mustern:
+
+- Draft-State-Update als kleine Utility (vgl. Phase 4.6).
+- Minimalvalidierung mit klaren Hinweistexten (vgl. Phase 4.7).
+- Klare UI/Domain-Abgrenzung und lokale Verarbeitung ohne Speicherung (vgl. Phase 5/6).
+- Bewusste Negativabgrenzung gegen Persistenz/Simulation/Anbindung (durchgängig seit Phase 4).
+
+## 9. JSON-Rundlauf
+
+Zielbild für 7.2.x:
+
+- Annahmen werden im Draft editiert.
+- Beim Export laufen Annahmen unverändert in `scenario.assumptions` ein.
+- Beim Import werden vorhandene `assumptions` übernommen, sofern die Basisvalidierung erfolgreich ist.
+- Kein separates Speicherformat und keine neue Persistenzlogik.
+
+## 10. Geplante Tests
+
+Für Phase 7.2.2/7.2.3 vorgesehen:
+
+- Utility-Tests für Erzeugen/Ändern/Löschen von Annahmen im Draft.
+- Validierungstests für Pflichtfelder und `confidence`-Werte.
+- UI-Tests für minimale Eingabeführung und Fehlhinweise.
+- Rundlauf-Tests (Export/Import), dass `assumptions` stabil durchgereicht werden.
+
+## 11. Accessibility-Anforderungen
+
+Für den späteren UI-Schritt:
+
+- Semantische Gruppierung der Annahmen-Eingaben (`fieldset`/`legend` oder gleichwertig).
+- Eindeutige Labels je Feld.
+- Fehlerhinweise per `aria-describedby` verknüpfen.
+- Status-/Fehlermeldungen als zugängliche Live-Region, wenn sinnvoll.
+- Fokusführung bei Validierungsfehlern nachvollziehbar halten.
+
+## 12. Geschätzter Umfang
+
+Phase 7.2.1 ist ein reiner Dokumentationsschritt mit geringem technischem Umfang.
+
+Für 7.2.2 wird mit einem kleinen bis mittleren Umfang gerechnet (Draft-State + Validierung + minimale UI + Tests).
+
+## 13. Risikohinweis
+
+Haupt-Risiko ist konzeptioneller Drift: Annahmen könnten zu früh mit Evidenz, Ressourcen oder Interventionen vermischt werden.
+
+Gegenmaßnahme: strikte Feldgrenzen und schrittweise Einführung ohne Querverknüpfungen in 7.2.2.
+
+## 14. Negativ-Liste
+
+In Phase 7.2.1 ausdrücklich **nicht** enthalten:
+
+- keine Codeänderung,
+- keine UI-Änderung,
+- keine Draft-State-Änderung,
+- keine JSON-Schema-Änderung,
+- keine Speicherung,
+- kein LocalStorage,
+- kein Backend,
+- keine OpenAI-Anbindung,
+- keine Simulation,
+- keine neuen Abhängigkeiten.
+
+## 15. Erwartete Folgephase
+
+Nächster Schritt ist **Phase 7.2.2 · Annahmen-Implementierung vorbereiten** mit minimaler Draft- und UI-Erweiterung im bestehenden Rahmen.
+
+## 16. Quality Gate
+
+Quality Gate für den Abschluss von 7.2.1:
+
+- Alle Pflichtabschnitte dieses Dokuments vorhanden.
+- Abgrenzung und Negativ-Liste klar dokumentiert.
+- Verweis auf Folgephase 7.2.2 vorhanden.
+- Keine Implementierungsartefakte in Code, Schema oder UI.
