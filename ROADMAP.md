@@ -122,3 +122,5 @@
 - [x] Phase 6.7 Review dokumentiert: JSON-Import-Statusmeldungs-Utility geprüft
 - [x] Phase 6.8: JSON-Import-UI konzeptionell vorbereitet
 - [x] Phase 6.8 Review dokumentiert: JSON-Import-UI-Konzept geprüft
+- [x] Phase 6.9: JSON-Import-UI minimal vorbereitet
+- [ ] Phase 6.9 Review dokumentiert: JSON-Import-UI geprüft

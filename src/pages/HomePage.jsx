@@ -13,6 +13,10 @@ import {
   downloadScenarioExport,
   createJsonDownloadStatusMessage,
 } from '../features/scenarios/export';
+import {
+  createJsonImportStatusMessage,
+  parseScenarioImportJsonText,
+} from '../features/scenarios/import';
 
 function HomePage() {
   const originalScenario = useMemo(() => exampleScenario, []);
@@ -24,6 +28,12 @@ function HomePage() {
   const [downloadStatus, setDownloadStatus] = useState(() =>
     createJsonDownloadStatusMessage(),
   );
+  const [selectedImportFile, setSelectedImportFile] = useState(null);
+  const [importResult, setImportResult] = useState(null);
+  const [importStatus, setImportStatus] = useState(() => ({
+    type: 'info',
+    message: 'Bitte wähle eine JSON-Datei für die Prüfung aus.',
+  }));
 
   const handleResetDraft = () => {
     const resetScenario = resetDraft(originalScenario);
@@ -45,6 +55,58 @@ function HomePage() {
     const exportDraft = createScenarioExportDraft(scenarioDraft);
     const result = downloadScenarioExport(exportDraft);
     setDownloadStatus(createJsonDownloadStatusMessage(result));
+  };
+
+  const handleImportFileChange = (event) => {
+    const [nextFile] = event.target.files ?? [];
+
+    if (!nextFile) {
+      setSelectedImportFile(null);
+      setImportResult(null);
+      setImportStatus({
+        type: 'info',
+        message: 'Bitte wähle eine JSON-Datei für die Prüfung aus.',
+      });
+      return;
+    }
+
+    setSelectedImportFile(nextFile);
+    setImportResult(null);
+    setImportStatus({
+      type: 'info',
+      message: 'Datei ausgewählt. Prüfe die Datei jetzt mit „JSON prüfen“.',
+    });
+  };
+
+  const handleValidateImportJson = () => {
+    if (!selectedImportFile) {
+      setImportResult(null);
+      setImportStatus({
+        type: 'info',
+        message: 'Bitte wähle zuerst eine JSON-Datei aus.',
+      });
+      return;
+    }
+
+    const fileReader = new FileReader();
+
+    fileReader.onload = () => {
+      const fileText = typeof fileReader.result === 'string' ? fileReader.result : '';
+      const nextImportResult = parseScenarioImportJsonText(fileText);
+      setImportResult(nextImportResult);
+      setImportStatus(createJsonImportStatusMessage(nextImportResult));
+    };
+
+    fileReader.onerror = () => {
+      const nextImportResult = { ok: false, reason: 'file-read-error' };
+      setImportResult(nextImportResult);
+      setImportStatus({
+        type: 'error',
+        message: 'Die Datei konnte nicht gelesen werden.',
+      });
+    };
+
+    fileReader.readAsText(selectedImportFile);
   };
 
   const handleScenarioNameChange = (nextName) => {
@@ -117,6 +179,39 @@ function HomePage() {
             >
               {downloadStatus.message}
             </p>
+          </section>
+
+          <section className="export-panel" aria-label="JSON-Import prüfen">
+            <h3>JSON-Import prüfen</h3>
+            <p className="workspace-hint">
+              Die Datei wird nur lokal geprüft. Der aktuelle Draft wird dadurch nicht ersetzt.
+            </p>
+            <label htmlFor="json-import-file">JSON-Datei für Import auswählen</label>
+            <input
+              id="json-import-file"
+              type="file"
+              accept="application/json,.json"
+              onChange={handleImportFileChange}
+            />
+            <button
+              type="button"
+              onClick={handleValidateImportJson}
+              disabled={!selectedImportFile}
+            >
+              JSON prüfen
+            </button>
+            <p
+              className={`download-status download-status-${importStatus.type}`}
+              role="status"
+              aria-live="polite"
+            >
+              {importStatus.message}
+            </p>
+            {importResult?.ok === true && Array.isArray(importResult.warnings) && importResult.warnings.length > 0 ? (
+              <div className="import-warnings" aria-label="Import-Warnungen">
+                <p>Hinweis: Die Datei enthält zusätzliche Felder, die derzeit nicht ausgewertet werden.</p>
+              </div>
+            ) : null}
           </section>
         </section>
 
