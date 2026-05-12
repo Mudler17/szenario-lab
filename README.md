@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.0 · Nächste Entwicklungsrichtung nach lokaler Import-/Export-Kette festgelegt
+Phase 7.1 · Nächstes editierbares Szenariofeld konzeptionell ausgewählt
 
 ## Lokale Befehle
 ```bash
@@ -129,6 +129,8 @@ In Phase 6.12 wurde die gesamte lokale JSON-Import-/Export-Kette fachlich geprü
 
 In Phase 7.0 wurde entschieden, die App nach Abschluss der lokalen JSON-Import-/Export-Kette fachlich in Richtung weiterer editierbarer Szenariofelder weiterzuentwickeln. Simulation, Persistenz und zusätzliche Speichermechanismen bleiben weiterhin zurückgestellt.
 
+In Phase 7.1 wurde fachlich geprüft, welcher Szenario-Bereich als nächstes editierbar werden soll. Die Entscheidung bereitet Annahmen als ersten zusätzlichen editierbaren Bereich vor; Implementierung, Speicherung, Simulation und Persistenz bleiben weiterhin ausgeschlossen.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -174,5 +176,6 @@ In Phase 7.0 wurde entschieden, die App nach Abschluss der lokalen JSON-Import-/
 - Phase-6.11-Review (JSON-Import-Übernahme): `docs/PHASE_6_11_JSON_IMPORT_DRAFT_ADOPTION_REVIEW.md`
 - Phase-6.12-Abschlussreview (JSON-Import/Export): `docs/PHASE_6_12_JSON_IMPORT_EXPORT_FINAL_REVIEW.md`
 - Phase-7-Richtungsentscheidung: `docs/PHASE_7_DIRECTION.md`
+- Phase-7.1-Auswahl nächstes editierbares Feld: `docs/PHASE_7_1_NEXT_EDITABLE_FIELD_SELECTION.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
