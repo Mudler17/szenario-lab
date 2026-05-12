@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 6.9 · JSON-Import-UI minimal vorbereitet (Review offen)
+Phase 6.9 Review · JSON-Import-UI geprüft
 
 ## Lokale Befehle
 ```bash
@@ -114,6 +114,8 @@ In Phase 6.8 wurde die spätere JSON-Import-UI konzeptionell vorbereitet. Defini
 
 In Phase 6.9 wurde eine minimale lokale JSON-Import-Prüfung ergänzt. Dateien werden lokal gelesen und geprüft; es gibt weiterhin keine Draft-Übernahme, keine Speicherung, kein LocalStorage und keine Server-/OpenAI-Anbindung.
 
+Im Phase-6.9-Review wurde diese UI fachlich geprüft und ohne Blocker bestätigt: eigener Prüfbereich, lokale Dateiprüfung mit FileReader-Adapter, Status-/Warnhinweise sowie klare Abgrenzung ohne Übernahme- oder Speicherlogik.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -153,5 +155,6 @@ In Phase 6.9 wurde eine minimale lokale JSON-Import-Prüfung ergänzt. Dateien w
 - Phase-6.7-Review (JSON-Import-Statusmeldungs-Utility): `docs/PHASE_6_7_JSON_IMPORT_STATUS_MESSAGES_UTILITY_REVIEW.md`
 - JSON-Import-UI-Konzept (Phase 6.8): `docs/JSON_IMPORT_UI_CONCEPT.md`
 - Phase-6.8-Review (JSON-Import-UI-Konzept): `docs/PHASE_6_8_JSON_IMPORT_UI_CONCEPT_REVIEW.md`
+- Phase-6.9-Review (JSON-Import-UI): `docs/PHASE_6_9_JSON_IMPORT_UI_REVIEW.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
