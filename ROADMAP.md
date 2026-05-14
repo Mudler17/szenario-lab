@@ -143,3 +143,7 @@
 
 - [x] Phase 7.2.4: Annahmen-Bearbeitung minimal umgesetzt
 - [x] Phase 7.2.4 Review dokumentiert: Annahmen-Bearbeitung geprüft
+
+- [x] Phase 7.3.1: Nächste Entität konzeptionell ausgewählt (Evidenz)
+- [ ] Phase 7.3.2: Evidenz-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
+- [ ] Phase 7.3.3 Review dokumentiert: Evidenz-Implementierung geprüft
