@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.4.2 · Personas im lokalen Draft minimal bearbeitbar umgesetzt
+Phase 7.5.1 · Nächste Entität konzeptionell ausgewählt (Ressourcen)
 
 ## Lokale Befehle
 ```bash
@@ -143,6 +143,8 @@ In Phase 7.4.1 wurde nach Annahmen und Evidenz die nächste Entität für den lo
 
 
 In Phase 7.4.2 wurden Personas im lokalen Draft minimal bearbeitbar ergänzt (Add/Update/Remove, Basis-a11y, Status-/Hilfetexte, Tests), weiterhin ohne Speicherung, LocalStorage, Backend oder Simulation.
+
+In Phase 7.5.1 wurde nach Annahmen, Evidenz und Personas die nächste Entität für den lokalen Draft-Ausbau verbindlich ausgewählt: Ressourcen. Die Phase bleibt rein konzeptionell; es wurden keine Implementierung, keine UI, keine Utilities, keine Tests und keine Speicher-/Backend-/Simulationsanbindung ergänzt.
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -196,5 +198,6 @@ In Phase 7.4.2 wurden Personas im lokalen Draft minimal bearbeitbar ergänzt (Ad
 - Phase-7.3.2-Implementierung Evidenz: `docs/PHASE_7_3_2_EVIDENCE_IMPLEMENTATION.md`
 
 - Phase-7.4.1-Konzept nächste Entität: `docs/PHASE_7_4_1_NEXT_ENTITY_CONCEPT.md`
+- Phase-7.5.1-Konzept nächste Entität: `docs/PHASE_7_5_1_NEXT_ENTITY_CONCEPT.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
