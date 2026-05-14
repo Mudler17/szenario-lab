@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.5.2 · Ressourcen im lokalen Draft minimal bearbeitbar umgesetzt
+Phase 7.5.4 · Statusdokumentation nach Ressourcen-Review konsolidiert
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
@@ -17,7 +17,12 @@ npm run build
 ```
 
 ## Hinweis
-Die App erlaubt derzeit die Bearbeitung von drei bestehenden Szenario-Grundfeldern im lokalen Draft: Name, Beschreibung und Ziel.
+Die App erlaubt derzeit die Bearbeitung der folgenden Bereiche im lokalen Draft:
+- Grunddaten: Name, Beschreibung, Ziel
+- Annahmen
+- Personas
+- Ressourcen
+- Evidenz
 Die Formularstruktur wurde in Phase 4.5 verbessert: Der Bereich ist als „Szenario-Grunddaten“ mit `fieldset` und `legend` strukturiert, alle drei Felder haben Hilfetexte und die Eingaben nutzen `aria-describedby`.
 In Phase 4.6 wurde die wiederholte Draft-Update-Logik für diese drei bestehenden Felder (Name, Beschreibung, Ziel) in eine kleine State-Utility ausgelagert.
 In Phase 4.7 wurde zusätzlich eine minimale lokale Validierung ergänzt: Name, Beschreibung und Ziel dürfen nicht leer sein; leere Felder zeigen sichtbare Hinweise im Draft-Formular.
