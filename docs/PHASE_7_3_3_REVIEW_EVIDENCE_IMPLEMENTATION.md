@@ -15,60 +15,59 @@ Prüfung der in Phase 7.3.2 umgesetzten minimalen Evidenz-Bearbeitung im lokalen
 - `ROADMAP.md`
 
 ## Ergebnis: minimale Evidenz-Bearbeitung vollständig?
-Ja.
-- Vorhandene Evidenz wird als Formular pro Eintrag angezeigt.
-- Bearbeitbar sind die erlaubten Felder: `title`, `content`, `sourceType`, `relation`, `confidence`, `assumptionId`.
-- „Evidenz hinzufügen“ ist vorhanden (Empty State + Listenansicht).
-- Pro Eintrag gibt es „Evidenz entfernen“.
-- „Unvollständige Evidenz“ bleibt sichtbar, wenn `title` oder `content` leer sind.
-- Id-lose Evidenz bleibt sichtbar und ist schreibgeschützt.
+Ja, die Mindestanforderungen sind erfüllt:
+- Vorhandene Evidenz-Einträge werden als Formularfelder dargestellt.
+- Bearbeitbar sind nur die vorgesehenen Felder `title`, `content`, `sourceType`, `relation`, `confidence`, `assumptionId`.
+- „Evidenz hinzufügen“ ist vorhanden (Empty State und Listenansicht).
+- „Evidenz entfernen“ ist pro Eintrag vorhanden.
+- „Unvollständige Evidenz“ bleibt sichtbar, wenn `title` oder `content` leer/Whitespace sind.
+- id-lose Evidenz bleibt sichtbar und ist schreibgeschützt inkl. Hinweistext.
 
 ## Ergebnis: Utility- und Draft-State-Konsistenz
-Ja.
-- Utilities (`getDraftEvidence`, `addDraftEvidence`, `updateDraftEvidence`, `removeDraftEvidence`) sind analog zum bestehenden Utility-Muster umgesetzt.
-- Eingangsdraft wird nicht mutiert (immutable Rückgaben, getestet).
-- Ungültige Evidenz-Einträge werden robust gefiltert/abgewiesen.
-- `HomePage` nutzt die zentralen Utilities; keine separate State-Architektur.
-- Änderungen bleiben im lokalen React-Draft-State.
-- Download-Status wird nach Evidenzänderungen analog neutralisiert (`createJsonDownloadStatusMessage()`).
+Ja, konsistent und im Scope:
+- Utilities `getDraftEvidence`, `addDraftEvidence`, `updateDraftEvidence`, `removeDraftEvidence` sind analog zum Annahmen-Muster aufgebaut.
+- Eingangsdraft wird nicht mutiert (immutable Rückgaben/Tests vorhanden).
+- Ungültige Eingaben und ungültige Listeneinträge werden robust behandelt.
+- `HomePage` nutzt die bestehenden State-Utilities.
+- Evidenzänderungen bleiben im lokalen React-Draft-State.
+- Download-Status wird nach Evidenzänderungen analog zu anderen Draft-Änderungen neutralisiert.
+- Keine separate State-Architektur eingeführt.
 
 ## Ergebnis: assumptionId als optionaler Bezug
-Für 7.3.2 als minimaler Schnitt akzeptabel.
-- `assumptionId` bleibt optional.
-- Keine harte Validierung gegen Annahmenliste.
-- Freies Textfeld bleibt bestehen.
+Für Phase 7.3.2 akzeptabel umgesetzt:
+- `assumptionId` ist optional.
+- Freies Textfeld ohne harte Validierung gegen die Annahmenliste.
+- Kein Select, keine Auflösung, keine relationale Kaskade.
+- Kleiner Hilfetext ist bereits vorhanden: „Optionaler Bezug auf eine Annahmen-ID.“
 
-Kleine Korrektur im Review umgesetzt:
-- Hilfetext ergänzt: „Optionaler Bezug auf eine Annahmen-ID.“
-- Keine zusätzliche Logik (kein Select, keine relationale Auflösung, keine Kaskade).
+Bewertung: Für den Minimal-Schnitt fachlich stimmig und ausreichend klar.
 
 ## Ergebnis: Scope-Hygiene
-Keine Verstöße erkannt.
-Insbesondere keine Erweiterung in Richtung Speicherung/LocalStorage/Backend/OpenAI/Simulation/Import-Export-Ausbau/Dependencies/Modellerweiterung/globaler State.
+Keine Verstöße gegen die Stoppliste gefunden.
+Insbesondere keine Erweiterung in Richtung Speicherung, LocalStorage, Backend, OpenAI, Simulation, Import-/Export-Ausbau, Dependencies, neues Evidenzmodell oder globale State-Architektur.
 
 ## Ergebnis: a11y
-Basisanforderungen erfüllt.
-- Sinnvolle Labels für alle Eingabefelder.
-- Klar beschriftete Buttons (keine reinen Icon-Buttons).
-- Textliche Hinweise für Unvollständigkeit und Schreibschutz vorhanden.
-- Hinweis zum lokalen Draft ohne Speicherung sichtbar.
-- Struktur mit Abschnitt/Liste/Einträgen bleibt nachvollziehbar.
-- Ergänzt: kurzer Hilfetext für optionales `assumptionId`.
+Basis-a11y ist erfüllt:
+- Sinnvolle Labels für alle Eingabefelder vorhanden.
+- Buttons sind klar beschriftet (keine reinen Icon-Buttons).
+- Unvollständigkeit und Schreibschutz sind textlich sichtbar.
+- Hinweis zur lokalen Draft-Bearbeitung ohne App-Speicherung ist sichtbar.
+- Struktur über Abschnitt/Liste/Eintrag bleibt nachvollziehbar.
 
 ## Ergebnis: Tests
-Bestand bestätigt, kleine Lücke geschlossen.
-- Utility-Tests decken Lesen/Hinzufügen/Aktualisieren/Entfernen/Nicht-Mutation/robuste Eingaben/Filterung ungültiger Einträge ab.
-- Komponenten-Tests decken Empty State, Add-Button, Formularfelder, Remove-Button, Unvollständigkeit und id-losen Schreibschutz ab.
-- Ergänzt: Test auf sichtbaren `assumptionId`-Hilfetext.
+Bestehende Tests decken die geforderten Kernpunkte ab:
+- Utilities: Lesen, Hinzufügen, Aktualisieren, Entfernen, Nicht-Mutation, robuste Eingaben, Filterung ungültiger Einträge.
+- Komponente: Empty State, Add-Button, Formularfelder (input/textarea/select), Remove-Button je Eintrag, Markierung unvollständiger Evidenz, id-lose Evidenz schreibgeschützt.
+- Zusätzlich vorhanden: Test für assumptionId-Hinweistext.
+
+Keine weitere Testergänzung notwendig.
 
 ## Ergebnis: README/ROADMAP
-- `README.md`: Status von Phase 7.3.2 bleibt korrekt; keine fachliche Überdehnung nötig.
-- `ROADMAP.md`: Phase 7.3.3 als Review abgeschlossen markiert.
+- `README.md`: Status „Phase 7.3.2“ ist konsistent und knapp.
+- `ROADMAP.md`: Phase 7.3.3 Review bereits als dokumentiert markiert; passt zum aktuellen Review-Schritt.
 
-## ggf. kleine Korrekturen
-- `EvidenceDraftForm`: Hilfetext für optionales `assumptionId` ergänzt.
-- `EvidenceDraftForm.test`: Testfall für Hilfetext ergänzt.
-- `ROADMAP.md`: Checkbox für Phase 7.3.3 auf erledigt gesetzt.
+## Ggf. kleine Korrekturen
+Keine Korrektur am Implementierungscode notwendig. Nur dieses Review-Dokument wurde ergänzt.
 
 ## Negativ-Liste: Was im Review NICHT gemacht wurde
 - keine neue Funktionalität
@@ -97,4 +96,4 @@ Bestand bestätigt, kleine Lücke geschlossen.
 **Phase 7.3.2 freigegeben.**
 
 ## Anschlusslogik
-Nächster Schritt: nächste Entität für minimale lokale Draft-Bearbeitung auswählen (oder kurzer Zwischenstand-Audit, falls priorisiert).
+Nächster Schritt: Auswahl und Umsetzung der nächsten minimal editierbaren Entität im bestehenden lokalen Draft-Muster (ohne Architekturwechsel), alternativ kurzer Zwischenstand-Audit über Konsistenz der bisher editierbaren Bereiche.
