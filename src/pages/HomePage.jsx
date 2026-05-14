@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { exampleScenario } from '../domain';
-import { ScenarioDraftForm } from '../features/scenarios/editing';
+import { ScenarioDraftForm, AssumptionDraftForm } from '../features/scenarios/editing';
 import {
   createDraftFromScenario,
   resetDraft,
@@ -178,6 +178,7 @@ function HomePage() {
             onDescriptionChange={handleScenarioDescriptionChange}
             onGoalChange={handleScenarioGoalChange}
           />
+          <AssumptionDraftForm scenarioDraft={scenarioDraft} />
           <button type="button" onClick={handleResetDraft}>
             Draft auf Original zurücksetzen
           </button>
