@@ -9,149 +9,97 @@
 - [x] Grundlegende Projekt-Dokumentation ergänzt
 
 ## Phase 2 – Architektur und Domänenmodell
-- [x] Architekturentscheidungen dokumentieren
-- [x] Domänenmodell ausarbeiten
-- [x] Modulgrenzen vorläufig definieren
-- [x] Code-Skeleton für Domänenmodell anlegen
-- [x] Modulgrenzen nach erstem Fachmodul überprüfen
+- [x] Architekturentscheidungen dokumentiert
+- [x] Domänenmodell ausgearbeitet
+- [x] Modulgrenzen vorläufig definiert
+- [x] Code-Skeleton für Domänenmodell angelegt
+- [x] Modulgrenzen nach erstem Fachmodul überprüft
 
 ## Phase 3 – Erste Fachmodule
-- [x] Erstes statisches Beispielszenario anlegen
-- [x] Erste lesende Szenario-Detailvorschau erstellen
-- [x] Szenario-Vorschau in Feature-Modul überführen
-- [x] Szenario-Detailvorschau in lesende Teilkomponenten zerlegen
-- [x] Beziehungen und Interventionen in lesender Vorschau sichtbar machen
-- [x] Beziehungspersonen in lesender Vorschau namentlich auflösen
-- [x] Ressourcen in lesender Vorschau sichtbar machen
-- [x] Szenario-Modul fachlich dokumentieren
-- [x] Evidenz als lesenden Teilbereich vorbereiten
-- [x] Evidenz-Annahmen in lesender Vorschau namentlich auflösen
-- [x] Lesende Szenario-Vorschau in fachliche Abschnitte gliedern
-- [x] Szenario-Modul fachlich ausarbeiten
-
+- [x] Statisches Beispielszenario angelegt
+- [x] Lesende Szenario-Vorschau aufgebaut und fachlich gegliedert
+- [x] Beziehungen, Interventionen, Ressourcen und Evidenz in der lesenden Vorschau vorbereitet
+- [x] Szenario-Modul fachlich dokumentiert
 
 ## Phase 4 – Szenario-Bearbeitung vorbereiten
-- [x] Bearbeitungsgrenzen fachlich dokumentieren
-- [x] Editierbares Datenmodell konzeptionell vorbereiten
-- [x] Erste Formularstruktur planen
-- [x] Editing-Code-Skeleton vorbereiten
-- [x] Editing-Code-Skeleton prüfen
-- [x] Lokalen Draft-State konzeptionell vorbereiten
-- [x] Erste Draft-State-Utility vorbereiten
-- [x] Erste Draft-State-Utility prüfen
-- [x] Reset-Draft-Utility vorbereiten
-- [x] Reset-Draft-Utility prüfen
-- [x] Phase 4.1 dokumentiert: Lokaler Szenario-Draft im Arbeitsspeicher sichtbar
-- [x] Phase 4.2 dokumentiert: Szenario-Name im lokalen Draft bearbeitbar (Preview + Reset)
-- [x] Phase 4.3 dokumentiert: Szenario-Name und Szenario-Beschreibung im lokalen Draft bearbeitbar (Preview + Reset)
-- [x] Phase 4.4 dokumentiert: Szenario-Name, Szenario-Beschreibung und Szenario-Ziel im lokalen Draft bearbeitbar (Preview + Reset)
-- [x] Phase 4.5 dokumentiert: Formularstruktur für Szenario-Grunddaten verbessert (fieldset/legend, Hilfetexte, aria-describedby)
-- [x] Phase 4.6 dokumentiert: Draft-Update-Logik aus HomePage für Name/Beschreibung/Ziel in Utility ausgelagert
-- [x] Phase 4.6 Review dokumentiert: Draft-Editing-Grenzen geprüft
-- [x] Phase 4.7 dokumentiert: Einfache lokale Validierung für Name/Beschreibung/Ziel ergänzt
-- [x] Phase 4.7.1 dokumentiert: Validierungs-Helper in eigene Draft-State-Datei ausgelagert (ohne Logikänderung)
-- [x] Phase 4.8 dokumentiert: Bearbeitung und Vorschau visuell klarer getrennt (ohne neue Fachlogik)
-- [x] Phase 4.8.1 dokumentiert: Minimal-CSS für Workspace-Grid und Panels ergänzt (ohne Logikänderung)
-- [x] Phase 4 Review dokumentiert: Szenario-Bearbeitung bis Draft/Validierung/Layout abgeschlossen
-- [ ] Noch keine Speicherung
-- [ ] Noch kein LocalStorage
-- [ ] Noch keine Simulation
-- [ ] Noch keine OpenAI-Anbindung
-- [ ] Keine weiteren Formularbereiche aktiv
-- [ ] Keine neuen Module in Phase 4
+- [x] Lokaler Draft-State vorbereitet
+- [x] Grunddaten im lokalen Draft bearbeitbar gemacht: Name, Beschreibung, Ziel
+- [x] Formularstruktur, Hilfetexte, Validierung, Reset und Vorschau verbessert
+- [x] Phase 4 Review dokumentiert
+- [ ] Keine App-interne Speicherung
+- [ ] Kein LocalStorage
+- [ ] Keine Simulation
+- [ ] Keine OpenAI-Anbindung
 
-## Phase 5 – Stabilisierung durch Tests
+## Phase 5 – Stabilisierung durch Tests und lokaler JSON-Export
+- [x] Testfundament mit node --test eingeführt
+- [x] Quality Gate mit npm test und npm run build dokumentiert
+- [x] JSON-Export-Payload, Dateiname, Orchestrierung und Download-Adapter vorbereitet
+- [x] Minimale JSON-Download-UI mit Statusmeldungen umgesetzt
+- [x] Statusmeldungen und a11y der Download-Meldung geprüft
+- [x] Phase 5 Review dokumentiert
+- [ ] Keine App-interne Speicherung
+- [ ] Kein LocalStorage
+- [ ] Keine Simulation
+- [ ] Keine OpenAI-Anbindung
 
-- [x] Phase 5.0 dokumentiert: Nächste Entwicklungsrichtung festgelegt
-- [x] Phase 5.1: Testfundament für Draft-State-Utilities einführen
-- [x] Phase 5.1 Review dokumentiert: Testfundament geprüft
-- [x] Phase 5.2 dokumentiert: Build- und Testbefehle als Qualitätsgrenze festgelegt
-- [x] Phase 5.2 Review dokumentiert: Quality Gate geprüft
-- [x] Phase 5.3 dokumentiert: Speicherentscheidung konzeptionell vorbereitet
-- [x] Phase 5.4: JSON-Export konzeptionell vorbereitet
-- [x] Phase 5.5: JSON-Export-Payload-Utility vorbereitet
-- [x] Phase 5.5 Review dokumentiert: JSON-Export-Payload-Utility geprüft
-- [x] Phase 5.6: JSON-Export-Schema konzeptionell festlegen
-- [x] Phase 5.7: JSON-Export-Dateinamen vorbereitet
-- [x] Phase 5.7 Review dokumentiert: JSON-Export-Dateinamen geprüft
-- [x] Phase 5.8: JSON-Export-Orchestrierung konzeptionell vorbereiten
-- [x] Phase 5.9: JSON-Export-Orchestrierungs-Utility vorbereitet
-- [x] Phase 5.9 Review dokumentiert: JSON-Export-Orchestrierungs-Utility geprüft
-- [x] Phase 5.10: JSON-Download konzeptionell vorbereitet
-- [x] Phase 5.11: JSON-Download-Utility vorbereitet
-- [x] Phase 5.11 Review dokumentiert: JSON-Download-Utility geprüft
-- [x] Phase 5.12: JSON-Download-Cleanup gehärtet
-- [x] Phase 5.12 Review dokumentiert: JSON-Download-Cleanup geprüft
-- [x] Phase 5.13: JSON-Download-UI konzeptionell vorbereitet
-- [x] Phase 5.13 Review dokumentiert: JSON-Download-UI-Konzept geprüft
-- [x] Phase 5.14: JSON-Download-Statusmeldungen vorbereitet
-- [x] Phase 5.14 Review dokumentiert: JSON-Download-Statusmeldungen geprüft
-- [x] Phase 5.15: JSON-Download-UI minimal vorbereitet
-- [x] Phase 5.15 Review dokumentiert: JSON-Download-UI geprüft
-- [x] Phase 5.16: UI-Hinweise neutralisiert und Hero-Phase-Note bereinigt
-- [x] Phase 5.16 Review dokumentiert: UI-Hinweise geprüft
-- [x] Phase 5.17: UI-Zugänglichkeit der Download-Statusmeldung verbessert
-- [x] Phase 5.17 Review dokumentiert: UI-Zugänglichkeit der Download-Statusmeldung geprüft
-- [x] Phase 5.18: UI-Statusmeldungen fachlich konsolidiert
-- [x] Phase 5.18 Review: UI-Statusmeldungen prüfen
-- [x] Phase 5.19: JSON-Export/Download fachlich abschließend geprüft
-- [x] Phase 5 Review dokumentiert: Stabilisierung durch Tests abgeschlossen
-- [ ] Noch keine Speicherung
-- [ ] Noch kein LocalStorage
-- [ ] Noch keine Simulation
-- [ ] Noch keine OpenAI-Anbindung
-- [ ] Keine neuen Fachmodule
-
-## Phase 6 – Nächste Entwicklungsrichtung
-
-- [x] Phase 6.0 dokumentiert: Nächste Entwicklungsrichtung nach Stabilisierung festgelegt
-- [x] Phase 6.1: JSON-Import konzeptionell vorbereitet
-- [x] Phase 6.1 Review dokumentiert: JSON-Import-Konzept geprüft
-- [x] Phase 6.2: JSON-Import-Validierung konzeptionell vorbereitet
-- [x] Phase 6.2 Review dokumentiert: JSON-Import-Validierungskonzept geprüft
-- [x] Phase 6.3: JSON-Import-Validierungs-Utility vorbereitet
-- [x] Phase 6.3 Review dokumentiert: JSON-Import-Validierungs-Utility geprüft
-- [x] Phase 6.4: JSON-Import-Parsing konzeptionell vorbereitet
-- [x] Phase 6.4 Review dokumentiert: JSON-Import-Parsing-Konzept geprüft
-- [x] Phase 6.5: JSON-Import-Parsing-Utility vorbereitet
-- [x] Phase 6.5 Review dokumentiert: JSON-Import-Parsing-Utility geprüft
-
-- [x] Phase 6.6: JSON-Import-Statusmeldungen konzeptionell vorbereitet
-- [x] Phase 6.6 Review dokumentiert: JSON-Import-Statusmeldungs-Konzept geprüft
-- [x] Phase 6.7: JSON-Import-Statusmeldungs-Utility vorbereitet
-- [x] Phase 6.7 Review dokumentiert: JSON-Import-Statusmeldungs-Utility geprüft
-- [x] Phase 6.8: JSON-Import-UI konzeptionell vorbereitet
-- [x] Phase 6.8 Review dokumentiert: JSON-Import-UI-Konzept geprüft
-- [x] Phase 6.9: JSON-Import-UI minimal vorbereitet
-- [x] Phase 6.9 Review dokumentiert: JSON-Import-UI geprüft
-- [x] Phase 6.10: JSON-Import-Übernahme konzeptionell vorbereitet
-- [x] Phase 6.10 Review dokumentiert: JSON-Import-Übernahme-Konzept geprüft
-
-- [x] Phase 6.11: JSON-Import-Übernahme minimal vorbereitet
-- [x] Phase 6.11 Review dokumentiert: JSON-Import-Übernahme geprüft
+## Phase 6 – Lokale JSON-Import-/Export-Kette
+- [x] JSON-Import konzeptionell vorbereitet
+- [x] Validierung, Parsing und Statusmeldungen vorbereitet
+- [x] Minimale lokale JSON-Import-Prüfung umgesetzt
+- [x] Bewusste Übernahme geprüfter JSON-Importe in den lokalen Draft umgesetzt
 - [x] Phase 6.12: JSON-Import/Export fachlich abschließend geprüft
-
+- [ ] Keine App-interne Speicherung
+- [ ] Kein LocalStorage
+- [ ] Kein Backend
+- [ ] Keine OpenAI-Anbindung
+- [ ] Keine Simulation
 
 ## Phase 7 – Szenario-Modell fachlich weiter editierbar machen
 
+### Grundsatz
+Neue Entität = Konzept · Implementierung · Review.
+Keine separaten Utility-/UI-/a11y-/Status-Sonderphasen.
+
+### Abgeschlossen
 - [x] Phase 7.0: Nächste Entwicklungsrichtung nach lokaler Import-/Export-Kette festgelegt
 - [x] Phase 7.1: Nächstes editierbares Szenariofeld konzeptionell ausgewählt
-- [x] Phase 7.1 Review dokumentiert: Auswahl des nächsten editierbaren Szenariofelds geprüft
-- [x] Phase 7.2.1: Annahmen-Konzept vorbereitet
-- [x] Phase 7.2.2: Annahmen-Implementierung vorbereiten
-- [x] Phase 7.2.3 Review dokumentiert: Annahmen als editierbarer Bereich geprüft
+- [x] Phase 7.1 Review dokumentiert: Auswahl geprüft
 
+- [x] Phase 7.2.1: Annahmen-Konzept vorbereitet
+- [x] Phase 7.2.2: Annahmen-Implementierung vorbereitet
+- [x] Phase 7.2.3 Review dokumentiert: Annahmen als editierbarer Bereich geprüft
 - [x] Phase 7.2.4: Annahmen-Bearbeitung minimal umgesetzt
 - [x] Phase 7.2.4 Review dokumentiert: Annahmen-Bearbeitung geprüft
 
 - [x] Phase 7.3.1: Nächste Entität konzeptionell ausgewählt (Evidenz)
-- [x] Phase 7.3.2: Evidenz-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
+- [x] Phase 7.3.2: Evidenz-Implementierung gebündelt umgesetzt
 - [x] Phase 7.3.3 Review dokumentiert: Evidenz-Implementierung geprüft
 
 - [x] Phase 7.4.1: Nächste Entität konzeptionell ausgewählt (Personas)
-- [x] Phase 7.4.2: Personas-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
-- [x] Phase 7.4.3 Review dokumentiert: Personas-Implementierung prüfen
+- [x] Phase 7.4.2: Personas-Implementierung gebündelt umgesetzt
+- [x] Phase 7.4.3 Review dokumentiert: Personas-Implementierung geprüft
 
 - [x] Phase 7.5.1: Nächste Entität konzeptionell ausgewählt (Ressourcen)
-- [x] Phase 7.5.2: Ressourcen-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
-- [ ] Phase 7.5.3: Review dokumentiert (Ressourcen-Implementierung prüfen)
+- [x] Phase 7.5.2: Ressourcen-Implementierung gebündelt umgesetzt
+- [x] Phase 7.5.3 Review dokumentiert: Ressourcen-Implementierung geprüft
+- [x] Phase 7.5.4: Statusdokumentation nach Ressourcen-Review konsolidiert
+
+### Aktuell editierbare Bereiche im lokalen Draft
+- [x] Grunddaten: Name, Beschreibung, Ziel
+- [x] Annahmen
+- [x] Personas
+- [x] Ressourcen
+- [x] Evidenz
+
+### Weiterhin ausgeschlossen
+- [ ] Keine App-interne Speicherung
+- [ ] Kein LocalStorage
+- [ ] Kein Backend
+- [ ] Keine OpenAI-Anbindung
+- [ ] Keine Simulation
+- [ ] Keine Beziehungslogik
+- [ ] Keine Interventionen
+
+### Möglicher nächster Schritt
+- [ ] Phase 7.6.1: Nächste Entität auswählen und Konzept erstellen
