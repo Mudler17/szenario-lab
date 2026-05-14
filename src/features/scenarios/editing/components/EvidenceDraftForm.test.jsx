@@ -45,6 +45,12 @@ test('shows evidence as editable form fields', () => {
   assert.match(html, /<select/i);
 });
 
+
+test('shows assumption reference hint as optional guidance', () => {
+  const html = renderComponent({ scenarioDraft: { evidence: [{ id: 'e-1', title: 'Titel', content: 'Inhalt' }] } });
+  assert.match(html, /Optionaler Bezug auf eine Annahmen-ID\./);
+});
+
 test('renders remove button per evidence entry', () => {
   const html = renderComponent({ scenarioDraft: { evidence: [{ id: 'e-1', title: 'A', content: 'x' }, { id: 'e-2', title: 'B', content: 'y' }] } });
   const removeCount = (html.match(/Evidenz entfernen/g) || []).length;
