@@ -103,6 +103,7 @@ export default function EvidenceDraftForm({
                     </select>
 
                     <label htmlFor={`evidence-assumptionId-${entryId}`}>Annahmenbezug</label>
+                    <p>Optionaler Bezug auf eine Annahmen-ID.</p>
                     <input
                       id={`evidence-assumptionId-${entryId}`}
                       type="text"
