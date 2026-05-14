@@ -52,3 +52,9 @@ test('renders id-less persona as read-only with explicit hint', () => {
   const disabledCount = (html.match(/disabled=""/g) || []).length;
   assert.equal(disabledCount, 7);
 });
+
+
+test('defaults influence to medium when missing', () => {
+  const html = renderComponent({ scenarioDraft: { personas: [{ id: 'p-1', name: 'A', role: 'R' }] } });
+  assert.match(html, /<option value="medium" selected="">medium<\/option>/);
+});

@@ -150,4 +150,4 @@
 
 - [x] Phase 7.4.1: Nächste Entität konzeptionell ausgewählt (Personas)
 - [x] Phase 7.4.2: Personas-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
-- [ ] Phase 7.4.3 Review dokumentiert: Personas-Implementierung prüfen
+- [x] Phase 7.4.3 Review dokumentiert: Personas-Implementierung prüfen
