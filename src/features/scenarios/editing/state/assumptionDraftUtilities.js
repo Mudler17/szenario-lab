@@ -3,13 +3,9 @@ function cloneAssumptions(assumptions) {
     return [];
   }
 
-  return assumptions.map((assumption) => {
-    if (assumption === null || typeof assumption !== 'object' || Array.isArray(assumption)) {
-      return {};
-    }
-
-    return { ...assumption };
-  });
+  return assumptions
+    .filter((assumption) => assumption !== null && typeof assumption === 'object' && !Array.isArray(assumption))
+    .map((assumption) => ({ ...assumption }));
 }
 
 function normalizeAssumptionInput(assumption) {
