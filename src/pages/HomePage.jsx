@@ -6,6 +6,7 @@ import {
   EvidenceDraftForm,
   PersonaDraftForm,
   ResourceDraftForm,
+  PhaseDraftForm,
 } from '../features/scenarios/editing';
 import {
   createDraftFromScenario,
@@ -24,6 +25,9 @@ import {
   addDraftResource,
   updateDraftResource,
   removeDraftResource,
+  addDraftPhase,
+  updateDraftPhase,
+  removeDraftPhase,
 } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 import {
@@ -164,6 +168,39 @@ function HomePage() {
   const handleRemoveResource = (resourceId) => {
     setScenarioDraft((currentDraft) => {
       const nextDraft = removeDraftResource(currentDraft, resourceId);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+
+  const handleAddPhase = () => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = addDraftPhase(currentDraft, {
+        id: `phase-${Date.now()}`,
+        title: '',
+        description: '',
+        order: '',
+        timeframe: '',
+        status: 'unclear',
+        risks: '',
+      });
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleUpdatePhase = (phaseId, updates) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = updateDraftPhase(currentDraft, phaseId, updates);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleRemovePhase = (phaseId) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = removeDraftPhase(currentDraft, phaseId);
       setDownloadStatus(createJsonDownloadStatusMessage());
       return nextDraft;
     });
@@ -346,6 +383,13 @@ function HomePage() {
             onAddResource={handleAddResource}
             onUpdateResource={handleUpdateResource}
             onRemoveResource={handleRemoveResource}
+          />
+
+          <PhaseDraftForm
+            scenarioDraft={scenarioDraft}
+            onAddPhase={handleAddPhase}
+            onUpdatePhase={handleUpdatePhase}
+            onRemovePhase={handleRemovePhase}
           />
           <EvidenceDraftForm
             scenarioDraft={scenarioDraft}
