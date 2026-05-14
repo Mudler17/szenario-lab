@@ -1,7 +1,7 @@
 # Phase 7.4.3 Review · Personas-Implementierung prüfen
 
 ## Review-Ziel
-Prüfung der in Phase 7.4.2 umgesetzten minimalen Personas-Bearbeitung im lokalen Draft auf funktionale Vollständigkeit, Utility-/State-Konsistenz, Scope-Hygiene, a11y-Basis, Testabdeckung und Dokumentationskonsistenz.
+Fachlicher Review der in Phase 7.4.2 gebündelt umgesetzten minimalen Personas-Bearbeitung im lokalen Draft (anzeigen, hinzufügen, ändern, entfernen) inklusive Utility-/State-Konsistenz, Scope-Hygiene, a11y-Basis, Tests und Doku-Stand.
 
 ## Geprüfte Dateien
 - `src/features/scenarios/editing/state/personaDraftUtilities.js`
@@ -15,119 +15,64 @@ Prüfung der in Phase 7.4.2 umgesetzten minimalen Personas-Bearbeitung im lokale
 - `ROADMAP.md`
 
 ## Ergebnis: minimale Personas-Bearbeitung vollständig?
-Status: **Ja**.
-
-Feststellungen:
-- Vorhandene Personas werden als Formularfelder angezeigt.
-- Bearbeitbare Felder entsprechen dem freigegebenen Minimalumfang:
-  - `name`
-  - `role`
-  - `perspective`
-  - `needs`
-  - `influence`
-  - `constraints`
-- Button **„Persona hinzufügen“** ist vorhanden (Empty State und Listenansicht).
-- Pro Persona ist ein Button **„Persona entfernen“** vorhanden.
-- Hinweis **„Unvollständige Persona“** bleibt sichtbar, wenn `name` oder `role` leer sind.
-- Personas ohne gültige `id` bleiben sichtbar und sind schreibgeschützt.
+Ja.
+- Vorhandene Personas werden als Formularfelder gerendert.
+- Bearbeitbar sind die vorgesehenen Felder: `name`, `role`, `perspective`, `needs`, `influence`, `constraints`.
+- Button „Persona hinzufügen“ ist vorhanden (Empty-State und Listenansicht).
+- Button „Persona entfernen“ ist pro Persona-Eintrag vorhanden.
+- „Unvollständige Persona“ bleibt sichtbar, wenn `name` oder `role` leer/Whitespace sind.
+- id-lose Personas bleiben sichtbar und sind schreibgeschützt (inkl. Hinweistext).
 
 ## Ergebnis: Utility- und Draft-State-Konsistenz
-Status: **Ja**.
-
-Feststellungen:
-- Persona-Utilities folgen dem bestehenden Pattern analog Annahmen/Evidenz:
-  - `getDraftPersonas`
-  - `addDraftPersona`
-  - `updateDraftPersona`
-  - `removeDraftPersona`
-- Eingabe-Draft wird bei Updates nicht mutiert; es werden neue Draft-Objekte zurückgegeben.
-- Ungültige Persona-Einträge werden robust behandelt (Filterung auf Objekte, Ausschluss von `null`/Arrays/Primitiven).
-- `HomePage` nutzt die bestehenden Persona-Utilities aus dem zentralen State-Export.
-- Persona-Änderungen bleiben im lokalen React-Draft-State.
-- Nach Persona-Änderungen wird der Download-Status analog zu anderen Draft-Änderungen neutralisiert.
+Erfüllt.
+- `getDraftPersonas`, `addDraftPersona`, `updateDraftPersona`, `removeDraftPersona` folgen dem bestehenden Muster (analog Annahmen/Evidenz).
+- Eingangs-Draft wird nicht mutiert; Updates erfolgen immutable.
+- Ungültige Persona-Einträge werden robust behandelt (Filterung nicht-objektartiger Einträge).
+- `HomePage` nutzt die bestehenden Persona-Utilities direkt.
+- Änderungen bleiben im lokalen React-Draft-State.
+- Download-Status wird nach Persona-Änderungen neutralisiert (analog anderen Draft-Änderungen).
 - Keine separate State-Architektur eingeführt.
 
 ## Ergebnis: Platzierung in HomePage
-Status: **Fachlich stimmig**.
-
-Feststellung:
-- `PersonaDraftForm` ist vor `EvidenceDraftForm` eingebunden.
-- Reihenfolge entspricht der erwarteten Struktur:
-  1. Grunddaten
-  2. Annahmen
-  3. Personas
-  4. Evidenz
-
-Keine Umstellung erforderlich.
+Bewertung: fachlich stimmig.
+- Reihenfolge ist: Grunddaten → Annahmen → Personas → Evidenz.
+- Diese Reihenfolge ist für den aktuellen Scope plausibel, weil Personas als Kontext zwischen Annahmen und Evidenz gut verortet sind.
+- Keine Umstellung notwendig.
 
 ## Ergebnis: Scope-Hygiene
-Status: **Keine Verstöße gefunden**.
-
-Geprüfte Stoppliste ohne Befund:
-- keine Speicherung
-- kein LocalStorage
-- kein Backend
-- keine OpenAI-Anbindung
-- keine Simulation
-- kein Import-/Export-Ausbau
-- keine neue Dependency
-- keine neuen fachlichen Felder
-- keine Änderung am Persona-Modell über 7.4.1 hinaus
-- keine neue globale State-Architektur
-- keine Beziehungslogik
-- keine Hierarchie-/Netzwerklogik
-- keine Organisationsstrukturmodellierung
-- keine Interventionen
-- keine psychologische Profilierung
-- keine Stakeholdermanagement-Funktion
-- keine automatische Persona-Bewertung
+Keine Verstöße gegen die Stoppliste erkannt.
+- Keine Speicherung, kein LocalStorage, kein Backend.
+- Keine OpenAI-Anbindung, keine Simulation.
+- Kein Import-/Export-Ausbau.
+- Keine neuen Dependencies.
+- Keine neuen fachlichen Felder über das Persona-Minimum hinaus.
+- Keine Modellausweitung (Beziehungen, Hierarchie/Netzwerk, Organisationsstruktur, Stakeholdermanagement, automatische Bewertung etc.).
 
 ## Ergebnis: a11y
-Status: **Basisanforderungen erfüllt**.
-
-Feststellungen:
-- Eingabefelder haben sinnvolle Text-Labels.
+Im Minimal-Scope erfüllt.
+- Alle Felder haben sichtbare Labels.
 - Buttons sind klar textlich beschriftet.
 - Keine reinen Icon-Buttons.
 - Unvollständigkeit wird textlich angezeigt.
-- Schreibschutz bei id-losen Personas wird textlich erklärt.
-- Hinweis zur lokalen Draft-Wirkung ist sichtbar:
-  - „Änderungen betreffen nur den lokalen Draft und werden nicht in der App gespeichert.“
-- Struktur (Abschnitt → Liste → Persona-Eintrag) bleibt nachvollziehbar.
+- Schreibschutz id-loser Personas wird textlich erklärt.
+- Hinweis „Änderungen betreffen nur den lokalen Draft und werden nicht in der App gespeichert.“ ist sichtbar.
+- Struktur mit Abschnitt/Liste/Einträgen bleibt nachvollziehbar.
 
 ## Ergebnis: Tests
-Status: **Überwiegend ausreichend, kleine Lücke geschlossen**.
-
-Vorhandene Abdeckung bestätigt:
-- Utility-Tests:
-  - Lesen
-  - Hinzufügen
-  - Aktualisieren
-  - Entfernen
-  - Nicht-Mutation
-  - robuste Eingaben
-  - Filterung ungültiger Einträge
-- Komponenten-Tests:
-  - Empty State
-  - Add-Button
-  - Formularfelder
-  - Remove-Button je Eintrag
-  - Markierung unvollständiger Persona
-  - id-lose Persona schreibgeschützt
-
-Kleine Ergänzung im bestehenden Teststil:
-- Ergänzt: Default-Wert `influence = medium`, wenn kein Wert gesetzt ist.
+Testabdeckung für den definierten Scope ist ausreichend.
+- Utility-Tests decken Lesen/Hinzufügen/Aktualisieren/Entfernen, Nicht-Mutation und robuste Eingaben ab.
+- Komponenten-Tests decken Empty State, Add-Button, Formularfelder, Remove-Button pro Eintrag, Markierung unvollständiger Persona und id-losen Schreibschutz ab.
+- Zusätzliche kleine Lücke „influence-Defaultwert medium“ ist bereits durch vorhandenen Test abgedeckt.
+- Keine LocalStorage-/Dependency-/Beziehungslogik-Erweiterung in Tests erkennbar.
 
 ## Ergebnis: README/ROADMAP
-Status: **Konsistent**.
-
-Feststellungen:
-- `README.md`: Phase 7.4.2 ist nachvollziehbar als umgesetzter Stand ergänzt.
-- `ROADMAP.md`: 7.4.3 war offen und wird mit diesem Review geschlossen.
+- `README.md` enthält den Hinweis zur Phase 7.4.2 konsistent zur Implementierung.
+- `ROADMAP.md` enthält den Eintrag für Phase 7.4.3 als dokumentierten Review-Schritt.
+- Keine inhaltlichen Korrekturen erforderlich.
 
 ## ggf. kleine Korrekturen
-- In `PersonaDraftForm.test.jsx` wurde ein kleiner zusätzlicher Test ergänzt, der den Defaultwert `medium` für das Einflussfeld prüft.
-- In `ROADMAP.md` wurde der Punkt **„Phase 7.4.3 Review dokumentiert: Personas-Implementierung prüfen“** auf erledigt gesetzt.
+Keine Korrekturen am Code erforderlich.
+Keine Testergänzung erforderlich.
 
 ## Negativ-Liste: Was im Review NICHT gemacht wurde
 - keine neue Funktionalität
@@ -158,5 +103,5 @@ Feststellungen:
 ## Entscheidung
 **Phase 7.4.2 freigegeben.**
 
-## Anschlusslogik
-Empfehlung: nächste Entität für minimale lokale Bearbeitung konzeptionell auswählen (analog 7.3.1/7.4.1) **oder** kurzen Zwischenstand-Audit der bisher editierbaren Entitäten durchführen.
+## Anschlusslogik: nächste Entität oder Zwischenstand-Audit
+Empfehlung: nächste Entität für minimale lokale Draft-Bearbeitung nach demselben Muster auswählen (kleiner, klar abgegrenzter fachlicher Bereich) **oder** kurzes Zwischenstand-Audit über alle bisher editierbaren Entitäten (Grunddaten, Annahmen, Evidenz, Personas) zur Konsistenz der UX-Texte und Testmuster.
