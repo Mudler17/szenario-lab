@@ -63,3 +63,24 @@ test('renders helper texts for order and timeframe boundaries', () => {
   assert.match(html, /Die Reihenfolge ist ein einfacher Orientierungswert, keine Projektplanung\./);
   assert.match(html, /Der Zeitraum ist eine freie Beschreibung, kein Kalendertermin\./);
 });
+
+
+test('phase form does not access localStorage', () => {
+  const originalDescriptor = Object.getOwnPropertyDescriptor(globalThis, 'localStorage');
+  Object.defineProperty(globalThis, 'localStorage', {
+    configurable: true,
+    get() {
+      throw new Error('localStorage must not be used in phase draft form');
+    },
+  });
+
+  try {
+    assert.doesNotThrow(() => renderComponent({ scenarioDraft: { phases: [] } }));
+  } finally {
+    if (originalDescriptor) {
+      Object.defineProperty(globalThis, 'localStorage', originalDescriptor);
+    } else {
+      delete globalThis.localStorage;
+    }
+  }
+});
