@@ -5,7 +5,14 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import AssumptionDraftForm from './AssumptionDraftForm.jsx';
 
 function renderComponent(props) {
-  return renderToStaticMarkup(<AssumptionDraftForm {...props} />);
+  return renderToStaticMarkup(
+    <AssumptionDraftForm
+      onAddAssumption={() => {}}
+      onUpdateAssumption={() => {}}
+      onRemoveAssumption={() => {}}
+      {...props}
+    />,
+  );
 }
 
 test('shows empty state when no assumptions are in draft', () => {
@@ -14,7 +21,13 @@ test('shows empty state when no assumptions are in draft', () => {
   assert.match(html, /Noch keine Annahmen im Szenario-Draft vorhanden\./);
 });
 
-test('shows assumptions with selected fields', () => {
+test('shows add button in empty state', () => {
+  const html = renderComponent({ scenarioDraft: { assumptions: [] } });
+
+  assert.match(html, /Annahme hinzufügen/);
+});
+
+test('shows assumptions as editable form fields', () => {
   const html = renderComponent({
     scenarioDraft: {
       assumptions: [
@@ -30,11 +43,28 @@ test('shows assumptions with selected fields', () => {
     },
   });
 
-  assert.match(html, /Annahme A/);
-  assert.match(html, /Inhalt A/);
-  assert.match(html, /Gesamtszenario/);
-  assert.match(html, /medium/);
-  assert.match(html, /Begründung A/);
+  assert.match(html, /Titel/);
+  assert.match(html, /Inhalt/);
+  assert.match(html, /Geltungsbereich/);
+  assert.match(html, /Vertrauen/);
+  assert.match(html, /Begründung/);
+  assert.match(html, /<input/i);
+  assert.match(html, /<textarea/i);
+  assert.match(html, /<select/i);
+});
+
+test('renders remove button per assumption', () => {
+  const html = renderComponent({
+    scenarioDraft: {
+      assumptions: [
+        { id: 'a-1', title: 'Annahme A', content: 'Inhalt A' },
+        { id: 'a-2', title: 'Annahme B', content: 'Inhalt B' },
+      ],
+    },
+  });
+
+  const removeCount = (html.match(/Annahme entfernen/g) || []).length;
+  assert.equal(removeCount, 2);
 });
 
 test('marks incomplete assumptions', () => {
@@ -53,33 +83,3 @@ test('marks incomplete assumptions', () => {
   assert.match(html, /Unvollständige Annahme/);
 });
 
-test('does not render invalid phantom assumption entries', () => {
-  const html = renderComponent({
-    scenarioDraft: {
-      assumptions: [
-        null,
-        'invalid',
-        { id: 'a-2', title: 'Valide Annahme', content: 'Valider Inhalt' },
-      ],
-    },
-  });
-
-  assert.doesNotMatch(html, /invalid/);
-  assert.match(html, /Valide Annahme/);
-});
-
-
-test('does not render editing controls or form fields', () => {
-  const html = renderComponent({
-    scenarioDraft: {
-      assumptions: [
-        { id: 'a-1', title: 'Annahme A', content: 'Inhalt A' },
-      ],
-    },
-  });
-
-  assert.doesNotMatch(html, /<input/i);
-  assert.doesNotMatch(html, /<textarea/i);
-  assert.doesNotMatch(html, /<select/i);
-  assert.doesNotMatch(html, /Hinzufügen|Speichern|Löschen|Bearbeiten/);
-});

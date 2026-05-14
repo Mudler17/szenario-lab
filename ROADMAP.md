@@ -138,5 +138,7 @@
 - [x] Phase 7.1: Nächstes editierbares Szenariofeld konzeptionell ausgewählt
 - [x] Phase 7.1 Review dokumentiert: Auswahl des nächsten editierbaren Szenariofelds geprüft
 - [x] Phase 7.2.1: Annahmen-Konzept vorbereitet
-- [ ] Phase 7.2.2: Annahmen-Implementierung vorbereiten
-- [ ] Phase 7.2.3 Review dokumentiert: Annahmen als editierbarer Bereich geprüft
+- [x] Phase 7.2.2: Annahmen-Implementierung vorbereiten
+- [x] Phase 7.2.3 Review dokumentiert: Annahmen als editierbarer Bereich geprüft
+
+- [x] Phase 7.2.4: Annahmen-Bearbeitung minimal umgesetzt
