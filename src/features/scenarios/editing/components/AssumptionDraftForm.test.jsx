@@ -83,3 +83,20 @@ test('marks incomplete assumptions', () => {
   assert.match(html, /Unvollständige Annahme/);
 });
 
+
+test('renders id-less assumptions as read-only with explicit hint', () => {
+  const html = renderComponent({
+    scenarioDraft: {
+      assumptions: [
+        {
+          title: 'Ohne ID',
+          content: 'Kann angezeigt werden, aber nicht robust bearbeitet.',
+        },
+      ],
+    },
+  });
+
+  assert.match(html, /Annahme ohne gültige id ist schreibgeschützt\./);
+  const disabledCount = (html.match(/disabled=""/g) || []).length;
+  assert.equal(disabledCount, 6);
+});

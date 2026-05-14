@@ -142,3 +142,4 @@
 - [x] Phase 7.2.3 Review dokumentiert: Annahmen als editierbarer Bereich geprüft
 
 - [x] Phase 7.2.4: Annahmen-Bearbeitung minimal umgesetzt
+- [x] Phase 7.2.4 Review dokumentiert: Annahmen-Bearbeitung geprüft

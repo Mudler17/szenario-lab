@@ -38,6 +38,7 @@ export default function AssumptionDraftForm({
               const assumptionId = typeof assumption?.id === 'string' && assumption.id.trim().length > 0
                 ? assumption.id
                 : `assumption-${index}`;
+              const hasValidId = typeof assumption?.id === 'string' && assumption.id.trim().length > 0;
               const titleFieldId = `assumption-title-${assumptionId}`;
               const contentFieldId = `assumption-content-${assumptionId}`;
               const scopeFieldId = `assumption-scope-${assumptionId}`;
@@ -49,10 +50,12 @@ export default function AssumptionDraftForm({
                   <article>
                     <h4>Annahme {index + 1}</h4>
                     {statusIncomplete ? <p>Unvollständige Annahme</p> : null}
+                    {!hasValidId ? <p>Annahme ohne gültige id ist schreibgeschützt.</p> : null}
 
                     <label htmlFor={titleFieldId}>Titel</label>
                     <input
                       id={titleFieldId}
+                      disabled={!hasValidId}
                       type="text"
                       value={normalizeFieldValue(assumption.title)}
                       onChange={(event) => onUpdateAssumption(assumptionId, { title: event.target.value })}
@@ -61,6 +64,7 @@ export default function AssumptionDraftForm({
                     <label htmlFor={contentFieldId}>Inhalt</label>
                     <textarea
                       id={contentFieldId}
+                      disabled={!hasValidId}
                       value={normalizeFieldValue(assumption.content)}
                       onChange={(event) => onUpdateAssumption(assumptionId, { content: event.target.value })}
                     />
@@ -68,6 +72,7 @@ export default function AssumptionDraftForm({
                     <label htmlFor={scopeFieldId}>Geltungsbereich</label>
                     <input
                       id={scopeFieldId}
+                      disabled={!hasValidId}
                       type="text"
                       value={normalizeFieldValue(assumption.scope)}
                       onChange={(event) => onUpdateAssumption(assumptionId, { scope: event.target.value })}
@@ -76,6 +81,7 @@ export default function AssumptionDraftForm({
                     <label htmlFor={confidenceFieldId}>Vertrauen</label>
                     <select
                       id={confidenceFieldId}
+                      disabled={!hasValidId}
                       value={normalizeFieldValue(assumption.confidence) || 'medium'}
                       onChange={(event) => onUpdateAssumption(assumptionId, { confidence: event.target.value })}
                     >
@@ -87,11 +93,13 @@ export default function AssumptionDraftForm({
                     <label htmlFor={rationaleFieldId}>Begründung</label>
                     <textarea
                       id={rationaleFieldId}
+                      disabled={!hasValidId}
                       value={normalizeFieldValue(assumption.rationale)}
                       onChange={(event) => onUpdateAssumption(assumptionId, { rationale: event.target.value })}
                     />
 
-                    <button type="button" onClick={() => onRemoveAssumption(assumptionId)}>
+                    <button type="button" onClick={() => onRemoveAssumption(assumptionId)}
+                      disabled={!hasValidId}>
                       Annahme entfernen
                     </button>
                   </article>
