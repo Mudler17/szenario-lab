@@ -24,3 +24,10 @@ export {
   updateDraftPersona,
   removeDraftPersona,
 } from './personaDraftUtilities';
+
+export {
+  getDraftResources,
+  addDraftResource,
+  updateDraftResource,
+  removeDraftResource,
+} from './resourceDraftUtilities';
