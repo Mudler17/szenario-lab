@@ -17,3 +17,10 @@ export {
   updateDraftEvidence,
   removeDraftEvidence,
 } from './evidenceDraftUtilities';
+
+export {
+  getDraftPersonas,
+  addDraftPersona,
+  updateDraftPersona,
+  removeDraftPersona,
+} from './personaDraftUtilities';
