@@ -6,6 +6,8 @@ szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 ## Aktueller Status
 Phase 7.5.1 · Nächste Entität konzeptionell ausgewählt (Ressourcen)
 
+Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
+
 ## Lokale Befehle
 ```bash
 npm install
