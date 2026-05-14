@@ -154,4 +154,5 @@
 
 - [x] Phase 7.5.1: Nächste Entität konzeptionell ausgewählt (Ressourcen)
 - [x] Phase 7.5.2: Ressourcen-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
-- [ ] Phase 7.5.3: Review dokumentiert (Ressourcen-Implementierung prüfen)
+- [x] Phase 7.5.3: Review dokumentiert (Ressourcen-Implementierung geprüft)
+- [x] Phase 7.5.4: Statusdokumentation nach Ressourcen-Review konsolidiert
