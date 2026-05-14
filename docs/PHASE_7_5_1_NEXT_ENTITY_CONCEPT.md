@@ -15,10 +15,10 @@ Auswahl und konzeptionelle Vorbereitung der nächsten editierbaren Entität nach
 - Implementierungsphase bündelt Utility, UI, a11y, Statusmeldungen, Tests und Doku.
 
 ## 4. Kurze Kandidatenprüfung
-- **Ressourcen jetzt:** Nach Annahmen (Hypothesen), Evidenz (Beleglage) und Personas (Perspektiven) fehlt ein minimaler strukturierter Blick auf verfügbare bzw. fehlende Mittel, Kapazitäten, Kompetenzen und Engpässe; das ist fachlich direkt anschlussfähig und bleibt im lokalen Draft-Pattern testbar.
-- **Phasen später:** Zeitliche Struktur wird belastbarer, wenn zusätzlich zu Annahmen/Evidenz/Personas zuerst die relevanten Ressourcen sichtbar sind.
-- **Beziehungen später:** Beziehungen erzeugen relationale Querverknüpfungen zwischen Akteuren und erhöhen das Komplexitätsrisiko vorzeitig.
-- **Interventionen später:** Maßnahmenplanung sollte erst nach stabilerer Ausgangslage aus Perspektiven, Evidenz und Ressourcen erfolgen.
+- **Ressourcen jetzt:** Nach Annahmen, Evidenz und Personas fehlt ein minimaler Blick auf verfügbare/fehlende Mittel, Kapazitäten, Kompetenzen und Engpässe; fachlich anschlussfähig, lokal testbar, geringes Kaskadenrisiko.
+- **Phasen später:** Zeitlogik wird robuster, wenn zuvor Ressourcenlage sichtbar ist.
+- **Beziehungen später:** Früh hohe Querverknüpfungskomplexität zwischen Entitäten.
+- **Interventionen später:** Maßnahmenplanung erst nach stabilerer Ausgangslage aus Annahmen/Evidenz/Personas/Ressourcen.
 
 ## 5. Entscheidung
 **Phase 7.5 fokussiert die Entität „Ressourcen“.**
@@ -145,8 +145,6 @@ Ein einziger Review mit Fokus auf:
 - keine Utility-/UI-/a11y-/Status-Sonderphasen
 
 ## 13. Quality-Gate-Hinweis
-Da dies eine reine Konzeptphase ist, muss kein Anwendungscode geändert werden.
-
-README/ROADMAP werden dennoch auf Konsistenz geprüft; falls geändert, bleibt die Änderung minimal.
-
-`npm test` und `npm run build` sind bei reinen Dokuänderungen optional; falls ausgeführt, werden Ergebnisse dokumentiert.
+- Da dies eine reine Konzeptphase ist, muss kein Anwendungscode geändert werden.
+- README/ROADMAP konsistent halten.
+- `npm test` und `npm run build` sind bei reinen Dokuänderungen optional; falls ausgeführt, Ergebnis dokumentieren.
