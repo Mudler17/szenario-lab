@@ -65,3 +65,28 @@ test('removeDraftResource removes entry by id without mutating input draft', () 
   assert.deepEqual(draft, before);
   assert.notEqual(updated, draft);
 });
+
+
+test('resource utilities do not access localStorage', () => {
+  const originalDescriptor = Object.getOwnPropertyDescriptor(globalThis, 'localStorage');
+  Object.defineProperty(globalThis, 'localStorage', {
+    configurable: true,
+    get() {
+      throw new Error('localStorage must not be used in resource draft utilities');
+    },
+  });
+
+  try {
+    const draft = createDraft();
+    assert.doesNotThrow(() => getDraftResources(draft));
+    assert.doesNotThrow(() => addDraftResource(draft, { id: 'resource-2' }));
+    assert.doesNotThrow(() => updateDraftResource(draft, 'resource-1', { name: 'Neu' }));
+    assert.doesNotThrow(() => removeDraftResource(draft, 'resource-1'));
+  } finally {
+    if (originalDescriptor) {
+      Object.defineProperty(globalThis, 'localStorage', originalDescriptor);
+    } else {
+      delete globalThis.localStorage;
+    }
+  }
+});
