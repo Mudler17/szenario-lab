@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { exampleScenario } from '../domain';
-import { ScenarioDraftForm, AssumptionDraftForm } from '../features/scenarios/editing';
+import { ScenarioDraftForm, AssumptionDraftForm, EvidenceDraftForm } from '../features/scenarios/editing';
 import {
   createDraftFromScenario,
   resetDraft,
@@ -9,6 +9,9 @@ import {
   addDraftAssumption,
   updateDraftAssumption,
   removeDraftAssumption,
+  addDraftEvidence,
+  updateDraftEvidence,
+  removeDraftEvidence,
 } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 import {
@@ -81,6 +84,39 @@ function HomePage() {
   const handleRemoveAssumption = (assumptionId) => {
     setScenarioDraft((currentDraft) => {
       const nextDraft = removeDraftAssumption(currentDraft, assumptionId);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+
+  const handleAddEvidence = () => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = addDraftEvidence(currentDraft, {
+        id: `evidence-${Date.now()}`,
+        title: '',
+        content: '',
+        sourceType: 'other',
+        relation: 'unclear',
+        confidence: 'medium',
+        assumptionId: '',
+      });
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleUpdateEvidence = (evidenceId, updates) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = updateDraftEvidence(currentDraft, evidenceId, updates);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleRemoveEvidence = (evidenceId) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = removeDraftEvidence(currentDraft, evidenceId);
       setDownloadStatus(createJsonDownloadStatusMessage());
       return nextDraft;
     });
@@ -218,6 +254,12 @@ function HomePage() {
             onAddAssumption={handleAddAssumption}
             onUpdateAssumption={handleUpdateAssumption}
             onRemoveAssumption={handleRemoveAssumption}
+          />
+          <EvidenceDraftForm
+            scenarioDraft={scenarioDraft}
+            onAddEvidence={handleAddEvidence}
+            onUpdateEvidence={handleUpdateEvidence}
+            onRemoveEvidence={handleRemoveEvidence}
           />
           <button type="button" onClick={handleResetDraft}>
             Draft auf Original zurücksetzen
