@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.2.4 · Annahmen im lokalen Draft minimal bearbeitbar
+Phase 7.3.1 · Nächste Entität nach Annahmen konzeptionell festgelegt (Evidenz)
 
 ## Lokale Befehle
 ```bash
@@ -135,6 +135,8 @@ In Phase 7.1 Review wurde die Auswahl des nächsten editierbaren Szenariofelds f
 
 In Phase 7.2.1 wurde das Konzept für Annahmen als ersten zusätzlichen editierbaren Szenario-Bereich vorbereitet. Die Phase definiert Felder, Validierung, Pattern-Verweise, geplante Tests, JSON-Rundlauf und Negativ-Liste. Es wurde noch keine Implementierung ergänzt.
 
+In Phase 7.3.1 wurde die nächste Entität nach der Annahmen-Bearbeitung neu bewertet und verbindlich als „Evidenz“ für den nächsten lokalen Draft-Ausbau ausgewählt. Die Umsetzung folgt im neuen Drei-Schritt-Schnitt (Konzept, Implementierung, Review) weiterhin ohne Speicherung, Backend oder Simulation.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
@@ -183,5 +185,7 @@ In Phase 7.2.1 wurde das Konzept für Annahmen als ersten zusätzlichen editierb
 - Phase-7.1-Auswahl nächstes editierbares Feld: `docs/PHASE_7_1_NEXT_EDITABLE_FIELD_SELECTION.md`
 - Phase-7.1-Review (Auswahl nächstes editierbares Feld): `docs/PHASE_7_1_NEXT_EDITABLE_FIELD_SELECTION_REVIEW.md`
 - Phase-7.2-Annahmen-Konzept: `docs/PHASE_7_2_DIRECTION.md`
+
+- Phase-7.3.1-Konzept nächste Entität: `docs/PHASE_7_3_1_NEXT_ENTITY_CONCEPT.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
