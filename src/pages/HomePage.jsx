@@ -1,6 +1,11 @@
 import { useMemo, useState } from 'react';
 import { exampleScenario } from '../domain';
-import { ScenarioDraftForm, AssumptionDraftForm, EvidenceDraftForm } from '../features/scenarios/editing';
+import {
+  ScenarioDraftForm,
+  AssumptionDraftForm,
+  EvidenceDraftForm,
+  PersonaDraftForm,
+} from '../features/scenarios/editing';
 import {
   createDraftFromScenario,
   resetDraft,
@@ -12,6 +17,9 @@ import {
   addDraftEvidence,
   updateDraftEvidence,
   removeDraftEvidence,
+  addDraftPersona,
+  updateDraftPersona,
+  removeDraftPersona,
 } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 import {
@@ -89,6 +97,40 @@ function HomePage() {
     });
   };
 
+
+
+
+  const handleAddPersona = () => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = addDraftPersona(currentDraft, {
+        id: `persona-${Date.now()}`,
+        name: '',
+        role: '',
+        perspective: '',
+        needs: '',
+        influence: 'medium',
+        constraints: '',
+      });
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleUpdatePersona = (personaId, updates) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = updateDraftPersona(currentDraft, personaId, updates);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleRemovePersona = (personaId) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = removeDraftPersona(currentDraft, personaId);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
 
   const handleAddEvidence = () => {
     setScenarioDraft((currentDraft) => {
@@ -254,6 +296,13 @@ function HomePage() {
             onAddAssumption={handleAddAssumption}
             onUpdateAssumption={handleUpdateAssumption}
             onRemoveAssumption={handleRemoveAssumption}
+          />
+
+          <PersonaDraftForm
+            scenarioDraft={scenarioDraft}
+            onAddPersona={handleAddPersona}
+            onUpdatePersona={handleUpdatePersona}
+            onRemovePersona={handleRemovePersona}
           />
           <EvidenceDraftForm
             scenarioDraft={scenarioDraft}
