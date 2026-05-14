@@ -42,6 +42,24 @@ test('getDraftAssumptions returns empty list for missing or invalid draft data',
   assert.deepEqual(getDraftAssumptions({ assumptions: 'invalid' }), []);
 });
 
+
+test('getDraftAssumptions filters invalid assumption entries', () => {
+  const assumptions = getDraftAssumptions({
+    assumptions: [
+      { id: 'valid-1', title: 'Valide Annahme' },
+      null,
+      'invalid',
+      ['invalid-array'],
+      { id: 'valid-2', title: 'Weitere valide Annahme' },
+    ],
+  });
+
+  assert.deepEqual(assumptions, [
+    { id: 'valid-1', title: 'Valide Annahme' },
+    { id: 'valid-2', title: 'Weitere valide Annahme' },
+  ]);
+});
+
 test('addDraftAssumption appends a new assumption without mutating input draft', () => {
   const draft = createDraft();
   const before = structuredClone(draft);
