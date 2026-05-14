@@ -6,6 +6,9 @@ import {
   resetDraft,
   updateScenarioDraftField,
   validateScenarioDraftBasics,
+  addDraftAssumption,
+  updateDraftAssumption,
+  removeDraftAssumption,
 } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 import {
@@ -46,6 +49,38 @@ function HomePage() {
     setScenarioDraft((currentDraft) => {
       const nextDraft = updateScenarioDraftField(currentDraft, fieldName, value);
       setScenarioValidation(validateScenarioDraftBasics(nextDraft));
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+
+  const handleAddAssumption = () => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = addDraftAssumption(currentDraft, {
+        id: `assumption-${Date.now()}`,
+        title: '',
+        content: '',
+        scope: '',
+        confidence: 'medium',
+        rationale: '',
+      });
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleUpdateAssumption = (assumptionId, updates) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = updateDraftAssumption(currentDraft, assumptionId, updates);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleRemoveAssumption = (assumptionId) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = removeDraftAssumption(currentDraft, assumptionId);
       setDownloadStatus(createJsonDownloadStatusMessage());
       return nextDraft;
     });
@@ -178,7 +213,12 @@ function HomePage() {
             onDescriptionChange={handleScenarioDescriptionChange}
             onGoalChange={handleScenarioGoalChange}
           />
-          <AssumptionDraftForm scenarioDraft={scenarioDraft} />
+          <AssumptionDraftForm
+            scenarioDraft={scenarioDraft}
+            onAddAssumption={handleAddAssumption}
+            onUpdateAssumption={handleUpdateAssumption}
+            onRemoveAssumption={handleRemoveAssumption}
+          />
           <button type="button" onClick={handleResetDraft}>
             Draft auf Original zurücksetzen
           </button>
