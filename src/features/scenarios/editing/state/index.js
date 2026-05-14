@@ -31,3 +31,11 @@ export {
   updateDraftResource,
   removeDraftResource,
 } from './resourceDraftUtilities';
+
+
+export {
+  getDraftPhases,
+  addDraftPhase,
+  updateDraftPhase,
+  removeDraftPhase,
+} from './phaseDraftUtilities';
