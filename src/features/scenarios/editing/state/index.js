@@ -10,3 +10,10 @@ export {
   updateDraftAssumption,
   removeDraftAssumption,
 } from './assumptionDraftUtilities';
+
+export {
+  getDraftEvidence,
+  addDraftEvidence,
+  updateDraftEvidence,
+  removeDraftEvidence,
+} from './evidenceDraftUtilities';
