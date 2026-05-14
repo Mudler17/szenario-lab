@@ -5,6 +5,7 @@ import {
   AssumptionDraftForm,
   EvidenceDraftForm,
   PersonaDraftForm,
+  ResourceDraftForm,
 } from '../features/scenarios/editing';
 import {
   createDraftFromScenario,
@@ -20,6 +21,9 @@ import {
   addDraftPersona,
   updateDraftPersona,
   removeDraftPersona,
+  addDraftResource,
+  updateDraftResource,
+  removeDraftResource,
 } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 import {
@@ -127,6 +131,39 @@ function HomePage() {
   const handleRemovePersona = (personaId) => {
     setScenarioDraft((currentDraft) => {
       const nextDraft = removeDraftPersona(currentDraft, personaId);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+
+  const handleAddResource = () => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = addDraftResource(currentDraft, {
+        id: `resource-${Date.now()}`,
+        name: '',
+        type: 'other',
+        description: '',
+        availability: 'unclear',
+        relevance: 'medium',
+        constraints: '',
+      });
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleUpdateResource = (resourceId, updates) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = updateDraftResource(currentDraft, resourceId, updates);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleRemoveResource = (resourceId) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = removeDraftResource(currentDraft, resourceId);
       setDownloadStatus(createJsonDownloadStatusMessage());
       return nextDraft;
     });
@@ -303,6 +340,12 @@ function HomePage() {
             onAddPersona={handleAddPersona}
             onUpdatePersona={handleUpdatePersona}
             onRemovePersona={handleRemovePersona}
+          />
+          <ResourceDraftForm
+            scenarioDraft={scenarioDraft}
+            onAddResource={handleAddResource}
+            onUpdateResource={handleUpdateResource}
+            onRemoveResource={handleRemoveResource}
           />
           <EvidenceDraftForm
             scenarioDraft={scenarioDraft}
