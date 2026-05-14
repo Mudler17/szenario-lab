@@ -67,3 +67,19 @@ test('does not render invalid phantom assumption entries', () => {
   assert.doesNotMatch(html, /invalid/);
   assert.match(html, /Valide Annahme/);
 });
+
+
+test('does not render editing controls or form fields', () => {
+  const html = renderComponent({
+    scenarioDraft: {
+      assumptions: [
+        { id: 'a-1', title: 'Annahme A', content: 'Inhalt A' },
+      ],
+    },
+  });
+
+  assert.doesNotMatch(html, /<input/i);
+  assert.doesNotMatch(html, /<textarea/i);
+  assert.doesNotMatch(html, /<select/i);
+  assert.doesNotMatch(html, /Hinzufügen|Speichern|Löschen|Bearbeiten/);
+});
