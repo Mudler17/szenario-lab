@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.5.4 · Statusdokumentation nach Ressourcen-Review konsolidiert
+Phase 7.6.1 · Nächste Entität ausgewählt und als „Phasen“ konzeptionell vorbereitet
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
@@ -211,3 +211,5 @@ In Phase 7.5.1 wurde nach Annahmen, Evidenz und Personas die nächste Entität f
 
 
 In Phase 7.5.2 wurden Ressourcen im lokalen Draft minimal bearbeitbar ergänzt (Add/Update/Remove, Basis-a11y, Status-/Hilfetexte, Tests), weiterhin ohne Speicherung, LocalStorage, Backend oder Simulation.
+
+In Phase 7.6.1 wurde nach Annahmen, Evidenz, Personas und Ressourcen die nächste Entität für den lokalen Draft-Ausbau verbindlich ausgewählt: Phasen. Die Phase bleibt rein konzeptionell; es wurden keine Implementierung, keine UI, keine Utilities, keine Tests und keine Speicher-/Backend-/Simulationsanbindung ergänzt.
