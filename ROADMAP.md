@@ -167,4 +167,5 @@
 - [x] Phase 7.7.3: Review dokumentiert (Beziehungen-Implementierung geprüft)
 - [x] Zwischenstand-Audit nach Phase 7.7: Editierbare Entitäten geprüft
 - [x] Phase 7.8.1: Relationship-Schema-Harmonisierung konzeptionell vorbereitet
-- [ ] Phase 7.8.2: Relationship-Schema-Harmonisierung minimal umsetzen
+- [x] Phase 7.8.2: Relationship-Schema-Harmonisierung minimal umgesetzt
+- [ ] Phase 7.8.3: Review dokumentiert (Relationship-Schema-Harmonisierung geprüft)
