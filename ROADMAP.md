@@ -159,4 +159,5 @@
 
 - [x] Phase 7.6.1: Nächste Entität konzeptionell ausgewählt (Phasen)
 - [x] Phase 7.6.2: Phasen-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
-- [ ] Phase 7.6.3: Review dokumentiert (Phasen-Implementierung geprüft)
+- [x] Phase 7.6.3: Review dokumentiert (Phasen-Implementierung geprüft)
+- [x] Phase 7.6.4: Statusdokumentation nach Phasen-Review konsolidiert

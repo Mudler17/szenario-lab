@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.6.2 · Phasen im lokalen Draft minimal bearbeitbar umgesetzt
+Phase 7.6.3 · Review der Phasen-Implementierung abgeschlossen
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
@@ -153,6 +153,10 @@ In Phase 7.4.1 wurde nach Annahmen und Evidenz die nächste Entität für den lo
 In Phase 7.4.2 wurden Personas im lokalen Draft minimal bearbeitbar ergänzt (Add/Update/Remove, Basis-a11y, Status-/Hilfetexte, Tests), weiterhin ohne Speicherung, LocalStorage, Backend oder Simulation.
 
 In Phase 7.5.1 wurde nach Annahmen, Evidenz und Personas die nächste Entität für den lokalen Draft-Ausbau verbindlich ausgewählt: Ressourcen. Die Phase bleibt rein konzeptionell; es wurden keine Implementierung, keine UI, keine Utilities, keine Tests und keine Speicher-/Backend-/Simulationsanbindung ergänzt.
+
+In Phase 7.6.3 wurde die Phasen-Implementierung fachlich geprüft und zur Umsetzung freigegeben.
+Phasen sind im lokalen Draft minimal bearbeitbar.
+
 ## Dokumentation
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
