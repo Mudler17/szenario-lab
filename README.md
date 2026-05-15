@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 8.15 · NoPersistence-Grundlage nachgeschärft
+Phase 8.16 · Review der nachgeschärften NoPersistence-Grundlage abgeschlossen
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -63,6 +63,8 @@ In Phase 8.14 wurde die in Phase 8.13 umgesetzte NoPersistence-/Guard-/Status-Gr
 
 
 In Phase 8.15 wurde die NoPersistence-Grundlage nachgeschärft. Der NoPersistence-Adapter wurde API-seitig erweitert, Guards für Nicht-Speicheraktionen wurden expliziter, Statuswerte und Meldungen wurden präzisiert und Tests gegen Browser-API-Zugriffe ergänzt. Es wurde weiterhin keine echte Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine HomePage-Anbindung eingeführt.
+
+In Phase 8.16 wurde die nachgeschärfte NoPersistence-/Guard-/Status-Grundlage geprüft. Die Grundlage bleibt strikt nicht-speichernd: keine echte Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine HomePage-Anbindung. Tests und Build wurden geprüft.
 
 ## Lokale Befehle
 ```bash
@@ -221,6 +223,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Architektur: `docs/ARCHITECTURE.md`
 - Domänenmodell: `docs/DOMAIN_MODEL.md`
 - Phase-8.15 NoPersistence-Nachschärfung: `docs/PHASE_8_15_NO_PERSISTENCE_FOUNDATION_REFINEMENT.md`
+- Phase-8.16 Review nachgeschärfte NoPersistence-Grundlage: `docs/PHASE_8_16_REVIEW_REFINED_NO_PERSISTENCE_FOUNDATION.md`
 - Review-Dokument: `docs/DRAFT_EDITING_REVIEW.md`
 - Phase-4-Review: `docs/PHASE_4_REVIEW.md`
 - Phase-5-Entscheidung: `docs/PHASE_5_DIRECTION.md`
