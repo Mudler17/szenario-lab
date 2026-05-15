@@ -217,6 +217,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 
 - Phase-7.7.1-Konzept nächste Entität: `docs/PHASE_7_7_1_NEXT_ENTITY_CONCEPT.md`
 - Phase-7.7.2-Implementierung Beziehungen: `docs/PHASE_7_7_2_RELATIONSHIPS_IMPLEMENTATION.md`
+- Phase-7.7.3-Review Beziehungen: `docs/PHASE_7_7_3_REVIEW_RELATIONSHIPS_IMPLEMENTATION.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
 
@@ -227,3 +228,9 @@ In Phase 7.6.1 wurde nach Annahmen, Evidenz, Personas und Ressourcen die nächst
 
 
 In Phase 7.7.2 wurden Beziehungen im lokalen Draft minimal bearbeitbar ergänzt (Add/Update/Remove, Basis-a11y, Status-/Hilfetexte, Tests), weiterhin ohne Speicherung, LocalStorage, Backend oder Simulation.
+
+
+Aktueller Status:
+Phase 7.7.3 · Review der Beziehungen-Implementierung abgeschlossen
+
+In Phase 7.7.3 wurde die Beziehungen-Implementierung fachlich geprüft und freigegeben.

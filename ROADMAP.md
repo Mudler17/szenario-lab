@@ -164,4 +164,4 @@
 
 - [x] Phase 7.7.1: Nächste Entität konzeptionell ausgewählt (Beziehungen)
 - [x] Phase 7.7.2: Beziehungen-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
-- [ ] Phase 7.7.3: Review dokumentiert (Beziehungen-Implementierung geprüft)
+- [x] Phase 7.7.3: Review dokumentiert (Beziehungen-Implementierung geprüft)
