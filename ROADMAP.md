@@ -217,3 +217,5 @@
 - [x] Phase 9.7: Entscheidungsnotiz-Utility minimal implementieren
 - [x] Phase 9.8: Review der Entscheidungsnotiz-Utility geprüft
 - [x] Phase 9.9: Entscheidungsnotiz-Testgrenzen nachschärfen
+- [x] Phase 9.10: Review der nachgeschärften Entscheidungsnotiz-Testgrenzen geprüft
+- [ ] Phase 9.11: Entscheidungsnotiz-Seiteneffekt- und Quelltexttests ergänzen
