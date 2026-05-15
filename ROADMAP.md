@@ -185,4 +185,5 @@
 - [x] Phase 8.0: Nächste Hauptphase festgelegt (Persistenzentscheidung und Speicherarchitektur vorbereiten)
 - [x] Phase 8.1: Persistenzentscheidung konzeptionell vorbereitet
 - [x] Phase 8.2: Speicheroptionen bewertet und Zielpfad ausgewählt
-- [ ] Phase 8.3: Speicherarchitektur für bewusst aktivierbaren Speicherpfad konzeptionell vorbereiten
+- [x] Phase 8.3: Speicherarchitektur für bewusst aktivierbaren Speicherpfad konzeptionell vorbereitet
+- [ ] Phase 8.4: Review der Speicherarchitektur-Konzeption prüfen
