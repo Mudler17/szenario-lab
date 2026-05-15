@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 9.6 · Review des Entscheidungsnotiz-Utility-Kontrakts abgeschlossen
+Phase 9.7 · Entscheidungsnotiz-Utility minimal implementiert
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -91,6 +91,7 @@ In Phase 9.6 wurde der konzeptionelle Utility-Kontrakt für die spätere Entsche
 - Phase-9.4 Review Entscheidungsnotiz-Implementierungsschnitt: docs/PHASE_9_4_REVIEW_DECISION_NOTE_IMPLEMENTATION_SLICE.md
 - Phase-9.5 Entscheidungsnotiz-Utility-Kontrakt: docs/PHASE_9_5_DECISION_NOTE_UTILITY_CONTRACT_CONCEPT.md
 - Phase-9.6 Review Entscheidungsnotiz-Utility-Kontrakt: docs/PHASE_9_6_REVIEW_DECISION_NOTE_UTILITY_CONTRACT.md
+- Phase-9.7 Implementierung Entscheidungsnotiz-Utility (minimal): docs/PHASE_9_7_DECISION_NOTE_UTILITY_MINIMAL_IMPLEMENTATION.md
 
 ## Lokale Befehle
 ```bash
