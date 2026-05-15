@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 8.16 · Review der nachgeschärften NoPersistence-Grundlage abgeschlossen
+Phase 8.17 · Persistenz-Zwischenstand-Audit nach NoPersistence-Grundlage abgeschlossen
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -65,6 +65,10 @@ In Phase 8.14 wurde die in Phase 8.13 umgesetzte NoPersistence-/Guard-/Status-Gr
 In Phase 8.15 wurde die NoPersistence-Grundlage nachgeschärft. Der NoPersistence-Adapter wurde API-seitig erweitert, Guards für Nicht-Speicheraktionen wurden expliziter, Statuswerte und Meldungen wurden präzisiert und Tests gegen Browser-API-Zugriffe ergänzt. Es wurde weiterhin keine echte Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine HomePage-Anbindung eingeführt.
 
 In Phase 8.16 wurde die nachgeschärfte NoPersistence-/Guard-/Status-Grundlage geprüft. Die Grundlage bleibt strikt nicht-speichernd: keine echte Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine HomePage-Anbindung. Tests und Build wurden geprüft.
+
+In Phase 8.17 wurde der Persistenz-Zwischenstand nach der NoPersistence-/Guard-/Status-Grundlage geprüft. Die Phase bestätigt: Die App hat weiterhin keine echte Speicherung, kein LocalStorage, kein Backend, keine API, keine UI- und keine HomePage-Anbindung für Persistenz. Die NoPersistence-Grundlage ist als sichere Architektur- und Testgrenze etabliert. Als nächster Schritt wird das Phase-8-Abschlussaudit mit Übergang zu Phase 9 empfohlen.
+
+- Phase-8.17 Persistenz-Zwischenstand-Audit: docs/PHASE_8_17_PERSISTENCE_INTERIM_AUDIT_AFTER_NO_PERSISTENCE.md
 
 ## Lokale Befehle
 ```bash
