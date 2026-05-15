@@ -179,4 +179,5 @@
 - [x] Phase 7.10.2: Bearbeitungsbereich-Struktur minimal umsetzen
 - [x] Phase 7.10.3: Review dokumentiert (Bearbeitungsbereich-Struktur geprüft)
 - [x] Zwischenstand-Audit nach Phase 7.10: Gesamtstand geprüft
-- [ ] Phase 7.11.1: Phase-7-Abschlussaudit konzeptionell vorbereiten
+- [x] Phase 7.11.1: Phase-7-Abschlussaudit konzeptionell vorbereitet
+- [ ] Phase 7.11.2: Phase-7-Abschlussaudit durchführen
