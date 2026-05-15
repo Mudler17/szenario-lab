@@ -4,13 +4,15 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.8.1 · Relationship-Schema-Harmonisierung konzeptionell vorbereitet
+Phase 7.8.2 · Relationship-Schema minimal harmonisiert
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
 Nach Phase 7.7 wurde der Stand der editierbaren Entitäten geprüft. Beziehungen sind editierbar; als nächster sinnvoller Schritt wird eine konzeptionelle Relationship-Schema-Harmonisierung empfohlen.
 
 In Phase 7.8.1 wurde die spätere Harmonisierung des Relationship-Schemas konzeptionell vorbereitet. Es wurden keine Migration, keine Mapping-Utility, keine UI-Änderung und keine Codeänderung umgesetzt.
+
+In Phase 7.8.2 wurden Beispiel-Szenario und lesende Relationship-Vorschau auf das editierbare Relationship-Schema harmonisiert. Es wurden keine Interventionen, keine Simulation, keine Speicherung und keine Mapping-Architektur ergänzt.
 
 ## Lokale Befehle
 ```bash
@@ -224,6 +226,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Phase-7.7.3-Review Beziehungen: `docs/PHASE_7_7_3_REVIEW_RELATIONSHIPS_IMPLEMENTATION.md`
 - Zwischenstand-Audit nach Phase 7.7: `docs/PHASE_7_EDITABLE_ENTITIES_AUDIT_AFTER_7_7.md`
 - Phase-7.8.1 Relationship-Schema-Harmonisierung: `docs/PHASE_7_8_1_RELATIONSHIP_SCHEMA_HARMONIZATION_CONCEPT.md`
+- Phase-7.8.2 Relationship-Schema-Harmonisierung: `docs/PHASE_7_8_2_RELATIONSHIP_SCHEMA_HARMONIZATION_IMPLEMENTATION.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
 
@@ -237,6 +240,6 @@ In Phase 7.7.2 wurden Beziehungen im lokalen Draft minimal bearbeitbar ergänzt 
 
 
 Aktueller Status:
-Phase 7.7.3 · Review der Beziehungen-Implementierung abgeschlossen
+Phase 7.8.2 · Relationship-Schema minimal harmonisiert
 
 In Phase 7.7.3 wurde die Beziehungen-Implementierung fachlich geprüft und freigegeben.
