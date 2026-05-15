@@ -1,9 +1,18 @@
 export { createNoPersistenceAdapter } from './adapter/noPersistenceAdapter.js';
 
 export {
+  NON_PERSISTENCE_ACTION,
+  PERSISTENCE_ACTION,
   guardNoPersistenceMode,
+  guardPersistenceAction,
+  isNonPersistenceAction,
+  isPersistenceAction,
   isPersistenceTechnologyBlocked,
 } from './orchestration/persistenceGuards.js';
 
-export { PERSISTENCE_STATUS } from './status/persistenceStatus.js';
+export {
+  PERSISTENCE_REASON,
+  PERSISTENCE_STATUS,
+  createPersistenceResult,
+} from './status/persistenceStatus.js';
 export { createPersistenceStatusMessage } from './status/persistenceStatusMessages.js';

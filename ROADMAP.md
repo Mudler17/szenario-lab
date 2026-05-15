@@ -198,4 +198,5 @@
 - [x] Phase 8.13: NoPersistence-/Guard-/Status-Grundlage minimal implementiert
 
 - [x] Phase 8.14: Review der NoPersistence-/Guard-/Status-Grundlage geprüft
-- [ ] Phase 8.15: NoPersistence-Grundlage nachschärfen
+- [x] Phase 8.15: NoPersistence-Grundlage nachschärfen
+- [ ] Phase 8.16: Review der nachgeschärften NoPersistence-Grundlage prüfen
