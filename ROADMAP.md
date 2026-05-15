@@ -202,4 +202,9 @@
 - [x] Phase 8.16: Review der nachgeschärften NoPersistence-Grundlage geprüft
 
 - [x] Phase 8.17: Persistenz-Zwischenstand-Audit nach NoPersistence-Grundlage abgeschlossen
-- [ ] Phase 8.18: Phase-8-Abschlussaudit und Übergang zu Phase 9 vorbereiten
+- [x] Phase 8.18: Phase-8-Abschlussaudit und Übergang zu Phase 9 vorbereitet
+
+
+## Phase 9 · Beratungslogik und Entscheidungsqualität
+
+- [ ] Phase 9.0: Nächste Hauptphase Beratungslogik festlegen
