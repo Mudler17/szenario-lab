@@ -6,8 +6,8 @@ Konzeptioneller Zuschnitt des ersten später möglichen Implementierungsschritts
 Die Phase entscheidet nicht über eine Speichertechnologie und implementiert nichts. Sie legt nur fest, welcher erste Umsetzungsschnitt später sicher wäre, ohne echte Speicherung einzuführen.
 
 ## 2. Ausgangspunkt
-- Phase 8.10 hat die Persistenz-Modulstruktur geprüft und freigegeben.
-- Die spätere Persistenz-Modulstruktur ist konzeptionell vorbereitet.
+Phase 8.10 hat die Persistenz-Modulstruktur geprüft und freigegeben. Die spätere Persistenz-Modulstruktur ist konzeptionell vorbereitet.
+
 - Es existiert weiterhin kein Ordner `src/features/scenarios/persistence/`.
 - Es gibt weiterhin keine App-Speicherung.
 - Es gibt weiterhin kein LocalStorage, SessionStorage, IndexedDB, Backend, API, Authentifizierung oder Accounts.
