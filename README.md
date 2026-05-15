@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 8.11 · Erste Persistenz-Implementierungsvorbereitung konzeptionell zugeschnitten
+Phase 8.13 · NoPersistence-/Guard-/Status-Grundlage minimal implementiert
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -56,6 +56,9 @@ In Phase 8.9 wurde die spätere Persistenz-Modulstruktur konzeptionell vorbereit
 In Phase 8.10 wurde die Persistenz-Modulstruktur geprüft und freigegeben. Die Review bestätigt: keine Dateien unter `src/features/scenarios/persistence/`, keine Persistenz-Exporte, keine Speichertechnologie, keine Browser-Persistenz und keine API.
 
 In Phase 8.11 wurde konzeptionell zugeschnitten, dass der erste spätere Implementierungsschritt nur eine sichere Nicht-Speicherungs-Grenze vorbereiten darf: NoPersistence-/Noop-Grundlage, Guard-Grundlage gegen verdeckte Speicherung und Status-/Meldungsgrundlage für „Speicherung nicht aktiv“. Es wurde weiterhin nichts implementiert: keine Speicherung, kein LocalStorage, kein SessionStorage, kein IndexedDB, kein Backend, keine API und keine UI.
+
+In Phase 8.13 wurde unter `src/features/scenarios/persistence/` eine minimale technische Grundlage für Nicht-Speicherung ergänzt: NoPersistence-/Noop-Adapter, Guards gegen verdeckte Speicherung sowie Statuswerte und nutzerfreundliche Meldungen für „Speicherung nicht aktiv“. Es wurde weiterhin keine echte Speicherung eingeführt (kein LocalStorage, kein SessionStorage, kein IndexedDB, kein Backend, keine API, keine Datenbank, keine Authentifizierung, keine Accounts, keine UI- oder HomePage-Anbindung).
+
 
 ## Lokale Befehle
 ```bash

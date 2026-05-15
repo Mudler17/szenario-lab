@@ -195,3 +195,4 @@
 - [x] Phase 8.10: Review der Persistenz-Modulstruktur geprüft
 - [x] Phase 8.11: Erste Persistenz-Implementierungsvorbereitung konzeptionell zuschneiden
 - [x] Phase 8.12: Review des ersten Persistenz-Implementierungsschnitts geprüft
+- [x] Phase 8.13: NoPersistence-/Guard-/Status-Grundlage minimal implementiert
