@@ -187,4 +187,5 @@
 - [x] Phase 8.2: Speicheroptionen bewertet und Zielpfad ausgewählt
 - [x] Phase 8.3: Speicherarchitektur für bewusst aktivierbaren Speicherpfad konzeptionell vorbereitet
 - [x] Phase 8.4: Review der Speicherarchitektur-Konzeption geprüft
-- [ ] Phase 8.5: Persistenz-Schnittstellen und Kontrollpunkte konzeptionell vorbereiten
+- [x] Phase 8.5: Persistenz-Schnittstellen und Kontrollpunkte konzeptionell vorbereitet
+- [ ] Phase 8.6: Review der Persistenz-Schnittstellen und Kontrollpunkte prüfen
