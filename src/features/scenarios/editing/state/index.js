@@ -39,3 +39,11 @@ export {
   updateDraftPhase,
   removeDraftPhase,
 } from './phaseDraftUtilities';
+
+
+export {
+  getDraftRelationships,
+  addDraftRelationship,
+  updateDraftRelationship,
+  removeDraftRelationship,
+} from './relationshipDraftUtilities';

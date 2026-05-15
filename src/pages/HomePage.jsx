@@ -7,6 +7,7 @@ import {
   PersonaDraftForm,
   ResourceDraftForm,
   PhaseDraftForm,
+  RelationshipDraftForm,
 } from '../features/scenarios/editing';
 import {
   createDraftFromScenario,
@@ -28,6 +29,9 @@ import {
   addDraftPhase,
   updateDraftPhase,
   removeDraftPhase,
+  addDraftRelationship,
+  updateDraftRelationship,
+  removeDraftRelationship,
 } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 import {
@@ -201,6 +205,40 @@ function HomePage() {
   const handleRemovePhase = (phaseId) => {
     setScenarioDraft((currentDraft) => {
       const nextDraft = removeDraftPhase(currentDraft, phaseId);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+
+  const handleAddRelationship = () => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = addDraftRelationship(currentDraft, {
+        id: `relationship-${Date.now()}`,
+        sourceId: '',
+        targetId: '',
+        type: 'unclear',
+        description: '',
+        strength: 'unclear',
+        quality: 'unclear',
+        risks: '',
+      });
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleUpdateRelationship = (relationshipId, updates) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = updateDraftRelationship(currentDraft, relationshipId, updates);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleRemoveRelationship = (relationshipId) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = removeDraftRelationship(currentDraft, relationshipId);
       setDownloadStatus(createJsonDownloadStatusMessage());
       return nextDraft;
     });
@@ -390,6 +428,12 @@ function HomePage() {
             onAddPhase={handleAddPhase}
             onUpdatePhase={handleUpdatePhase}
             onRemovePhase={handleRemovePhase}
+          />
+          <RelationshipDraftForm
+            scenarioDraft={scenarioDraft}
+            onAddRelationship={handleAddRelationship}
+            onUpdateRelationship={handleUpdateRelationship}
+            onRemoveRelationship={handleRemoveRelationship}
           />
           <EvidenceDraftForm
             scenarioDraft={scenarioDraft}
