@@ -190,4 +190,5 @@
 - [x] Phase 8.5: Persistenz-Schnittstellen und Kontrollpunkte konzeptionell vorbereitet
 - [x] Phase 8.6: Review der Persistenz-Schnittstellen und Kontrollpunkte geprüft
 - [x] Phase 8.7: Persistenz-Integrationsgrenzen konzeptionell vorbereitet
-- [ ] Phase 8.8: Review der Persistenz-Integrationsgrenzen prüfen
+- [x] Phase 8.8: Review der Persistenz-Integrationsgrenzen geprüft
+- [ ] Phase 8.9: Persistenz-Modulstruktur konzeptionell vorbereiten
