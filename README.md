@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 9.4 · Review des Entscheidungsnotiz-Implementierungsschnitts abgeschlossen
+Phase 9.6 · Review des Entscheidungsnotiz-Utility-Kontrakts abgeschlossen
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -80,6 +80,8 @@ In Phase 9.3 wurde der kleinste spätere Implementierungsschnitt für eine Entsc
 
 In Phase 9.4 wurde der konzeptionelle Implementierungsschnitt für eine Entscheidungsnotiz geprüft. Der Schnitt bleibt auf eine neutrale Utility-Grundlage begrenzt und führt keine Empfehlung, kein Scoring, keine Rangfolge, keine UI, keine Speicherung, keine OpenAI-Anbindung und keine Implementierung ein. Als nächster Schritt wird empfohlen, den Utility-Kontrakt für die Entscheidungsnotiz präzise zuzuschneiden.
 
+In Phase 9.6 wurde der konzeptionelle Utility-Kontrakt für die spätere Entscheidungsnotiz geprüft. Der Kontrakt bleibt auf eine neutrale, testbare Entscheidungsnotiz-Grundlage begrenzt: keine Empfehlung, kein Scoring, keine Rangfolge, keine UI, keine Speicherung, keine OpenAI-/LLM-Anbindung und keine Implementierung im Review. Als nächster Schritt wird eine minimal begrenzte Implementierung der Utility empfohlen, sofern keine Blocker bestehen.
+
 - Phase-8.17 Persistenz-Zwischenstand-Audit: docs/PHASE_8_17_PERSISTENCE_INTERIM_AUDIT_AFTER_NO_PERSISTENCE.md
 - Phase-8.18 Abschlussaudit und Phase-9-Übergang: docs/PHASE_8_18_PHASE_8_COMPLETION_AUDIT_AND_PHASE_9_TRANSITION.md
 - Phase-9.0 Entscheidung Beratungslogik: docs/PHASE_9_0_NEXT_MAIN_PHASE_CONSULTING_LOGIC_DECISION.md
@@ -87,6 +89,8 @@ In Phase 9.4 wurde der konzeptionelle Implementierungsschnitt für eine Entschei
 - Phase-9.2 Review Vergleichs- und Entscheidungslogik: docs/PHASE_9_2_REVIEW_COMPARISON_AND_DECISION_LOGIC.md
 - Phase-9.3 Entscheidungsnotiz-Implementierungsschnitt: docs/PHASE_9_3_DECISION_NOTE_IMPLEMENTATION_SLICE_CONCEPT.md
 - Phase-9.4 Review Entscheidungsnotiz-Implementierungsschnitt: docs/PHASE_9_4_REVIEW_DECISION_NOTE_IMPLEMENTATION_SLICE.md
+- Phase-9.5 Entscheidungsnotiz-Utility-Kontrakt: docs/PHASE_9_5_DECISION_NOTE_UTILITY_CONTRACT_CONCEPT.md
+- Phase-9.6 Review Entscheidungsnotiz-Utility-Kontrakt: docs/PHASE_9_6_REVIEW_DECISION_NOTE_UTILITY_CONTRACT.md
 
 ## Lokale Befehle
 ```bash
