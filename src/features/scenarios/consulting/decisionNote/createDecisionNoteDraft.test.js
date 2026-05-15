@@ -1,5 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import { createDecisionNoteDraft } from './createDecisionNoteDraft.js';
 
@@ -183,4 +186,89 @@ test('returns boundaries as independent array instance', () => {
   assert.notEqual(a.boundaries, b.boundaries);
   assert.ok(a.boundaries.length > 0);
   assert.ok(b.boundaries.length > 0);
+});
+
+test('does not access browser persistence/network globals', () => {
+  const restore = [];
+
+  const installThrowingGetter = (name) => {
+    const descriptor = Object.getOwnPropertyDescriptor(globalThis, name);
+    restore.push(() => {
+      if (descriptor) {
+        Object.defineProperty(globalThis, name, descriptor);
+      } else {
+        delete globalThis[name];
+      }
+    });
+
+    Object.defineProperty(globalThis, name, {
+      configurable: true,
+      get() {
+        throw new Error(`${name} must not be accessed`);
+      },
+    });
+  };
+
+  const installThrowingFunction = (name) => {
+    const original = globalThis[name];
+    restore.push(() => {
+      if (typeof original === 'undefined') {
+        delete globalThis[name];
+      } else {
+        globalThis[name] = original;
+      }
+    });
+
+    globalThis[name] = () => {
+      throw new Error(`${name} must not be called`);
+    };
+  };
+
+  installThrowingGetter('localStorage');
+  installThrowingGetter('sessionStorage');
+  installThrowingGetter('indexedDB');
+  installThrowingFunction('fetch');
+  installThrowingFunction('XMLHttpRequest');
+  installThrowingFunction('axios');
+
+  try {
+    assert.doesNotThrow(() => {
+      createDecisionNoteDraft({
+        name: 'Test',
+        interventions: [{ name: 'Option A' }],
+      });
+    });
+  } finally {
+    while (restore.length > 0) {
+      const restoreFn = restore.pop();
+      restoreFn();
+    }
+  }
+});
+
+test('source contains no forbidden persistence/browser/api patterns', () => {
+  const currentFile = fileURLToPath(import.meta.url);
+  const sourcePath = path.join(path.dirname(currentFile), 'createDecisionNoteDraft.js');
+  const source = fs.readFileSync(sourcePath, 'utf8');
+
+  const forbiddenPatterns = [
+    'localStorage',
+    'sessionStorage',
+    'indexedDB',
+    'fetch(',
+    'XMLHttpRequest',
+    'axios',
+    '/export',
+    '/import',
+    '/persistence',
+    'openai',
+    'OpenAI',
+    'document.',
+    'window.',
+    'navigator.',
+  ];
+
+  for (const pattern of forbiddenPatterns) {
+    assert.equal(source.includes(pattern), false, `source must not include: ${pattern}`);
+  }
 });

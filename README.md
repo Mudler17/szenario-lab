@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 9.10 · Review der nachgeschärften Entscheidungsnotiz-Testgrenzen abgeschlossen
+Phase 9.11 · Entscheidungsnotiz-Seiteneffekt- und Quelltexttests ergänzt
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -86,6 +86,7 @@ In Phase 9.8 wurde die minimale Utility `createDecisionNoteDraft` geprüft.
 In Phase 9.9 wurden die Testgrenzen der Utility `createDecisionNoteDraft` nachgeschärft (u. a. explizite null/undefined-Eingaben, strengere Array-Inhaltsprüfungen, exakte Pflichtfeld-Keys, engere Schutztests für neutrale Sprache und Grenzen). Die Utility bleibt ohne neue Fachlogik sowie ohne UI-/Speicher-/Automatisierungsanbindung.
 
 In Phase 9.10 wurden die in Phase 9.9 nachgeschärften Testgrenzen der Entscheidungsnotiz-Utility geprüft. Die Utility bleibt ohne UI, ohne Speicherung, ohne OpenAI-/LLM-Anbindung, ohne Empfehlung, ohne Scoring, ohne Rangfolge und ohne Entscheidungsautomatisierung. Offene Hinweise betreffen ausschließlich Testhärtung und keine neue Fachlogik.
+In Phase 9.11 wurden die fehlenden Seiteneffekt- und Quelltext-Negativtests für `createDecisionNoteDraft` ergänzt. Die Utility bleibt ohne UI, ohne Speicherung, ohne OpenAI-/LLM-Anbindung, ohne Empfehlung, ohne Scoring, ohne Rangfolge und ohne Entscheidungsautomatisierung.
  Die Utility bleibt auf eine neutrale Entscheidungsnotiz-Grundlage begrenzt und führt keine UI, keine Speicherung, keine OpenAI-/LLM-Anbindung, keine Empfehlung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung ein. Als nächster Schritt werden die Testgrenzen der Entscheidungsnotiz-Utility nachgeschärft, sofern die Review-Hinweise bestätigt werden.
 
 - Phase-8.17 Persistenz-Zwischenstand-Audit: docs/PHASE_8_17_PERSISTENCE_INTERIM_AUDIT_AFTER_NO_PERSISTENCE.md
@@ -101,6 +102,7 @@ In Phase 9.10 wurden die in Phase 9.9 nachgeschärften Testgrenzen der Entscheid
 - Phase-9.8 Review Entscheidungsnotiz-Utility: docs/PHASE_9_8_REVIEW_DECISION_NOTE_UTILITY.md
 - Phase-9.9 Entscheidungsnotiz-Testgrenzen nachschärfen: docs/PHASE_9_9_DECISION_NOTE_TEST_BOUNDARIES_HARDENING.md
 - Phase-9.10 Review Entscheidungsnotiz-Testgrenzen: docs/PHASE_9_10_REVIEW_DECISION_NOTE_TEST_BOUNDARIES.md
+- Phase-9.11 Entscheidungsnotiz-Seiteneffekt- und Quelltexttests: docs/PHASE_9_11_DECISION_NOTE_SIDE_EFFECT_AND_SOURCE_NEGATIVE_TESTS.md
 
 ## Lokale Befehle
 ```bash
