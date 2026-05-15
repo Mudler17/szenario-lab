@@ -215,3 +215,5 @@
 - [x] Phase 9.5: Entscheidungsnotiz-Utility-Kontrakt konzeptionell präzisieren
 - [x] Phase 9.6: Review des Entscheidungsnotiz-Utility-Kontrakts geprüft
 - [x] Phase 9.7: Entscheidungsnotiz-Utility minimal implementieren
+- [x] Phase 9.8: Review der Entscheidungsnotiz-Utility geprüft
+- [ ] Phase 9.9: Entscheidungsnotiz-Testgrenzen nachschärfen
