@@ -435,62 +435,88 @@ function HomePage() {
           <p className="workspace-hint">
             Aktiver Modus: <strong>Lokaler Draft</strong> (nicht gespeichert)
           </p>
-          <ScenarioDraftForm
-            scenario={scenarioDraft}
-            validation={scenarioValidation}
-            onNameChange={handleScenarioNameChange}
-            onDescriptionChange={handleScenarioDescriptionChange}
-            onGoalChange={handleScenarioGoalChange}
-          />
-          <AssumptionDraftForm
-            scenarioDraft={scenarioDraft}
-            onAddAssumption={handleAddAssumption}
-            onUpdateAssumption={handleUpdateAssumption}
-            onRemoveAssumption={handleRemoveAssumption}
-          />
+          <nav className="editor-navigation" aria-label="Abschnitte im Bearbeitungsbereich">
+            <h3>Abschnitte</h3>
+            <ul>
+              <li><a href="#editor-basic">Szenario-Basis</a></li>
+              <li><a href="#editor-actors">Akteure und Mittel</a></li>
+              <li><a href="#editor-system">Verlauf und Systemstruktur</a></li>
+              <li><a href="#editor-actions">Handlungsoptionen</a></li>
+              <li><a href="#editor-tools">Werkzeuge</a></li>
+            </ul>
+          </nav>
 
-          <PersonaDraftForm
-            scenarioDraft={scenarioDraft}
-            onAddPersona={handleAddPersona}
-            onUpdatePersona={handleUpdatePersona}
-            onRemovePersona={handleRemovePersona}
-          />
-          <ResourceDraftForm
-            scenarioDraft={scenarioDraft}
-            onAddResource={handleAddResource}
-            onUpdateResource={handleUpdateResource}
-            onRemoveResource={handleRemoveResource}
-          />
+          <section id="editor-basic" className="editor-group" aria-label="Szenario-Basis">
+            <h3>Szenario-Basis</h3>
+            <ScenarioDraftForm
+              scenario={scenarioDraft}
+              validation={scenarioValidation}
+              onNameChange={handleScenarioNameChange}
+              onDescriptionChange={handleScenarioDescriptionChange}
+              onGoalChange={handleScenarioGoalChange}
+            />
+            <AssumptionDraftForm
+              scenarioDraft={scenarioDraft}
+              onAddAssumption={handleAddAssumption}
+              onUpdateAssumption={handleUpdateAssumption}
+              onRemoveAssumption={handleRemoveAssumption}
+            />
+            <EvidenceDraftForm
+              scenarioDraft={scenarioDraft}
+              onAddEvidence={handleAddEvidence}
+              onUpdateEvidence={handleUpdateEvidence}
+              onRemoveEvidence={handleRemoveEvidence}
+            />
+          </section>
 
-          <PhaseDraftForm
-            scenarioDraft={scenarioDraft}
-            onAddPhase={handleAddPhase}
-            onUpdatePhase={handleUpdatePhase}
-            onRemovePhase={handleRemovePhase}
-          />
-          <RelationshipDraftForm
-            scenarioDraft={scenarioDraft}
-            onAddRelationship={handleAddRelationship}
-            onUpdateRelationship={handleUpdateRelationship}
-            onRemoveRelationship={handleRemoveRelationship}
-          />
-          <InterventionDraftForm
-            scenarioDraft={scenarioDraft}
-            onAddIntervention={handleAddIntervention}
-            onUpdateIntervention={handleUpdateIntervention}
-            onRemoveIntervention={handleRemoveIntervention}
-          />
-          <EvidenceDraftForm
-            scenarioDraft={scenarioDraft}
-            onAddEvidence={handleAddEvidence}
-            onUpdateEvidence={handleUpdateEvidence}
-            onRemoveEvidence={handleRemoveEvidence}
-          />
-          <button type="button" onClick={handleResetDraft}>
-            Draft auf Original zurücksetzen
-          </button>
+          <section id="editor-actors" className="editor-group" aria-label="Akteure und Mittel">
+            <h3>Akteure und Mittel</h3>
+            <PersonaDraftForm
+              scenarioDraft={scenarioDraft}
+              onAddPersona={handleAddPersona}
+              onUpdatePersona={handleUpdatePersona}
+              onRemovePersona={handleRemovePersona}
+            />
+            <ResourceDraftForm
+              scenarioDraft={scenarioDraft}
+              onAddResource={handleAddResource}
+              onUpdateResource={handleUpdateResource}
+              onRemoveResource={handleRemoveResource}
+            />
+          </section>
 
-          <section className="export-panel" aria-label="JSON-Download">
+          <section id="editor-system" className="editor-group" aria-label="Verlauf und Systemstruktur">
+            <h3>Verlauf und Systemstruktur</h3>
+            <PhaseDraftForm
+              scenarioDraft={scenarioDraft}
+              onAddPhase={handleAddPhase}
+              onUpdatePhase={handleUpdatePhase}
+              onRemovePhase={handleRemovePhase}
+            />
+            <RelationshipDraftForm
+              scenarioDraft={scenarioDraft}
+              onAddRelationship={handleAddRelationship}
+              onUpdateRelationship={handleUpdateRelationship}
+              onRemoveRelationship={handleRemoveRelationship}
+            />
+          </section>
+
+          <section id="editor-actions" className="editor-group" aria-label="Handlungsoptionen">
+            <h3>Handlungsoptionen</h3>
+            <InterventionDraftForm
+              scenarioDraft={scenarioDraft}
+              onAddIntervention={handleAddIntervention}
+              onUpdateIntervention={handleUpdateIntervention}
+              onRemoveIntervention={handleRemoveIntervention}
+            />
+          </section>
+
+          <section id="editor-tools" className="editor-group editor-tools" aria-label="Werkzeuge">
+            <h3>Werkzeuge</h3>
+            <button type="button" onClick={handleResetDraft}>
+              Draft auf Original zurücksetzen
+            </button>
+            <section className="export-panel" aria-label="JSON-Download">
             <h3>JSON-Download</h3>
             <p className="workspace-hint">
               Lädt den aktuellen lokalen Draft als JSON-Datei auf dein Gerät herunter. Dies ist keine Speicherung in der App.
@@ -508,9 +534,9 @@ function HomePage() {
             >
               {downloadStatus.message}
             </p>
-          </section>
+            </section>
 
-          <section className="export-panel" aria-label="JSON-Import prüfen">
+            <section className="export-panel" aria-label="JSON-Import prüfen">
             <h3>JSON-Import prüfen</h3>
             <p className="workspace-hint">
               Die Datei wird nur lokal geprüft. Der aktuelle Draft wird dadurch nicht ersetzt.
@@ -550,7 +576,9 @@ function HomePage() {
               <p className="workspace-hint">
                 Dieses Szenario kann erst übernommen werden, wenn die Prüfung erfolgreich war.
               </p>
-            )}          </section>
+            )}
+            </section>
+          </section>
         </section>
 
         <section className="workspace-panel preview-panel" aria-label="Vorschau">
