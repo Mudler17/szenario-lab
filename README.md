@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.7.1 · Beziehungen als nächste Entität konzeptionell ausgewählt
+Phase 7.7.2 · Beziehungen im lokalen Draft minimal bearbeitbar umgesetzt
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
@@ -24,6 +24,7 @@ Die App erlaubt derzeit die Bearbeitung der folgenden Bereiche im lokalen Draft:
 - Ressourcen
 - Phasen
 - Evidenz
+- Beziehungen
 Die Formularstruktur wurde in Phase 4.5 verbessert: Der Bereich ist als „Szenario-Grunddaten“ mit `fieldset` und `legend` strukturiert, alle drei Felder haben Hilfetexte und die Eingaben nutzen `aria-describedby`.
 In Phase 4.6 wurde die wiederholte Draft-Update-Logik für diese drei bestehenden Felder (Name, Beschreibung, Ziel) in eine kleine State-Utility ausgelagert.
 In Phase 4.7 wurde zusätzlich eine minimale lokale Validierung ergänzt: Name, Beschreibung und Ziel dürfen nicht leer sein; leere Felder zeigen sichtbare Hinweise im Draft-Formular.
@@ -215,6 +216,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Phase-7.5.1-Konzept nächste Entität: `docs/PHASE_7_5_1_NEXT_ENTITY_CONCEPT.md`
 
 - Phase-7.7.1-Konzept nächste Entität: `docs/PHASE_7_7_1_NEXT_ENTITY_CONCEPT.md`
+- Phase-7.7.2-Implementierung Beziehungen: `docs/PHASE_7_7_2_RELATIONSHIPS_IMPLEMENTATION.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
 
@@ -222,3 +224,6 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 In Phase 7.5.2 wurden Ressourcen im lokalen Draft minimal bearbeitbar ergänzt (Add/Update/Remove, Basis-a11y, Status-/Hilfetexte, Tests), weiterhin ohne Speicherung, LocalStorage, Backend oder Simulation.
 
 In Phase 7.6.1 wurde nach Annahmen, Evidenz, Personas und Ressourcen die nächste Entität für den lokalen Draft-Ausbau verbindlich ausgewählt: Phasen. Die Phase bleibt rein konzeptionell; es wurden keine Implementierung, keine UI, keine Utilities, keine Tests und keine Speicher-/Backend-/Simulationsanbindung ergänzt.
+
+
+In Phase 7.7.2 wurden Beziehungen im lokalen Draft minimal bearbeitbar ergänzt (Add/Update/Remove, Basis-a11y, Status-/Hilfetexte, Tests), weiterhin ohne Speicherung, LocalStorage, Backend oder Simulation.
