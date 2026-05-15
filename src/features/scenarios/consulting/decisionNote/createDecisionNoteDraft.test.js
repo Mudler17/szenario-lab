@@ -3,6 +3,26 @@ import assert from 'node:assert/strict';
 
 import { createDecisionNoteDraft } from './createDecisionNoteDraft.js';
 
+const REQUIRED_KEYS = [
+  'decisionPoint',
+  'options',
+  'centralDifferences',
+  'targetConflicts',
+  'criticalAssumptions',
+  'openQuestions',
+  'nextClarificationStep',
+  'boundaries'
+];
+
+const ARRAY_FIELDS = [
+  'options',
+  'centralDifferences',
+  'targetConflicts',
+  'criticalAssumptions',
+  'openQuestions',
+  'boundaries'
+];
+
 test('returns stable decision note structure with expected field types', () => {
   const result = createDecisionNoteDraft({});
 
@@ -23,6 +43,56 @@ test('uses placeholders for missing data and keeps required fields non-empty', (
   assert.ok(result.options.length > 0);
   assert.ok(result.boundaries.length > 0);
   assert.ok(result.nextClarificationStep.length > 0);
+});
+
+test('handles null input with stable non-empty required structure', () => {
+  const result = createDecisionNoteDraft(null);
+
+  for (const key of REQUIRED_KEYS) {
+    assert.equal(key in result, true);
+    assert.notEqual(result[key], null);
+    assert.notEqual(result[key], undefined);
+  }
+
+  assert.ok(Array.isArray(result.boundaries));
+  assert.ok(result.boundaries.length > 0);
+});
+
+test('handles undefined input with stable required structure', () => {
+  const result = createDecisionNoteDraft(undefined);
+
+  for (const key of REQUIRED_KEYS) {
+    assert.equal(key in result, true);
+    assert.notEqual(result[key], null);
+    assert.notEqual(result[key], undefined);
+  }
+});
+
+test('all array fields only contain non-empty strings', () => {
+  const result = createDecisionNoteDraft({
+    interventions: [{ name: ' Option A ' }, { name: 'Option B' }],
+    strategies: [{ name: 'Strategie C' }],
+    assumptions: [{ name: 'Annahme D' }]
+  });
+
+  for (const field of ARRAY_FIELDS) {
+    assert.ok(Array.isArray(result[field]), `${field} must be array`);
+
+    for (const value of result[field]) {
+      assert.equal(typeof value, 'string', `${field} values must be strings`);
+      assert.notEqual(value, '', `${field} values must not be empty`);
+      assert.notEqual(value, null, `${field} values must not be null`);
+      assert.notEqual(value, undefined, `${field} values must not be undefined`);
+    }
+  }
+});
+
+test('contains exactly required keys without extras', () => {
+  const result = createDecisionNoteDraft({});
+
+  const keys = Object.keys(result).sort();
+  const expected = [...REQUIRED_KEYS].sort();
+  assert.deepEqual(keys, expected);
 });
 
 test('reads draft values defensively for decision point and options', () => {
@@ -71,7 +141,11 @@ test('avoids forbidden directive language in output strings', () => {
     'objektiv besser',
     'sollte gewählt werden',
     'keine weitere prüfung nötig',
-    'entscheidung ist reif'
+    'entscheidung ist reif',
+    'entscheide jetzt',
+    'direkt entscheiden',
+    'ohne weitere analyse',
+    'zweifelsfrei besser'
   ];
 
   const result = createDecisionNoteDraft({});
@@ -91,4 +165,22 @@ test('avoids forbidden directive language in output strings', () => {
   for (const word of forbidden) {
     assert.equal(text.includes(word), false, `must not include: ${word}`);
   }
+});
+
+test('keeps next clarification step narrow and neutral', () => {
+  const result = createDecisionNoteDraft({});
+
+  assert.equal(typeof result.nextClarificationStep, 'string');
+  assert.ok(result.nextClarificationStep.trim().length > 0);
+  assert.equal(result.nextClarificationStep.toLowerCase().includes('empfehl'), false);
+  assert.equal(result.nextClarificationStep.toLowerCase().includes('automatisch'), false);
+});
+
+test('returns boundaries as independent array instance', () => {
+  const a = createDecisionNoteDraft({});
+  const b = createDecisionNoteDraft({});
+
+  assert.notEqual(a.boundaries, b.boundaries);
+  assert.ok(a.boundaries.length > 0);
+  assert.ok(b.boundaries.length > 0);
 });

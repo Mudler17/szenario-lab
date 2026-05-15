@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 9.8 · Review der Entscheidungsnotiz-Utility abgeschlossen
+Phase 9.9 · Entscheidungsnotiz-Testgrenzen nachgeschärft
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -82,7 +82,9 @@ In Phase 9.4 wurde der konzeptionelle Implementierungsschnitt für eine Entschei
 
 In Phase 9.6 wurde der konzeptionelle Utility-Kontrakt für die spätere Entscheidungsnotiz geprüft. Der Kontrakt bleibt auf eine neutrale, testbare Entscheidungsnotiz-Grundlage begrenzt: keine Empfehlung, kein Scoring, keine Rangfolge, keine UI, keine Speicherung, keine OpenAI-/LLM-Anbindung und keine Implementierung im Review. Als nächster Schritt wird eine minimal begrenzte Implementierung der Utility empfohlen, sofern keine Blocker bestehen.
 
-In Phase 9.8 wurde die minimale Utility `createDecisionNoteDraft` geprüft. Die Utility bleibt auf eine neutrale Entscheidungsnotiz-Grundlage begrenzt und führt keine UI, keine Speicherung, keine OpenAI-/LLM-Anbindung, keine Empfehlung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung ein. Als nächster Schritt werden die Testgrenzen der Entscheidungsnotiz-Utility nachgeschärft, sofern die Review-Hinweise bestätigt werden.
+In Phase 9.8 wurde die minimale Utility `createDecisionNoteDraft` geprüft.
+In Phase 9.9 wurden die Testgrenzen der Utility `createDecisionNoteDraft` nachgeschärft (u. a. explizite null/undefined-Eingaben, strengere Array-Inhaltsprüfungen, exakte Pflichtfeld-Keys, engere Schutztests für neutrale Sprache und Grenzen). Die Utility bleibt ohne neue Fachlogik sowie ohne UI-/Speicher-/Automatisierungsanbindung.
+ Die Utility bleibt auf eine neutrale Entscheidungsnotiz-Grundlage begrenzt und führt keine UI, keine Speicherung, keine OpenAI-/LLM-Anbindung, keine Empfehlung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung ein. Als nächster Schritt werden die Testgrenzen der Entscheidungsnotiz-Utility nachgeschärft, sofern die Review-Hinweise bestätigt werden.
 
 - Phase-8.17 Persistenz-Zwischenstand-Audit: docs/PHASE_8_17_PERSISTENCE_INTERIM_AUDIT_AFTER_NO_PERSISTENCE.md
 - Phase-8.18 Abschlussaudit und Phase-9-Übergang: docs/PHASE_8_18_PHASE_8_COMPLETION_AUDIT_AND_PHASE_9_TRANSITION.md
