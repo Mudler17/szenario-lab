@@ -4,9 +4,11 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.7.2 · Beziehungen im lokalen Draft minimal bearbeitbar umgesetzt
+Phase 7.7 Zwischenstand-Audit · Editierbare Entitäten nach Phase 7.7 abgeschlossen
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
+
+Nach Phase 7.7 wurde der Stand der editierbaren Entitäten geprüft. Beziehungen sind editierbar; als nächster sinnvoller Schritt wird eine konzeptionelle Relationship-Schema-Harmonisierung empfohlen.
 
 ## Lokale Befehle
 ```bash
@@ -218,6 +220,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Phase-7.7.1-Konzept nächste Entität: `docs/PHASE_7_7_1_NEXT_ENTITY_CONCEPT.md`
 - Phase-7.7.2-Implementierung Beziehungen: `docs/PHASE_7_7_2_RELATIONSHIPS_IMPLEMENTATION.md`
 - Phase-7.7.3-Review Beziehungen: `docs/PHASE_7_7_3_REVIEW_RELATIONSHIPS_IMPLEMENTATION.md`
+- Zwischenstand-Audit nach Phase 7.7: `docs/PHASE_7_EDITABLE_ENTITIES_AUDIT_AFTER_7_7.md`
 
 - Phase-5.14-Statusmeldungen werden durch `src/features/scenarios/export/createJsonDownloadStatusMessage.js` vorbereitet.
 

@@ -165,3 +165,5 @@
 - [x] Phase 7.7.1: Nächste Entität konzeptionell ausgewählt (Beziehungen)
 - [x] Phase 7.7.2: Beziehungen-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
 - [x] Phase 7.7.3: Review dokumentiert (Beziehungen-Implementierung geprüft)
+- [x] Zwischenstand-Audit nach Phase 7.7: Editierbare Entitäten geprüft
+- [ ] Phase 7.8.1: Relationship-Schema-Harmonisierung konzeptionell vorbereiten
