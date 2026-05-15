@@ -119,27 +119,39 @@ export const exampleScenario = {
   relationships: [
     {
       id: 'relationship-1',
-      from: 'persona-1',
-      to: 'persona-2',
-      trust: 'hoch',
-      tension: 'mittel',
-      influence: 'hoch'
+      sourceId: 'persona-1',
+      targetId: 'persona-2',
+      type: 'influence',
+      description:
+        'Die Bereichsleitung priorisiert den Piloten, die Teamkoordination übersetzt die Erwartungen in operative Schritte.',
+      strength: 'high',
+      quality: 'neutral',
+      risks:
+        'Erwartungsdruck kann entstehen, wenn Effizienzgewinne schneller erwartet werden als das Team sie belastbar liefern kann.'
     },
     {
       id: 'relationship-2',
-      from: 'persona-2',
-      to: 'persona-3',
-      trust: 'mittel',
-      tension: 'niedrig',
-      influence: 'mittel'
+      sourceId: 'persona-2',
+      targetId: 'persona-3',
+      type: 'collaboration',
+      description:
+        'Die Teamkoordination stimmt operative Umsetzungsschritte mit der Fachexpertin ab, um Qualität und Alltagstauglichkeit zu sichern.',
+      strength: 'medium',
+      quality: 'positive',
+      risks:
+        'Zusätzliche Abstimmungen können den Pilotfortschritt verlangsamen, wenn Prioritäten nicht klar vereinbart sind.'
     },
     {
       id: 'relationship-3',
-      from: 'persona-4',
-      to: 'persona-1',
-      trust: 'mittel',
-      tension: 'mittel',
-      influence: 'hoch'
+      sourceId: 'persona-4',
+      targetId: 'persona-1',
+      type: 'governance',
+      description:
+        'Die Compliance-Vertretung setzt Leitplanken, die von der Bereichsleitung in Priorisierung und Kommunikation integriert werden müssen.',
+      strength: 'high',
+      quality: 'neutral',
+      risks:
+        'Bei unklaren Freigabewegen können Entscheidungen verzögert werden und die Akzeptanz des Piloten sinken.'
     }
   ],
   interventions: [

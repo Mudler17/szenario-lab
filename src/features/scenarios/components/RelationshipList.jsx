@@ -14,14 +14,20 @@ function RelationshipList({ relationships, personas }) {
   return (
     <ScenarioSection title="Beziehungen">
       <ul>
-        {relationships.map((relationship) => (
-          <li key={relationship.id}>
-            <strong>Von:</strong> {displayPersona(relationship.from)} · <strong>Zu:</strong>{' '}
-            {displayPersona(relationship.to)} · <strong>Vertrauen:</strong> {relationship.trust} ·{' '}
-            <strong>Spannung:</strong> {relationship.tension} · <strong>Einfluss:</strong>{' '}
-            {relationship.influence}
-          </li>
-        ))}
+        {relationships.map((relationship) => {
+          const sourceId = relationship.sourceId ?? relationship.from;
+          const targetId = relationship.targetId ?? relationship.to;
+
+          return (
+            <li key={relationship.id}>
+              <strong>Von:</strong> {displayPersona(sourceId)} · <strong>Zu:</strong>{' '}
+              {displayPersona(targetId)} · <strong>Typ:</strong> {relationship.type} ·{' '}
+              <strong>Beschreibung:</strong> {relationship.description} · <strong>Stärke:</strong>{' '}
+              {relationship.strength} · <strong>Qualität:</strong> {relationship.quality} ·{' '}
+              <strong>Risiken:</strong> {relationship.risks}
+            </li>
+          );
+        })}
       </ul>
     </ScenarioSection>
   );
