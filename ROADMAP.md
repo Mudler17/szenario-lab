@@ -173,4 +173,4 @@
 - [x] Phase 7.8.2 Nacharbeit: Relationship-Optionswerte konsolidiert
 - [x] Phase 7.9.1: Nächste Entität konzeptionell ausgewählt (Interventionen)
 - [x] Phase 7.9.2: Interventionen-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
-- [ ] Phase 7.9.3: Review dokumentiert (Interventionen-Implementierung geprüft)
+- [x] Phase 7.9.3: Review dokumentiert (Interventionen-Implementierung geprüft)
