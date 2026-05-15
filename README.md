@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.9.2 · Interventionen im lokalen Draft minimal bearbeitbar umgesetzt
+Phase 7.9.3 · Review der Interventionen-Implementierung abgeschlossen
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
@@ -223,6 +223,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Phase-7.3.1-Konzept nächste Entität: `docs/PHASE_7_3_1_NEXT_ENTITY_CONCEPT.md`
 - Phase-7.9.1-Konzept nächste Entität: `docs/PHASE_7_9_1_NEXT_ENTITY_CONCEPT.md`
 - Phase-7.9.2-Implementierung Interventionen: `docs/PHASE_7_9_2_INTERVENTIONS_IMPLEMENTATION.md`
+- Phase-7.9.3-Review Interventionen: `docs/PHASE_7_9_3_REVIEW_INTERVENTIONS_IMPLEMENTATION.md`
 - Phase-7.3.2-Implementierung Evidenz: `docs/PHASE_7_3_2_EVIDENCE_IMPLEMENTATION.md`
 - Phase-7.8.2-Nacharbeit Relationship-Optionswerte: `docs/PHASE_7_8_2_OPTIONS_VALUES_FIX.md`
 - Phase-7.8.4 Review Relationship-Optionswerte-Nacharbeit: `docs/PHASE_7_8_4_REVIEW_RELATIONSHIP_OPTIONS_VALUES_FIX.md`
@@ -258,3 +259,5 @@ In Phase 7.8.4 wurde die Nacharbeit zu den Relationship-Optionswerten geprüft u
 
 
 In Phase 7.9.2 wurden Interventionen im lokalen Draft minimal bearbeitbar ergänzt (Add/Update/Remove, Basis-a11y, Status-/Hilfetexte, Tests), weiterhin ohne Speicherung, LocalStorage, Backend, Aufgabensteuerung oder Simulation.
+
+In Phase 7.9.3 wurde die Interventionen-Implementierung fachlich geprüft und freigegeben.
