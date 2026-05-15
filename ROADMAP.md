@@ -169,5 +169,5 @@
 - [x] Phase 7.8.1: Relationship-Schema-Harmonisierung konzeptionell vorbereitet
 - [x] Phase 7.8.2: Relationship-Schema-Harmonisierung minimal umgesetzt
 - [ ] Phase 7.8.3: Review dokumentiert (Relationship-Schema-Harmonisierung geprüft)
-- [ ] Phase 7.8.4: Review der Relationship-Optionswerte-Nacharbeit prüfen
+- [x] Phase 7.8.4: Review dokumentiert (Relationship-Optionswerte-Nacharbeit geprüft)
 - [x] Phase 7.8.2 Nacharbeit: Relationship-Optionswerte konsolidiert

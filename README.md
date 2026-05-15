@@ -220,6 +220,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Phase-7.3.1-Konzept nächste Entität: `docs/PHASE_7_3_1_NEXT_ENTITY_CONCEPT.md`
 - Phase-7.3.2-Implementierung Evidenz: `docs/PHASE_7_3_2_EVIDENCE_IMPLEMENTATION.md`
 - Phase-7.8.2-Nacharbeit Relationship-Optionswerte: `docs/PHASE_7_8_2_OPTIONS_VALUES_FIX.md`
+- Phase-7.8.4 Review Relationship-Optionswerte-Nacharbeit: `docs/PHASE_7_8_4_REVIEW_RELATIONSHIP_OPTIONS_VALUES_FIX.md`
 
 - Phase-7.4.1-Konzept nächste Entität: `docs/PHASE_7_4_1_NEXT_ENTITY_CONCEPT.md`
 - Phase-7.5.1-Konzept nächste Entität: `docs/PHASE_7_5_1_NEXT_ENTITY_CONCEPT.md`
@@ -243,6 +244,9 @@ In Phase 7.7.2 wurden Beziehungen im lokalen Draft minimal bearbeitbar ergänzt 
 
 
 Aktueller Status:
-Phase 7.8.2 · Relationship-Schema minimal harmonisiert
+Phase 7.8.4 · Review der Relationship-Optionswerte-Nacharbeit abgeschlossen
 
 In Phase 7.7.3 wurde die Beziehungen-Implementierung fachlich geprüft und freigegeben.
+
+In Phase 7.8.4 wurde die Nacharbeit zu den Relationship-Optionswerten geprüft und freigegeben. Der in Phase 7.8.3 dokumentierte Blocker ist behoben.
+
