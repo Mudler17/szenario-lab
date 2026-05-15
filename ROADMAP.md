@@ -211,3 +211,5 @@
 - [x] Phase 9.1: Vergleichs- und Entscheidungslogik konzeptionell vorbereitet
 - [x] Phase 9.2: Review der Vergleichs- und Entscheidungslogik geprüft
 - [x] Phase 9.3: Kleinsten Implementierungsschnitt für Entscheidungsnotiz konzeptionell zuschneiden
+- [x] Phase 9.4: Review des Entscheidungsnotiz-Implementierungsschnitts geprüft
+- [ ] Phase 9.5: Entscheidungsnotiz-Utility-Kontrakt konzeptionell präzisieren
