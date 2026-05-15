@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 8.8 · Review der Persistenz-Integrationsgrenzen abgeschlossen
+Phase 8.9 · Persistenz-Modulstruktur konzeptionell vorbereitet
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -50,6 +50,8 @@ In Phase 8.6 wurde das Konzept zu Persistenz-Schnittstellen und Kontrollpunkten 
 In Phase 8.7 wurden Integrationsgrenzen für einen späteren Persistenz-Orchestrator konzeptionell vorbereitet. Ziel ist, HomePage, Draft-Utilities, JSON-Export und JSON-Import vor unkontrollierter Speicherlogik zu schützen. Es wurde keine Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine Implementierung eingeführt.
 
 In Phase 8.8 wurde das Konzept zu Persistenz-Integrationsgrenzen geprüft. Die Phase bleibt rein konzeptionell: keine Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine Implementierung. Als nächster Schritt wird eine konzeptionelle Vorbereitung der Persistenz-Modulstruktur empfohlen.
+
+In Phase 8.9 wurde die spätere Persistenz-Modulstruktur konzeptionell vorbereitet. Zielbild, Verantwortlichkeiten und Guard-Grenzen wurden dokumentiert, ohne Dateien anzulegen oder Implementierung zu starten. Es gibt weiterhin keine Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine Implementierung.
 
 ## Lokale Befehle
 ```bash
