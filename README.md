@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 8.0 · Nächste Hauptphase festgelegt
+Phase 8.1 · Persistenzentscheidung konzeptionell vorbereitet
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -34,6 +34,8 @@ In Phase 7.11.1 wurde das spätere Abschlussaudit für Phase 7 konzeptionell vor
 In Phase 7.11.2 wurde Phase 7 gesamthaft geprüft. Der Ausbau editierbarer Szenariofelder, JSON-Werkzeuge, Relationship-Harmonisierung, Interventionen und Bearbeitungsbereich-Struktur wurde freigegeben. Phase 7 ist damit fachlich abgeschlossen; nächste Entscheidung ist Phase 8.0 zur Festlegung der nächsten Hauptphase.
 
 In Phase 8.0 wurde die nächste Hauptphase festgelegt: Phase 8 bereitet die Persistenzentscheidung und Speicherarchitektur konzeptionell vor. Es wurde keine Speicherung, kein LocalStorage, kein Backend, keine Datenbank und keine Implementierung eingeführt.
+
+In Phase 8.1 wurde die Persistenzentscheidung konzeptionell vorbereitet. Es wurden Speicheroptionen, Datenschutzgrenzen, Entscheidungskriterien und Ausschlüsse dokumentiert. Es wurde keine Speicherung, kein LocalStorage, kein Backend, keine Datenbank, keine Authentifizierung und keine Implementierung eingeführt.
 
 ## Lokale Befehle
 ```bash
@@ -218,6 +220,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Phase-6.1-Review (JSON-Import-Konzept): `docs/PHASE_6_1_JSON_IMPORT_CONCEPT_REVIEW.md`
 - JSON-Import-Validierungskonzept: `docs/JSON_IMPORT_VALIDATION_CONCEPT.md`
 - Phase-6.2-Review (JSON-Import-Validierungskonzept): `docs/PHASE_6_2_JSON_IMPORT_VALIDATION_CONCEPT_REVIEW.md`
+- Phase-8.1 Persistenzentscheidung-Konzept: `docs/PHASE_8_1_PERSISTENCE_DECISION_CONCEPT.md`
 - Phase-6.3-Review (JSON-Import-Validierungs-Utility): `docs/PHASE_6_3_JSON_IMPORT_VALIDATION_UTILITY_REVIEW.md`
 - Phase-6.4-Review (JSON-Import-Parsing-Konzept): `docs/PHASE_6_4_JSON_IMPORT_PARSING_CONCEPT_REVIEW.md`
 - JSON-Import-Parsing-Konzept (Phase 6.4): `docs/JSON_IMPORT_PARSING_CONCEPT.md`

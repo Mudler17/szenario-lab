@@ -183,4 +183,5 @@
 - [x] Phase 7.11.2: Phase-7-Abschlussaudit durchgeführt
 - [x] Phase 7 abgeschlossen: Editierbare Szenariofelder, Werkzeuge und Bearbeitungsbereich-Struktur freigegeben
 - [x] Phase 8.0: Nächste Hauptphase festgelegt (Persistenzentscheidung und Speicherarchitektur vorbereiten)
-- [ ] Phase 8.1: Persistenzentscheidung konzeptionell vorbereiten
+- [x] Phase 8.1: Persistenzentscheidung konzeptionell vorbereitet
+- [ ] Phase 8.2: Speicheroptionen bewerten und Zielpfad auswählen
