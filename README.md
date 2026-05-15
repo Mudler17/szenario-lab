@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 9.1 · Vergleichs- und Entscheidungslogik konzeptionell vorbereitet
+Phase 9.2 · Review der Vergleichs- und Entscheidungslogik abgeschlossen
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -74,10 +74,13 @@ In Phase 9.0 wurde die nächste Hauptphase festgelegt: Phase 9 baut Beratungslog
 
 In Phase 9.1 wurde die Vergleichs- und Entscheidungslogik konzeptionell vorbereitet. Die App soll Unterschiede, Zielkonflikte, kritische Annahmen und Entscheidungsreife sichtbar machen, ohne Entscheidungen zu automatisieren. Es wurde keine Implementierung, keine UI, kein Scoring, keine automatische Empfehlung, keine Simulation, keine Speicherung und keine OpenAI-Anbindung eingeführt.
 
+In Phase 9.2 wurde das Konzept zur Vergleichs- und Entscheidungslogik geprüft. Die Beratungslogik bleibt auf Entscheidungsvorbereitung begrenzt: keine automatische Entscheidung, kein finales Scoring, keine automatische Empfehlung, keine Simulation, keine OpenAI-Anbindung und keine Implementierung. Als nächster Schritt wird empfohlen, den kleinsten Implementierungsschnitt für eine Entscheidungsnotiz konzeptionell zuzuschneiden.
+
 - Phase-8.17 Persistenz-Zwischenstand-Audit: docs/PHASE_8_17_PERSISTENCE_INTERIM_AUDIT_AFTER_NO_PERSISTENCE.md
 - Phase-8.18 Abschlussaudit und Phase-9-Übergang: docs/PHASE_8_18_PHASE_8_COMPLETION_AUDIT_AND_PHASE_9_TRANSITION.md
 - Phase-9.0 Entscheidung Beratungslogik: docs/PHASE_9_0_NEXT_MAIN_PHASE_CONSULTING_LOGIC_DECISION.md
 - Phase-9.1 Vergleichs- und Entscheidungslogik-Konzept: docs/PHASE_9_1_COMPARISON_AND_DECISION_LOGIC_CONCEPT.md
+- Phase-9.2 Review Vergleichs- und Entscheidungslogik: docs/PHASE_9_2_REVIEW_COMPARISON_AND_DECISION_LOGIC.md
 
 ## Lokale Befehle
 ```bash
