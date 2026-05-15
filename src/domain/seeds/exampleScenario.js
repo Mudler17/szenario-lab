@@ -133,11 +133,11 @@ export const exampleScenario = {
       id: 'relationship-2',
       sourceId: 'persona-2',
       targetId: 'persona-3',
-      type: 'collaboration',
+      type: 'communication',
       description:
         'Die Teamkoordination stimmt operative Umsetzungsschritte mit der Fachexpertin ab, um Qualität und Alltagstauglichkeit zu sichern.',
       strength: 'medium',
-      quality: 'positive',
+      quality: 'supportive',
       risks:
         'Zusätzliche Abstimmungen können den Pilotfortschritt verlangsamen, wenn Prioritäten nicht klar vereinbart sind.'
     },
@@ -145,7 +145,7 @@ export const exampleScenario = {
       id: 'relationship-3',
       sourceId: 'persona-4',
       targetId: 'persona-1',
-      type: 'governance',
+      type: 'dependency',
       description:
         'Die Compliance-Vertretung setzt Leitplanken, die von der Bereichsleitung in Priorisierung und Kommunikation integriert werden müssen.',
       strength: 'high',

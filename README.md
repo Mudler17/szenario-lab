@@ -14,6 +14,8 @@ In Phase 7.8.1 wurde die spätere Harmonisierung des Relationship-Schemas konzep
 
 In Phase 7.8.2 wurden Beispiel-Szenario und lesende Relationship-Vorschau auf das editierbare Relationship-Schema harmonisiert. Es wurden keine Interventionen, keine Simulation, keine Speicherung und keine Mapping-Architektur ergänzt.
 
+In der Nacharbeit zu Phase 7.8.2 wurden die Relationship-Optionswerte im Beispiel-Szenario mit den Optionswerten des Editierformulars konsolidiert.
+
 ## Lokale Befehle
 ```bash
 npm install
@@ -217,6 +219,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 
 - Phase-7.3.1-Konzept nächste Entität: `docs/PHASE_7_3_1_NEXT_ENTITY_CONCEPT.md`
 - Phase-7.3.2-Implementierung Evidenz: `docs/PHASE_7_3_2_EVIDENCE_IMPLEMENTATION.md`
+- Phase-7.8.2-Nacharbeit Relationship-Optionswerte: `docs/PHASE_7_8_2_OPTIONS_VALUES_FIX.md`
 
 - Phase-7.4.1-Konzept nächste Entität: `docs/PHASE_7_4_1_NEXT_ENTITY_CONCEPT.md`
 - Phase-7.5.1-Konzept nächste Entität: `docs/PHASE_7_5_1_NEXT_ENTITY_CONCEPT.md`
