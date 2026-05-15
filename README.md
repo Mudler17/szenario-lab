@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.11.2 · Phase-7-Abschlussaudit abgeschlossen
+Phase 8.0 · Nächste Hauptphase festgelegt
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -32,6 +32,8 @@ Nach Phase 7.10 wurde der Gesamtstand aus editierbaren Entitäten, Relationship-
 In Phase 7.11.1 wurde das spätere Abschlussaudit für Phase 7 konzeptionell vorbereitet. Ziel ist die gesamthafte Prüfung von editierbaren Entitäten, JSON-Werkzeugen, Relationship-Harmonisierung, Interventionen, Bearbeitungsbereich-Struktur, Dokumentation und Roadmap, bevor über die nächste Hauptphase entschieden wird.
 
 In Phase 7.11.2 wurde Phase 7 gesamthaft geprüft. Der Ausbau editierbarer Szenariofelder, JSON-Werkzeuge, Relationship-Harmonisierung, Interventionen und Bearbeitungsbereich-Struktur wurde freigegeben. Phase 7 ist damit fachlich abgeschlossen; nächste Entscheidung ist Phase 8.0 zur Festlegung der nächsten Hauptphase.
+
+In Phase 8.0 wurde die nächste Hauptphase festgelegt: Phase 8 bereitet die Persistenzentscheidung und Speicherarchitektur konzeptionell vor. Es wurde keine Speicherung, kein LocalStorage, kein Backend, keine Datenbank und keine Implementierung eingeführt.
 
 ## Lokale Befehle
 ```bash
@@ -237,6 +239,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Phase-7.10.3 Review Bearbeitungsbereich-Struktur: `docs/PHASE_7_10_3_REVIEW_EDITOR_STRUCTURE.md`
 - Phase-7.11.1 Phase-7-Abschlussaudit-Konzept: `docs/PHASE_7_11_1_PHASE_7_COMPLETION_AUDIT_CONCEPT.md`
 - Phase-7.11.2 Phase-7-Abschlussaudit: `docs/PHASE_7_11_2_PHASE_7_COMPLETION_AUDIT.md`
+- Phase-8.0 Richtungsentscheidung nächste Hauptphase: `docs/PHASE_8_0_NEXT_MAIN_PHASE_DECISION.md`
 - Phase-7.1-Auswahl nächstes editierbares Feld: `docs/PHASE_7_1_NEXT_EDITABLE_FIELD_SELECTION.md`
 - Phase-7.1-Review (Auswahl nächstes editierbares Feld): `docs/PHASE_7_1_NEXT_EDITABLE_FIELD_SELECTION_REVIEW.md`
 - Phase-7.2-Annahmen-Konzept: `docs/PHASE_7_2_DIRECTION.md`
