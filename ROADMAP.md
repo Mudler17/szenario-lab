@@ -199,4 +199,6 @@
 
 - [x] Phase 8.14: Review der NoPersistence-/Guard-/Status-Grundlage geprüft
 - [x] Phase 8.15: NoPersistence-Grundlage nachschärfen
-- [ ] Phase 8.16: Review der nachgeschärften NoPersistence-Grundlage prüfen
+- [x] Phase 8.16: Review der nachgeschärften NoPersistence-Grundlage geprüft
+
+- [ ] Phase 8.17: Persistenz-Zwischenstand-Audit nach NoPersistence-Grundlage
