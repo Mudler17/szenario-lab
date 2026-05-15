@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 8.7 · Persistenz-Integrationsgrenzen konzeptionell vorbereitet
+Phase 8.8 · Review der Persistenz-Integrationsgrenzen abgeschlossen
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -48,6 +48,8 @@ In Phase 8.5 wurden Persistenz-Schnittstellen und Kontrollpunkte für einen spä
 In Phase 8.6 wurde das Konzept zu Persistenz-Schnittstellen und Kontrollpunkten geprüft. Die Phase bleibt rein konzeptionell: keine Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine Implementierung. Als nächster Schritt wird eine konzeptionelle Vorbereitung der Persistenz-Integrationsgrenzen empfohlen.
 
 In Phase 8.7 wurden Integrationsgrenzen für einen späteren Persistenz-Orchestrator konzeptionell vorbereitet. Ziel ist, HomePage, Draft-Utilities, JSON-Export und JSON-Import vor unkontrollierter Speicherlogik zu schützen. Es wurde keine Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine Implementierung eingeführt.
+
+In Phase 8.8 wurde das Konzept zu Persistenz-Integrationsgrenzen geprüft. Die Phase bleibt rein konzeptionell: keine Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine Implementierung. Als nächster Schritt wird eine konzeptionelle Vorbereitung der Persistenz-Modulstruktur empfohlen.
 
 ## Lokale Befehle
 ```bash
@@ -221,6 +223,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - JSON-Download-Konzept: `docs/JSON_DOWNLOAD_CONCEPT.md`
 - Phase-5.11-Review (JSON-Download-Utility): `docs/PHASE_5_11_DOWNLOAD_UTILITY_REVIEW.md`
 - Phase-8.7 Persistenz-Integrationsgrenzen: `docs/PHASE_8_7_PERSISTENCE_INTEGRATION_BOUNDARIES_CONCEPT.md`
+- Phase-8.8 Review Persistenz-Integrationsgrenzen: `docs/PHASE_8_8_REVIEW_PERSISTENCE_INTEGRATION_BOUNDARIES.md`
 - Phase-5.12-Review (JSON-Download-Cleanup): `docs/PHASE_5_12_DOWNLOAD_CLEANUP_REVIEW.md`
 - JSON-Download-UI-Konzept: `docs/JSON_DOWNLOAD_UI_CONCEPT.md`
 - Phase-5.13-Review (JSON-Download-UI-Konzept): `docs/PHASE_5_13_DOWNLOAD_UI_CONCEPT_REVIEW.md`
