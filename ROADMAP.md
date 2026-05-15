@@ -161,3 +161,7 @@
 - [x] Phase 7.6.2: Phasen-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
 - [x] Phase 7.6.3: Review dokumentiert (Phasen-Implementierung geprüft)
 - [x] Phase 7.6.4: Statusdokumentation nach Phasen-Review konsolidiert
+
+- [x] Phase 7.7.1: Nächste Entität konzeptionell ausgewählt (Beziehungen)
+- [ ] Phase 7.7.2: Beziehungen-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
+- [ ] Phase 7.7.3: Review dokumentiert (Beziehungen-Implementierung geprüft)
