@@ -184,4 +184,5 @@
 - [x] Phase 7 abgeschlossen: Editierbare Szenariofelder, Werkzeuge und Bearbeitungsbereich-Struktur freigegeben
 - [x] Phase 8.0: Nächste Hauptphase festgelegt (Persistenzentscheidung und Speicherarchitektur vorbereiten)
 - [x] Phase 8.1: Persistenzentscheidung konzeptionell vorbereitet
-- [ ] Phase 8.2: Speicheroptionen bewerten und Zielpfad auswählen
+- [x] Phase 8.2: Speicheroptionen bewertet und Zielpfad ausgewählt
+- [ ] Phase 8.3: Speicherarchitektur für bewusst aktivierbaren Speicherpfad konzeptionell vorbereiten
