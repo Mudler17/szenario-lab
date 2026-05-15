@@ -201,4 +201,5 @@
 - [x] Phase 8.15: NoPersistence-Grundlage nachschärfen
 - [x] Phase 8.16: Review der nachgeschärften NoPersistence-Grundlage geprüft
 
-- [ ] Phase 8.17: Persistenz-Zwischenstand-Audit nach NoPersistence-Grundlage
+- [x] Phase 8.17: Persistenz-Zwischenstand-Audit nach NoPersistence-Grundlage abgeschlossen
+- [ ] Phase 8.18: Phase-8-Abschlussaudit und Übergang zu Phase 9 vorbereiten
