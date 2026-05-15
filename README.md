@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-UI-Struktur-Audit nach Interventionen abgeschlossen
+Phase 7.10.1 · Bearbeitungsbereich-Struktur konzeptionell vorbereitet
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
@@ -19,6 +19,8 @@ In der Nacharbeit zu Phase 7.8.2 wurden die Relationship-Optionswerte im Beispie
 In Phase 7.9.1 wurden Interventionen als nächste editierbare Entität ausgewählt. Die Phase bleibt rein konzeptionell; es wurden keine Implementierung, keine UI, keine Utilities, keine Tests und keine Speicher-/Backend-/Simulationsanbindung ergänzt.
 
 Nach der Freigabe der Interventionen wurde der lineare Bearbeitungsbereich geprüft. Das Audit empfiehlt vor weiteren Entitäten eine konzeptionelle UI-Struktur-Konsolidierung.
+
+In Phase 7.10.1 wurde eine kleine Strukturverbesserung des Bearbeitungsbereichs konzeptionell vorbereitet. Zielbild sind Abschnittsnavigation, fachliche Gruppierung und ein klarer Werkzeugbereich ohne neue Fachlogik, Routing, Tabs oder globale State-Architektur.
 
 ## Lokale Befehle
 ```bash
@@ -218,6 +220,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Phase-6.11-Review (JSON-Import-Übernahme): `docs/PHASE_6_11_JSON_IMPORT_DRAFT_ADOPTION_REVIEW.md`
 - Phase-6.12-Abschlussreview (JSON-Import/Export): `docs/PHASE_6_12_JSON_IMPORT_EXPORT_FINAL_REVIEW.md`
 - Phase-7-Richtungsentscheidung: `docs/PHASE_7_DIRECTION.md`
+- Phase-7.10.1 Bearbeitungsbereich-Struktur-Konzept: `docs/PHASE_7_10_1_EDITOR_STRUCTURE_CONCEPT.md`
 - Phase-7.1-Auswahl nächstes editierbares Feld: `docs/PHASE_7_1_NEXT_EDITABLE_FIELD_SELECTION.md`
 - Phase-7.1-Review (Auswahl nächstes editierbares Feld): `docs/PHASE_7_1_NEXT_EDITABLE_FIELD_SELECTION_REVIEW.md`
 - Phase-7.2-Annahmen-Konzept: `docs/PHASE_7_2_DIRECTION.md`
