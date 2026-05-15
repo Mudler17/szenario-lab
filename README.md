@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 8.5 · Persistenz-Schnittstellen und Kontrollpunkte konzeptionell vorbereitet
+Phase 8.6 · Review der Persistenz-Schnittstellen und Kontrollpunkte abgeschlossen
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -44,6 +44,8 @@ In Phase 8.3 wurde die Speicherarchitektur für einen später bewusst aktivierba
 In Phase 8.4 wurde die Speicherarchitektur-Konzeption aus Phase 8.3 geprüft. Die Architektur bleibt konzeptionell: keine Speicherung, kein LocalStorage, kein Backend, keine API und keine Implementierung. Als nächster Schritt wird eine konzeptionelle Vorbereitung von Persistenz-Schnittstellen und Kontrollpunkten empfohlen.
 
 In Phase 8.5 wurden Persistenz-Schnittstellen und Kontrollpunkte für einen später bewusst aktivierbaren Speicherpfad konzeptionell vorbereitet. Es wurde keine Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine Implementierung eingeführt.
+
+In Phase 8.6 wurde das Konzept zu Persistenz-Schnittstellen und Kontrollpunkten geprüft. Die Phase bleibt rein konzeptionell: keine Speicherung, kein LocalStorage, kein Backend, keine API, keine UI und keine Implementierung. Als nächster Schritt wird eine konzeptionelle Vorbereitung der Persistenz-Integrationsgrenzen empfohlen.
 
 ## Lokale Befehle
 ```bash
@@ -233,6 +235,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 - Phase-8.3 Speicherarchitektur-Konzept: `docs/PHASE_8_3_ACTIVATABLE_PERSISTENCE_ARCHITECTURE_CONCEPT.md`
 - Phase-8.4 Review Speicherarchitektur-Konzeption: `docs/PHASE_8_4_REVIEW_ACTIVATABLE_PERSISTENCE_ARCHITECTURE.md`
 - Phase-8.5 Persistenz-Schnittstellen und Kontrollpunkte: `docs/PHASE_8_5_PERSISTENCE_INTERFACES_AND_CONTROLS_CONCEPT.md`
+- Phase-8.6 Review Persistenz-Schnittstellen und Kontrollpunkte: `docs/PHASE_8_6_REVIEW_PERSISTENCE_INTERFACES_AND_CONTROLS.md`
 - Phase-6.3-Review (JSON-Import-Validierungs-Utility): `docs/PHASE_6_3_JSON_IMPORT_VALIDATION_UTILITY_REVIEW.md`
 - Phase-6.4-Review (JSON-Import-Parsing-Konzept): `docs/PHASE_6_4_JSON_IMPORT_PARSING_CONCEPT_REVIEW.md`
 - JSON-Import-Parsing-Konzept (Phase 6.4): `docs/JSON_IMPORT_PARSING_CONCEPT.md`
