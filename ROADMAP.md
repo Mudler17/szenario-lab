@@ -189,4 +189,5 @@
 - [x] Phase 8.4: Review der Speicherarchitektur-Konzeption geprüft
 - [x] Phase 8.5: Persistenz-Schnittstellen und Kontrollpunkte konzeptionell vorbereitet
 - [x] Phase 8.6: Review der Persistenz-Schnittstellen und Kontrollpunkte geprüft
-- [ ] Phase 8.7: Persistenz-Integrationsgrenzen konzeptionell vorbereiten
+- [x] Phase 8.7: Persistenz-Integrationsgrenzen konzeptionell vorbereitet
+- [ ] Phase 8.8: Review der Persistenz-Integrationsgrenzen prüfen
