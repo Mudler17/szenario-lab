@@ -174,3 +174,5 @@
 - [x] Phase 7.9.1: Nächste Entität konzeptionell ausgewählt (Interventionen)
 - [x] Phase 7.9.2: Interventionen-Implementierung (gebündelt: Utility/UI/a11y/Status/Tests/Doku)
 - [x] Phase 7.9.3: Review dokumentiert (Interventionen-Implementierung geprüft)
+- [x] UI-Struktur-Audit nach Interventionen: Bearbeitungsbereich geprüft
+- [ ] Phase 7.10.1: Bearbeitungsbereich-Struktur konzeptionell vorbereiten
