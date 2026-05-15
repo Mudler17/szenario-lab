@@ -176,5 +176,5 @@
 - [x] Phase 7.9.3: Review dokumentiert (Interventionen-Implementierung geprüft)
 - [x] UI-Struktur-Audit nach Interventionen: Bearbeitungsbereich geprüft
 - [x] Phase 7.10.1: Bearbeitungsbereich-Struktur konzeptionell vorbereitet
-- [ ] Phase 7.10.2: Bearbeitungsbereich-Struktur minimal umsetzen
+- [x] Phase 7.10.2: Bearbeitungsbereich-Struktur minimal umsetzen
 - [ ] Phase 7.10.3: Review dokumentiert (Bearbeitungsbereich-Struktur geprüft)

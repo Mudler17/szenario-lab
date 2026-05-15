@@ -95,6 +95,43 @@ body {
   background: linear-gradient(180deg, #eff6ff 0%, #ffffff 24%);
 }
 
+.editor-navigation {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  background: #eff6ff;
+}
+
+.editor-navigation h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.editor-navigation ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.editor-navigation li + li {
+  margin-top: 0.25rem;
+}
+
+.editor-group {
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #dbeafe;
+}
+
+.editor-group h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+.editor-tools {
+  border-top-color: #cbd5e1;
+}
+
 .preview-panel {
   border-left: 4px solid #0f766e;
   background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 24%);
