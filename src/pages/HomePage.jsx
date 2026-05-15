@@ -8,6 +8,7 @@ import {
   ResourceDraftForm,
   PhaseDraftForm,
   RelationshipDraftForm,
+  InterventionDraftForm,
 } from '../features/scenarios/editing';
 import {
   createDraftFromScenario,
@@ -32,6 +33,9 @@ import {
   addDraftRelationship,
   updateDraftRelationship,
   removeDraftRelationship,
+  addDraftIntervention,
+  updateDraftIntervention,
+  removeDraftIntervention,
 } from '../features/scenarios/editing/state';
 import ScenarioPreview from '../features/scenarios/components/ScenarioPreview';
 import {
@@ -244,6 +248,41 @@ function HomePage() {
     });
   };
 
+
+
+  const handleAddIntervention = () => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = addDraftIntervention(currentDraft, {
+        id: `intervention-${Date.now()}`,
+        name: '',
+        goal: '',
+        description: '',
+        targetRelationshipId: '',
+        phaseId: '',
+        status: 'idea',
+        risks: '',
+      });
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleUpdateIntervention = (interventionId, updates) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = updateDraftIntervention(currentDraft, interventionId, updates);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
+  const handleRemoveIntervention = (interventionId) => {
+    setScenarioDraft((currentDraft) => {
+      const nextDraft = removeDraftIntervention(currentDraft, interventionId);
+      setDownloadStatus(createJsonDownloadStatusMessage());
+      return nextDraft;
+    });
+  };
+
   const handleAddEvidence = () => {
     setScenarioDraft((currentDraft) => {
       const nextDraft = addDraftEvidence(currentDraft, {
@@ -434,6 +473,12 @@ function HomePage() {
             onAddRelationship={handleAddRelationship}
             onUpdateRelationship={handleUpdateRelationship}
             onRemoveRelationship={handleRemoveRelationship}
+          />
+          <InterventionDraftForm
+            scenarioDraft={scenarioDraft}
+            onAddIntervention={handleAddIntervention}
+            onUpdateIntervention={handleUpdateIntervention}
+            onRemoveIntervention={handleRemoveIntervention}
           />
           <EvidenceDraftForm
             scenarioDraft={scenarioDraft}

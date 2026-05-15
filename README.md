@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 7.9.1 · Interventionen als nächste Entität konzeptionell ausgewählt
+Phase 7.9.2 · Interventionen im lokalen Draft minimal bearbeitbar umgesetzt
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
@@ -35,6 +35,7 @@ Die App erlaubt derzeit die Bearbeitung der folgenden Bereiche im lokalen Draft:
 - Phasen
 - Evidenz
 - Beziehungen
+- Interventionen
 Die Formularstruktur wurde in Phase 4.5 verbessert: Der Bereich ist als „Szenario-Grunddaten“ mit `fieldset` und `legend` strukturiert, alle drei Felder haben Hilfetexte und die Eingaben nutzen `aria-describedby`.
 In Phase 4.6 wurde die wiederholte Draft-Update-Logik für diese drei bestehenden Felder (Name, Beschreibung, Ziel) in eine kleine State-Utility ausgelagert.
 In Phase 4.7 wurde zusätzlich eine minimale lokale Validierung ergänzt: Name, Beschreibung und Ziel dürfen nicht leer sein; leere Felder zeigen sichtbare Hinweise im Draft-Formular.
@@ -221,6 +222,7 @@ In Phase 7.7.1 wurde Beziehungen als nächste editierbare Entität ausgewählt. 
 
 - Phase-7.3.1-Konzept nächste Entität: `docs/PHASE_7_3_1_NEXT_ENTITY_CONCEPT.md`
 - Phase-7.9.1-Konzept nächste Entität: `docs/PHASE_7_9_1_NEXT_ENTITY_CONCEPT.md`
+- Phase-7.9.2-Implementierung Interventionen: `docs/PHASE_7_9_2_INTERVENTIONS_IMPLEMENTATION.md`
 - Phase-7.3.2-Implementierung Evidenz: `docs/PHASE_7_3_2_EVIDENCE_IMPLEMENTATION.md`
 - Phase-7.8.2-Nacharbeit Relationship-Optionswerte: `docs/PHASE_7_8_2_OPTIONS_VALUES_FIX.md`
 - Phase-7.8.4 Review Relationship-Optionswerte-Nacharbeit: `docs/PHASE_7_8_4_REVIEW_RELATIONSHIP_OPTIONS_VALUES_FIX.md`
@@ -253,3 +255,6 @@ In Phase 7.7.3 wurde die Beziehungen-Implementierung fachlich geprüft und freig
 
 In Phase 7.8.4 wurde die Nacharbeit zu den Relationship-Optionswerten geprüft und freigegeben. Der in Phase 7.8.3 dokumentierte Blocker ist behoben.
 
+
+
+In Phase 7.9.2 wurden Interventionen im lokalen Draft minimal bearbeitbar ergänzt (Add/Update/Remove, Basis-a11y, Status-/Hilfetexte, Tests), weiterhin ohne Speicherung, LocalStorage, Backend, Aufgabensteuerung oder Simulation.
