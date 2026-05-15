@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 8.18 · Phase 8 abgeschlossen und Übergang zu Phase 9 vorbereitet
+Phase 9.0 · Nächste Hauptphase Beratungslogik festgelegt
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -70,8 +70,11 @@ In Phase 8.17 wurde der Persistenz-Zwischenstand nach der NoPersistence-/Guard-/
 
 In Phase 8.18 wurde Phase 8 abgeschlossen. Die Persistenzentscheidung und Speicherarchitektur sind vorbereitet, und eine NoPersistence-/Guard-/Status-Grundlage ist als sichere nicht-speichernde Architekturgrenze etabliert. Die App führt weiterhin keine echte Speicherung ein: kein LocalStorage, kein Backend, keine API, keine UI- und keine HomePage-Anbindung für Persistenz. Als nächste Hauptphase wird Phase 9 zur Beratungslogik und Entscheidungsqualität empfohlen.
 
+In Phase 9.0 wurde die nächste Hauptphase festgelegt: Phase 9 baut Beratungslogik und Entscheidungsqualität aus. Als erste fachliche Linie wurde Vergleichs- und Entscheidungslogik gewählt. Es wurde keine Implementierung, keine UI, keine Simulation, kein Report-Ausbau, keine Speicherung und keine OpenAI-Anbindung eingeführt.
+
 - Phase-8.17 Persistenz-Zwischenstand-Audit: docs/PHASE_8_17_PERSISTENCE_INTERIM_AUDIT_AFTER_NO_PERSISTENCE.md
 - Phase-8.18 Abschlussaudit und Phase-9-Übergang: docs/PHASE_8_18_PHASE_8_COMPLETION_AUDIT_AND_PHASE_9_TRANSITION.md
+- Phase-9.0 Entscheidung Beratungslogik: docs/PHASE_9_0_NEXT_MAIN_PHASE_CONSULTING_LOGIC_DECISION.md
 
 ## Lokale Befehle
 ```bash

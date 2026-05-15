@@ -207,4 +207,5 @@
 
 ## Phase 9 · Beratungslogik und Entscheidungsqualität
 
-- [ ] Phase 9.0: Nächste Hauptphase Beratungslogik festlegen
+- [x] Phase 9.0: Nächste Hauptphase Beratungslogik festgelegt
+- [ ] Phase 9.1: Vergleichs- und Entscheidungslogik konzeptionell vorbereiten
