@@ -96,6 +96,9 @@ In Phase 9.14 wurde konzeptionell vorbereitet, wie die Entscheidungsnotiz späte
 In Phase 9.15 wurde das UI-Konzept für die spätere Sichtbarkeit der Entscheidungsnotiz geprüft. Der Zielpfad bleibt eng begrenzt: später zunächst eine reine Präsentationskomponente, keine HomePage- oder Bearbeitungsbereich-Anbindung, keine Speicherung, keine OpenAI-/LLM-Anbindung, keine Empfehlung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung. Als nächster Schritt wird empfohlen, den UI-Komponenten-Kontrakt konzeptionell zuzuschneiden.
 
 In Phase 9.17 wurde der UI-Komponenten-Kontrakt für die spätere `DecisionNotePanel`-Präsentationskomponente geprüft. Der Zielpfad bleibt eng begrenzt: presentation-only, Prop `decisionNote`, verpflichtender Boundary-Block, keine Interaktion, keine Erzeugungslogik, keine HomePage- oder Bearbeitungsbereich-Anbindung, keine Speicherung, keine OpenAI-/LLM-Anbindung, keine Empfehlung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung. Als nächster Schritt wird empfohlen, den minimalen Implementierungsschnitt und Testvertrag vorzubereiten.
+
+In Phase 9.18 wurde der minimale spätere Implementierungsschnitt für `DecisionNotePanel` konzeptionell vorbereitet. Festgelegt wurden der maximal erlaubte Dateiscope (Panel + Test), ein verpflichtender Testvertrag (inklusive Boundary-Block und fehlendem `decisionNote`), eine testpflichtige Negativliste verbotener Labels sowie harte Scope-Grenzen ohne Integration, ohne Speicherung und ohne OpenAI-/LLM-Anbindung.
+
  Die Utility bleibt auf eine neutrale Entscheidungsnotiz-Grundlage begrenzt und führt keine UI, keine Speicherung, keine OpenAI-/LLM-Anbindung, keine Empfehlung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung ein. Als nächster Schritt werden die Testgrenzen der Entscheidungsnotiz-Utility nachgeschärft, sofern die Review-Hinweise bestätigt werden.
 
 - Phase-8.17 Persistenz-Zwischenstand-Audit: docs/PHASE_8_17_PERSISTENCE_INTERIM_AUDIT_AFTER_NO_PERSISTENCE.md
@@ -117,6 +120,7 @@ In Phase 9.17 wurde der UI-Komponenten-Kontrakt für die spätere `DecisionNoteP
 - Phase-9.14 Entscheidungsnotiz-UI-Konzept: docs/PHASE_9_14_DECISION_NOTE_UI_CONCEPT.md
 - Phase-9.15 Review Entscheidungsnotiz-UI-Konzept: docs/PHASE_9_15_REVIEW_DECISION_NOTE_UI_CONCEPT.md
 - Phase-9.17 Review Entscheidungsnotiz-UI-Komponenten-Kontrakt: docs/PHASE_9_17_REVIEW_DECISION_NOTE_UI_COMPONENT_CONTRACT.md
+- Phase-9.18 Entscheidungsnotiz-UI-Implementierungsschnitt (Konzept): docs/PHASE_9_18_DECISION_NOTE_UI_IMPLEMENTATION_SLICE_CONCEPT.md
 
 ## Lokale Befehle
 ```bash
