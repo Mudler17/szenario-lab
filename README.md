@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 9.17 · Review des Entscheidungsnotiz-UI-Komponenten-Kontrakts abgeschlossen
+Phase 10.1 · Browserlokale Speicherung des aktuellen Szenario-Drafts implementiert
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -145,7 +145,7 @@ In Phase 4.6 wurde die wiederholte Draft-Update-Logik für diese drei bestehende
 In Phase 4.7 wurde zusätzlich eine minimale lokale Validierung ergänzt: Name, Beschreibung und Ziel dürfen nicht leer sein; leere Felder zeigen sichtbare Hinweise im Draft-Formular.
 In Phase 4.8 wurden Bearbeitungsbereich und Vorschau in der Home-Ansicht als klar getrennte Bereiche dargestellt (inklusive Überschriften und kurzer Hinweise), ohne neue Fachlogik einzuführen.
 Es wurden keine neuen Felder ergänzt. Die Vorschau reagiert weiterhin direkt auf Änderungen, und über Reset werden die drei Originalwerte wiederhergestellt.
-Wichtig: Keine Speicherung, kein LocalStorage, keine Simulation, keine OpenAI-Anbindung, keine weiteren aktiven Formularbereiche und keine neuen Module.
+Wichtig: Der aktuelle Draft wird browserlokal per localStorage gespeichert (sofern verfügbar). Es gibt weiterhin kein Backend, keine Accounts, keine Synchronisierung und keine OpenAI-Anbindung.
 In Phase 4.8.1 wurde dafür ergänzend ein bewusst schlankes Minimal-CSS dokumentiert: `workspace-grid` strukturiert Bearbeitung und Vorschau als Bereiche, `workspace-panel` vereinheitlicht die Panel-Gestaltung, `editor-panel` und `preview-panel` differenzieren beide Ansichten visuell, und `workspace-hint` formatiert erklärende Hinweise.
 Auch in Phase 4.8.1 gilt unverändert: keine React-Logikänderung, keine neuen Felder, keine Speicherung, kein LocalStorage, keine Simulation, keine OpenAI-Anbindung und keine neuen Module.
 In Phase 5.1 wurde ein minimales Testfundament eingeführt: Es wird der native Node-Test-Runner verwendet, und `npm test` führt `node --test` aus.
@@ -384,3 +384,6 @@ In Phase 7.8.4 wurde die Nacharbeit zu den Relationship-Optionswerten geprüft u
 In Phase 7.9.2 wurden Interventionen im lokalen Draft minimal bearbeitbar ergänzt (Add/Update/Remove, Basis-a11y, Status-/Hilfetexte, Tests), weiterhin ohne Speicherung, LocalStorage, Backend, Aufgabensteuerung oder Simulation.
 
 In Phase 7.9.3 wurde die Interventionen-Implementierung fachlich geprüft und freigegeben.
+
+
+- Phase-10.1 Browserlokale Speicherung des aktuellen Drafts: docs/PHASE_10_1_LOCALSTORAGE_CURRENT_DRAFT_IMPLEMENTATION.md

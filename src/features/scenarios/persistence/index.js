@@ -1,4 +1,5 @@
 export { createNoPersistenceAdapter } from './adapter/noPersistenceAdapter.js';
+export { createLocalStorageDraftAdapter } from './adapter/localStorageDraftAdapter.js';
 
 export {
   NON_PERSISTENCE_ACTION,
