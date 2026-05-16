@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 9.14 · Entscheidungsnotiz-UI-Konzept vorbereitet
+Phase 9.15 · Review des Entscheidungsnotiz-UI-Konzepts abgeschlossen
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -92,6 +92,8 @@ In Phase 9.12 wurden die in Phase 9.11 ergänzten Seiteneffekt- und Quelltext-Ne
 In Phase 9.13 wurde die Entscheidungsnotiz-Linie zwischengeprüft. Die Utility `createDecisionNoteDraft` ist fachlich und technisch stabil als neutrale Entscheidungsnotiz-Grundlage: keine UI, keine Speicherung, keine OpenAI-/LLM-Anbindung, keine Empfehlung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung. Tests und Schutzgrenzen sind ausreichend gehärtet. Als nächster Schritt wird ein reines UI-Konzept für die spätere Sichtbarkeit der Entscheidungsnotiz empfohlen.
 
 In Phase 9.14 wurde konzeptionell vorbereitet, wie die Entscheidungsnotiz später im Bearbeitungsbereich sichtbar gemacht werden kann. Der empfohlene Zielpfad ist ein eigener, klar abgegrenzter Abschnitt im Bearbeitungsbereich mit sichtbaren Boundaries und dem Status „Entwurf · keine Empfehlung“. Es wurde keine UI implementiert, keine HomePage- oder Bearbeitungsbereich-Anbindung vorgenommen, keine Speicherung, keine OpenAI-/LLM-Anbindung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung eingeführt.
+
+In Phase 9.15 wurde das UI-Konzept für die spätere Sichtbarkeit der Entscheidungsnotiz geprüft. Der Zielpfad bleibt eng begrenzt: später zunächst eine reine Präsentationskomponente, keine HomePage- oder Bearbeitungsbereich-Anbindung, keine Speicherung, keine OpenAI-/LLM-Anbindung, keine Empfehlung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung. Als nächster Schritt wird empfohlen, den UI-Komponenten-Kontrakt konzeptionell zuzuschneiden.
  Die Utility bleibt auf eine neutrale Entscheidungsnotiz-Grundlage begrenzt und führt keine UI, keine Speicherung, keine OpenAI-/LLM-Anbindung, keine Empfehlung, kein Scoring, keine Rangfolge und keine Entscheidungsautomatisierung ein. Als nächster Schritt werden die Testgrenzen der Entscheidungsnotiz-Utility nachgeschärft, sofern die Review-Hinweise bestätigt werden.
 
 - Phase-8.17 Persistenz-Zwischenstand-Audit: docs/PHASE_8_17_PERSISTENCE_INTERIM_AUDIT_AFTER_NO_PERSISTENCE.md
@@ -111,6 +113,7 @@ In Phase 9.14 wurde konzeptionell vorbereitet, wie die Entscheidungsnotiz späte
 - Phase-9.12 Review Entscheidungsnotiz-Seiteneffekt- und Quelltexttests: docs/PHASE_9_12_REVIEW_DECISION_NOTE_SIDE_EFFECT_AND_SOURCE_TESTS.md
 - Phase-9.13 Entscheidungsnotiz-Zwischenstand-Audit: docs/PHASE_9_13_DECISION_NOTE_INTERIM_AUDIT.md
 - Phase-9.14 Entscheidungsnotiz-UI-Konzept: docs/PHASE_9_14_DECISION_NOTE_UI_CONCEPT.md
+- Phase-9.15 Review Entscheidungsnotiz-UI-Konzept: docs/PHASE_9_15_REVIEW_DECISION_NOTE_UI_CONCEPT.md
 
 ## Lokale Befehle
 ```bash

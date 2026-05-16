@@ -222,4 +222,5 @@
 - [x] Phase 9.12: Review der Entscheidungsnotiz-Seiteneffekt- und Quelltexttests geprüft
 - [x] Phase 9.13: Entscheidungsnotiz-Zwischenstand-Audit abgeschlossen
 - [x] Phase 9.14: Entscheidungsnotiz-UI-Konzept vorbereitet
-- [ ] Phase 9.15: Review des Entscheidungsnotiz-UI-Konzepts prüfen
+- [x] Phase 9.15: Review des Entscheidungsnotiz-UI-Konzepts geprüft
+- [ ] Phase 9.16: Entscheidungsnotiz-UI-Komponenten-Kontrakt konzeptionell zuschneiden
