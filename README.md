@@ -387,3 +387,10 @@ In Phase 7.9.3 wurde die Interventionen-Implementierung fachlich geprüft und fr
 
 
 - Phase-10.1 Browserlokale Speicherung des aktuellen Drafts: docs/PHASE_10_1_LOCALSTORAGE_CURRENT_DRAFT_IMPLEMENTATION.md
+
+
+Aktueller Status: Phase 10.2 · Review der browserlokalen Draft-Speicherung abgeschlossen.
+
+- Phase-10.2 Review browserlokale Draft-Speicherung: `docs/PHASE_10_2_REVIEW_BROWSER_LOCAL_DRAFT_PERSISTENCE.md`
+
+Hinweis: In Phase 10.2 wurde die browserlokale Draft-Speicherung aus Phase 10.1 geprüft. Der aktuelle Draft wird browserlokal via localStorage gespeichert; Backend, Accounts, Sync, Mehrszenario-Verwaltung, API und OpenAI-/LLM-Anbindung bleiben ausgeschlossen. Die Funktion ist als MVP-Nutzwert freigegeben, sollte aber in einer kurzen Nachschärfungsphase testseitig und initialisierungsseitig gehärtet werden.
