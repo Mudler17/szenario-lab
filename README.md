@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 9.15 · Review des Entscheidungsnotiz-UI-Konzepts abgeschlossen
+Phase 9.16 · Entscheidungsnotiz-UI-Komponenten-Kontrakt konzeptionell zugeschnitten
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
