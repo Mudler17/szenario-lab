@@ -224,3 +224,5 @@
 - [x] Phase 9.14: Entscheidungsnotiz-UI-Konzept vorbereitet
 - [x] Phase 9.15: Review des Entscheidungsnotiz-UI-Konzepts geprüft
 - [x] Phase 9.16: Entscheidungsnotiz-UI-Komponenten-Kontrakt konzeptionell zuschneiden
+- [x] Phase 9.17: Review des Entscheidungsnotiz-UI-Komponenten-Kontrakts geprüft
+- [ ] Phase 9.18: Entscheidungsnotiz-UI-Implementierungsschnitt minimal vorbereiten
