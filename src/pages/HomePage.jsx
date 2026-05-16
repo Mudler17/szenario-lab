@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { exampleScenario } from '../domain';
 import {
   ScenarioDraftForm,
@@ -47,6 +47,11 @@ import {
   createJsonImportStatusMessage,
   parseScenarioImportJsonText,
 } from '../features/scenarios/import';
+import {
+  createLocalStorageDraftAdapter,
+  createPersistenceStatusMessage,
+  PERSISTENCE_STATUS,
+} from '../features/scenarios/persistence';
 
 function HomePage() {
   const originalScenario = useMemo(() => exampleScenario, []);
@@ -64,6 +69,34 @@ function HomePage() {
     type: 'info',
     message: 'Bitte wähle eine JSON-Datei für die Prüfung aus.',
   }));
+
+  const persistenceAdapter = useMemo(() => createLocalStorageDraftAdapter(), []);
+  const [persistenceStatus, setPersistenceStatus] = useState(() =>
+    createPersistenceStatusMessage(PERSISTENCE_STATUS.STORAGE_ACTIVE),
+  );
+
+
+  useEffect(() => {
+    const loaded = persistenceAdapter.loadScenarioDraft();
+    if (loaded.ok && loaded.data) {
+      setScenarioDraft(loaded.data);
+      setScenarioValidation(validateScenarioDraftBasics(loaded.data));
+      setPersistenceStatus(createPersistenceStatusMessage(loaded.status, loaded.reason));
+      return;
+    }
+
+    setPersistenceStatus(createPersistenceStatusMessage(loaded.status, loaded.reason));
+  }, [persistenceAdapter]);
+
+  useEffect(() => {
+    const result = persistenceAdapter.saveScenarioDraft(scenarioDraft);
+    setPersistenceStatus(createPersistenceStatusMessage(result.status, result.reason));
+  }, [persistenceAdapter, scenarioDraft]);
+
+  const handleClearBrowserStorage = () => {
+    const result = persistenceAdapter.clearScenarioDraft();
+    setPersistenceStatus(createPersistenceStatusMessage(result.status, result.reason));
+  };
 
   const handleResetDraft = () => {
     const resetScenario = resetDraft(originalScenario);
@@ -389,7 +422,7 @@ function HomePage() {
     setImportStatus({
       type: 'success',
       message:
-        'Das geprüfte Szenario wurde in den lokalen Draft übernommen. Es wurde nicht gespeichert.',
+        'Das geprüfte Szenario wurde in den lokalen Draft übernommen und wird browserlokal gespeichert, sofern Speicher verfügbar ist.',
     });
     setDownloadStatus(createJsonDownloadStatusMessage());
   };
@@ -411,7 +444,7 @@ function HomePage() {
       <section className="hero">
         <h1>szenario-lab</h1>
         <p className="subtitle">Organisationsszenarien strukturiert modellieren</p>
-        <p className="phase-note">Lokaler Draft · Bearbeitung, Vorschau, JSON-Download und JSON-Importprüfung ohne App-Speicherung</p>
+        <p className="phase-note">Lokaler Draft · Bearbeitung, Vorschau, browserlokale Speicherung, JSON-Download und JSON-Importprüfung</p>
       </section>
 
       <section className="placeholder-grid" aria-label="Module in Vorbereitung">
@@ -433,7 +466,7 @@ function HomePage() {
         <section className="workspace-panel editor-panel" aria-label="Bearbeitung">
           <h2>Bearbeitung</h2>
           <p className="workspace-hint">
-            Aktiver Modus: <strong>Lokaler Draft</strong> (nicht gespeichert)
+            Aktiver Modus: <strong>Lokaler Draft</strong> (browserlokal gespeichert, sofern verfügbar)
           </p>
           <nav className="editor-navigation" aria-label="Abschnitte im Bearbeitungsbereich">
             <h3>Abschnitte</h3>
@@ -516,10 +549,19 @@ function HomePage() {
             <button type="button" onClick={handleResetDraft}>
               Draft auf Original zurücksetzen
             </button>
+            <p className="workspace-hint">
+              Browserlokale Speicherung aktiv: nur in diesem Browser, kein Backend, keine Accounts.
+            </p>
+            <p className={`download-status download-status-${persistenceStatus.type}`} role="status" aria-live="polite">
+              {persistenceStatus.text}
+            </p>
+            <button type="button" onClick={handleClearBrowserStorage}>
+              Browser-Speicher löschen
+            </button>
             <section className="export-panel" aria-label="JSON-Download">
             <h3>JSON-Download</h3>
             <p className="workspace-hint">
-              Lädt den aktuellen lokalen Draft als JSON-Datei auf dein Gerät herunter. Dies ist keine Speicherung in der App.
+              Lädt den aktuellen lokalen Draft als JSON-Datei auf dein Gerät herunter. JSON-Download ist eine zusätzliche Sicherung außerhalb des browserlokalen Speichers.
             </p>
             <p className="workspace-hint">
               Prüfe vor dem Download, ob der Entwurf personenbezogene oder vertrauliche Informationen enthält.
@@ -564,7 +606,7 @@ function HomePage() {
             </p>
             {importResult?.ok === true ? (
               <div className="import-adoption-notice" aria-label="Import-Übernahmehinweis">
-                <p>Diese Aktion ersetzt den aktuellen lokalen Draft. Es wird nichts in der App gespeichert.</p>
+                <p>Diese Aktion ersetzt den aktuellen lokalen Draft und nutzt danach die browserlokale Speicherung, sofern verfügbar.</p>
                 {Array.isArray(importResult.warnings) && importResult.warnings.length > 0 ? (
                   <p>Die Datei ist gültig, enthält aber zusätzliche Felder. Diese Felder werden derzeit nicht ausgewertet.</p>
                 ) : null}

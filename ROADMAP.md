@@ -226,3 +226,8 @@
 - [x] Phase 9.16: Entscheidungsnotiz-UI-Komponenten-Kontrakt konzeptionell zuschneiden
 - [x] Phase 9.17: Review des Entscheidungsnotiz-UI-Komponenten-Kontrakts geprüft
 - [x] Phase 9.18: Entscheidungsnotiz-UI-Implementierungsschnitt minimal vorbereiten
+
+
+## Phase 10 · Sichtbarer MVP-Nutzwert
+
+- [x] Phase 10.1: Browserlokale Speicherung des aktuellen Szenario-Drafts via localStorage umgesetzt
