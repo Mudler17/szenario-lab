@@ -244,4 +244,5 @@
 - [x] Phase 11.2: Review des Beratungsreport-Konzepts prüfen
 - [x] Phase 11.3: Beratungsreport-Utility-Kontrakt konzeptionell zuschneiden
 
-- [ ] Phase 11.4: Review des Beratungsreport-Utility-Kontrakts prüfen
+- [x] Phase 11.4: Review des Beratungsreport-Utility-Kontrakts prüfen
+- [ ] Phase 11.5: Beratungsreport-Utility minimal implementieren
