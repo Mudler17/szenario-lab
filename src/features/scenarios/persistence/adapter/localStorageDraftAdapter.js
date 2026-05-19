@@ -76,18 +76,24 @@ export function createLocalStorageDraftAdapter(options = {}) {
         return createUnavailableResult('loadScenarioDraft');
       }
 
+      let serialized;
       try {
-        const serialized = storage.getItem(storageKey);
-        if (serialized === null) {
-          return createPersistenceResult({
-            ok: false,
-            status: PERSISTENCE_STATUS.DRAFT_NOT_FOUND,
-            reason: PERSISTENCE_REASON.DRAFT_NOT_FOUND,
-            action: 'loadScenarioDraft',
-            data: null,
-          });
-        }
+        serialized = storage.getItem(storageKey);
+      } catch {
+        return createUnavailableResult('loadScenarioDraft');
+      }
 
+      if (serialized === null) {
+        return createPersistenceResult({
+          ok: false,
+          status: PERSISTENCE_STATUS.DRAFT_NOT_FOUND,
+          reason: PERSISTENCE_REASON.DRAFT_NOT_FOUND,
+          action: 'loadScenarioDraft',
+          data: null,
+        });
+      }
+
+      try {
         const draft = JSON.parse(serialized);
         return createPersistenceResult({
           ok: true,
