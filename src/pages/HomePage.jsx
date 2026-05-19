@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { exampleScenario } from '../domain';
 import {
   ScenarioDraftForm,
@@ -74,6 +74,7 @@ function HomePage() {
   const [persistenceStatus, setPersistenceStatus] = useState(() =>
     createPersistenceStatusMessage(PERSISTENCE_STATUS.STORAGE_ACTIVE),
   );
+  const hasHydratedRef = useRef(false);
 
 
   useEffect(() => {
@@ -82,13 +83,19 @@ function HomePage() {
       setScenarioDraft(loaded.data);
       setScenarioValidation(validateScenarioDraftBasics(loaded.data));
       setPersistenceStatus(createPersistenceStatusMessage(loaded.status, loaded.reason));
+      hasHydratedRef.current = true;
       return;
     }
 
     setPersistenceStatus(createPersistenceStatusMessage(loaded.status, loaded.reason));
+    hasHydratedRef.current = true;
   }, [persistenceAdapter]);
 
   useEffect(() => {
+    if (!hasHydratedRef.current) {
+      return;
+    }
+
     const result = persistenceAdapter.saveScenarioDraft(scenarioDraft);
     setPersistenceStatus(createPersistenceStatusMessage(result.status, result.reason));
   }, [persistenceAdapter, scenarioDraft]);

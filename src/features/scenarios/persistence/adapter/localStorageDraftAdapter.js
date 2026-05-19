@@ -14,6 +14,15 @@ function getLocalStorageSafely() {
   }
 }
 
+function getStorageAccess() {
+  const storage = getLocalStorageSafely();
+  if (!storage) {
+    return { available: false, storage: null };
+  }
+
+  return { available: true, storage };
+}
+
 function createUnavailableResult(action) {
   return createPersistenceResult({
     ok: false,
@@ -36,29 +45,29 @@ export function createLocalStorageDraftAdapter(options = {}) {
       return true;
     },
     isAvailable() {
-      const storage = getLocalStorageSafely();
-      if (!storage) {
+      const access = getStorageAccess();
+      if (!access.available) {
         return false;
       }
 
       try {
         const probeKey = `${storageKey}:availability-probe`;
-        storage.setItem(probeKey, '1');
-        storage.removeItem(probeKey);
+        access.storage.setItem(probeKey, '1');
+        access.storage.removeItem(probeKey);
         return true;
       } catch {
         return false;
       }
     },
     saveScenarioDraft(payload) {
-      const storage = getLocalStorageSafely();
-      if (!storage) {
+      const access = getStorageAccess();
+      if (!access.available) {
         return createUnavailableResult('saveScenarioDraft');
       }
 
       try {
         const serialized = JSON.stringify(payload);
-        storage.setItem(storageKey, serialized);
+        access.storage.setItem(storageKey, serialized);
         return createPersistenceResult({
           ok: true,
           status: PERSISTENCE_STATUS.DRAFT_SAVED,
@@ -71,13 +80,13 @@ export function createLocalStorageDraftAdapter(options = {}) {
       }
     },
     loadScenarioDraft() {
-      const storage = getLocalStorageSafely();
-      if (!storage) {
+      const access = getStorageAccess();
+      if (!access.available) {
         return createUnavailableResult('loadScenarioDraft');
       }
 
       try {
-        const serialized = storage.getItem(storageKey);
+        const serialized = access.storage.getItem(storageKey);
         if (serialized === null) {
           return createPersistenceResult({
             ok: false,
@@ -88,7 +97,19 @@ export function createLocalStorageDraftAdapter(options = {}) {
           });
         }
 
-        const draft = JSON.parse(serialized);
+        let draft;
+        try {
+          draft = JSON.parse(serialized);
+        } catch {
+          return createPersistenceResult({
+            ok: false,
+            status: PERSISTENCE_STATUS.DRAFT_INVALID,
+            reason: PERSISTENCE_REASON.DRAFT_INVALID,
+            action: 'loadScenarioDraft',
+            data: null,
+          });
+        }
+
         return createPersistenceResult({
           ok: true,
           status: PERSISTENCE_STATUS.DRAFT_LOADED,
@@ -97,23 +118,17 @@ export function createLocalStorageDraftAdapter(options = {}) {
           data: draft,
         });
       } catch {
-        return createPersistenceResult({
-          ok: false,
-          status: PERSISTENCE_STATUS.DRAFT_INVALID,
-          reason: PERSISTENCE_REASON.DRAFT_INVALID,
-          action: 'loadScenarioDraft',
-          data: null,
-        });
+        return createUnavailableResult('loadScenarioDraft');
       }
     },
     clearScenarioDraft() {
-      const storage = getLocalStorageSafely();
-      if (!storage) {
+      const access = getStorageAccess();
+      if (!access.available) {
         return createUnavailableResult('clearScenarioDraft');
       }
 
       try {
-        storage.removeItem(storageKey);
+        access.storage.removeItem(storageKey);
         return createPersistenceResult({
           ok: true,
           status: PERSISTENCE_STATUS.DRAFT_CLEARED,
