@@ -241,4 +241,5 @@
 
 - [x] Phase 11.0: Nächste Entwicklungsrichtung nach sichtbarem MVP-Nutzwert festlegen
 - [x] Phase 11.1: Konzept der gewählten Entwicklungsrichtung vorbereiten
-- [ ] Phase 11.2: Review des Beratungsreport-Konzepts prüfen
+- [x] Phase 11.2: Review des Beratungsreport-Konzepts prüfen
+- [ ] Phase 11.3: Beratungsreport-Utility-Kontrakt konzeptionell zuschneiden
