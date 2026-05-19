@@ -75,7 +75,7 @@ function HomePage() {
     createPersistenceStatusMessage(PERSISTENCE_STATUS.STORAGE_ACTIVE),
   );
   const hasHydratedRef = useRef(false);
-
+  const hasInitializedAutosaveRef = useRef(false);
 
   useEffect(() => {
     const loaded = persistenceAdapter.loadScenarioDraft();
@@ -93,6 +93,11 @@ function HomePage() {
 
   useEffect(() => {
     if (!hasHydratedRef.current) {
+      return;
+    }
+
+    if (!hasInitializedAutosaveRef.current) {
+      hasInitializedAutosaveRef.current = true;
       return;
     }
 
