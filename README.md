@@ -4,11 +4,13 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 10.3 · Browserlokale Draft-Speicherung nachgeschärft
+Phase 10.3.1 · Hydration-Guard der browserlokalen Draft-Speicherung korrigiert
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
 In Phase 10.3 wurde die browserlokale Draft-Speicherung nachgeschärft: robuste Fehlerbehandlung im LocalStorage-Adapter, erweiterte Negativ-/Fehlertests und ein Hydration-Guard gegen Initial-Überschreiben. Details: `docs/PHASE_10_3_BROWSER_LOCAL_DRAFT_PERSISTENCE_HARDENING.md`.
+
+In Phase 10.3.1 wurde der Hydration-Guard der browserlokalen Draft-Speicherung korrigiert: Der Initial-Autosave wird nach abgeschlossener Hydration genau einmal übersprungen, sodass ein vorhandener gespeicherter Draft beim Start nicht durch den Beispiel-Draft überschrieben wird. Details: `docs/PHASE_10_3_1_BROWSER_LOCAL_DRAFT_HYDRATION_GUARD_FIX.md`.
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
