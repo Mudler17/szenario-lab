@@ -240,4 +240,5 @@
 ## Phase 11 · Nächste Entwicklungsrichtung
 
 - [x] Phase 11.0: Nächste Entwicklungsrichtung nach sichtbarem MVP-Nutzwert festlegen
-- [ ] Phase 11.1: Konzept der gewählten Entwicklungsrichtung vorbereiten
+- [x] Phase 11.1: Konzept der gewählten Entwicklungsrichtung vorbereiten
+- [ ] Phase 11.2: Review des Beratungsreport-Konzepts prüfen
