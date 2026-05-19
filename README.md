@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 10.4 · Review der nachgeschärften browserlokalen Draft-Speicherung abgeschlossen
+Phase 11.0 · Nächste Entwicklungsrichtung nach sichtbarem MVP-Nutzwert festgelegt
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -13,6 +13,8 @@ In Phase 10.3 wurde die browserlokale Draft-Speicherung nachgeschärft: robuste 
 In Phase 10.3.1 wurde der Hydration-Guard der browserlokalen Draft-Speicherung korrigiert: Der Initial-Autosave wird nach abgeschlossener Hydration genau einmal übersprungen, sodass ein vorhandener gespeicherter Draft beim Start nicht durch den Beispiel-Draft überschrieben wird. Details: `docs/PHASE_10_3_1_BROWSER_LOCAL_DRAFT_HYDRATION_GUARD_FIX.md`.
 
 In Phase 10.4 wurde die nachgeschärfte browserlokale Draft-Speicherung (Phase 10.3 + 10.3.1) fachlich und technisch geprüft und freigegeben. Details: `docs/PHASE_10_4_REVIEW_BROWSER_LOCAL_DRAFT_PERSISTENCE_HARDENING.md`.
+In Phase 11.0 wurde die nächste Hauptentwicklungsrichtung nach dem sichtbaren MVP-Nutzwert festgelegt: **Beratungsoutput / Report stärken**. Die Entscheidung ist rein konzeptionell und priorisiert den größten unmittelbaren fachlichen Nutzen für Organisationsberatung ohne Implementierung. Details: `docs/PHASE_11_0_NEXT_DIRECTION_AFTER_VISIBLE_MVP_VALUE.md`.
+
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
@@ -395,7 +397,7 @@ In Phase 7.9.3 wurde die Interventionen-Implementierung fachlich geprüft und fr
 - Phase-10.1 Browserlokale Speicherung des aktuellen Drafts: docs/PHASE_10_1_LOCALSTORAGE_CURRENT_DRAFT_IMPLEMENTATION.md
 
 
-Aktueller Status: Phase 10.4 · Review der nachgeschärften browserlokalen Draft-Speicherung abgeschlossen.
+Aktueller Status: Phase 11.0 · Nächste Entwicklungsrichtung nach sichtbarem MVP-Nutzwert festgelegt.
 
 - Phase-10.2 Review browserlokale Draft-Speicherung: `docs/PHASE_10_2_REVIEW_BROWSER_LOCAL_DRAFT_PERSISTENCE.md`
 - Phase-10.4 Review nachgeschärfte browserlokale Draft-Speicherung: `docs/PHASE_10_4_REVIEW_BROWSER_LOCAL_DRAFT_PERSISTENCE_HARDENING.md`
