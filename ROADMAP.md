@@ -239,4 +239,5 @@
 
 ## Phase 11 · Nächste Entwicklungsrichtung
 
-- [ ] Phase 11.0: Nächste Entwicklungsrichtung nach sichtbarem MVP-Nutzwert festlegen
+- [x] Phase 11.0: Nächste Entwicklungsrichtung nach sichtbarem MVP-Nutzwert festlegen
+- [ ] Phase 11.1: Konzept der gewählten Entwicklungsrichtung vorbereiten
