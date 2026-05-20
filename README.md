@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 11.8 · Review der nachgeschärften Beratungsreport-Utility geprüft
+Phase 11.9 · Beratungsreport-Risiko-/Unsicherheiten-Mapping nachgeschärft
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -30,6 +30,8 @@ In Phase 11.6 wurde die in Phase 11.5 minimal umgesetzte Utility `createConsulti
 In Phase 11.7 wurde das Mapping der bestehenden Beratungsreport-Utility fachlich nachgeschärft: vorhandene scenarioDraft-Felder werden nun passender auf die 12 bestehenden Report-Sektionen verteilt (u. a. Ausgangslage aus name/description, Zielbild aus goal, Personas aus personas, neutrale Übernahme vorhandener risks/uncertainty sowie optionaler explicit fields für offene Fragen und nächste Schritte). Scope bleibt Utility-only, ohne UI/Persistenz/API/LLM-Erweiterung. Details: `docs/PHASE_11_7_CONSULTING_REPORT_UTILITY_MAPPING_REFINEMENT.md`.
 
 In Phase 11.8 wurde die in Phase 11.7 nachgeschärfte Mapping-Logik der Beratungsreport-Utility fachlich, architektonisch und testseitig geprüft. Ergebnis: Struktur und Neutralität sind stabil; als Resthinweis bleibt die mögliche Kontextanreicherung von `assumptions[].uncertainty` für eine Folgephase. Details: `docs/PHASE_11_8_REVIEW_CONSULTING_REPORT_UTILITY_MAPPING.md`.
+
+In Phase 11.9 wurde das Risiko-/Unsicherheiten-Mapping der Beratungsreport-Utility gezielt nachgeschärft: `assumptions[].uncertainty` wird nicht mehr isoliert übernommen, sondern neutral mit Annahmenbezug (inkl. neutralem Fallback ohne Namen) in die Sektion „Risiken / Unsicherheiten“ gemappt. Details: `docs/PHASE_11_9_CONSULTING_REPORT_RISK_UNCERTAINTY_MAPPING_REFINEMENT.md`.
 
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
