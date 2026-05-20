@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 11.10 · Review des Risiko-/Unsicherheiten-Mappings geprüft
+Phase 11.11 · Beratungsreport-UI-Konzept vorbereitet
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -35,6 +35,8 @@ In Phase 11.9 wurde das Risiko-/Unsicherheiten-Mapping der Beratungsreport-Utili
 
 In Phase 11.10 wurde die Nachschärfung des Risiko-/Unsicherheiten-Mappings der Utility `createConsultingReportDraft(scenarioDraft)` fachlich, architektonisch und testseitig geprüft und freigegeben. Details: `docs/PHASE_11_10_REVIEW_CONSULTING_REPORT_RISK_UNCERTAINTY_MAPPING.md`.
 
+
+In Phase 11.11 wurde konzeptionell vorbereitet, wie das bestehende `reportDraft` später als neutraler Beratungsreport in der Oberfläche sichtbar gemacht werden kann: rein lesend, klar strukturiert, mit sichtbaren Boundaries und ohne Empfehlung, Scoring, Entscheidung, Export- oder Speicherlogik. Details: `docs/PHASE_11_11_CONSULTING_REPORT_UI_CONCEPT.md`.
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
