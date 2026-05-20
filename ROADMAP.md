@@ -253,4 +253,5 @@
 - [x] Phase 11.10: Review des Risiko-/Unsicherheiten-Mappings prüfen
 - [x] Phase 11.11: Beratungsreport-UI-Konzept vorbereiten
 - [x] Phase 11.12: Review des Beratungsreport-UI-Konzepts prüfen
-- [ ] Phase 11.13: Beratungsreport-UI-Komponenten-Kontrakt konzeptionell zuschneiden
+- [x] Phase 11.13: Beratungsreport-UI-Komponenten-Kontrakt konzeptionell zuschneiden
+- [ ] Phase 11.14: Review des Beratungsreport-UI-Komponenten-Kontrakts prüfen
