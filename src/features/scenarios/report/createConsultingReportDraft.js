@@ -93,6 +93,95 @@ function toItems(values) {
     .filter(Boolean);
 }
 
+function collectContextItems(draft) {
+  return [draft?.name, draft?.description]
+    .filter((value) => typeof value === 'string')
+    .map((value) => value.trim())
+    .filter(Boolean);
+}
+
+function collectFocusItems(draft) {
+  return [draft?.goal]
+    .filter((value) => typeof value === 'string')
+    .map((value) => value.trim())
+    .filter(Boolean);
+}
+
+function collectRisks(draft) {
+  const items = [];
+
+  const pushArrayItems = (values) => {
+    items.push(...toItems(values));
+  };
+
+  pushArrayItems(draft?.relationships?.flatMap((relationship) => relationship?.risks));
+  pushArrayItems(draft?.phases?.flatMap((phase) => phase?.risks));
+  pushArrayItems(draft?.interventions?.flatMap((intervention) => intervention?.risks));
+  pushArrayItems(draft?.assumptions?.map((assumption) => assumption?.uncertainty));
+
+  return items;
+}
+
+function collectOpenQuestions(draft) {
+  return toItems(draft?.openQuestions).concat(toItems(draft?.clarificationQuestions));
+}
+
+function collectNextSteps(draft) {
+  return toItems(draft?.nextSteps).concat(toItems(draft?.workSteps));
+}
+
+function mapSectionItems(sectionType, draft) {
+  if (sectionType === 'context') {
+    return collectContextItems(draft);
+  }
+
+  if (sectionType === 'focus') {
+    return collectFocusItems(draft);
+  }
+
+  if (sectionType === 'assumptions') {
+    return toItems(draft?.assumptions);
+  }
+
+  if (sectionType === 'evidence') {
+    return toItems(draft?.evidence);
+  }
+
+  if (sectionType === 'stakeholders') {
+    return toItems(draft?.personas);
+  }
+
+  if (sectionType === 'resources') {
+    return toItems(draft?.resources);
+  }
+
+  if (sectionType === 'phases') {
+    return toItems(draft?.phases);
+  }
+
+  if (sectionType === 'relationships') {
+    return toItems(draft?.relationships);
+  }
+
+  if (sectionType === 'interventions') {
+    return toItems(draft?.interventions);
+  }
+
+  if (sectionType === 'risks') {
+    return collectRisks(draft);
+  }
+
+  if (sectionType === 'open-questions') {
+    return collectOpenQuestions(draft);
+  }
+
+  if (sectionType === 'next-steps') {
+    return collectNextSteps(draft);
+  }
+
+  return [];
+}
+
 export function createConsultingReportDraft(scenarioDraft) {
   const draft = scenarioDraft && typeof scenarioDraft === 'object' ? scenarioDraft : {};
 
@@ -116,7 +205,7 @@ export function createConsultingReportDraft(scenarioDraft) {
       id: section.id,
       title: section.title,
       type: section.type,
-      items: toItems(draft[section.type]),
+      items: mapSectionItems(section.type, draft),
       emptyState: section.emptyState
     }))
   };

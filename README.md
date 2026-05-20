@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 11.6 · Review der minimalen Beratungsreport-Utility geprüft
+Phase 11.7 · Beratungsreport-Utility-Mapping nachgeschärft
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -26,6 +26,8 @@ In Phase 11.4 wurde dieser Utility-Kontrakt fachlich, architektonisch und testse
 In Phase 11.5 wurde die reine Utility `createConsultingReportDraft(scenarioDraft)` minimal umgesetzt. Sie erzeugt ein neutrales `reportDraft` mit festen Boundary-/Source-Markern und 12 Pflichtsektionen, ohne UI, Persistenz, API, Exportänderung oder OpenAI-/LLM-Anbindung. Details: `docs/PHASE_11_5_CONSULTING_REPORT_UTILITY_MINIMAL_IMPLEMENTATION.md`.
 
 In Phase 11.6 wurde die in Phase 11.5 minimal umgesetzte Utility `createConsultingReportDraft(scenarioDraft)` fachlich, architektonisch und testseitig geprüft. Ergebnis: Scope-/Boundary-Struktur ist stabil; fachliche Restlücken betreffen primär das feldgenaue Mapping aus dem scenarioDraft. Details: `docs/PHASE_11_6_REVIEW_CONSULTING_REPORT_UTILITY.md`.
+
+In Phase 11.7 wurde das Mapping der bestehenden Beratungsreport-Utility fachlich nachgeschärft: vorhandene scenarioDraft-Felder werden nun passender auf die 12 bestehenden Report-Sektionen verteilt (u. a. Ausgangslage aus name/description, Zielbild aus goal, Personas aus personas, neutrale Übernahme vorhandener risks/uncertainty sowie optionaler explicit fields für offene Fragen und nächste Schritte). Scope bleibt Utility-only, ohne UI/Persistenz/API/LLM-Erweiterung. Details: `docs/PHASE_11_7_CONSULTING_REPORT_UTILITY_MAPPING_REFINEMENT.md`.
 
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
