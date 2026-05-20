@@ -107,6 +107,26 @@ function collectFocusItems(draft) {
     .filter(Boolean);
 }
 
+function mapAssumptionUncertainties(values) {
+  if (!Array.isArray(values)) {
+    return [];
+  }
+
+  return values
+    .map((assumption) => {
+      const name = typeof assumption?.name === 'string' ? assumption.name.trim() : '';
+      const uncertainty = typeof assumption?.uncertainty === 'string' ? assumption.uncertainty.trim() : '';
+
+      if (!uncertainty) {
+        return '';
+      }
+
+      const assumptionLabel = name || 'Annahme ohne Bezeichnung';
+      return `Annahme: ${assumptionLabel} · Unsicherheit: ${uncertainty}`;
+    })
+    .filter(Boolean);
+}
+
 function collectRisks(draft) {
   const items = [];
 
@@ -117,7 +137,7 @@ function collectRisks(draft) {
   pushArrayItems(draft?.relationships?.flatMap((relationship) => relationship?.risks));
   pushArrayItems(draft?.phases?.flatMap((phase) => phase?.risks));
   pushArrayItems(draft?.interventions?.flatMap((intervention) => intervention?.risks));
-  pushArrayItems(draft?.assumptions?.map((assumption) => assumption?.uncertainty));
+  pushArrayItems(mapAssumptionUncertainties(draft?.assumptions));
 
   return items;
 }

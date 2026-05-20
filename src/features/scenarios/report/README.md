@@ -18,6 +18,6 @@ Dieses Modul enthält die reine, funktionale Utility `createConsultingReportDraf
 - Phasen: `phases`
 - Beziehungen: `relationships`
 - Interventionen: `interventions`
-- Risiken / Unsicherheiten: vorhandene `risks`/`uncertainty`-Angaben aus Draft-Objekten
+- Risiken / Unsicherheiten: vorhandene `risks`-Angaben sowie `assumptions[].uncertainty` mit neutralem Annahmenbezug (`Annahme: … · Unsicherheit: …`, Fallback ohne Namen)
 - Offene Klärungsfragen: optional `openQuestions`/`clarificationQuestions`
 - Nächste Arbeitsschritte: optional `nextSteps`/`workSteps`

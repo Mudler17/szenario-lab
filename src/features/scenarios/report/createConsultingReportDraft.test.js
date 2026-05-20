@@ -93,12 +93,36 @@ test('mappt relationships[].risks in Risiken / Unsicherheiten', () => {
   assert.deepEqual(getSectionItems(result, 'Risiken / Unsicherheiten'), ['Risiko Beziehung A', 'Risiko Beziehung B']);
 });
 
-test('mappt assumptions[].uncertainty neutral in Risiken / Unsicherheiten', () => {
+test('mappt assumptions[].uncertainty mit Annahmenbezug in Risiken / Unsicherheiten', () => {
   const result = createConsultingReportDraft({
-    assumptions: [{ name: 'A1', uncertainty: 'Unsicherheit A' }, { name: 'A2', uncertainty: { name: 'Unsicherheit B' } }]
+    assumptions: [{ name: 'A1', uncertainty: 'mittel' }, { name: 'A2', uncertainty: 'hoch' }]
   });
 
-  assert.deepEqual(getSectionItems(result, 'Risiken / Unsicherheiten'), ['Unsicherheit A', 'Unsicherheit B']);
+  assert.deepEqual(getSectionItems(result, 'Risiken / Unsicherheiten'), [
+    'Annahme: A1 · Unsicherheit: mittel',
+    'Annahme: A2 · Unsicherheit: hoch'
+  ]);
+});
+
+test('mappt assumptions[].uncertainty ohne Annahmenname mit neutralem Fallback', () => {
+  const result = createConsultingReportDraft({
+    assumptions: [{ uncertainty: 'mittel' }, { name: ' ', uncertainty: 'niedrig' }]
+  });
+
+  assert.deepEqual(getSectionItems(result, 'Risiken / Unsicherheiten'), [
+    'Annahme: Annahme ohne Bezeichnung · Unsicherheit: mittel',
+    'Annahme: Annahme ohne Bezeichnung · Unsicherheit: niedrig'
+  ]);
+});
+
+test('assumption ohne uncertainty erzeugt keinen Risiko-/Unsicherheiten-Eintrag', () => {
+  const result = createConsultingReportDraft({
+    assumptions: [{ name: 'A1' }, { name: 'A2', uncertainty: '   ' }, { name: 'A3', uncertainty: 'mittel' }]
+  });
+
+  assert.deepEqual(getSectionItems(result, 'Risiken / Unsicherheiten'), [
+    'Annahme: A3 · Unsicherheit: mittel'
+  ]);
 });
 
 test('übernimmt offene Fragen nur aus openQuestions oder clarificationQuestions', () => {
