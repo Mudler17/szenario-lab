@@ -4,7 +4,7 @@
 szenario-lab dient dazu, Organisationsszenarien strukturiert zu modellieren.
 
 ## Aktueller Status
-Phase 11.11 · Beratungsreport-UI-Konzept vorbereitet
+Phase 11.12 · Review des Beratungsreport-UI-Konzepts geprüft
 
 Zwischenstand-Audit nach Phase 7.10 abgeschlossen
 
@@ -37,6 +37,8 @@ In Phase 11.10 wurde die Nachschärfung des Risiko-/Unsicherheiten-Mappings der 
 
 
 In Phase 11.11 wurde konzeptionell vorbereitet, wie das bestehende `reportDraft` später als neutraler Beratungsreport in der Oberfläche sichtbar gemacht werden kann: rein lesend, klar strukturiert, mit sichtbaren Boundaries und ohne Empfehlung, Scoring, Entscheidung, Export- oder Speicherlogik. Details: `docs/PHASE_11_11_CONSULTING_REPORT_UI_CONCEPT.md`.
+
+In Phase 11.12 wurde das in Phase 11.11 vorbereitete Beratungsreport-UI-Konzept fachlich, architektonisch, UX-seitig und a11y-seitig geprüft. Ergebnis: Der MVP-Schnitt „eigener Abschnitt Beratungsreport im Bearbeitungsbereich“ ist tragfähig; Resthinweise (Neutralitätswahrnehmung, Längenrisiko, Boundary-Wahrnehmbarkeit) sind für die Folgephase dokumentiert. Details: `docs/PHASE_11_12_REVIEW_CONSULTING_REPORT_UI_CONCEPT.md`.
 
 Phase-7.5-Schnitt: 7.5.1 Konzept · 7.5.2 Implementierung · 7.5.3 Review.
 
