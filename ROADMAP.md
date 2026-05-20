@@ -251,4 +251,5 @@
 - [x] Phase 11.8: Review der nachgeschärften Beratungsreport-Utility prüfen
 - [x] Phase 11.9: Beratungsreport-Risiko-/Unsicherheiten-Mapping nachschärfen
 - [x] Phase 11.10: Review des Risiko-/Unsicherheiten-Mappings prüfen
-- [ ] Phase 11.11: Beratungsreport-UI-Konzept vorbereiten
+- [x] Phase 11.11: Beratungsreport-UI-Konzept vorbereiten
+- [ ] Phase 11.12: Review des Beratungsreport-UI-Konzepts prüfen
