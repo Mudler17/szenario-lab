@@ -247,4 +247,5 @@
 - [x] Phase 11.4: Review des Beratungsreport-Utility-Kontrakts prüfen
 - [x] Phase 11.5: Beratungsreport-Utility minimal implementieren
 - [x] Phase 11.6: Review der minimalen Beratungsreport-Utility prüfen
-- [ ] Phase 11.7: Beratungsreport-Utility-Mapping nachschärfen
+- [x] Phase 11.7: Beratungsreport-Utility-Mapping nachschärfen
+- [ ] Phase 11.8: Review der nachgeschärften Beratungsreport-Utility prüfen
