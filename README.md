@@ -433,7 +433,9 @@ Hinweis: In Phase 10.2 wurde die browserlokale Draft-Speicherung aus Phase 10.1 
 
 ## Deployment-Hinweis: Basic-Auth über Coolify
 
-Für produktive Deployments muss der serverseitige Passwortschutz ausschließlich über Coolify-Umgebungsvariablen gesetzt werden:
+Die App wird in Production über `server.js` als Express-Server ausgeliefert. Der Server schützt alle Requests per HTTP Basic Auth und liefert erst danach die gebaute Vite-App aus `dist/` aus.
+
+Pflichtvariablen in Coolify (Runtime Environment Variables):
 
 - `BASIC_AUTH_USER`
 - `BASIC_AUTH_PASSWORD`
@@ -441,7 +443,6 @@ Für produktive Deployments muss der serverseitige Passwortschutz ausschließlic
 Wichtige Regeln:
 
 - Passwörter niemals im Repository hinterlegen (kein Klartext in Code, Doku oder Tests).
-- Ohne diese Variablen darf ein Production-Start nicht offen erreichbar sein.
+- Keine `VITE_`-Passwortvariablen verwenden; Passwörter gehören ausschließlich in Runtime-Variablen.
+- Wenn `NODE_ENV=production` gesetzt ist und `BASIC_AUTH_USER` oder `BASIC_AUTH_PASSWORD` fehlen, antwortet der Server fail-closed mit `503 Server authentication is not configured.`
 - Nach Änderungen an Coolify-Variablen ist ein Redeploy erforderlich.
-
-Hinweis: In diesem Repository liegt aktuell keine `server.js`/Express-Serverdatei vor; die konkrete Production-Guard-Implementierung muss daher in dem Runtime-Repository erfolgen, das den Express-Server betreibt.
