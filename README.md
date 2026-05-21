@@ -429,3 +429,19 @@ Aktueller Status: Phase 11.0 · Nächste Entwicklungsrichtung nach sichtbarem MV
 - Phase-10.4 Review nachgeschärfte browserlokale Draft-Speicherung: `docs/PHASE_10_4_REVIEW_BROWSER_LOCAL_DRAFT_PERSISTENCE_HARDENING.md`
 
 Hinweis: In Phase 10.2 wurde die browserlokale Draft-Speicherung aus Phase 10.1 geprüft. Der aktuelle Draft wird browserlokal via localStorage gespeichert; Backend, Accounts, Sync, Mehrszenario-Verwaltung, API und OpenAI-/LLM-Anbindung bleiben ausgeschlossen. Die Funktion ist als MVP-Nutzwert freigegeben, sollte aber in einer kurzen Nachschärfungsphase testseitig und initialisierungsseitig gehärtet werden.
+
+
+## Deployment-Hinweis: Basic-Auth über Coolify
+
+Für produktive Deployments muss der serverseitige Passwortschutz ausschließlich über Coolify-Umgebungsvariablen gesetzt werden:
+
+- `BASIC_AUTH_USER`
+- `BASIC_AUTH_PASSWORD`
+
+Wichtige Regeln:
+
+- Passwörter niemals im Repository hinterlegen (kein Klartext in Code, Doku oder Tests).
+- Ohne diese Variablen darf ein Production-Start nicht offen erreichbar sein.
+- Nach Änderungen an Coolify-Variablen ist ein Redeploy erforderlich.
+
+Hinweis: In diesem Repository liegt aktuell keine `server.js`/Express-Serverdatei vor; die konkrete Production-Guard-Implementierung muss daher in dem Runtime-Repository erfolgen, das den Express-Server betreibt.
